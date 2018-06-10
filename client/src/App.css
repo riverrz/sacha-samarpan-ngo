@@ -1,28 +1,16 @@
-.App {
-  text-align: center;
+:global * {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+:global html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+:global * {
+  box-sizing: inherit;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+:global body {
+  font-size: 1.2rem;
+  position: relative;
+  background-color: #222126;
 }
