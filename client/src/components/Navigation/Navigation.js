@@ -1,7 +1,13 @@
 import React from "react";
+
 import classes from "./Navigation.css";
 import Logo from "../../assets/logo.png";
 const navigation = props => {
+  // let images = [
+  //   "../../assets/1.jpg",
+  //   "../../assets/2.jpg",
+  //   "../../assets/3.jpg"
+  // ];
   return (
     <div className={classes.nav}>
       <div className={classes.nav__contact}>
@@ -46,6 +52,7 @@ const navigation = props => {
           <a href="3">Registration Form</a>
         </div>
       </nav>
+      
     </div>
   );
 };
