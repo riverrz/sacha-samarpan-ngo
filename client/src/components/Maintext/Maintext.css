@@ -36,7 +36,7 @@ h1 span {
   letter-spacing: 0.4px;
 }
 .main strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 .content p {
   color: #666666;
@@ -47,26 +47,29 @@ h1 span {
   font-weight: normal;
 }
 .Memberform h3 {
-    font-weight: 300;
+  font-weight: 300;
 }
 .Memberform button {
-    margin: 3rem;
-    padding: 3rem 2rem;
-    border: none;
-    background-color: #008000;
-    outline: none;
-    font-family: inherit;
-    font-size: 1.5rem;
-    color: white;
-    border-radius: 20px;
-    transition: all 0.2s;
-    box-shadow: 0.05rem 0.5rem 2rem rgba(0,0,0,0.5);
+  margin: 3rem;
+  padding: 3rem 2rem;
+  border: none;
+  background-color: #ff9933;
+
+  outline: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0.05rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
+}
+.Memberform button:hover {
+  background-color: #008000;
 }
 .Memberform button:active {
-    transform: translateY(4px);
-    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.5);
+  transform: translateY(4px);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 ::selection {
   color: #008000;
 }
-
