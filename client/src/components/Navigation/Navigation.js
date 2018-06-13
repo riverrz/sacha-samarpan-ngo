@@ -9,7 +9,6 @@ const navigation = props => {
   //   "../../assets/2.jpg",
   //   "../../assets/3.jpg"
   // ];
-  var arr
   return (
     <div className={classes.nav}>
       <div className={classes.nav__contact}>
@@ -20,10 +19,10 @@ const navigation = props => {
           <i class="fas fa-envelope" /> info@example.com
         </div>
         <div className={classes.nav__contact__social}>
-          <a href="#">
+          <a href="/">
             <i class="fab fa-facebook" />
           </a>
-          <a href="#">
+          <a href="/">
             <i class="fab fa-google-plus" />
           </a>
         </div>
@@ -33,25 +32,25 @@ const navigation = props => {
           <img className={classes.logo} src={Logo} alt="Logo" />
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">About</a>
+          <a href="/">About</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Contact Us</a>
+          <a href="/">Contact Us</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Donate Now</a>
+          <a href="/">Donate Now</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Gallery</a>
+          <a href="/">Gallery</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Programs</a>
+          <a href="/">Programs</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Courses</a>
+          <a href="/">Courses</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="3">Registration Form</a>
+          <a href="/">Registration Form</a>
         </div>
       </nav>
       
