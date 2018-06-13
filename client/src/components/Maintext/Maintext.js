@@ -4,6 +4,7 @@ const maintext = props => {
   return (
     <div className={classes.Maintext}>
           <h1>WELCOME TO <span>SACHA SAMARPAN</span> </h1>
+      <hr />
       <div className={classes.content}>
         <span className={classes.main}><strong>"UMEED - A DROP OF HOPE"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
         THE BASIC MOTTO OF WHICH IS SOCIAL SERVICE. BESIDES THE MAIN MOTTO, THE
