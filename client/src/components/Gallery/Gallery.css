@@ -1,0 +1,27 @@
+.galleryContainer {
+  width: 100%;
+  padding: 5rem;
+  text-align: center;
+  background-color: #fff;
+}
+.gallery__headingPrimary {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+}
+.gallery {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery__item {
+  height: 25rem;
+  width: 30rem;
+  margin: 5rem 0;
+  overflow: hidden;
+  background-image: url('../../assets/2.JPG');
+  background-size: cover;
+}

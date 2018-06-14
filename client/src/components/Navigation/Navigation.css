@@ -1,7 +1,7 @@
 .nav {
   position: absolute;
   left: 50%;
-  top: 3rem;
+  top: 1rem;
   width: 75%;
   transform: translateX(-50%);
   font-family: "Lato", sans-serif;
