@@ -1,3 +1,6 @@
+
+
+
 .nav {
   position: absolute;
   left: 50%;
@@ -31,7 +34,8 @@ a:visited {
   color:#fff;
 }
 .nav__contact__email {
-  margin: auto;
+  /* margin: auto; */
+  color: steelblue;
 }
 .navigation {
   display: flex;
