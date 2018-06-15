@@ -9,11 +9,10 @@ const navigation = props => {
   //   "../../assets/2.jpg",
   //   "../../assets/3.jpg"
   // ];
-  return (
-    <div className={classes.nav}>
+  return <div className={classes.nav}>
       <div className={classes.nav__contact}>
         <div className={classes.nav__contact__number}>
-          <i class="fas fa-phone-square" /> 9999999999
+          <i class="fas fa-phone" /> 9999999999
         </div>
         <div className={classes.nav__contact__email}>
           <i class="fas fa-envelope" /> info@example.com
@@ -28,7 +27,10 @@ const navigation = props => {
         </div>
       </div>
       <nav className={classes.navigation}>
-        <div className={classNames({ [classes.navigation__item]: true, [classes.logoBox]: true })}>
+        <div className={classNames({
+            [classes.navigation__item]: true,
+            [classes.logoBox]: true
+          })}>
           <img className={classes.logo} src={Logo} alt="Logo" />
         </div>
         <div className={classes.navigation__item}>
@@ -53,9 +55,7 @@ const navigation = props => {
           <a href="/">Registration Form</a>
         </div>
       </nav>
-      
-    </div>
-  );
+    </div>;
 };
 
 export default navigation;
