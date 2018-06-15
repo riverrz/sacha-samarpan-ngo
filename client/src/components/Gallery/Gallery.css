@@ -10,6 +10,9 @@
   font-weight: bold;
   font-family: "Exo", sans-serif;
 }
+gallery__headingPrimary span {
+  color: #ff9933;
+}
 .gallery {
   display: flex;
   width: 100%;

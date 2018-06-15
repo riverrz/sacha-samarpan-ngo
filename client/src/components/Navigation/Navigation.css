@@ -2,7 +2,7 @@
 .nav {
   position: absolute;
   left: 50%;
-  top: 1rem;
+  top: 0;
   width: 80%;
   transform: translateX(-50%);
   font-family: "Lato", sans-serif;
@@ -14,27 +14,29 @@
   align-items: center;
   font-size: 1.5rem;
   padding: 0.9rem;
-  color: #fff;
+  color: #222126;
   
 }
 .nav__contact > * {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex: 1;
 }
 .nav__contact__social {
   flex-basis: 6%;
-  justify-content: space-between;
+  justify-content: flex-end;
+  color: #222126;
+}
+.nav__contact__social a:visited {
+    color: #222126;  
 }
 a:link,
 a:active,
 a:visited {
-  color:#fff;
+  color:#e2e2e2;
 }
-.nav__contact__email {
-  /* margin: auto; */
-  color: steelblue;
-}
+
 .navigation {
   display: flex;
   width: 100%;
@@ -43,6 +45,7 @@ a:visited {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
   font-size: 1.4rem;
   border-radius: 5px;
+  height: 7rem;
   overflow: hidden;
 }
 .navigation__item {
@@ -62,24 +65,25 @@ a:visited {
     transform: translate(-50%,-50%);
     z-index: 2;
 }
+.navigation__item:hover >a {
+  color: #FF8C00;
+}
 .navigation__item:not(:first-child)::before {
   content: "";
   position: absolute;
-  background-color: #008000;
+  /* background-color: #008000; */
+  background-color: #fff;
   top: 0;
   z-index: 1;
   left: 0;
   height: 100%;
+  color: #fff;
   width: 0;
-  /* transform: scaleY(0); */
-  transition: width 0.4s;
+  transition: all 0.4s;
 }
-.navigation__item:hover {
-  color: #000 !important;
-}
+
 .navigation__item:hover::before {
   width: 100%;
-  /* transform: scaleY(1); */
 }
 .logo {
   width: 100%;

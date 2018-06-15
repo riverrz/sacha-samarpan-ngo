@@ -42,3 +42,25 @@
   background-color: #008000;
   clip-path: polygon(100% 100%, 100% 0,0 100%);
 }
+
+.backSide {
+  width: 99%;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 7px;
+  box-sizing: border-box;
+  background-color: #D3D3D3;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+.backSide__logoBox {
+  width: 6rem;
+  height:7rem;
+  display: inline-block;
+}
+.backSide__logo {
+  height: 100%;
+  width: 100%;
+}

@@ -4,7 +4,7 @@ import classNames from "classnames";
 const gallery = props=> {
     return <div className={classes.galleryContainer}>
         <h1 className={classes.gallery__headingPrimary}>
-          Our Precious Moments
+          Our Precious <span>Moments</span>
         </h1>
         <div className={classes.gallery}>
           <div className={classNames({
