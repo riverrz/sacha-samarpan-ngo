@@ -37,10 +37,10 @@ const navigation = props => {
           <a href="/">About</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="/">Contact Us</a>
+          <a href="/">Contact</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="/">Donate Now</a>
+          <a href="/">Donate</a>
         </div>
         <div className={classes.navigation__item}>
           <a href="/">Gallery</a>
@@ -52,7 +52,7 @@ const navigation = props => {
           <a href="/">Courses</a>
         </div>
         <div className={classes.navigation__item}>
-          <a href="/">Registration Form</a>
+          <a href="/">Registration</a>
         </div>
       </nav>
     </div>;

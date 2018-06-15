@@ -51,15 +51,15 @@
 .footer__contactInfo>i {
     color: currentColor;
 }
-i {
-    font-size: 1.5rem;
-}
+
 .iconSpan {
   display: inline-block;
   height: 100%;
   background-color: #222126;
   text-align: center;
-  padding: 8px 0 0 7px;
+  padding: 8px 0 0 0;
+  width: 4rem;
+  box-sizing: border-box;
   margin-right: 12px;
 }
 .footer__contactInfo__email {
@@ -145,4 +145,5 @@ hr {
 li a i {
   font-size: 1.3rem;
   color: #bbbbbb;
+  margin-right: 0.4rem;
 }
