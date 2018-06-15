@@ -31,22 +31,22 @@ const footer = props => {
             <hr />
             <ul className={classes.list}>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> About Sacha Samarpan
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Refund Policy
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Terms & Conditions
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Privacy Policy
                 </a>
               </li>
@@ -57,22 +57,22 @@ const footer = props => {
             <hr />
             <ul className={classes.list}>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Umeed ID Form
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Events
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Join Us
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Internship
                 </a>
               </li>
@@ -83,17 +83,17 @@ const footer = props => {
             <hr />
             <ul className={classes.list}>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Umeed ID Form
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Events
                 </a>
               </li>
               <li className={classes.list__item}>
-                <a href="#" className={classes.list__item__text}>
+                <a href="/" className={classes.list__item__text}>
                   <i class="fas fa-angle-right" /> Join Us
                 </a>
               </li>
