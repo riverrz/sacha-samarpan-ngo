@@ -58,7 +58,7 @@ const footer = props => {
             <ul className={classes.list}>
               <li className={classes.list__item}>
                 <a href="/" className={classes.list__item__text}>
-                  <i class="fas fa-angle-right" /> Umeed ID Form
+                  <i class="fas fa-angle-right" /> ID Form
                 </a>
               </li>
               <li className={classes.list__item}>
@@ -84,7 +84,7 @@ const footer = props => {
             <ul className={classes.list}>
               <li className={classes.list__item}>
                 <a href="/" className={classes.list__item__text}>
-                  <i class="fas fa-angle-right" /> Umeed ID Form
+                  <i class="fas fa-angle-right" /> ID Form
                 </a>
               </li>
               <li className={classes.list__item}>

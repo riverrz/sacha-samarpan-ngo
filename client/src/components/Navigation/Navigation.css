@@ -46,7 +46,6 @@ a:visited {
   font-size: 1.4rem;
   border-radius: 5px;
   height: 7rem;
-  overflow: hidden;
 }
 .navigation__item {
   flex: 1;
@@ -96,3 +95,15 @@ a:visited {
   margin-right: 1rem;
   font-size: 1.8rem !important;
 }
+
+.navigation__item:nth-child(2):hover ul {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+.navigation__item:nth-child(6):hover ul {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
