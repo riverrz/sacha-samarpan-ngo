@@ -20,11 +20,3 @@ gallery__headingPrimary span {
   align-items: center;
   flex-wrap: wrap;
 }
-.gallery__item {
-  height: 25rem;
-  width: 30rem;
-  margin: 5rem 0;
-  overflow: hidden;
-  background-image: url('../../assets/2.JPG');
-  background-size: cover;
-}
