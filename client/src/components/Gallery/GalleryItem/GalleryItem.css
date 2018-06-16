@@ -1,0 +1,37 @@
+.galleryItem {
+  height: 25rem;
+  width: 30rem;
+  margin: 5rem 0;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  backface-visibility: hidden;
+}
+.galleryItem img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+.galleryItem:hover img {
+  filter: blur(2px) brightness(50%);
+
+  transform: scale(1);
+}
+.galleryItem:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%,-50%);
+}
+.galleryItem p {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) translateY(30px);
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
