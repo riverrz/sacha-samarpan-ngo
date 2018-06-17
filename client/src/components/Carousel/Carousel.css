@@ -1,9 +1,69 @@
-.Carousel {
-    margin-top: 8rem;
-    width: 100%;
-    height: 90vh;
+@keyframes mover {
+
+0% {
+	left: 0;
 }
-.pic {
+
+20% {
+	left: 0;
+}
+
+25% {
+	left: -100%;
+}
+
+45% {
+    left: -100%;
+
+}
+
+50% {
+		left: -200%;
+
+}
+
+70% {
+	left: -200%;
+}
+
+75% {
+	left: -300%;
+}
+
+95% {
+	left: -300%;
+}
+
+100% {
+	left: -400%;
+
+}
+
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    z-index: -2;
+}
+
+.slider figure>div {
+	width: 20%;
+	float: left;
+}
+.imageBox>img {
     width: 100%;
     height: 100%;
+}
+.slider figure {
+	position: relative;
+    width: 500%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	animation: mover 20s infinite ; 
+
 }

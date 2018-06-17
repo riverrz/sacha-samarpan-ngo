@@ -40,8 +40,8 @@ class Gallery extends Component {
     ]
   }
   render() {
-    const allGalleryItems = this.state.images.map((data)=> {
-      return <GalleryItem imageName={data.name} text={data.text} />
+    const allGalleryItems = this.state.images.map((data,i)=> {
+      return <GalleryItem imageName={data.name} text={data.text} key={i}/>
     })
     return (
       <div className={classes.galleryContainer}>
