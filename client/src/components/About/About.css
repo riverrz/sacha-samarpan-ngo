@@ -1,4 +1,4 @@
-hr {
+.mainHR {
   width: 35%;
   height: 2px;
   background-color: #008000;
@@ -50,7 +50,7 @@ hr {
 .textBox>p {
     margin: 2rem auto;
     font-size: 1.3rem;
-    color: #666666;
+    color: #333333;
     letter-spacing: 0.5px;
 }
 

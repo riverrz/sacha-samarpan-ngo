@@ -48,6 +48,11 @@ const navigation = props => {
                 </Link>
               </li>
               <li>
+                <Link to="/issues">
+                  <i class="fas fa-angle-right" /> Issues & Views
+                </Link>
+              </li>
+              <li>
                 <a href="/">
                   <i class="fas fa-angle-right" /> Founder
                 </a>

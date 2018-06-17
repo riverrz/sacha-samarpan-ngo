@@ -84,7 +84,7 @@
 .projects {
   flex-basis: 25%;
 }
-hr {
+.footerHR {
   width: 20%;
   height: 1px;
   border: none;

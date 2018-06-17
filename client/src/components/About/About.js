@@ -7,7 +7,7 @@ const about = props => (
       <span className={classes.headingPrimarySpan}>Sacha Samarthan</span>
     </h1>
     <h2 className={classes.subHeading}>Something about us</h2>
-    <hr />
+    <hr className={classes.mainHR}/>
     <div className={classes.textBox}>
       <h2 className={classes.innerHeading}>Our Vision</h2>
       <hr className={classes.subHR} />

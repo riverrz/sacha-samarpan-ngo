@@ -28,7 +28,7 @@ const footer = props => {
         <div className={classes.footer__right}>
           <div className={classes.about}>
             <h1 className={classes.heading}>About Section</h1>
-            <hr />
+            <hr className={classes.footerHR}/>
             <ul className={classes.list}>
               <li className={classes.list__item}>
                 <a href="/" className={classes.list__item__text}>
@@ -54,7 +54,7 @@ const footer = props => {
           </div>
           <div className={classes.links}>
             <h1 className={classes.heading}>Quick Links</h1>
-            <hr />
+            <hr className={classes.footerHR}/>
             <ul className={classes.list}>
               <li className={classes.list__item}>
                 <a href="/" className={classes.list__item__text}>
@@ -80,7 +80,7 @@ const footer = props => {
           </div>
           <div className={classes.projects}>
             <h1 className={classes.heading}>Our projects</h1>
-            <hr />
+            <hr className={classes.footerHR}/>
             <ul className={classes.list}>
               <li className={classes.list__item}>
                 <a href="/" className={classes.list__item__text}>
