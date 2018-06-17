@@ -5,6 +5,7 @@ import Logo from "../../assets/logo.png";
 import classNames from "classnames";
 import Aux from "../../hoc/Aux";
 import Dropdown from "../Dropdown/Dropdown";
+import { Link,NavLink } from "react-router-dom";
 const navigation = props => {
   // let images = [
   //   "../../assets/1.jpg",
@@ -37,12 +38,14 @@ const navigation = props => {
             <img className={classes.logo} src={Logo} alt="Logo" />
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">About</a>
+            <NavLink to="/about" activeClassName={classes.active}>
+              About
+            </NavLink>
             <Dropdown>
               <li>
-                <a href="/">
+                <Link to="/about">
                   <i class="fas fa-angle-right" /> About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/">

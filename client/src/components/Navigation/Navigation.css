@@ -106,4 +106,7 @@ a:visited {
   visibility: visible;
   opacity: 1;
 }
+.active {
+  color: #222126 !important;
+}
 
