@@ -6,7 +6,7 @@ const maintext = props => {
           <h1>WELCOME TO <span>SACHA SAMARPAN</span> </h1>
       <hr />
       <div className={classes.content}>
-        <span className={classes.main}><strong>"UMEED - A DROP OF HOPE"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
+        <span className={classes.main}><strong>"Sacha Samarpan"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
         THE BASIC MOTTO OF WHICH IS SOCIAL SERVICE. BESIDES THE MAIN MOTTO, THE
         BASIC IDEA OF SUCH A FORMATION IS TO HELP EACH AND EVERY HUMAN BEING WHO
         NEEDS HELP.</span> <p>Umeed works for education for needy children who are under

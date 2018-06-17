@@ -5,7 +5,8 @@ import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import leftLogo from "./assets/Icons/charity-1.png";
 import rightLogo from "./assets/Icons/praying.png";
-import Frontpage from './containers/Frontpage/Frontpage';
+import Frontpage from "./containers/Frontpage/Frontpage";
+import About from "./components/About/About";
 class App extends Component {
   render() {
     return (
@@ -27,11 +28,8 @@ class App extends Component {
           </div>
         </div>
         <Navigation />
-        <Route
-          path="/"
-          exact
-          component={Frontpage}
-        />
+        <Route path="/" exact component={Frontpage} />
+        <Route path="/about" exact component={About} />
         <Footer />
       </div>
     );
