@@ -22,6 +22,7 @@ const navigation = props => {
             <i class="fas fa-envelope" /> info@example.com
           </div>
           <div className={classes.nav__contact__social}>
+            <Link to="/important-links" className={classes.impLink}>Important Links</Link>
             <a href="/">
               <i class="fab fa-facebook" />
             </a>
@@ -35,7 +36,7 @@ const navigation = props => {
               [classes.navigation__item]: true,
               [classes.logoBox]: true
             })}>
-            <img className={classes.logo} src={Logo} alt="Logo" />
+            <Link to="/" exact className={classes.logoLink}><img className={classes.logo} src={Logo} alt="Logo" /></Link>
           </div>
           <div className={classes.navigation__item}>
             <NavLink to="/about" activeClassName={classes.active}>
@@ -43,12 +44,12 @@ const navigation = props => {
             </NavLink>
             <Dropdown>
               <li>
-                <Link to="/about">
+                <Link to="/about" exact>
                   <i class="fas fa-angle-right" /> About Us
                 </Link>
               </li>
               <li>
-                <Link to="/issues">
+                <Link to="/issues" exact>
                   <i class="fas fa-angle-right" /> Issues & Views
                 </Link>
               </li>

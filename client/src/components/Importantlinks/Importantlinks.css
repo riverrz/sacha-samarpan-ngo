@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  background-color: #fff;
+  font-family: inherit;
+  margin-top: 8rem;
+  padding: 8rem;
+}
+.heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+.linksList {
+  margin-top: 3rem;
+  list-style: none;
+}
+.linksList a {
+  color: #333333;
+  font-size: 1.4rem;
+}
+.linksList > li {
+  margin: 1rem 0;
+}
+.linksList  i {
+  font-size: 1.3rem;
+  color: #bbbbbb;
+  margin-right: 0.8rem;
+}
+.HR {
+  width: 10%;
+  height: 1px;
+  background-color: #777777;
+}

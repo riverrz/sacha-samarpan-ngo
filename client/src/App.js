@@ -8,6 +8,7 @@ import rightLogo from "./assets/Icons/praying.png";
 import Frontpage from "./containers/Frontpage/Frontpage";
 import About from "./components/About/About";
 import IssuesAndViews from './components/IssuesAndViews/IssuesAndViews';
+import Importantlinks from './components/Importantlinks/Importantlinks';
 class App extends Component {
   render() {
     return (
@@ -32,6 +33,7 @@ class App extends Component {
         <Route path="/" exact component={Frontpage} />
         <Route path="/about" exact component={About} />
         <Route path="/issues" exact component={IssuesAndViews} />
+        <Route path="/important-links" exact component={Importantlinks} />
         <Footer />
       </div>
     );
