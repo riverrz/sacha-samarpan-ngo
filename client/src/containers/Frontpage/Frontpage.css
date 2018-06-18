@@ -5,8 +5,8 @@
   position: absolute;
   top:0;
   left:0;
-  height: 40rem;
-  width: 45rem;
+  height: 50rem;
+  width: 50rem;
   background-color: #ff9933;
   clip-path: polygon(0 0, 100% 0,0 100%);
 }
@@ -14,8 +14,8 @@
   bottom: 0;
   right:0;
   position: absolute;
-  height: 40rem;
-  width: 50rem;
+  height: 50rem;
+  width: 60rem;
   background-color: #008000;
   clip-path: polygon(100% 100%, 100% 0,0 100%);
 }
