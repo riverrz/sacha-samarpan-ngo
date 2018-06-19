@@ -13,15 +13,15 @@ import Backdrop from "./containers/Backdrop/Backdrop";
 class App extends Component {
   state = {
     isBackdropShowing: false,
-    imageToLoad:null
+    imageToLoad: null
   };
   backdropRemover = () => {
     this.setState({
       isBackdropShowing: false,
-      imageLinkToLoad:null
+      imageLinkToLoad: null
     });
   };
-  backdropInvoker = (event) => {
+  backdropInvoker = event => {
     console.log(event.target);
     this.setState({
       isBackdropShowing: true,
@@ -31,7 +31,13 @@ class App extends Component {
   render() {
     let backdrop = null;
     if (this.state.isBackdropShowing) {
-      backdrop = <Backdrop clicked={this.backdropRemover} image={this.state.imageLinkToLoad}/>;
+      backdrop = (
+        <Backdrop
+          clicked={this.backdropRemover}
+          image={this.state.imageLinkToLoad}
+          exitClicked={this.backdropRemover}
+        />
+      );
     }
     return (
       <div className={classes.App}>
@@ -53,7 +59,13 @@ class App extends Component {
         </div>
         <Navigation />
         {backdrop}
-        <Route path="/" exact render={()=> <Frontpage invoke={(event)=> this.backdropInvoker(event)}/>} />
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <Frontpage invoke={event => this.backdropInvoker(event)} />
+          )}
+        />
         <Route path="/about" exact component={About} />
         <Route path="/issues" exact component={IssuesAndViews} />
         <Route path="/important-links" exact component={Importantlinks} />
