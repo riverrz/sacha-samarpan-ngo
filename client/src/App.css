@@ -4,14 +4,16 @@
 }
 :global html {
   font-size: 62.5%;
+  /* min-height: 100%; */
   box-sizing: border-box;
+  /* position: relative; */
 }
 :global * {
   box-sizing: inherit;
 }
 :global body {
   font-size: 1.2rem;
-  /* position: relative; */
+  position: relative;
   height: 100%;
   width: 100%;
   background-color: #222126;
@@ -24,11 +26,8 @@
 
 
 .backSide {
-  width: 99%;
+  /* width: 99%; */
   height: 8rem;
-  position: absolute;
-  top: 0;
-  left: 7px;
   box-sizing: border-box;
   background-color: #D3D3D3;
   display: flex;
