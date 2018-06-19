@@ -1,0 +1,9 @@
+.modalContainer {
+    width: 80%;
+    margin: auto;
+    margin-top: 70%;
+}
+.modalContainer>img {
+    width: 100%;
+    height: 100%;
+}

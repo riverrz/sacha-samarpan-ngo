@@ -7,42 +7,34 @@ class Gallery extends Component {
   state = {
     images: [
       {
-        name: "2.JPG",
-        text: "test1"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test2"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       },
       {
-        name: "2.JPG",
-        text: "test"
+        name: "2.JPG"
       }
     ]
   };
   render() {
     const allGalleryItems = this.state.images.map((data, i) => {
-      return <GalleryItem imageName={data.name} text={data.text} key={i} invokeBackdrop={this.props.invokeBackdrop}/>;
+      return <GalleryItem imageName={data.name} key={i} invokeBackdrop={(event)=> this.props.invokeBackdrop(event)}/>;
     });
     return (
       <div className={classes.galleryContainer}>
