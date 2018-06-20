@@ -15,16 +15,21 @@
     filter: blur(1px) brightness(70%);
 }
 .modalContainer:hover .exitButton{
-    color: #fff;
+    visibility: visible;
+    color: #eeeeee;
 }
 .exitButton {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.5rem;
     font-size: 2rem;
     z-index: 2;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    visibility: hidden;
+}
+.exitButton>i {
+    font-size: 2rem;
 }
