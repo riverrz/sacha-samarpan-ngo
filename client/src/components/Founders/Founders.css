@@ -1,0 +1,21 @@
+.foundersContainer {
+    width: 100%;
+    padding: 8rem;
+    text-align: center;
+    background-color: #fff;
+}
+.founder {
+    width: 100%;
+    margin: 5rem auto;
+    text-align: left;
+    padding-left: 15rem;
+}
+.figure {
+    height: 20rem;
+    width: 20rem;
+}
+.founderPhoto {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}

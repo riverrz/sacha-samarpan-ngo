@@ -10,6 +10,7 @@ import About from "./components/About/About";
 import IssuesAndViews from "./components/IssuesAndViews/IssuesAndViews";
 import Importantlinks from "./components/Importantlinks/Importantlinks";
 import Backdrop from "./containers/Backdrop/Backdrop";
+import Founders from './components/Founders/Founders';
 class App extends Component {
   state = {
     isBackdropShowing: false,
@@ -69,6 +70,7 @@ class App extends Component {
         <Route path="/about" exact component={About} />
         <Route path="/issues" exact component={IssuesAndViews} />
         <Route path="/important-links" exact component={Importantlinks} />
+        <Route path="/founders" exact component={Founders}/>
         <Footer />
       </div>
     );

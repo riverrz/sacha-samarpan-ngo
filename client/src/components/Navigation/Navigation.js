@@ -54,9 +54,9 @@ const navigation = props => {
                 </Link>
               </li>
               <li>
-                <a href="/">
-                  <i class="fas fa-angle-right" /> Founder
-                </a>
+                <Link to="/founders" exact>
+                  <i class="fas fa-angle-right" /> Founders
+                </Link>
               </li>
             </Dropdown>
           </div>
