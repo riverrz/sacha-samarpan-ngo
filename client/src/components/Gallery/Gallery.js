@@ -10,25 +10,25 @@ class Gallery extends Component {
         name: "2.JPG"
       },
       {
-        name: "2.JPG"
+        name: "1.JPG"
+      },
+      {
+        name: "3.JPG"
       },
       {
         name: "2.JPG"
       },
       {
-        name: "2.JPG"
+        name: "3.JPG"
       },
       {
         name: "2.JPG"
       },
       {
-        name: "2.JPG"
+        name: "1.JPG"
       },
       {
-        name: "2.JPG"
-      },
-      {
-        name: "2.JPG"
+        name: "1.JPG"
       }
     ]
   };
