@@ -5,7 +5,7 @@ import Logo from "../../assets/logo.png";
 import classNames from "classnames";
 import Aux from "../../hoc/Aux";
 import Dropdown from "../Dropdown/Dropdown";
-import { Link,NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const navigation = props => {
   // let images = [
   //   "../../assets/1.jpg",
@@ -22,7 +22,6 @@ const navigation = props => {
             <i class="fas fa-envelope" /> info@example.com
           </div>
           <div className={classes.nav__contact__social}>
-            <Link to="/important-links" className={classes.impLink}>Important Links</Link>
             <a href="/">
               <i class="fab fa-facebook" />
             </a>
@@ -36,7 +35,12 @@ const navigation = props => {
               [classes.navigation__item]: true,
               [classes.logoBox]: true
             })}>
-            <Link to="/" exact className={classes.logoLink}><img className={classes.logo} src={Logo} alt="Logo" /></Link>
+            <img className={classes.logo} src={Logo} alt="Logo" />
+          </div>
+          <div className={classes.navigation__item}>
+            <Link to="/" exact>
+              Home
+            </Link>
           </div>
           <div className={classes.navigation__item}>
             <NavLink to="/about" activeClassName={classes.active}>
@@ -48,26 +52,34 @@ const navigation = props => {
                   <i class="fas fa-angle-right" /> About Us
                 </Link>
               </li>
-              <li>
-                <Link to="/issues" exact>
-                  <i class="fas fa-angle-right" /> Issues & Views
-                </Link>
-              </li>
+
               <li>
                 <Link to="/founders" exact>
                   <i class="fas fa-angle-right" /> Founders
                 </Link>
               </li>
+              <li>
+                <Link to="/team" exact>
+                  <i class="fas fa-angle-right" /> Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/issues" exact>
+                  <i class="fas fa-angle-right" /> Issues & Views
+                </Link>
+              </li>
             </Dropdown>
           </div>
+
           <div className={classes.navigation__item}>
-            <a href="/">Contact</a>
+            <Link to="/full-gallery" exact>
+              Gallery
+            </Link>
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">Donate</a>
-          </div>
-          <div className={classes.navigation__item}>
-            <Link to="/full-gallery" exact>Gallery</Link>
+            <Link to="/internship" exact>
+              Internship
+            </Link>
           </div>
           <div className={classes.navigation__item}>
             <a href="/">Programs</a>
@@ -85,10 +97,17 @@ const navigation = props => {
             </Dropdown>
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">Courses</a>
+            <a href="/">Registration</a>
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">Registration</a>
+            <Link to="/important-links" exact>
+              Important Links
+            </Link>
+          </div>
+          <div className={classes.navigation__item}>
+            <Link to="/donate" exact>
+              Donate
+            </Link>
           </div>
         </nav>
       </div>
