@@ -3,12 +3,11 @@
   width: 30rem;
   margin: 3rem 0;
   overflow: hidden;
-  background-size: cover;
   position: relative;
   backface-visibility: hidden;
 }
 .galleryItem img {
   height: 100%;
   width: 100%;
-  
+  background-size: cover;
 }
