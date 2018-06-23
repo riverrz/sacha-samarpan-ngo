@@ -78,27 +78,7 @@ const footer = props => {
               </li>
             </ul>
           </div>
-          <div className={classes.projects}>
-            <h1 className={classes.heading}>Our projects</h1>
-            <hr className={classes.footerHR}/>
-            <ul className={classes.list}>
-              <li className={classes.list__item}>
-                <a href="/" className={classes.list__item__text}>
-                  <i class="fas fa-angle-right" /> ID Form
-                </a>
-              </li>
-              <li className={classes.list__item}>
-                <a href="/" className={classes.list__item__text}>
-                  <i class="fas fa-angle-right" /> Events
-                </a>
-              </li>
-              <li className={classes.list__item}>
-                <a href="/" className={classes.list__item__text}>
-                  <i class="fas fa-angle-right" /> Join Us
-                </a>
-              </li>
-            </ul>
-          </div>
+          
         </div>
       </footer>
       <div className={classes.copyRight}>

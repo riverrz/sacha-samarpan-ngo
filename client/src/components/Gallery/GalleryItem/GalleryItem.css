@@ -5,9 +5,17 @@
   overflow: hidden;
   position: relative;
   backface-visibility: hidden;
+  
 }
+
 .galleryItem img {
   height: 100%;
   width: 100%;
   background-size: cover;
+  transition: all .4s;
+  transform: scale(1.1);
+}
+.galleryItem:hover img {
+  transform: scale(1);
+  filter: brightness(60%);
 }
