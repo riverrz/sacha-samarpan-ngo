@@ -12,7 +12,7 @@
     transition: all .4s;
 }
 .modalContainer:hover>img {
-    filter: blur(1px) brightness(70%);
+    filter: brightness(70%);
 }
 .modalContainer:hover .exitButton{
     visibility: visible;
