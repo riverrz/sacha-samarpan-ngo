@@ -5,17 +5,38 @@
     background-color: #fff;
 }
 .founder {
-    width: 100%;
+    width: 80%;
     margin: 5rem auto;
     text-align: left;
-    padding-left: 15rem;
+    padding: 2rem;
+    transform: skew(-10deg);
+    background-color: #eee;
+    display: flex;
+}
+.founder>* {
+    transform: skew(+10deg);
 }
 .figure {
     height: 20rem;
     width: 20rem;
+    display: inline-block;
+    flex:1;
 }
 .founderPhoto {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+}
+.foundersInfo {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    color: #222222;
+    padding-left: 5rem;
+    flex:3;
+}
+.designation {
+    font-family: inherit;
+    margin-bottom: 2rem;
 }
