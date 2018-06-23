@@ -14,7 +14,7 @@ class Frontpage extends Component {
                     <Maintext />
                     <div className={classes.green} />
                 </div>
-                <Gallery invokeBackdrop={(event)=> this.props.invoke(event)}/>
+                <Gallery invokeBackdrop={(event)=> this.props.invoke(event)} limit="8"/>
             </Aux>
         );
     }

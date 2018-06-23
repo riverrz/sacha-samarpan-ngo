@@ -9,6 +9,7 @@
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
+  margin-bottom: 2rem;
 }
 gallery__headingPrimary span {
   color: #ff9933;

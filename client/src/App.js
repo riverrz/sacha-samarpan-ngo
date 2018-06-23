@@ -11,6 +11,7 @@ import IssuesAndViews from "./components/IssuesAndViews/IssuesAndViews";
 import Importantlinks from "./components/Importantlinks/Importantlinks";
 import Backdrop from "./containers/Backdrop/Backdrop";
 import Founders from './components/Founders/Founders';
+import Fullgallery from './containers/Fullgallery/Fullgallery';
 class App extends Component {
   state = {
     isBackdropShowing: false,
@@ -40,40 +41,25 @@ class App extends Component {
         />
       );
     }
-    return (
-      <div className={classes.App}>
+    return <div className={classes.App}>
         <div className={classes.backSide}>
           <div className={classes.backSide__logoBox}>
-            <img
-              src={leftLogo}
-              alt="charity-logo-1"
-              className={classes.backSide__logo}
-            />
+            <img src={leftLogo} alt="charity-logo-1" className={classes.backSide__logo} />
           </div>
           <div className={classes.backSide__logoBox}>
-            <img
-              src={rightLogo}
-              alt="charity-logo-1"
-              className={classes.backSide__logo}
-            />
+            <img src={rightLogo} alt="charity-logo-1" className={classes.backSide__logo} />
           </div>
         </div>
         <Navigation />
         {backdrop}
-        <Route
-          path="/"
-          exact
-          render={() => (
-            <Frontpage invoke={event => this.backdropInvoker(event)} />
-          )}
-        />
+        <Route path="/" exact render={() => <Frontpage invoke={event => this.backdropInvoker(event)} />} />
         <Route path="/about" exact component={About} />
         <Route path="/issues" exact component={IssuesAndViews} />
         <Route path="/important-links" exact component={Importantlinks} />
-        <Route path="/founders" exact component={Founders}/>
+        <Route path="/founders" exact component={Founders} />
+        <Route path="/full-gallery" exact render={() => <Fullgallery invoke={event => this.backdropInvoker(event)} />} />
         <Footer />
-      </div>
-    );
+      </div>;
   }
 }
 
