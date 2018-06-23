@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Founders.css";
+import {Link} from 'react-router-dom';
 const founders = props => {
   return (
     <div className={classes.foundersContainer}>
@@ -23,6 +24,11 @@ const founders = props => {
           Nirala Educational & Welfare Society as a social worker to promote
           education in rural areas. He is the Director of Shri Kalka
           Construction Company.
+          <div className={classes.readMoreContainer}>
+            <button className={classes.readMoreButton}>
+              <Link to="/founder-1" exact>Read More <span className={classes.arrow}>→</span></Link>
+            </button>
+          </div>
         </div>
       </div>
       <div className={classes.founder}>
@@ -42,6 +48,11 @@ const founders = props => {
           Women Empowerment and Child Education.She has 20 year of experience in
           Social Workand Teaching different Vocational courses in different NGOs
           and Institute.
+          <div className={classes.readMoreContainer}>
+            <button className={classes.readMoreButton}>
+              <Link to="/founder-2" exact>Read More <span className={classes.arrow}>→</span></Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

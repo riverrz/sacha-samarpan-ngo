@@ -3,6 +3,8 @@
     padding: 8rem;
     text-align: center;
     background-color: #fff;
+    position: relative;
+    z-index:-1;
 }
 .founder {
     width: 80%;
@@ -39,4 +41,29 @@
 .designation {
     font-family: inherit;
     margin-bottom: 2rem;
+}
+.readMoreContainer {
+    margin-top: 2rem;
+}
+
+.readMoreButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.readMoreButton > a {
+  font-family: Exo;
+  padding: 3px;
+  font-size: 1.5rem;
+  color: #ba265d !important;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.readMoreButton:hover {
+  transform: scale(1.1);
+}
+.readMoreButton:hover .arrow {
+  transform: translateX(10px);
 }

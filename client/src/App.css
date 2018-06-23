@@ -29,7 +29,9 @@
   /* width: 99%; */
   height: 8rem;
   box-sizing: border-box;
-  background-color: #D3D3D3;
+  /* background-color: #D3D3D3; */
+  /* background-color: #8DEEEE; */
+  background-color: lightskyblue;
   display: flex;
   margin: auto;
   justify-content: space-between;

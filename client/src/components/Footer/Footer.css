@@ -30,6 +30,7 @@
   height: 30%;
   width: 60%;
   overflow: hidden;
+  background-color: #fff;
 }
 .footer__contactInfo {
   height: 8rem;

@@ -67,7 +67,7 @@ const navigation = props => {
             <a href="/">Donate</a>
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">Gallery</a>
+            <Link to="/full-gallery" exact>Gallery</Link>
           </div>
           <div className={classes.navigation__item}>
             <a href="/">Programs</a>
