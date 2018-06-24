@@ -1,0 +1,39 @@
+.donate__container {
+    width: 100%;
+    background-color: #fff;
+    font-family: inherit;
+    text-align: center;
+    padding-top: 8rem;
+}
+.donate__headingContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.donate__heading {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+  margin-bottom: 2rem;
+}
+.donate__heading__span {
+  color: #ff9933;
+}
+.donate__horizontal {
+    height: 3px;
+    background-color: green;
+    width: 50%;
+    margin: auto;
+}
+
+.donate__logoBox {
+  width: 6rem;
+  height:7rem;
+  display: inline-block;
+  margin-left: 3rem;
+}
+.donate__logo {
+  height: 100%;
+  width: 100%;
+}

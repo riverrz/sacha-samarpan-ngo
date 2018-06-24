@@ -12,6 +12,7 @@ import Importantlinks from "./components/Importantlinks/Importantlinks";
 import Backdrop from "./containers/Backdrop/Backdrop";
 import Founders from './components/Founders/Founders';
 import Fullgallery from './containers/Fullgallery/Fullgallery';
+import Donate from './components/Donate/Donate';
 class App extends Component {
   state = {
     isBackdropShowing: false,
@@ -57,6 +58,7 @@ class App extends Component {
         <Route path="/important-links" exact component={Importantlinks} />
         <Route path="/founders" exact component={Founders} />
         <Route path="/full-gallery" exact render={() => <Fullgallery invoke={event => this.backdropInvoker(event)} />} />
+        <Route path="/donate" exact component={Donate} />
         <Footer />
       </div>;
   }
