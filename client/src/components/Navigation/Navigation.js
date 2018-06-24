@@ -118,12 +118,12 @@ class Navigation extends Component {
             <Dropdown>
               <li>
                 <a href="/">
-                  <i class="fas fa-angle-right" /> Program 1
+                  <i class="fas fa-angle-right" /> Upcoming Programs
                 </a>
               </li>
               <li>
                 <a href="/">
-                  <i class="fas fa-angle-right" /> Program 2
+                  <i class="fas fa-angle-right" /> Current Programs
                 </a>
               </li>
             </Dropdown>
