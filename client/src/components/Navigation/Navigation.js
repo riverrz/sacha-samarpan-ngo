@@ -40,7 +40,6 @@ class Navigation extends Component {
     if (this.state.scrollingLock) {
       styleForFixedNav = { position: "fixed", top: "0", width: "100%", transform: "translateX(0)" };
     }
-    console.log(styleForFixedNav);
     return (
       <Aux>
         <div className={classes.nav}>

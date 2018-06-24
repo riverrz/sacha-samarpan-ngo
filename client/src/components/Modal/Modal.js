@@ -7,7 +7,6 @@ class Modal extends Component {
     }
   }
   componentDidMount() {
-    console.log(window.pageYOffset);
     this.setState({
       marginTop: {
         "margin-top": Math.round(window.pageYOffset) + 80+'px'

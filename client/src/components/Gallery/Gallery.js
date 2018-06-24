@@ -77,7 +77,6 @@ class Gallery extends Component {
       </button>
     );
     if (!this.props.limit) {
-      console.log("Yes")
       possibleButton = null;
     }
     return (

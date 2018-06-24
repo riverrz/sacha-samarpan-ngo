@@ -24,7 +24,6 @@ class App extends Component {
     });
   };
   backdropInvoker = event => {
-    console.log(event.target);
     this.setState({
       isBackdropShowing: true,
       imageLinkToLoad: event.target.src
