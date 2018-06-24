@@ -20,8 +20,14 @@ const donate = props => {
           <hr className={classes.donate__horizontal} />
         </h1>
       </div>
-      <form autocomplete="off">
-          <Inputfield type="text" placeholder="Name"/>
+      <form autocomplete="off" className={classes.donate__form}>
+          <Inputfield type="text" placeholder="Name:"/>
+          <Inputfield type="email" placeholder="Email Address"/>
+          <Inputfield type="text" placeholder="Phone:"/>
+          <Inputfield type="text" placeholder="PAN Number"/>
+          <textarea placeholder="Address:" className={classes.donate__address}></textarea>
+          <Inputfield type="text" placeholder="Amount" />
+          <div className={classes.donate__button__container}><button className={classes.donate__button}>Donate</button></div>
       </form>
     </div>
   );

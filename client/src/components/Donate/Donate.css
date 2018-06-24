@@ -4,6 +4,7 @@
     font-family: inherit;
     text-align: center;
     padding-top: 8rem;
+    padding-bottom: 3rem;
 }
 .donate__headingContainer {
     display: flex;
@@ -36,4 +37,40 @@
 .donate__logo {
   height: 100%;
   width: 100%;
+}
+.donate__form {
+  width: 75%;
+  display: flex;
+  margin: 5rem auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.donate__address {
+  padding: 1rem;
+  width: 40rem;
+  height: 10rem;
+  font-family: inherit;
+  outline: none;
+}
+.donate__button__container {
+  width: 40rem;
+  margin-top: 6rem;
+}
+.donate__button {
+  outline: none;
+  background: none;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .1s;
+  box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.5);
+}
+.donate__button:active {
+  transform: translateY(3px);
+  box-shadow: 0 0.1rem 0.7rem rgba(0,0,0,0.5);
 }
