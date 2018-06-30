@@ -5,11 +5,13 @@ import Inputfield from "../../components/Inputfield/Inputfield";
 
 class Internship extends Component {
   state = {
-    type: ""
+    type: "",
+    visible: false
   };
   changeTypeHandler = event => {
     this.setState({
-      type: event.target.value
+      type: event.target.value,
+      visible: true
     });
   };
   render() {
@@ -31,6 +33,10 @@ class Internship extends Component {
           <option value="June 15">June 15</option>
         </select>
       );
+    }
+    let fieldContainerClasses = classes.internship__fields__container;
+    if (!this.state.visible) {
+      fieldContainerClasses+=" "+classes.hidden;
     }
     return (
       <WhiteContainer>
@@ -60,7 +66,7 @@ class Internship extends Component {
               <option value="virtual">Virtual Internship</option>
             </select>
           </div>
-          <div className={classes.internship__fields__container}>
+          <div className={fieldContainerClasses}>
             {batchField}
             <Inputfield
               type="text"

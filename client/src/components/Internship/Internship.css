@@ -1,39 +1,39 @@
 .heading__primary {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .horizontalRule--mid {
-    width: 20rem;
-    margin: auto;
+  width: 20rem;
+  margin: auto;
 }
 
 .internship__form {
-    background-color: #f6f6f6;
-    padding: 4rem;
-    margin: 4rem auto;
-    width: 75%;
+  background-color: #f6f6f6;
+  padding: 4rem;
+  margin: 4rem auto;
+  width: 75%;
 }
 .select__container {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 .internship__select {
-    background-color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    background-color: #e6e6e6;
-    font-family: inherit;
-    cursor: pointer;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #e6e6e6;
+  font-family: inherit;
+  cursor: pointer;
 }
 .internship__select--big {
-    padding: 1rem 2rem;
-    width: 100%;
-    height: 5rem;
-    margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
 }
 .internship__select--small {
-    width: 40rem;
-    padding: 0.8rem 2rem;
+  width: 40rem;
+  padding: 0.8rem 2rem;
 }
 .internship__fields__container {
   display: flex;
@@ -42,10 +42,17 @@
   background-color: #f6f6f6;
   justify-content: space-evenly;
   align-items: flex-start;
+  opacity: 1;
+  height: 35rem;
+  transition: height 500ms 0ms, opacity 500ms 400ms;
+}
+.hidden {
+  height: 0;
+  opacity: 0;
 }
 
 .internship__address {
-    padding: 1rem;
+  padding: 1rem;
   width: 89%;
   height: 10rem;
   font-family: inherit;
@@ -53,32 +60,32 @@
   border-radius: 20px;
 }
 .internship__button__container {
-    margin-top: 2rem;
-    text-align: center;
+  margin-top: 2rem;
+  text-align: center;
 }
 .internship__button__container i {
-    margin-left: 5px;
-    color: dodgerblue;
+  margin-left: 5px;
+  color: dodgerblue;
 }
 .internship__submitButton {
-    padding: 1.5rem 3rem;
-    border: 1.5px solid dodgerblue;
-    border-radius: 30px;
-    font-size: 1.4rem;
-    color: #222222;
-    text-transform: uppercase;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-    transition: all .2s;
+  padding: 1.5rem 3rem;
+  border: 1.5px solid dodgerblue;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  color: #222222;
+  text-transform: uppercase;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 .internship__submitButton:hover {
-    background-color: dodgerblue;
-    color: #fff;
+  background-color: dodgerblue;
+  color: #fff;
 }
 .internship__submitButton:active {
-    transform: translateY(3px);
+  transform: translateY(3px);
 }
 .internship__submitButton:hover i {
-    color: #fff;
+  color: #fff;
 }
