@@ -45,17 +45,17 @@ class Navigation extends Component {
         <div className={classes.nav}>
           <div className={classes.nav__contact}>
             <div className={classes.nav__contact__number}>
-              <i class="fas fa-phone" /> 9999999999
+              <i className="fas fa-phone" /> 9999999999
             </div>
             <div className={classes.nav__contact__email}>
-              <i class="fas fa-envelope" /> info@example.com
+              <i className="fas fa-envelope" /> info@example.com
             </div>
             <div className={classes.nav__contact__social}>
               <a href="/">
-                <i class="fab fa-facebook" />
+                <i className="fab fa-facebook" />
               </a>
               <a href="/">
-                <i class="fab fa-google-plus" />
+                <i className="fab fa-google-plus" />
               </a>
             </div>
           </div>
@@ -81,23 +81,23 @@ class Navigation extends Component {
             <Dropdown>
               <li>
                 <Link to="/about" exact>
-                  <i class="fas fa-angle-right" /> About Us
+                  <i className="fas fa-angle-right" /> About Us
                 </Link>
               </li>
 
               <li>
                 <Link to="/founders" exact>
-                  <i class="fas fa-angle-right" /> Founders
+                  <i className="fas fa-angle-right" /> Founders
                 </Link>
               </li>
               <li>
                 <Link to="/team" exact>
-                  <i class="fas fa-angle-right" /> Our Team
+                  <i className="fas fa-angle-right" /> Our Team
                 </Link>
               </li>
               <li>
                 <Link to="/issues" exact>
-                  <i class="fas fa-angle-right" /> Issues & Views
+                  <i className="fas fa-angle-right" /> Issues & Views
                 </Link>
               </li>
             </Dropdown>
@@ -118,12 +118,12 @@ class Navigation extends Component {
             <Dropdown>
               <li>
                 <a href="/">
-                  <i class="fas fa-angle-right" /> Upcoming Programs
+                  <i className="fas fa-angle-right" /> Upcoming Programs
                 </a>
               </li>
               <li>
                 <a href="/">
-                  <i class="fas fa-angle-right" /> Current Programs
+                  <i className="fas fa-angle-right" /> Current Programs
                 </a>
               </li>
             </Dropdown>

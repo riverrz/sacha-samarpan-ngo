@@ -15,5 +15,8 @@
 .inputfield:focus {
     /* background-color: #d2d2d2; */
     background-color: #e6e6e6;
-
+}
+.inputfield__container i {
+    margin-left: -25px;
+    color: #7e7e7e;
 }
