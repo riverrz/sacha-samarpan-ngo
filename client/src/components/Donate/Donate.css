@@ -35,7 +35,9 @@
   width: 75%;
   display: flex;
   margin: 5rem auto;
+  padding: 4rem 0;
   flex-wrap: wrap;
+  background-color: #f6f6f6;
   justify-content: space-around;
 }
 .donate__address {
@@ -48,7 +50,7 @@
 }
 .donate__button__container {
   width: 40rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .donate__button {
   outline: none;

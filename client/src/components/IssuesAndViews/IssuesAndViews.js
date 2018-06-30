@@ -3,8 +3,8 @@ import classes from "./IssuesAndViews.css";
 import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const issuesAndViews = props => {
   const style= {
-    "text-align": "left",
-    "padding-left": "4rem"
+    textAlign: "left",
+    paddingLeft: "4rem"
   }
   return <WhiteContainer style={style}>
     <div className={classes.content}>
@@ -60,20 +60,20 @@ const issuesAndViews = props => {
       <p>Saccha Samarpan fight for the girl child in India include:</p>
       <ul className={classes.resolvesList}>
         <li>
-          <i class="fas fa-angle-right" />Education that helps create
+          <i className="fas fa-angle-right" />Education that helps create
           attitudinal shifts that emphasise the rights of a girl child
         </li>
         <li>
-          <i class="fas fa-angle-right" />Breaking myths and stereotypes around
+          <i className="fas fa-angle-right" />Breaking myths and stereotypes around
           gender
         </li>
         <li>
-          <i class="fas fa-angle-right" />Ensuring State accountability to
+          <i className="fas fa-angle-right" />Ensuring State accountability to
           implement various schemes, policies, laws, constitutional guarantees
           and international commitments
         </li>
         <li>
-          <i class="fas fa-angle-right" />Building women leaders from the
+          <i className="fas fa-angle-right" />Building women leaders from the
           community through sensitisation programmes that help them understand
           their rights and ensure it for girls and women like them.
         </li>
