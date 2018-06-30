@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./IssuesAndViews.css";
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const issuesAndViews = props => (
-  <div className={classes.container}>
+  <WhiteContainer>
     <div className={classes.content}>
       <h1>Issues</h1>
       <p>
@@ -74,7 +75,7 @@ const issuesAndViews = props => (
         </li>
       </ul>
     </div>
-  </div>
+  </WhiteContainer>
 );
 
 export default issuesAndViews;

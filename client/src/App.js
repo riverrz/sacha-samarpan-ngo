@@ -13,26 +13,27 @@ import Backdrop from "./containers/Backdrop/Backdrop";
 import Founders from './components/Founders/Founders';
 import Fullgallery from './containers/Fullgallery/Fullgallery';
 import Donate from './components/Donate/Donate';
+import Internship from './components/Internship/Internship';
 class App extends Component {
   state = {
-    isBackdropShowing: false,
+    backdropWillShow: false,
     imageToLoad: null
   };
   backdropRemover = () => {
     this.setState({
-      isBackdropShowing: false,
+      backdropWillShow: false,
       imageLinkToLoad: null
     });
   };
   backdropInvoker = event => {
     this.setState({
-      isBackdropShowing: true,
+      backdropWillShow: true,
       imageLinkToLoad: event.target.src
     });
   };
   render() {
     let backdrop = null;
-    if (this.state.isBackdropShowing) {
+    if (this.state.backdropWillShow) {
       backdrop = (
         <Backdrop
           clicked={this.backdropRemover}
@@ -59,6 +60,7 @@ class App extends Component {
         <Route path="/founders" exact component={Founders} />
         <Route path="/full-gallery" exact render={() => <Fullgallery invoke={event => this.backdropInvoker(event)} />} />
         <Route path="/donate" exact component={Donate} />
+        <Route path="/internship" exact component={Internship} />
         <Footer />
       </div>;
   }

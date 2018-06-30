@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classes from "./Gallery.css";
 import GalleryItem from "./GalleryItem/GalleryItem";
 import { Link } from "react-router-dom";
-
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 class Gallery extends Component {
   state = {
     images: [
@@ -80,13 +80,13 @@ class Gallery extends Component {
       possibleButton = null;
     }
     return (
-      <div className={classes.galleryContainer}>
+      <WhiteContainer>
         <h1 className={classes.gallery__headingPrimary}>
           Our Precious <span>Moments</span>
         </h1>
         <div className={classes.gallery}>{allGalleryItems}</div>
         {possibleButton}
-      </div>
+      </WhiteContainer>
     );
   }
 }

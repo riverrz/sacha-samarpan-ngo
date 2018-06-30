@@ -1,11 +1,4 @@
-.donate__container {
-    width: 100%;
-    background-color: #fff;
-    font-family: inherit;
-    text-align: center;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-}
+
 .donate__headingContainer {
     display: flex;
     justify-content: center;

@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./About.css";
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const about = props => (
-  <div className={classes.container}>
+  <WhiteContainer>
     <h1 className={classes.headingPrimary}>
       Welcome to{" "}
       <span className={classes.headingPrimarySpan}>Sacha Samarthan</span>
@@ -28,7 +29,7 @@ const about = props => (
         children.
       </p>
     </div>
-  </div>
+  </WhiteContainer>
 );
 
 export default about;

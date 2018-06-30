@@ -2,10 +2,11 @@ import React from "react";
 import classes from "./Donate.css";
 import DonateLogo from "../../assets/Icons/donation-1.png";
 import Inputfield from "../Inputfield/Inputfield";
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 
 const donate = props => {
   return (
-    <div className={classes.donate__container}>
+    <WhiteContainer>
       <div className={classes.donate__headingContainer}>
         <h1 className={classes.donate__heading}>
           Thank You For{" "}
@@ -44,7 +45,7 @@ const donate = props => {
           <button className={classes.donate__button}>Donate</button>
         </div>
       </form>
-    </div>
+    </WhiteContainer>
   );
 };
 

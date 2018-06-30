@@ -1,9 +1,11 @@
 import React from "react";
 import classes from "./Founders.css";
 import { Link } from "react-router-dom";
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const founders = props => {
   return (
-    <div className={classes.foundersContainer}>
+
+    <WhiteContainer>
       <h1>
         Our <span>Founders</span>
       </h1>
@@ -62,7 +64,7 @@ const founders = props => {
           </div>
         </div>
       </div>
-    </div>
+    </WhiteContainer>
   );
 };
 
