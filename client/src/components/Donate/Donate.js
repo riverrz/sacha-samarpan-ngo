@@ -34,8 +34,9 @@ const donate = props => {
           placeholder="PAN Number"
           iconClass="fas fa-address-card"
         />
-
+      <div className={classes.address__container}>
         <textarea placeholder="Address:" className={classes.donate__address} />
+        </div>
         <Inputfield
           type="text"
           placeholder="Amount(Rs)"
