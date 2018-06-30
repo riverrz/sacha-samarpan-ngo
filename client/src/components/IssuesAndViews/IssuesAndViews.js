@@ -1,8 +1,12 @@
 import React from "react";
 import classes from "./IssuesAndViews.css";
 import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
-const issuesAndViews = props => (
-  <WhiteContainer>
+const issuesAndViews = props => {
+  const style= {
+    "text-align": "left",
+    "padding-left": "4rem"
+  }
+  return <WhiteContainer style={style}>
     <div className={classes.content}>
       <h1>Issues</h1>
       <p>
@@ -76,6 +80,6 @@ const issuesAndViews = props => (
       </ul>
     </div>
   </WhiteContainer>
-);
+};
 
 export default issuesAndViews;

@@ -1,7 +1,13 @@
 import React from "react";
 import classes from "./Importantlinks.css";
-const importantlinks = props => (
-  <div className={classes.container}>
+import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
+
+const importantlinks = props => {
+  const style={
+    "text-align": "left",
+    "padding-left": "4rem"
+  }
+  return <WhiteContainer style={style}>
     <h2 className={classes.heading}>Important Links</h2>
     <hr className={classes.HR}/>
     <ul className={classes.linksList}>
@@ -130,7 +136,7 @@ const importantlinks = props => (
         </a>
       </li>
     </ul>
-  </div>
-);
+  </WhiteContainer>
+};
 
 export default importantlinks;
