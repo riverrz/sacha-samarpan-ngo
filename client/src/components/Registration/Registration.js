@@ -10,7 +10,7 @@ const registration = props => (
     </h1>
     <hr className={classes.registration__horizontalRule} />
     <form className={classes.registration__form}>
-      <p>Pay it to coordinator by selecting Pyment Mode as Offline</p>
+      <p>Pay it to coordinator by selecting Payment Mode as Offline</p>
       <div className={classes.registration__inputfields__container}>
         <Inputfield type="text" placeholder="Name:" iconClass="fas fa-user" />
         <Inputfield type="text" placeholder="Phone:" iconClass="fas fa-phone" />
