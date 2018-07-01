@@ -74,3 +74,21 @@
   transform: translateY(3px);
   box-shadow: 0 0.1rem 0.7rem rgba(0,0,0,0.5);
 }
+
+.conditionsContainer {
+  font-family: inherit;
+  margin: 3rem auto;
+  width: 75%;
+  text-align: left;
+  line-height: 20px;
+  
+}
+.conditionsList {
+  list-style: disc;
+  font-size: 1.4rem;
+}
+.conditionsHeading {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

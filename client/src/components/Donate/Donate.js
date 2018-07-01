@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Donate.css";
 import DonateLogo from "../../assets/Icons/donation-1.png";
 import Inputfield from "../Inputfield/Inputfield";
-import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
+import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 
 const donate = props => {
   return (
@@ -34,8 +34,11 @@ const donate = props => {
           placeholder="PAN Number"
           iconClass="fas fa-address-card"
         />
-      <div className={classes.address__container}>
-        <textarea placeholder="Address:" className={classes.donate__address} />
+        <div className={classes.address__container}>
+          <textarea
+            placeholder="Address:"
+            className={classes.donate__address}
+          />
         </div>
         <Inputfield
           type="text"
@@ -46,6 +49,20 @@ const donate = props => {
           <button className={classes.donate__button}>Donate</button>
         </div>
       </form>
+      <div className={classes.conditionsContainer}>
+        <h1 className={classes.conditionsHeading}>Terms & Conditions</h1>
+        <ul className={classes.conditionsList}>
+          <li>
+            Refund Policy:- If customer paid twice for one transaction, the one
+            transaction amount will be refunded via same source within 07 to 10
+            working days
+          </li>
+          <li>
+            After donation process a Unique transaction referenace number and
+            transaction ID will be in donation slip.
+          </li>
+        </ul>
+      </div>
     </WhiteContainer>
   );
 };

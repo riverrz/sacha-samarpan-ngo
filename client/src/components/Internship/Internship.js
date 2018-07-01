@@ -36,7 +36,7 @@ class Internship extends Component {
     }
     let fieldContainerClasses = classes.internship__fields__container;
     if (!this.state.visible) {
-      fieldContainerClasses+=" "+classes.hidden;
+      fieldContainerClasses += " " + classes.hidden;
     }
     return (
       <WhiteContainer>
@@ -49,6 +49,7 @@ class Internship extends Component {
         </h1>
 
         <form className={classes.internship__form}>
+          <span className={classes.typeText}>Type of Internship:</span>
           <div className={classes.select__container}>
             <select
               className={

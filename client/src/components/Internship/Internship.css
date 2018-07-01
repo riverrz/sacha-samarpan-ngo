@@ -50,7 +50,11 @@
   height: 0;
   opacity: 0;
 }
-
+.typeText {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
 .internship__address {
   padding: 1rem;
   width: 89%;
