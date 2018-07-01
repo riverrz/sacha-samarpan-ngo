@@ -129,7 +129,7 @@ class Navigation extends Component {
             </Dropdown>
           </div>
           <div className={classes.navigation__item}>
-            <a href="/">Registration</a>
+            <Link to="/registration" exact>Registration</Link>
           </div>
           <div className={classes.navigation__item}>
             <Link to="/important-links" exact>

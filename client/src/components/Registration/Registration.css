@@ -1,0 +1,72 @@
+
+.registration__heading--primary {
+    text-transform: uppercase;
+}
+.registration__horizontalRule {
+    width: 10rem;
+    margin: auto;
+    height: 2px;
+    border: none;
+    background-color: #2b2b2b;
+}
+.registration__form {
+  padding: 1rem 4rem;
+  margin: 4rem auto 0 auto;
+  width: 75%;
+}
+.registration__inputfields__container {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+}
+.registration__address {
+  padding: 1rem;
+  width: 86%;
+  height: 10rem;
+  font-family: inherit;
+  outline: none;
+  border-radius: 20px;
+}
+.registration__select {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #e6e6e6;
+  font-family: inherit;
+  cursor: pointer;
+  width: 40rem;
+  padding: 0.8rem 2rem;
+  margin: 2rem auto;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.registration__button__container i {
+  margin-left: 5px;
+  color: dodgerblue;
+}
+.registration__submitButton {
+  padding: 1.5rem 3rem;
+  border: 1.5px solid dodgerblue;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  color: #222222;
+  text-transform: uppercase;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.registration__submitButton:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+.registration__submitButton:hover i {
+    color: #fff;
+}
+.registration__submitButton:active {
+  transform: translateY(3px);
+}

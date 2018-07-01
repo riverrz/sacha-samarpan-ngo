@@ -14,6 +14,7 @@ import Founders from './components/Founders/Founders';
 import Fullgallery from './containers/Fullgallery/Fullgallery';
 import Donate from './components/Donate/Donate';
 import Internship from './components/Internship/Internship';
+import Registration from './components/Registration/Registration';
 class App extends Component {
   state = {
     backdropWillShow: false,
@@ -61,6 +62,7 @@ class App extends Component {
         <Route path="/full-gallery" exact render={() => <Fullgallery invoke={event => this.backdropInvoker(event)} />} />
         <Route path="/donate" exact component={Donate} />
         <Route path="/internship" exact component={Internship} />
+        <Route path="/registration" exact component={Registration} />
         <Footer />
       </div>;
   }
