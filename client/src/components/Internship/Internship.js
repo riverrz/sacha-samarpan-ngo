@@ -25,6 +25,8 @@ class Internship extends Component {
             classes["internship__select--small"]
           }
           required
+          name="intern[batch]"
+          id="batch"
         >
           <option value="" disabled selected hidden>
             Choose Starting Batch
@@ -48,7 +50,7 @@ class Internship extends Component {
           <hr className={classes["horizontalRule--mid"]} />
         </h1>
 
-        <form className={classes.internship__form}>
+        <form className={classes.internship__form} action="/internship" method="POST">
           <span className={classes.typeText}>Type of Internship:</span>
           <div className={classes.select__container}>
             <select
@@ -59,6 +61,8 @@ class Internship extends Component {
               }
               required
               onChange={this.changeTypeHandler}
+              name="intern[internshipType]"
+              id="internshipType"
             >
               <option value="" disabled selected hidden>
                 Select Internship Type
@@ -73,26 +77,31 @@ class Internship extends Component {
               type="text"
               placeholder="Name"
               iconClass="fas fa-user"
+              name="intern[name]"
             />
             <Inputfield
               type="text"
               placeholder="Phone:"
               iconClass="fas fa-phone"
+              name="intern[phone]"
             />
             <Inputfield
               type="email"
               placeholder="Email Address"
               iconClass="fas fa-envelope"
+              name="intern[email]"
             />
             <Inputfield
               type="text"
               placeholder="College"
               iconClass="fas fa-university"
+              name="intern[college]"
             />
             <textarea
               placeholder="Address:"
               className={classes.internship__address}
               required
+              name="intern[address]"
             />
           </div>
           <div className={classes.internship__button__container}>
