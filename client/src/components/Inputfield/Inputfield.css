@@ -6,11 +6,12 @@
     width: 40rem;
     padding: 1rem 2rem;
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     border: 1px solid #e6e6e6;
     border-radius: 60px;
     outline: none;
     color: #666666;
+    transition: background-color 0.2s ease;
 }
 .inputfield:focus {
     /* background-color: #d2d2d2; */
@@ -18,5 +19,5 @@
 }
 .inputfield__container i {
     margin-left: -25px;
-    color: #7e7e7e;
+    color: dodgerblue;
 }
