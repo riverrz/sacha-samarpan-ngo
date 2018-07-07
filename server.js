@@ -8,8 +8,11 @@ const bodyParser = require("body-parser");
 const Member = require("./Models/Member");
 const Intern = require("./Models/Intern");
 
-// Importing utility functions 
-const {findExistingIntern,findExistingMember} = require("./utilities/functions");
+// Importing utility functions
+const {
+  findExistingIntern,
+  findExistingMember
+} = require("./utilities/functions");
 
 // Importing URIs from keys.js
 const { mongoURI } = require("./config/keys");
@@ -70,7 +73,6 @@ app.post("/internship", async (req, res) => {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-
 
 app.listen(port, () => {
   console.log("Server has started");

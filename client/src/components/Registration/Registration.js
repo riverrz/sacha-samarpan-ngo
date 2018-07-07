@@ -43,9 +43,9 @@ const registration = props => (
           <option value="" disabled selected hidden>
             Registration Duration
           </option>
-          <option value="1 Year">1 Year</option>
-          <option value="3 Year">3 Year</option>
-          <option value="Lifetime">Lifetime</option>
+          <option value="1 Year">1 Year (Rs. 50/-)</option>
+          <option value="3 Year">3 Year (Rs. 100/-)</option>
+          <option value="Lifetime">Lifetime (Rs. 500/-)</option>
         </select>
         <select className={classes.registration__select} required name='member[payMode]' id="payMode">
           <option value="" disabled selected hidden>

@@ -64,7 +64,7 @@ class Internship extends Component {
               name="intern[internshipType]"
               id="internshipType"
             >
-              <option value="" disabled selected hidden>
+              <option value="" disabled selected >
                 Select Internship Type
               </option>
               <option value="summer">Summer Internship</option>

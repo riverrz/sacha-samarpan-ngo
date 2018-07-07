@@ -4,6 +4,11 @@
   font-family: inherit;
   padding: 8rem;
 }
+.importantLinks__container {
+  height: 100%;
+  width: 100%;
+  padding-left: 7rem;
+}
 .heading {
   font-size: 3rem;
   text-transform: uppercase;
@@ -14,8 +19,12 @@
   list-style: none;
 }
 .linksList a {
-  color: #333333;
+  color: dodgerblue;
+  /* color: #333333; */
   font-size: 1.4rem;
+}
+.linksList a:hover {
+  color: #333333;
 }
 .linksList > li {
   margin: 1rem 0;

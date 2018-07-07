@@ -15,13 +15,13 @@ const footer = props => {
               <span className={classes.iconSpan}>
                 <i className="fas fa-phone" />
               </span>{" "}
-              +91 9999999999
+              +91 9211458806
             </div>
             <div className={classes.footer__contactInfo__email}>
               <span className={classes.iconSpan}>
                 <i className="fas fa-envelope" />
               </span>{" "}
-              info@example.com
+              info@sacchasamarpan.com
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
   position: absolute;
   left: 50%;
   top: 0;
-  width: 80%;
+  width: 85%;
   height: 2rem;
   transform: translateX(-50%);
 }
@@ -59,7 +59,7 @@ a:visited {
   text-decoration: none;
   position: absolute;
   color: #fff;
-  font-size: inherit;
+  font-size: 1.58rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -98,6 +98,7 @@ a:visited {
 .logoBox {
   background-color: #fff;
   flex: 0 0 17%;
+  border-right: 2px solid #ff8c00;
 }
 .nav__contact i {
   margin-right: 1rem;
@@ -114,10 +115,31 @@ a:visited {
   visibility: visible;
   opacity: 1;
 }
-.active {
-  color: #222126 !important;
+.navigation__donate {
+  background-color: #fff;
+  border: 2px solid #ff8c00;
 }
-
+.navigation__donate a {
+  color: #fff;
+  height: 55%;
+  background-color: #ff8c00;
+  width:93%;
+  transition: background-color .2s;
+}
+.navigation__donate:hover a {
+  color: #fff;
+  background-color: #df9143;
+}
+.active {
+  color: #ff8c00 !important;
+  background-color: #fff !important;
+}
+.navigation__donate__strong {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 5px;
+}
 .impLink {
   color: #222126;
   margin-right: auto;

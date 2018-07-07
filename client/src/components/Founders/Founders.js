@@ -18,9 +18,10 @@ const founders = props => {
           />
         </figure>
         <div className={classes.foundersInfo}>
-          <h2 className={classes.designation}>President</h2>
+         <h2>Nauratna Gupta</h2>
+          <h3 className={classes.designation}>President</h3>
           Nauratna Gupta is the President of Saccha Samarpan Society. He is the
-          Member of ZRUCC in Railway Ministry (Government of India). He is well
+          <strong> Member of ZRUCC in Railway Ministry (Government of India).</strong> He is well
           qualified and holds his Masters degree in Master in Social Work (MSW).
           He has more than 18 years of experience in Social Work, Politics and
           Business. He is dedicated towards providing quality education to all
@@ -46,7 +47,8 @@ const founders = props => {
           />
         </figure>
         <div className={classes.foundersInfo}>
-          <h2 className={classes.designation}>General Secretary</h2>
+        <h2>Reena Sharma</h2>
+          <h3 className={classes.designation}>General Secretary</h3>
           Reena Sharma is the General Secretary of Saccha Samarpan Society. She
           is professionally qualified and holds her Masters degree in Master in
           Social Work (MSW). She has taken an initiative to educate children and
