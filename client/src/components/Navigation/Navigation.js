@@ -77,25 +77,25 @@ class Navigation extends Component {
             </NavLink>
             <Dropdown>
               <li>
-                <Link to="/about" exact>
+              <NavLink to="/about" exact activeClassName={classes.activeDropDown}>
                   <i className="fas fa-angle-right" /> About Us
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link to="/about/founders" exact>
+                <NavLink to="/about/founders" exact activeClassName={classes.activeDropDown}>
                   <i className="fas fa-angle-right" /> Founders
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/about/team" exact>
+                <NavLink to="/about/team" exact activeClassName={classes.activeDropDown}>
                   <i className="fas fa-angle-right" /> Our Team
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/about/issues" exact>
+                <NavLink to="/about/issues" exact activeClassName={classes.activeDropDown}>
                   <i className="fas fa-angle-right" /> Issues & Views
-                </Link>
+                </NavLink>
               </li>
             </Dropdown>
           </div>
