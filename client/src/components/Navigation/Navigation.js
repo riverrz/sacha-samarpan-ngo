@@ -83,17 +83,17 @@ class Navigation extends Component {
               </li>
 
               <li>
-                <Link to="/founders" exact>
+                <Link to="/about/founders" exact>
                   <i className="fas fa-angle-right" /> Founders
                 </Link>
               </li>
               <li>
-                <Link to="/team" exact>
+                <Link to="/about/team" exact>
                   <i className="fas fa-angle-right" /> Our Team
                 </Link>
               </li>
               <li>
-                <Link to="/issues" exact>
+                <Link to="/about/issues" exact>
                   <i className="fas fa-angle-right" /> Issues & Views
                 </Link>
               </li>

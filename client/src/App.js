@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import classes from "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import leftLogo from "./assets/Icons/charity-1.png";
 import rightLogo from "./assets/Icons/praying.png";
 import Frontpage from "./containers/Frontpage/Frontpage";
-import About from "./components/About/About";
-import IssuesAndViews from "./components/IssuesAndViews/IssuesAndViews";
 import Importantlinks from "./components/Importantlinks/Importantlinks";
 import Backdrop from "./containers/Backdrop/Backdrop";
-import Founders from './components/Founders/Founders';
-import Fullgallery from './containers/Fullgallery/Fullgallery';
-import Donate from './components/Donate/Donate';
-import Internship from './components/Internship/Internship';
-import Registration from './components/Registration/Registration';
+import Fullgallery from "./containers/Fullgallery/Fullgallery";
+import Donate from "./components/Donate/Donate";
+import Internship from "./components/Internship/Internship";
+import Registration from "./components/Registration/Registration";
+import AboutContainer from './containers/AboutContainer/AboutContainer';
+
 class App extends Component {
   state = {
     backdropWillShow: false,
@@ -43,28 +42,49 @@ class App extends Component {
         />
       );
     }
-    return <div className={classes.App}>
+    return (
+      <div className={classes.App}>
         <div className={classes.backSide}>
           <div className={classes.backSide__logoBox}>
-            <img src={leftLogo} alt="charity-logo-1" className={classes.backSide__logo} />
+            <img
+              src={leftLogo}
+              alt="charity-logo-1"
+              className={classes.backSide__logo}
+            />
           </div>
           <div className={classes.backSide__logoBox}>
-            <img src={rightLogo} alt="charity-logo-1" className={classes.backSide__logo} />
+            <img
+              src={rightLogo}
+              alt="charity-logo-1"
+              className={classes.backSide__logo}
+            />
           </div>
         </div>
         <Navigation />
         {backdrop}
-        <Route path="/" exact render={() => <Frontpage invoke={event => this.backdropInvoker(event)} />} />
-        <Route path="/about" exact component={About} />
-        <Route path="/issues" exact component={IssuesAndViews} />
-        <Route path="/important-links" exact component={Importantlinks} />
-        <Route path="/founders" exact component={Founders} />
-        <Route path="/full-gallery" exact render={() => <Fullgallery invoke={event => this.backdropInvoker(event)} />} />
-        <Route path="/donate" exact component={Donate} />
-        <Route path="/internship" exact component={Internship} />
-        <Route path="/registration" exact component={Registration} />
+        <Switch>
+          <Route path="/about"  component={AboutContainer} />
+          <Route path="/important-links" exact component={Importantlinks} />
+          <Route
+            path="/full-gallery"
+            exact
+            render={() => (
+              <Fullgallery invoke={event => this.backdropInvoker(event)} />
+            )}
+          />
+          <Route path="/donate" exact component={Donate} />
+          <Route path="/internship" exact component={Internship} />
+          <Route path="/registration" exact component={Registration} />
+          <Route
+            path="/"
+            render={() => (
+              <Frontpage invoke={event => this.backdropInvoker(event)} />
+            )}
+          />
+        </Switch>
         <Footer />
-      </div>;
+      </div>
+    );
   }
 }
 
