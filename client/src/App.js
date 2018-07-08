@@ -13,7 +13,7 @@ import Donate from "./components/Donate/Donate";
 import Internship from "./components/Internship/Internship";
 import Registration from "./components/Registration/Registration";
 import AboutContainer from './containers/AboutContainer/AboutContainer';
-
+import EventContainer from './containers/EventContainer/EventContainer';
 class App extends Component {
   state = {
     backdropWillShow: false,
@@ -64,6 +64,8 @@ class App extends Component {
         {backdrop}
         <Switch>
           <Route path="/about"  component={AboutContainer} />
+          <Route path="/events"  component={EventContainer} />
+
           <Route path="/important-links" exact component={Importantlinks} />
           <Route
             path="/full-gallery"
@@ -75,6 +77,7 @@ class App extends Component {
           <Route path="/donate" exact component={Donate} />
           <Route path="/internship" exact component={Internship} />
           <Route path="/registration" exact component={Registration} />
+          
           <Route
             path="/"
             render={() => (

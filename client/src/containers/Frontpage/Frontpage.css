@@ -31,6 +31,7 @@
 }
 .iconRow__item {
   display:flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -51,6 +52,22 @@
   font-size: 1.7rem;
   font-weight: 600;
 } 
+.iconRow__item__iconContainer {
+  display: inline-block;
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  top:-20px;
+  left: 50%;
+  background-color: #8DEEEE;
+  transform: translate(-50%,0);
+}
+.iconRow__item__icon {
+  width: 80%;
+  height: 80%;
+}
 .active {
     color: #008000 !important;
 }

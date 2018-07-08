@@ -1,0 +1,30 @@
+.EventOverview__header {
+    padding: 3rem 0;
+    background-color: #fafafa;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    font-family: "Lato", sans-serif;
+    
+}
+.EventOverview__heading--primary {
+    font-size: 2.9rem;
+    font-weight: 400;
+    font-family: inherit;
+    margin-bottom: 1rem;
+}
+.EventOverview__horizontal {
+    width: 20rem;
+    margin: auto;
+}
+.EventOverview__container {
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    padding: 5rem;
+}
+.EventOverview__list {
+    padding: 3rem;
+}
+.EventOverview__listItem {
+    padding: 1rem;
+}
