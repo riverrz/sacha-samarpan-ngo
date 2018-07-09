@@ -75,12 +75,25 @@
   margin: 2rem 0;
   font-family: inherit;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .details i {
     font-size: 2rem;
     color: dodgerblue;
     margin-right: 1rem;
+}
+.iconContainer {
+  height: 3rem;
+  width: 3rem;
+  display:inline-block;
+  margin-right: 1rem;
+}
+.icon {
+  height: 100%;
+  width: 100%;
+
 }
 .applyLink {
     text-decoration: none;

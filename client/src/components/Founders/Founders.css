@@ -32,24 +32,21 @@
 }
 .iconContainer {
     position: absolute;
-    top: 43%;
+    top: 36%;
     text-decoration: none;
-    left: 46%;
+    left: 41%;
     display: inline-block;
     visibility: hidden;
     opacity: 0;
     transform: translateY(20px);
     transition: all .4s;
-    border: 1px solid dodgerblue;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+    height: 5rem;
+    width: 5rem;
     text-align: center;
 }
-.iconContainer i {
-    color: dodgerblue;
-    font-size: 2rem;
-    margin-top: 4px;
+.icon {
+    height: 100%;
+    width: 100%;
 }
 .figure:hover .iconContainer {
     transform: translateY(0);

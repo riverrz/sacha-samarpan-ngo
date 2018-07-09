@@ -16,7 +16,7 @@ const founders = props => {
             className={classes.founderPhoto}
           />
           <a href="/" className={classes.iconContainer}>
-            <i className="fab fa-facebook-f" />
+            <img src="/facebook.png" alt="Facebook" className={classes.icon} />
           </a>
         </figure>
         <div className={classes.foundersInfo}>
@@ -50,8 +50,9 @@ const founders = props => {
             alt="Founder"
             className={classes.founderPhoto}
           />
+
           <a href="/" className={classes.iconContainer}>
-            <i className="fab fa-facebook-f" />
+            <img src="/facebook.png" alt="Facebook" className={classes.icon} />
           </a>
         </figure>
         <div className={classes.foundersInfo}>
