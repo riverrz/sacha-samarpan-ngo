@@ -1,10 +1,9 @@
 import React from "react";
 import classes from "./Founders.css";
 import { Link } from "react-router-dom";
-import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
+import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 const founders = props => {
   return (
-
     <WhiteContainer>
       <h1>
         Our <span>Founders</span>
@@ -16,19 +15,25 @@ const founders = props => {
             alt="Founder"
             className={classes.founderPhoto}
           />
+          <a href="/" className={classes.iconContainer}>
+            <i className="fab fa-facebook-f" />
+          </a>
         </figure>
         <div className={classes.foundersInfo}>
-         <h2>Nauratna Gupta</h2>
+          <h2>Nauratna Gupta</h2>
           <h3 className={classes.designation}>President</h3>
           Nauratna Gupta is the President of Saccha Samarpan Society. He is the
-          <strong> Member of ZRUCC in Railway Ministry (Government of India).</strong> He is well
-          qualified and holds his Masters degree in Master in Social Work (MSW).
-          He has more than 18 years of experience in Social Work, Politics and
-          Business. He is dedicated towards providing quality education to all
-          poor children and motivates them for their future desires. He has
-          worked with many NGO’s for the enhancement of the society regarding
-          Women Empowerment and Child Education. He is also the Director of
-          “Shri Kalka Construction Company”.
+          <strong>
+            {" "}
+            Member of ZRUCC in Railway Ministry (Government of India).
+          </strong>{" "}
+          He is well qualified and holds his Masters degree in Master in Social
+          Work (MSW). He has more than 18 years of experience in Social Work,
+          Politics and Business. He is dedicated towards providing quality
+          education to all poor children and motivates them for their future
+          desires. He has worked with many NGO’s for the enhancement of the
+          society regarding Women Empowerment and Child Education. He is also
+          the Director of “Shri Kalka Construction Company”.
           <div className={classes.readMoreContainer}>
             <button className={classes.readMoreButton}>
               <Link to="/founder-1" exact>
@@ -45,9 +50,12 @@ const founders = props => {
             alt="Founder"
             className={classes.founderPhoto}
           />
+          <a href="/" className={classes.iconContainer}>
+            <i className="fab fa-facebook-f" />
+          </a>
         </figure>
         <div className={classes.foundersInfo}>
-        <h2>Reena Sharma</h2>
+          <h2>Reena Sharma</h2>
           <h3 className={classes.designation}>General Secretary</h3>
           Reena Sharma is the General Secretary of Saccha Samarpan Society. She
           is professionally qualified and holds her Masters degree in Master in

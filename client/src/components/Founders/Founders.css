@@ -15,12 +15,47 @@
     height: 20rem;
     width: 20rem;
     display: inline-block;
+    position: relative;
     flex:1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.figure:hover .founderPhoto {
+    transform: scale(1);
+    filter: blur(1px) brightness(50%);
 }
 .founderPhoto {
     height: 100%;
     width: 100%;
+    transition: all .3s;
+    transform: scale(1.02);
+}
+.iconContainer {
+    position: absolute;
+    top: 43%;
+    text-decoration: none;
+    left: 46%;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .4s;
+    border: 1px solid dodgerblue;
     border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+}
+.iconContainer i {
+    color: dodgerblue;
+    font-size: 2rem;
+    margin-top: 4px;
+}
+.figure:hover .iconContainer {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    /* z-index: 99; */
 }
 .foundersInfo {
     display: inline-block;
