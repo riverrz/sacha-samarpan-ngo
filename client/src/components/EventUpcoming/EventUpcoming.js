@@ -40,6 +40,7 @@ class EventUpcoming extends Component {
           venue={event.Venue}
           timings={event.Timings}
           subject={event.Subject}
+          key={id}
         />
       );
     });
@@ -47,9 +48,7 @@ class EventUpcoming extends Component {
     return (
       <WhiteContainer>
         <h1 className={classes["heading--primary"]}>Our Upcoming Events</h1>
-        <div className={classes["container"]}>
-            {events}
-        </div>
+        <div className={classes["container"]}>{events}</div>
       </WhiteContainer>
     );
   }
