@@ -12,33 +12,59 @@ import Fullgallery from "./containers/Fullgallery/Fullgallery";
 import Donate from "./components/Donate/Donate";
 import Internship from "./components/Internship/Internship";
 import Registration from "./components/Registration/Registration";
-import AboutContainer from './containers/AboutContainer/AboutContainer';
-import EventContainer from './containers/EventContainer/EventContainer';
+import AboutContainer from "./containers/AboutContainer/AboutContainer";
+import EventContainer from "./containers/EventContainer/EventContainer";
 class App extends Component {
   state = {
-    backdropWillShow: false,
+    viewPopUp: false,
+    backdropForGallery: false,
     imageToLoad: null
   };
   backdropRemover = () => {
     this.setState({
-      backdropWillShow: false,
-      imageLinkToLoad: null
+      backdropForGallery: false,
+      imageLinkToLoad: null,
+      viewPopUp: false
     });
   };
   backdropInvoker = event => {
     this.setState({
-      backdropWillShow: true,
+      backdropForGallery: true,
       imageLinkToLoad: event.target.src
     });
   };
+  componentDidMount() {
+    let visited = sessionStorage["alreadyVisited"];
+    if (visited) {
+      this.setState({
+        viewPopUp: false
+      });
+    } else {
+      this.setState({
+        viewPopUp: true
+      });
+      sessionStorage["alreadyVisited"] = true;
+    }
+  }
   render() {
     let backdrop = null;
-    if (this.state.backdropWillShow) {
+    if (this.state.backdropForGallery) {
       backdrop = (
         <Backdrop
           clicked={this.backdropRemover}
           image={this.state.imageLinkToLoad}
           exitClicked={this.backdropRemover}
+          for="gallery"
+        />
+      );
+    }
+    if (this.state.viewPopUp) {
+      backdrop = (
+        <Backdrop
+          clicked={this.backdropRemover}
+          image={this.state.imageLinkToLoad}
+          exitClicked={this.backdropRemover}
+          for="popup"
         />
       );
     }
@@ -63,8 +89,8 @@ class App extends Component {
         <Navigation />
         {backdrop}
         <Switch>
-          <Route path="/about"  component={AboutContainer} />
-          <Route path="/events"  component={EventContainer} />
+          <Route path="/about" component={AboutContainer} />
+          <Route path="/events" component={EventContainer} />
 
           <Route path="/important-links" exact component={Importantlinks} />
           <Route
@@ -77,7 +103,7 @@ class App extends Component {
           <Route path="/donate" exact component={Donate} />
           <Route path="/internship" exact component={Internship} />
           <Route path="/registration" exact component={Registration} />
-          
+
           <Route
             path="/"
             render={() => (
