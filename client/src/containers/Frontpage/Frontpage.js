@@ -20,7 +20,7 @@ class Frontpage extends Component {
           <div className={classes["iconRow__item"]}>
             <span className={classes["iconRow__item__iconContainer"]}>
               <img
-                src="group-1.png"
+                src="info.png"
                 alt=""
                 className={classes["iconRow__item__icon"]}
               />
@@ -36,7 +36,7 @@ class Frontpage extends Component {
           <div className={classes["iconRow__item"]}>
             <span className={classes["iconRow__item__iconContainer"]}>
               <img
-                src="group-1.png"
+                src="help-hand.png"
                 alt=""
                 className={classes["iconRow__item__icon"]}
               />
@@ -54,7 +54,7 @@ class Frontpage extends Component {
           <div className={classes["iconRow__item"]}>
             <span className={classes["iconRow__item__iconContainer"]}>
               <img
-                src="group-1.png"
+                src="group.png"
                 alt=""
                 className={classes["iconRow__item__icon"]}
               />
