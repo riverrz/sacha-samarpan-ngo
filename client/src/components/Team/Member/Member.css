@@ -1,8 +1,8 @@
 .container {
-  padding: 3rem;
+  padding: 5rem;
   display: flex;
   border-bottom: 1px solid #bbbbbb;
-  width: 63%;
+  width: 75%;
   text-align: left;
   margin-left: 5rem;
 }
@@ -15,7 +15,7 @@
 }
 .textContainer {
   flex: 4;
-  padding-left: 2rem;
+  padding-left: 4rem;
   text-align: left;
   color: #666666;
   line-height: 26px;

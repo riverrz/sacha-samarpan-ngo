@@ -92,7 +92,7 @@ class Navigation extends Component {
                   exact
                   activeClassName={classes.activeDropDown}
                 >
-                  <i className="fas fa-angle-right" /> About Us
+                  <i className="fas fa-angle-right" /> Overview
                 </NavLink>
               </li>
 
