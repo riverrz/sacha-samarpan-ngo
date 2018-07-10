@@ -4,3 +4,9 @@
     font-family: "Lato", sans-serif;
 }
 
+.container {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
