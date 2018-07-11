@@ -3,6 +3,7 @@ import Aux from "../../hoc/Aux";
 import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
 import Gallery from "../../components/Gallery/Gallery";
+import FrontPageGallery from '../../components/FrontPageGallery/FrontPageGallery';
 import classes from "./Frontpage.css";
 import { Link } from "react-router-dom";
 
@@ -72,7 +73,8 @@ class Frontpage extends Component {
             </Link>
           </div>
         </div>
-        <Gallery invokeBackdrop={event => this.props.invoke(event)} limit="8" />
+        {/* <Gallery invokeBackdrop={event => this.props.invoke(event)} limit="8" /> */}
+        <FrontPageGallery invokeBackdrop={event => this.props.invoke(event)}  />
       </Aux>
     );
   }

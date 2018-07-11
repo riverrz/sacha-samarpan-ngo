@@ -1,7 +1,8 @@
 .modalContainer {
   width: 80%;
   margin: auto;
-  height: 23%;
+  height: 27%;
+  /* height: 35%; */
   position: relative;
   overflow: hidden;
 }
