@@ -88,6 +88,18 @@ class Modal extends Component {
           </div>
         </div>
       );
+    } else if (this.props.for === "video") {
+      content = (
+        <div className={classes.modal__videoContainer} style={this.state.marginTop}>
+          <iframe
+            className={classes.modal__video}
+            title="pvr"
+            frameBorder="0"
+            src="https://www.youtube.com/embed/MG7dW2gChOs"
+            allowFullScreen
+          />
+        </div>
+      );
     }
     return <Aux>{content}</Aux>;
   }

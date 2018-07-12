@@ -23,20 +23,24 @@
     align-content: space-evenly;
 }
 .frontPageGallery__videoContainer {
-    height: 80%;
+    height: 78.5%;
     width: 30%;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    align-content: space-between;
+    padding-right: 3rem;
+    position: relative;
 }
 .frontPageGallery__video {
-    height: 44%;
+    height: 100%;
     width: 100%;
 }
-
+.overlay {
+  position: absolute;
+  top:0;
+  left: 0;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
 .galleryLink {
   border: none;
   outline: none;

@@ -108,3 +108,19 @@
     color: #fff !important;
     background-color: dodgerblue;
 }
+
+
+/*  For Video */
+
+.modal__videoContainer {
+  height: 20%;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  z-index: 100;
+  box-sizing: border-box;
+}
+.modal__video {
+  height: 100%;
+  width: 100%;
+}

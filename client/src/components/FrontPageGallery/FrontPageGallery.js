@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import GalleryItem from "../Gallery/GalleryItem/GalleryItem";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import classes from "./FrontPageGallery.css";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 class frontPageGallery extends Component {
   state = {
     photos: [
@@ -20,6 +20,9 @@ class frontPageGallery extends Component {
       }
     ]
   };
+  // clickHandler = event => {
+  //   console.log(event.target);
+  // };
   render() {
     let images = this.state.photos.map((photo, id) => {
       return (
@@ -40,14 +43,13 @@ class frontPageGallery extends Component {
         <div className={classes["frontPageGallery__container"]}>
           <div className={classes.frontPageGallery__imgContainer}>{images}</div>
           <div className={classes.frontPageGallery__videoContainer}>
-            <video className={classes.frontPageGallery__video} controls>
-              <source src="/videos/1.mp4" type="video/mp4" />
-              Your Browser doesnt support video playback
-            </video>
-            <video className={classes.frontPageGallery__video} controls>
-              <source src="/videos/2.mp4" type="video/mp4" />
-              Your Browser doesnt support video playback
-            </video>
+            <iframe
+              className={classes.frontPageGallery__video}
+              title="pvr"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/MG7dW2gChOs"
+            />
+            <div className={classes.overlay} id="overlay" onClick={this.props.invokeBackdrop} />
           </div>
         </div>
         <button className={classes.galleryLink}>

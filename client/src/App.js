@@ -18,16 +18,24 @@ class App extends Component {
   state = {
     viewPopUp: false,
     backdropForGallery: false,
+    backdropForVideo:false,
     imageToLoad: null
   };
   backdropRemover = () => {
     this.setState({
       backdropForGallery: false,
       imageLinkToLoad: null,
-      viewPopUp: false
+      viewPopUp: false,
+      backdropForVideo: false
     });
   };
   backdropInvoker = event => {
+    console.log(event.target.id);
+    if (event.target.id==="overlay") {
+      this.setState({
+        backdropForVideo: true
+      })
+    }
     this.setState({
       backdropForGallery: true,
       imageLinkToLoad: event.target.src
@@ -67,6 +75,15 @@ class App extends Component {
           for="popup"
         />
       );
+    }
+    if (this.state.backdropForVideo) {
+      backdrop = (
+        <Backdrop
+          clicked={this.backdropRemover}
+          exitClicked={this.backdropRemover}
+          for="video"
+        />
+      )
     }
     return (
       <div className={classes.App}>
