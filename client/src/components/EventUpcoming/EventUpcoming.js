@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import Event from "./Event/Event";
-import classes from "./EventUpcoming.css";
+import  "./EventUpcoming.css";
 
 class EventUpcoming extends Component {
   state = {
@@ -47,8 +47,8 @@ class EventUpcoming extends Component {
 
     return (
       <WhiteContainer>
-        <h1 className={classes["eventUpcoming__heading--primary"]}>Our Upcoming Events</h1>
-        <div className={classes["eventUpcoming__container"]}>{events}</div>
+        <h1 className="eventUpcoming__heading--primary">Our Upcoming Events</h1>
+        <div className="eventUpcoming__container">{events}</div>
       </WhiteContainer>
     );
   }

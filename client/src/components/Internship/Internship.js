@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from "./Internship.css";
+import "./Internship.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import Inputfield from "../../components/Inputfield/Inputfield";
 
@@ -19,11 +19,7 @@ class Internship extends Component {
     if (this.state.type === "summer") {
       batchField = (
         <select
-          className={
-            classes.internship__select +
-            " " +
-            classes["internship__select--small"]
-          }
+          className="internship__select internship__select--small"
           required
           name="intern[batch]"
           id="batch"
@@ -36,29 +32,25 @@ class Internship extends Component {
         </select>
       );
     }
-    let fieldContainerClasses = classes.internship__fields__container;
+    let fieldContainerClasses = 'internship__fields__container';
     if (!this.state.visible) {
-      fieldContainerClasses += " " + classes.internship__hidden;
+      fieldContainerClasses += ' internship__hidden';
     }
     return (
       <WhiteContainer>
-        <h1 className={classes["internship__heading--primary"]}>
+        <h1 className="internship__heading--primary">
           Internship{" "}
-          <span className={classes["heading__primary--saffron"]}>
+          <span className="heading__primary--saffron">
             Registration
           </span>
-          <hr className={classes["internship__horizontalRule--mid"]} />
+          <hr className="internship__horizontalRule--mid" />
         </h1>
 
-        <form className={classes.internship__form} action="/internship" method="POST">
-          <span className={classes.internship__typeText}>Type of Internship:</span>
-          <div className={classes.internship__select__container}>
+        <form className='internship__form' action="/internship" method="POST">
+          <span className='internship__typeText'>Type of Internship:</span>
+          <div className='internship__select__container'>
             <select
-              className={
-                classes.internship__select +
-                " " +
-                classes["internship__select--big"]
-              }
+              className="internship__select internship__select--big"
               required
               onChange={this.changeTypeHandler}
               name="intern[internshipType]"
@@ -99,13 +91,13 @@ class Internship extends Component {
             />
             <textarea
               placeholder="Address:"
-              className={classes.internship__address}
+              className='internship__address'
               required
               name="intern[address]"
             />
           </div>
-          <div className={classes.internship__button__container}>
-            <button className={classes.internship__submitButton}>
+          <div className='internship__button__container'>
+            <button className='internship__submitButton'>
               Submit <i className="fas fa-paper-plane" />
             </button>
           </div>

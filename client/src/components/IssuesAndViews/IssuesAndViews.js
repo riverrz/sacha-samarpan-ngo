@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./IssuesAndViews.css";
+import  "./IssuesAndViews.css";
 import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const issuesAndViews = props => {
   const style= {
@@ -7,7 +7,7 @@ const issuesAndViews = props => {
     paddingLeft: "4rem"
   }
   return <WhiteContainer style={style}>
-    <div className={classes.issues__content}>
+    <div className='issues__content'>
       <h1>Issues</h1>
       <p>
         In many parts of India, the birth of a girl child is not welcomed. Right
@@ -58,7 +58,7 @@ const issuesAndViews = props => {
         and participate in decisions that impact her life
       </p>
       <p>Saccha Samarpan fight for the girl child in India include:</p>
-      <ul className={classes.issues__resolvesList}>
+      <ul className='issues__resolvesList'>
         <li>
           <i className="fas fa-angle-right" />Education that helps create
           attitudinal shifts that emphasise the rights of a girl child

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from "./Gallery.css";
+import  "./Gallery.css";
 import GalleryItem from "./GalleryItem/GalleryItem";
 import { Link } from "react-router-dom";
 import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
@@ -70,9 +70,9 @@ class Gallery extends Component {
       );
     });
     let possibleButton = (
-      <button className={classes.gallery__link}>
+      <button className='gallery__link'>
         <Link to="/full-gallery" exact>
-          View All Photos <span className={classes.gallery__arrow}>→</span>
+          View All Photos <span className='gallery__arrow'>→</span>
         </Link>
       </button>
     );
@@ -81,10 +81,10 @@ class Gallery extends Component {
     }
     return (
       <WhiteContainer>
-        <h1 className={classes.gallery__headingPrimary}>
+        <h1 className='gallery__headingPrimary'>
           Our Precious <span>Moments</span>
         </h1>
-        <div className={classes.gallery}>{allGalleryItems}</div>
+        <div className='gallery'>{allGalleryItems}</div>
         {possibleButton}
       </WhiteContainer>
     );

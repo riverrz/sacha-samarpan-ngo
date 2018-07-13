@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import EventArch from "./EventArch/EventArch";
-import classes from "./EventArchive.css";
+import  "./EventArchive.css";
 class EventArchive extends Component {
   state = {
     events: [
@@ -75,10 +75,10 @@ class EventArchive extends Component {
     });
     return (
       <WhiteContainer>
-        <h1 className={classes["eventArchive__heading--primary"]}>
+        <h1 className="eventArchive__heading--primary">
           Event Archives <i className="fas fa-archive" />
         </h1>
-        <div className={classes.eventArchive__container}>{events}</div>
+        <div className='eventArchive__container'>{events}</div>
       </WhiteContainer>
     );
   }

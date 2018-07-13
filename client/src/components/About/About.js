@@ -1,23 +1,23 @@
 import React from "react";
-import classes from "./About.css";
+import  "./About.css";
 import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
 const about = props => (
   <WhiteContainer>
-    <h1 className={classes.about__headingPrimary}>
+    <h1 className="about__headingPrimary">
       Welcome to{" "}
-      <span className={classes.about__headingPrimarySpan}>Sacha Samarthan</span>
+      <span className="about__headingPrimarySpan">Sacha Samarthan</span>
     </h1>
-    <h2 className={classes.about__subHeading}>Something about us</h2>
-    <hr className={classes.about__mainHR}/>
-    <div className={classes.about__textBox}>
-      <h2 className={classes.about__innerHeading}>Our Vision</h2>
-      <hr className={classes.about__subHR} />
+    <h2 className='about__subHeading'>Something about us</h2>
+    <hr className='about__mainHR'/>
+    <div className='about__textBox'>
+      <h2 className='about__innerHeading'>Our Vision</h2>
+      <hr className='about__subHR' />
       <p>
         We want to see an India where every child gets an education, every youth
         an opportunity to succeed, and every woman the right to equality.
       </p>
-      <h2 className={classes.about__innerHeading}>Our Mission</h2>
-      <hr className={classes.about__subHR} />
+      <h2 className='about__innerHeading'>Our Mission</h2>
+      <hr className='about__subHR' />
       <p>
         To enable people to take responsibility for the situation of the
         deprived Indian child and so motivate them to seek resolution through

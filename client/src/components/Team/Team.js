@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Member from "./Member/Member";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
-import classes from "./Team.css";
+import "./Team.css";
 class Team extends Component {
   state = {
     member: [
@@ -36,7 +36,7 @@ class Team extends Component {
 
     return (
       <WhiteContainer>
-        <h1 className={classes["team__heading--primary"]}>Our Team</h1>
+        <h1 className="team__heading--primary">Our Team</h1>
         {allMembers}
       </WhiteContainer>
     );

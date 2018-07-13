@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './Fullgallery.css';
+import './Fullgallery.css';
 import Gallery from '../../components/Gallery/Gallery';
 class Fullgallery extends Component {
     componentDidMount() {
@@ -7,7 +7,7 @@ class Fullgallery extends Component {
     }
     render() {
         return(
-            <div className={classes.fullGallery}>
+            <div className='fullGallery'>
                 <Gallery invokeBackdrop={(event) => this.props.invoke(event)} />
             </div>
         );

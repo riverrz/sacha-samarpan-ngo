@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GalleryItem from "../Gallery/GalleryItem/GalleryItem";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
-import classes from "./FrontPageGallery.css";
+import "./FrontPageGallery.css";
 import { Link } from "react-router-dom";
 class frontPageGallery extends Component {
   state = {
@@ -34,24 +34,24 @@ class frontPageGallery extends Component {
     });
     return (
       <WhiteContainer>
-        <h1 className={classes.frontPageGallery__headingPrimary}>
+        <h1 className='frontPageGallery__headingPrimary'>
           Our Precious <span>Moments</span>
         </h1>
-        <div className={classes["frontPageGallery__container"]}>
-          <div className={classes.frontPageGallery__imgContainer}>{images}</div>
-          <div className={classes.frontPageGallery__videoContainer}>
+        <div className="frontPageGallery__container">
+          <div className='frontPageGallery__imgContainer'>{images}</div>
+          <div className='frontPageGallery__videoContainer'>
             <iframe
-              className={classes.frontPageGallery__video}
+              className='frontPageGallery__video'
               title="pvr"
               frameBorder="0"
               src="https://www.youtube.com/embed/MG7dW2gChOs"
             />
-            <div className={classes.frontPageGallery__overlay} id="overlay" onClick={this.props.invokeBackdrop} />
+            <div className='frontPageGallery__overlay' id="overlay" onClick={this.props.invokeBackdrop} />
           </div>
         </div>
-        <button className={classes.frontPageGallery__galleryLink}>
+        <button className='frontPageGallery__galleryLink'>
           <Link to="/full-gallery" exact>
-            View All Photos <span className={classes.frontPageGallery__arrow}>→</span>
+            View All Photos <span className='frontPageGallery__arrow'>→</span>
           </Link>
         </button>
       </WhiteContainer>

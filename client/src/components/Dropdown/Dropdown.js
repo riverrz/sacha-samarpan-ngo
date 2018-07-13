@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from './Dropdown.css';
+import  './Dropdown.css';
 const dropdown=props=> (
-    <ul className={classes.dropDown__list}>
+    <ul className='dropDown__list'>
         {props.children}
     </ul>
 );

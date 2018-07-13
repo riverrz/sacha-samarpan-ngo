@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Donate.css";
+import  "./Donate.css";
 import DonateLogo from "../../assets/Icons/donation-1.png";
 import Inputfield from "../Inputfield/Inputfield";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
@@ -7,21 +7,21 @@ import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 const donate = props => {
   return (
     <WhiteContainer>
-      <div className={classes.donate__headingContainer}>
-        <h1 className={classes.donate__heading}>
+      <div className='donate__headingContainer'>
+        <h1 className='donate__heading'>
           Thank You For{" "}
-          <span className={classes.donate__heading__span}>Your Support</span>
-          <div className={classes.donate__logoBox}>
+          <span className='donate__heading__span'>Your Support</span>
+          <div className='donate__logoBox'>
             <img
               src={DonateLogo}
               alt="Donation-1"
-              className={classes.donate__logo}
+              className='donate__logo'
             />
           </div>
-          <hr className={classes.donate__horizontal} />
+          <hr className='donate__horizontal' />
         </h1>
       </div>
-      <form autoComplete="off" className={classes.donate__form}>
+      <form autoComplete="off" className='donate__form'>
         <Inputfield type="text" placeholder="Name:" iconClass="fas fa-user" />
         <Inputfield
           type="email"
@@ -34,10 +34,10 @@ const donate = props => {
           placeholder="PAN Number"
           iconClass="fas fa-address-card"
         />
-        <div className={classes.donate__address__container}>
+        <div className='donate__address__container'>
           <textarea
             placeholder="Address:"
-            className={classes.donate__address}
+            className='donate__address'
           />
         </div>
         <Inputfield
@@ -45,13 +45,13 @@ const donate = props => {
           placeholder="Amount(Rs)"
           iconClass="fas fa-rupee-sign"
         />
-        <div className={classes.donate__button__container}>
-          <button className={classes.donate__button}>Donate</button>
+        <div className='donate__button__container'>
+          <button className='donate__button'>Donate</button>
         </div>
       </form>
-      <div className={classes.donate__conditionsContainer}>
-        <h1 className={classes.donate__conditionsHeading}>Terms & Conditions</h1>
-        <ul className={classes.donate__conditionsList}>
+      <div className='donate__conditionsContainer'>
+        <h1 className='donate__conditionsHeading'>Terms & Conditions</h1>
+        <ul className='donate__conditionsList'>
           <li>
             Refund Policy:- If customer paid twice for one transaction, the one
             transaction amount will be refunded via same source within 07 to 10

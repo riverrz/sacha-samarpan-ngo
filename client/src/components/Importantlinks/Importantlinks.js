@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Importantlinks.css";
+import  "./Importantlinks.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 
 const importantlinks = props => {
@@ -9,10 +9,10 @@ const importantlinks = props => {
   };
   return (
     <WhiteContainer style={style}>
-      <div className={classes["importantLinks__container"]}>
-        <h2 className={classes.importantLinks__heading}>Important Links</h2>
-        <hr className={classes.importantLinks__HR} />
-        <ul className={classes.importantLinks__linksList}>
+      <div className="importantLinks__container">
+        <h2 className='importantLinks__heading'>Important Links</h2>
+        <hr className='importantLinks__HR' />
+        <ul className='importantLinks__linksList'>
           <li>
             <i className="fas fa-angle-right" />{" "}
             <a

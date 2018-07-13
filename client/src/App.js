@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import classes from "./App.css";
+import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import leftLogo from "./assets/Icons/charity-1.png";
@@ -86,20 +86,20 @@ class App extends Component {
       )
     }
     return (
-      <div className={classes.App}>
-        <div className={classes.app__backSide}>
-          <div className={classes.app__backSide__logoBox}>
+      <div className='App'>
+        <div className='app__backSide'>
+          <div className='app__backSide__logoBox'>
             <img
               src={leftLogo}
               alt="charity-logo-1"
-              className={classes.app__backSide__logo}
+              className='app__backSide__logo'
             />
           </div>
-          <div className={classes.app__backSide__logoBox}>
+          <div className='app__backSide__logoBox'>
             <img
               src={rightLogo}
               alt="charity-logo-1"
-              className={classes.app__backSide__logo}
+              className='app__backSide__logo'
             />
           </div>
         </div>
