@@ -1,6 +1,14 @@
 
-.registration__heading--primary {
-    text-transform: uppercase;
+.registration__headingPrimary {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.registration__headingPrimarySpan {
+  color: #ff9933;
 }
 .registration__horizontalRule {
     width: 10rem;

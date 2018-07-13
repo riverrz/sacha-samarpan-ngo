@@ -38,21 +38,21 @@ class Internship extends Component {
     }
     let fieldContainerClasses = classes.internship__fields__container;
     if (!this.state.visible) {
-      fieldContainerClasses += " " + classes.hidden;
+      fieldContainerClasses += " " + classes.internship__hidden;
     }
     return (
       <WhiteContainer>
-        <h1 className={classes.heading__primary}>
+        <h1 className={classes["internship__heading--primary"]}>
           Internship{" "}
           <span className={classes["heading__primary--saffron"]}>
             Registration
           </span>
-          <hr className={classes["horizontalRule--mid"]} />
+          <hr className={classes["internship__horizontalRule--mid"]} />
         </h1>
 
         <form className={classes.internship__form} action="/internship" method="POST">
-          <span className={classes.typeText}>Type of Internship:</span>
-          <div className={classes.select__container}>
+          <span className={classes.internship__typeText}>Type of Internship:</span>
+          <div className={classes.internship__select__container}>
             <select
               className={
                 classes.internship__select +

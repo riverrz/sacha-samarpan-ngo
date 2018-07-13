@@ -53,7 +53,7 @@
     color: currentColor;
 }
 
-.iconSpan {
+.footer__iconSpan {
   display: inline-block;
   height: 100%;
   background-color: #222126;
@@ -70,22 +70,22 @@
   justify-content: flex-start;
   align-items: center;
 }
-.logo {
+.footer__logo {
   height: 100%;
   width: 100%;
 }
-.about {
+.footer__about {
   flex-basis: 25%;
 }
 
-.links {
+.footer__links {
   flex-basis: 25%;
 }
 
-.projects {
+.footer__projects {
   flex-basis: 25%;
 }
-.footerHR {
+.footer__HR {
   width: 20%;
   height: 1px;
   border: none;
@@ -93,35 +93,35 @@
   /* background-color: green; */
 }
 
-.list {
+.footer__list {
   font-family: inherit;
   list-style: none;
   margin-top: 2rem;
 }
-.list__item {
+.footer__list__item {
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s;
 }
-.list__item:hover {
+.footer__list__item:hover {
   background-color: #ff9933;
 }
-.list__item > a {
+.footer__list__item > a {
   display: inline-block;
   text-decoration: none;
   transition: all 0.3s;
 }
-.list__item:hover > a {
+.footer__list__item:hover > a {
   color: white;
   transform: translateX(9px);
 }
-.list__item:hover > a > i {
+.footer__list__item:hover > a > i {
   color: #fff;
 }
-.list__item:last-child {
+.footer__list__item:last-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.heading {
+.footer__heading {
   margin-top: 4rem;
   font-family: inherit;
   font-weight: 600;
@@ -131,7 +131,7 @@
   margin-bottom: 0.5rem;
 }
 
-.copyRight {
+.footer__copyRight {
     width: 100%;
     padding: 1.6rem 0;
     background-color: #ff9933;
@@ -143,7 +143,7 @@
 }
 
 
-li a i {
+footer__list__item__text i {
   font-size: 1.3rem;
   color: #bbbbbb;
   margin-right: 0.4rem;

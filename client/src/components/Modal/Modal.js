@@ -23,9 +23,9 @@ class Modal extends Component {
       var indexOfLink = this.props.image.indexOf("/images");
       const relativeLink = this.props.image.slice(indexOfLink);
       content = (
-        <div className={classes.modalContainer} style={this.state.marginTop}>
+        <div className={classes.modal__container} style={this.state.marginTop}>
           <button
-            className={classes.exitButton}
+            className={classes.modal__exitButton}
             onClick={this.props.exitClicked}
           >
             <i class="fas fa-times" />
@@ -35,59 +35,59 @@ class Modal extends Component {
       );
     } else if (this.props.for === "popup") {
       content = (
-        <div className={classes.popupContainer} style={this.state.marginTop}>
+        <div className={classes.modal__popupContainer} style={this.state.marginTop}>
           <img
             src="/images/internship_banner.jpg"
             alt="Internship Banner"
-            className={classes.banner}
+            className={classes.modal__banner}
           />
-          <img src="/images/at.png" alt="At icon" className={classes.atIcon} />
+          <img src="/images/at.png" alt="At icon" className={classes.modal__atIcon} />
           <img
             src={Logo}
             alt="Saccha Samarpan Logo"
-            className={classes.logobanner}
+            className={classes.modal__logobanner}
           />
-          <div className={classes.details}>
-            <p className={classes.bold}>
+          <div className={classes.modal__details}>
+            <p className={classes.modal__bold}>
               Internships are currently being offered to the interested
               candidates
             </p>
             <p>
-              <span className={classes.iconContainer}>
+              <span className={classes.modal__iconContainer}>
                 <img
                   src="calendar.png"
                   alt="Calendar"
-                  className={classes.icon}
+                  className={classes.modal__icon}
                 />
               </span>{" "}
               Starting Date: 7th July 2018
             </p>
             <p>
-              <span className={classes.iconContainer}>
+              <span className={classes.modal__iconContainer}>
                 <img
                   src="document.png"
                   alt="Project"
-                  className={classes.icon}
+                  className={classes.modal__icon}
                 />
               </span>{" "}
               Projects: Women Empowerment, Child Education
             </p>
             <p>
-              <span className={classes.iconContainer}>
+              <span className={classes.modal__iconContainer}>
                 <img
                   src="building.png"
                   alt="Building"
-                  className={classes.icon}
+                  className={classes.modal__icon}
                 />
               </span>{" "}
               Type of Work: On field Work
             </p>
-            <Link exact to="/internship" className={classes.applyLink}>
+            <Link exact to="/internship" className={classes.modal__applyLink}>
               Apply Now
             </Link>
           </div>
           <button
-            className={classes.exitButton + " " + classes["exitButton--bottom"]}
+            className={classes.modal__exitButton + " " + classes["modal__exitButton--bottom"]}
             onClick={this.props.exitClicked}
           >
             <i class="fas fa-times" />
@@ -108,7 +108,7 @@ class Modal extends Component {
             allowFullScreen
           />
           <button
-            className={classes.exitButton + " " + classes["exitButton--bottom"]}
+            className={classes.modal__exitButton + " " + classes["modal__exitButton--bottom"]}
             onClick={this.props.exitClicked}
           >
             <i class="fas fa-times" />

@@ -1,7 +1,14 @@
-.heading__primary {
-  text-transform: uppercase;
+.internship__headingPrimary {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+  margin-bottom: 2rem;
 }
-.horizontalRule--mid {
+.internship__headingPrimary span {
+  color: #ff9933;
+}
+.internship__horizontalRule--mid {
   width: 20rem;
   margin: auto;
 }
@@ -12,7 +19,7 @@
   margin: 4rem auto;
   width: 75%;
 }
-.select__container {
+.internship__select__container {
   width: 100%;
   text-align: left;
 }
@@ -46,11 +53,11 @@
   height: 35rem;
   transition: height 500ms 0ms, opacity 500ms 400ms;
 }
-.hidden {
+.internship__hidden {
   height: 0;
   opacity: 0;
 }
-.typeText {
+.internship__typeText {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   display: inline-block;

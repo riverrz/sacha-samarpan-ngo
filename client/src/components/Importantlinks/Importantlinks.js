@@ -10,9 +10,9 @@ const importantlinks = props => {
   return (
     <WhiteContainer style={style}>
       <div className={classes["importantLinks__container"]}>
-        <h2 className={classes.heading}>Important Links</h2>
-        <hr className={classes.HR} />
-        <ul className={classes.linksList}>
+        <h2 className={classes.importantLinks__heading}>Important Links</h2>
+        <hr className={classes.importantLinks__HR} />
+        <ul className={classes.importantLinks__linksList}>
           <li>
             <i className="fas fa-angle-right" />{" "}
             <a

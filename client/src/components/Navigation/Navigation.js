@@ -71,18 +71,18 @@ class Navigation extends Component {
           <div
             className={classNames({
               [classes.navigation__item]: true,
-              [classes.logoBox]: true
+              [classes.navigation__logoBox]: true
             })}
           >
-            <img className={classes.logo} src={Logo} alt="Logo" />
+            <img className={classes.navigation__logo} src={Logo} alt="Logo" />
           </div>
           <div className={classes.navigation__item}>
-            <NavLink to="/" exact activeClassName={classes.active}>
+            <NavLink to="/" exact activeClassName={classes.navigation__active}>
               Home
             </NavLink>
           </div>
           <div className={classes.navigation__item}>
-            <NavLink to="/about" activeClassName={classes.active}>
+            <NavLink to="/about" activeClassName={classes.navigation__active}>
               About
             </NavLink>
             <Dropdown>
@@ -90,7 +90,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/about"
                   exact
-                  activeClassName={classes.activeDropDown}
+                  activeClassName={classes.navigation__activeDropDown}
                 >
                   <i className="fas fa-angle-right" /> Overview
                 </NavLink>
@@ -100,7 +100,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/about/founders"
                   exact
-                  activeClassName={classes.activeDropDown}
+                  activeClassName={classes.navigation__activeDropDown}
                 >
                   <i className="fas fa-angle-right" /> Founders
                 </NavLink>
@@ -109,7 +109,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/about/team"
                   exact
-                  activeClassName={classes.activeDropDown}
+                  activeClassName={classes.navigation__activeDropDown}
                 >
                   <i className="fas fa-angle-right" /> Our Team
                 </NavLink>
@@ -118,7 +118,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/about/issues"
                   exact
-                  activeClassName={classes.activeDropDown}
+                  activeClassName={classes.navigation__activeDropDown}
                 >
                   <i className="fas fa-angle-right" /> Issues & Views
                 </NavLink>
@@ -127,18 +127,18 @@ class Navigation extends Component {
           </div>
 
           <div className={classes.navigation__item}>
-            <NavLink to="/full-gallery" exact activeClassName={classes.active}>
+            <NavLink to="/full-gallery" exact activeClassName={classes.navigation__active}>
               Gallery
             </NavLink>
           </div>
           <div className={classes.navigation__item}>
-            <NavLink to="/internship" exact activeClassName={classes.active}>
+            <NavLink to="/internship" exact activeClassName={classes.navigation__active}>
               Internship
             </NavLink>
           </div>
 
           <div className={classes.navigation__item}>
-            <NavLink to="/events" activeClassName={classes.active}>
+            <NavLink to="/events" activeClassName={classes.navigation__active}>
               Events
             </NavLink>
             <Dropdown>
@@ -146,7 +146,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/events/overview"
                   exact
-                  activeClassName={classes.activeDropDown}>
+                  activeClassName={classes.navigation__activeDropDown}>
                   <i className="fas fa-angle-right" /> Overview
                 </NavLink>
               </li>
@@ -154,7 +154,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/events/archive"
                   exact
-                  activeClassName={classes.activeDropDown}>
+                  activeClassName={classes.navigation__activeDropDown}>
                   <i className="fas fa-angle-right" /> Events Archive
                 </NavLink>
               </li>
@@ -162,7 +162,7 @@ class Navigation extends Component {
                 <NavLink
                   to="/events/upcoming"
                   exact
-                  activeClassName={classes.activeDropDown}>
+                  activeClassName={classes.navigation__activeDropDown}>
                   <i className="fas fa-angle-right" /> Upcoming Events
                 </NavLink>
               </li>
@@ -170,7 +170,7 @@ class Navigation extends Component {
           </div>
 
           <div className={classes.navigation__item}>
-            <NavLink to="/registration" exact activeClassName={classes.active}>
+            <NavLink to="/registration" exact activeClassName={classes.navigation__active}>
               Registration
             </NavLink>
           </div>
@@ -178,7 +178,7 @@ class Navigation extends Component {
             <NavLink
               to="/important-links"
               exact
-              activeClassName={classes.active}
+              activeClassName={classes.navigation__active}
             >
               Important Links
             </NavLink>

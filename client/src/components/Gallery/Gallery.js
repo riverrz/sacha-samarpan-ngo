@@ -70,9 +70,9 @@ class Gallery extends Component {
       );
     });
     let possibleButton = (
-      <button className={classes.galleryLink}>
+      <button className={classes.gallery__link}>
         <Link to="/full-gallery" exact>
-          View All Photos <span className={classes.arrow}>→</span>
+          View All Photos <span className={classes.gallery__arrow}>→</span>
         </Link>
       </button>
     );

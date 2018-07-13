@@ -41,7 +41,7 @@
 
 }
 
-.slider {
+.carousel__slider {
     overflow: hidden;
     width: 100%;
 	height: 95vh;
@@ -49,15 +49,15 @@
     z-index: -2;
 }
 
-.slider figure>div {
+.carousel__slider figure>div {
 	width: 20%;
 	float: left;
 }
-.imageBox>img {
+.carousel__imageBox>img {
     width: 100%;
     height: 100%;
 }
-.slider figure {
+.carousel__slider figure {
 	position: relative;
     width: 500%;
 	margin: 0;

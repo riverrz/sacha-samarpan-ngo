@@ -75,10 +75,10 @@ class EventArchive extends Component {
     });
     return (
       <WhiteContainer>
-        <h1 className={classes["heading--primary"]}>
+        <h1 className={classes["eventArchive__heading--primary"]}>
           Event Archives <i className="fas fa-archive" />
         </h1>
-        <div className={classes.container}>{events}</div>
+        <div className={classes.eventArchive__container}>{events}</div>
       </WhiteContainer>
     );
   }

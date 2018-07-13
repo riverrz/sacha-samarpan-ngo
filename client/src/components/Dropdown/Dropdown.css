@@ -1,4 +1,4 @@
-.list {
+.dropDown__list {
   position: absolute;
   top: 100%;
   left: 0;
@@ -10,7 +10,7 @@
   transform: translateX(20px);
   transition: all .4s;
 }
-.list > li {
+.dropDown__list > li {
   color: #fff;
   background-color: #222126;
   font-family: "Exo" ,sans-serif;
@@ -18,10 +18,10 @@
   transition: all 0.3s;
 }
 
-.list>li:hover {
+.dropDown__list>li:hover {
   background-color: #ff9933;
 }
-.list>li > a {
+.dropDown__list>li > a {
   display: flex;
   padding-left: 1.2rem;
   align-items: center;
@@ -30,14 +30,14 @@
   text-decoration: none;
   transition: all 0.3s;
 }
-.list>li:hover > a {
+.dropDown__list>li:hover > a {
   color: white;
   transform: translateX(9px);
 }
-.list>li:hover > a > i {
+.dropDown__list>li:hover > a > i {
   color: #fff;
 }
-.list>li a i {
+.dropDown__list>li a i {
   font-size: 1.3rem;
   color: #bbbbbb;
   margin-right: 0.8rem ;

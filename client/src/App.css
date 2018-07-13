@@ -25,7 +25,7 @@
 }
 
 
-.backSide {
+.app__backSide {
   height: 8rem;
   box-sizing: border-box;
   background-color: lightskyblue;
@@ -33,12 +33,12 @@
   margin: auto;
   justify-content: space-between;
 }
-.backSide__logoBox {
+.app__backSide__logoBox {
   width: 6rem;
   height:7rem;
   display: inline-block;
 }
-.backSide__logo {
+.app__backSide__logo {
   height: 100%;
   width: 100%;
 }

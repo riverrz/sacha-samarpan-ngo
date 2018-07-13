@@ -87,19 +87,19 @@ class App extends Component {
     }
     return (
       <div className={classes.App}>
-        <div className={classes.backSide}>
-          <div className={classes.backSide__logoBox}>
+        <div className={classes.app__backSide}>
+          <div className={classes.app__backSide__logoBox}>
             <img
               src={leftLogo}
               alt="charity-logo-1"
-              className={classes.backSide__logo}
+              className={classes.app__backSide__logo}
             />
           </div>
-          <div className={classes.backSide__logoBox}>
+          <div className={classes.app__backSide__logoBox}>
             <img
               src={rightLogo}
               alt="charity-logo-1"
-              className={classes.backSide__logo}
+              className={classes.app__backSide__logo}
             />
           </div>
         </div>

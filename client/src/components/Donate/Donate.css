@@ -40,7 +40,7 @@
   background-color: #f6f6f6;
   justify-content: space-evenly;
 }
-.address__container {
+.donate__address__container {
   width: 40rem;
 }
 .donate__address {
@@ -75,7 +75,7 @@
   box-shadow: 0 0.1rem 0.7rem rgba(0,0,0,0.5);
 }
 
-.conditionsContainer {
+.donate__conditionsContainer {
   font-family: inherit;
   margin: 3rem auto;
   width: 75%;
@@ -83,11 +83,11 @@
   line-height: 20px;
   
 }
-.conditionsList {
+.donate__conditionsList {
   list-style: disc;
   font-size: 1.4rem;
 }
-.conditionsHeading {
+.donate__conditionsHeading {
   font-weight: 300;
   font-size: 2rem;
   margin-bottom: 1rem;

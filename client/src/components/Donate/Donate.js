@@ -34,7 +34,7 @@ const donate = props => {
           placeholder="PAN Number"
           iconClass="fas fa-address-card"
         />
-        <div className={classes.address__container}>
+        <div className={classes.donate__address__container}>
           <textarea
             placeholder="Address:"
             className={classes.donate__address}
@@ -49,9 +49,9 @@ const donate = props => {
           <button className={classes.donate__button}>Donate</button>
         </div>
       </form>
-      <div className={classes.conditionsContainer}>
-        <h1 className={classes.conditionsHeading}>Terms & Conditions</h1>
-        <ul className={classes.conditionsList}>
+      <div className={classes.donate__conditionsContainer}>
+        <h1 className={classes.donate__conditionsHeading}>Terms & Conditions</h1>
+        <ul className={classes.donate__conditionsList}>
           <li>
             Refund Policy:- If customer paid twice for one transaction, the one
             transaction amount will be refunded via same source within 07 to 10

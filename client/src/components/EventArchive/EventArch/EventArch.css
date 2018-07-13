@@ -1,4 +1,4 @@
-.container {
+.eventArch__container {
     /* flex:1; */
     padding:0 4rem;
     /* height: 30rem; */
@@ -8,11 +8,11 @@
     /* width: 100%; */
     font-family: 'Josefin Sans', sans-serif;
 }
-.photo {
+.eventArch__photo {
     width: 100%;
     height: 50%;
 }
-.title {
+.eventArch__title {
     font-size: 1.6rem;
     font-weight: 700;
     font-family: inherit;
@@ -20,7 +20,7 @@
     width: 100%;
     margin-bottom: 20px;
 }
-.date {
+.eventArch__date {
     font-size: 1.5rem;
     font-weight: 500;
     color: #bbbbbb;

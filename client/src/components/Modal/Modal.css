@@ -1,4 +1,4 @@
-.modalContainer {
+.modal__container {
   width: 80%;
   margin: auto;
   height: 27%;
@@ -6,19 +6,19 @@
   position: relative;
   overflow: hidden;
 }
-.modalContainer > img {
+.modal__container > img {
   width: 100%;
   height: 100%;
   transition: all 0.4s;
 }
-.modalContainer:hover > img {
+.modal__container:hover > img {
   filter: brightness(70%);
 }
-.modalContainer:hover .exitButton {
+.modal__container:hover .modal__exitButton {
   visibility: visible;
   color: #eeeeee;
 }
-.exitButton {
+.modal__exitButton {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
@@ -30,10 +30,10 @@
   cursor: pointer;
   visibility: hidden;
 }
-.exitButton > i {
+.modal__exitButton > i {
   font-size: 2rem;
 }
-.exitButton--bottom {
+.modal__exitButton--bottom {
   top: 103%;
   right: 2%;
   color: #eeeeee;
@@ -41,7 +41,7 @@
 }
 /*For Popup*/
 
-.popupContainer {
+.modal__popupContainer {
   height: 16%;
   width: 40%;
   background-color: #fff;
@@ -50,34 +50,34 @@
   z-index: 100;
   box-sizing: border-box;
 }
-.banner {
+.modal__banner {
   width: 56%;
   height: 30%;
   display: inline-block;
 }
-.atIcon {
+.modal__atIcon {
   width: 11%;
   height: 15%;
   margin: 2% 2%;
   display: inline-block;
 }
-.logobanner {
+.modal__logobanner {
   width: 29%;
   height: 30%;
   display: inline-block;
 }
-.details {
+.modal__details {
   display: block;
   width: 100%;
   height: 70%;
   padding: 3rem 2rem;
   font-family: "Lato", sans-serif;
 }
-.bold {
+.modal__bold {
   font-weight: 500;
   font-size: 1.7rem;
 }
-.details p {
+.modal__details p {
   margin: 2rem 0;
   font-family: inherit;
   font-size: 1.5rem;
@@ -85,23 +85,23 @@
   align-items: center;
 }
 
-.details i {
+.modal__details i {
     font-size: 2rem;
     color: dodgerblue;
     margin-right: 1rem;
 }
-.iconContainer {
+.modal__iconContainer {
   height: 3rem;
   width: 3rem;
   display:inline-block;
   margin-right: 1rem;
 }
-.icon {
+.modal__icon {
   height: 100%;
   width: 100%;
 
 }
-.applyLink {
+.modal__applyLink {
     text-decoration: none;
     display: block;
     margin: 5rem auto;

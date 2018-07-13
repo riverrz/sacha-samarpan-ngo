@@ -10,37 +10,37 @@
   font-size: 1.5rem;
   font-family: "Lato", sans-serif;
 }
-.Maintext .horizontalRule {
+.Maintext__horizontalRule {
   width: 35%;
   height: 3px;
   background-color: #008000;
   margin-left: 35%;
   transform: translateX(-50%);
 }
-.content {
+.Maintext__content {
   width: 55%;
   margin: 4rem auto;
   text-align: center;
 }
-h1 {
+.Maintext__headingPrimary {
   font-size: 40px;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
 }
-h1 span {
+.Maintext__headingPrimarySpan {
   color: #ff9933;
 }
-.main {
+.Maintext__main {
   color: dodgerblue;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   letter-spacing: 0.4px;
 }
-.main strong {
+.Maintext__main strong {
   font-weight: 600;
 }
-.content p {
+.Maintext__content p {
   /* color: #666666; */
   /* color:  #000080; */
   color: dodgerblue;
@@ -50,10 +50,10 @@ h1 span {
   letter-spacing: 0.2px;
   font-weight: normal;
 }
-.Memberform h3 {
+.Maintext__Memberform h3 {
   font-weight: 300;
 }
-.Memberform button {
+.Maintext__Memberform button {
   margin: 3rem;
   padding: 3rem 2rem;
   border: none;
@@ -67,10 +67,10 @@ h1 span {
   transition: transform 0.2s, background-color 0.4s;
   box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
 }
-.Memberform button:hover {
+.Maintext__Memberform button:hover {
   background-color: deepskyblue;
 }
-.Memberform button:active {
+.Maintext__Memberform button:active {
   transform: translateY(4px);
   box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.5);
 }

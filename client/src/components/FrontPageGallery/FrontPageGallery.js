@@ -20,9 +20,6 @@ class frontPageGallery extends Component {
       }
     ]
   };
-  // clickHandler = event => {
-  //   console.log(event.target);
-  // };
   render() {
     let images = this.state.photos.map((photo, id) => {
       return (
@@ -49,12 +46,12 @@ class frontPageGallery extends Component {
               frameBorder="0"
               src="https://www.youtube.com/embed/MG7dW2gChOs"
             />
-            <div className={classes.overlay} id="overlay" onClick={this.props.invokeBackdrop} />
+            <div className={classes.frontPageGallery__overlay} id="overlay" onClick={this.props.invokeBackdrop} />
           </div>
         </div>
-        <button className={classes.galleryLink}>
+        <button className={classes.frontPageGallery__galleryLink}>
           <Link to="/full-gallery" exact>
-            View All Photos <span className={classes.arrow}>→</span>
+            View All Photos <span className={classes.frontPageGallery__arrow}>→</span>
           </Link>
         </button>
       </WhiteContainer>

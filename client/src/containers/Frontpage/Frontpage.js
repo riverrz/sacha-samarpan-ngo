@@ -11,62 +11,62 @@ class Frontpage extends Component {
     return (
       <Aux>
         <Carousel />
-        <div className={classes.frontTextAndLogoBox}>
-          <div className={classes.saffron} />
+        <div className={classes.frontPage__frontTextAndLogoBox}>
+          <div className={classes.frontPage__saffron} />
           <Maintext />
-          <div className={classes.green} />
+          <div className={classes.frontPage__green} />
         </div>
-        <div className={classes.iconRow}>
-          <div className={classes["iconRow__item"]}>
-            <span className={classes["iconRow__item__iconContainer"]}>
+        <div className={classes.frontPage__iconRow}>
+          <div className={classes["frontPage__iconRow__item"]}>
+            <span className={classes["frontPage__iconRow__item__iconContainer"]}>
               <img
                 src="info.png"
                 alt=""
-                className={classes["iconRow__item__icon"]}
+                className={classes["frontPage__iconRow__item__icon"]}
               />
             </span>
-            <h2 className={classes["iconRow__item__heading"]}>KNOW MORE</h2>
-            <p className={classes["iconRow__item__para"]}>
+            <h2 className={classes["frontPage__iconRow__item__heading"]}>KNOW MORE</h2>
+            <p className={classes["frontPage__iconRow__item__para"]}>
               Most Trusted NGO among youth
             </p>
-            <Link exact to="/about" className={classes["iconRow__item__link"]}>
+            <Link exact to="/about" className={classes["frontPage__iconRow__item__link"]}>
               <em>Discover More</em>
             </Link>
           </div>
-          <div className={classes["iconRow__item"]}>
-            <span className={classes["iconRow__item__iconContainer"]}>
+          <div className={classes["frontPage__iconRow__item"]}>
+            <span className={classes["frontPage__iconRow__item__iconContainer"]}>
               <img
                 src="help-hand.png"
                 alt=""
-                className={classes["iconRow__item__icon"]}
+                className={classes["frontPage__iconRow__item__icon"]}
               />
             </span>
-            <h2 className={classes["iconRow__item__heading"]}>
+            <h2 className={classes["frontPage__iconRow__item__heading"]}>
               HELP & SUPPORT
             </h2>
-            <p className={classes["iconRow__item__para"]}>
+            <p className={classes["frontPage__iconRow__item__para"]}>
               Donate now to help the society.
             </p>
-            <Link exact to="/donate" className={classes["iconRow__item__link"]}>
+            <Link exact to="/donate" className={classes["frontPage__iconRow__item__link"]}>
               <em>Donate</em>
             </Link>
           </div>
-          <div className={classes["iconRow__item"]}>
-            <span className={classes["iconRow__item__iconContainer"]}>
+          <div className={classes["frontPage__iconRow__item"]}>
+            <span className={classes["frontPage__iconRow__item__iconContainer"]}>
               <img
                 src="group.png"
                 alt=""
-                className={classes["iconRow__item__icon"]}
+                className={classes["frontPage__iconRow__item__icon"]}
               />
             </span>
-            <h2 className={classes["iconRow__item__heading"]}>VOLUNTEERING</h2>
-            <p className={classes["iconRow__item__para"]}>
+            <h2 className={classes["frontPage__iconRow__item__heading"]}>VOLUNTEERING</h2>
+            <p className={classes["frontPage__iconRow__item__para"]}>
               Join us as Volunteer to help needed.
             </p>
             <Link
               exact
               to="/registration"
-              className={classes["iconRow__item__link"]}
+              className={classes["frontPage__iconRow__item__link"]}
             >
               <em>Apply Now</em>
             </Link>

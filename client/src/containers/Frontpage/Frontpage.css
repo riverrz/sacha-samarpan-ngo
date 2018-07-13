@@ -1,7 +1,7 @@
-.frontTextAndLogoBox {
+.frontPage__frontTextAndLogoBox {
   position: relative;
 }
-.saffron {
+.frontPage__saffron {
   position: absolute;
   top:0;
   left:0;
@@ -10,7 +10,7 @@
   background-color: #ff9933;
   clip-path: polygon(0 0, 100% 0,0 100%);
 }
-.green {
+.frontPage__green {
   bottom: 0;
   right:0;
   position: absolute;
@@ -19,7 +19,7 @@
   background-color: #008000;
   clip-path: polygon(100% 100%, 100% 0,0 100%);
 }
-.iconRow {
+.frontPage__iconRow {
   background-color: #fff;
   width: 100%;
   height: 30rem;
@@ -29,7 +29,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.iconRow__item {
+.frontPage__iconRow__item {
   display:flex;
   position: relative;
   justify-content: center;
@@ -38,21 +38,21 @@
   padding: 5rem 8rem 2rem 8rem;
   border: 1px solid #d5d5d5;
 }
-.iconRow__item__heading {
+.frontPage__iconRow__item__heading {
   font-size: 2rem;
   margin: 1rem;
 }
-.iconRow__item__para {
+.frontPage__iconRow__item__para {
   margin: 1rem 0;
   font-size: 1.4rem;
 }
-.iconRow__item__link {
+.frontPage__iconRow__item__link {
   color: #222222 !important;
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 600;
 } 
-.iconRow__item__iconContainer {
+.frontPage__iconRow__item__iconContainer {
   display: inline-block;
   height: 6rem;
   width: 6rem;
@@ -67,10 +67,10 @@
   background-color: #fff;
   transform: translate(-50%,0);
 }
-.iconRow__item__icon {
+.frontPage__iconRow__item__icon {
   width: 80%;
   height: 80%;
 }
-.active {
+.frontPage__active {
     color: #008000 !important;
 }

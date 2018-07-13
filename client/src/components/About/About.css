@@ -1,11 +1,11 @@
-.mainHR {
+.about__mainHR {
   width: 35%;
   height: 2px;
   background-color: #008000;
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.subHR {
+.about__subHR {
     width: 10%;
     height: 1px;
     background-color: #777777;
@@ -14,33 +14,33 @@
 }
 
 
-.headingPrimary {
+.about__headingPrimary {
   font-size: 40px;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
   text-transform: uppercase;
 }
-.headingPrimarySpan {
+.about__headingPrimarySpan {
   color: #ff9933;
 }
-.subHeading {
+.about__subHeading {
     color: #777777;
     font-weight: 400;
     margin-bottom: 1rem;
 }
-.textBox {
+.about__textBox {
     width: 60%;
     text-align: center;
     margin: 5rem auto;
 }
-.innerHeading {
+.about__innerHeading {
     margin-bottom: 0.5rem;
     font-weight: 600;
     font-size: 2rem;
     color: #ff9933;
 }
-.textBox>p {
+.about__textBox>p {
     margin: 2rem auto;
     font-size: 1.3rem;
     color: #333333;

@@ -4,9 +4,9 @@ import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import Inputfield from "../Inputfield/Inputfield";
 const registration = props => (
   <WhiteContainer>
-    <h1 className={classes["registration__heading--primary"]}>
+    <h1 className={classes["registration__headingPrimary"]}>
       Join Us{" "}
-      <span className={classes.heading__primary__span}>for a cause</span>
+      <span className={classes.registration__headingPrimarySpan}>for a cause</span>
     </h1>
     <hr className={classes.registration__horizontalRule} />
     <form className={classes.registration__form} action="/registration" method="POST">

@@ -1,10 +1,10 @@
-.heading--primary {
+.eventArchive__heading--primary {
     font-size: 4rem;
     font-weight: 400;
     font-family: "Lato", sans-serif;
 }
 
-.container {
+.eventArchive__container {
     width: 100%;
     padding: 5rem;
     display: flex;

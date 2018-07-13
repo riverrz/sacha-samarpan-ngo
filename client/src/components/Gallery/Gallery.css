@@ -16,14 +16,14 @@ gallery__headingPrimary span {
   align-items: center;
   flex-wrap: wrap;
 }
-.galleryLink {
+.gallery__link {
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.4s;
 }
-.galleryLink > a {
+.gallery__link > a {
   font-family: inherit;
   padding: 3px;
   font-size: 1.8rem;
@@ -31,9 +31,9 @@ gallery__headingPrimary span {
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 }
-.galleryLink:hover {
+.gallery__link:hover {
   transform: scale(1.1);
 }
-.galleryLink:hover .arrow {
+.gallery__link:hover .arrow {
   transform: translateX(10px);
 }

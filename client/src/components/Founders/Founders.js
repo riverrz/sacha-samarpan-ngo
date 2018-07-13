@@ -5,44 +5,44 @@ import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 const founders = props => {
   return (
     <WhiteContainer>
-      <h1>
-        Our <span>Founders</span>
+      <h1 className={classes['founders__heading--primary']}>
+        Our <span className={classes['founders__headingSpan']}>Founders</span>
       </h1>
       <div className={classes.founder}>
-        <div className={classes.founder__left}>
-          <figure className={classes.figure}>
+        <div className={classes.founders__left}>
+          <figure className={classes.founder__figure}>
             <img
               src="/images/founders/founder1.JPG"
               alt="Founder"
-              className={classes.founderPhoto}
+              className={classes.founder__photo}
             />
           </figure>
-          <div className={classes.founders__contact}>
+          <div className={classes.founder__contact}>
             <a
               href="https://www.facebook.com/NauratnaGupta"
               target="_blank"
               rel="noopener noreferrer"
-              className={classes.iconContainer}
+              className={classes.founder__iconContainer}
             >
               <img
                 src="/facebook.png"
                 alt="Facebook"
-                className={classes.icon}
+                className={classes.founder__icon}
               />
             </a>
             <a
               href="https://www.twitter.com/NauratnaGupta"
               target="_blank"
               rel="noopener noreferrer"
-              className={classes.iconContainer}
+              className={classes.founder__iconContainer}
             >
-              <img src="/twitter.png" alt="Facebook" className={classes.icon} />
+              <img src="/twitter.png" alt="Facebook" className={classes.founder__icon} />
             </a>
           </div>
         </div>
-        <div className={classes.foundersInfo}>
+        <div className={classes.founder__info}>
           <h2>Nauratna Gupta</h2>
-          <h3 className={classes.designation}>President</h3>
+          <h3 className={classes.founder__designation}>President</h3>
           Nauratna Gupta is the President of Saccha Samarpan Society. He is the
           <strong>
             {" "}
@@ -55,46 +55,46 @@ const founders = props => {
           desires. He has worked with many NGO’s for the enhancement of the
           society regarding Women Empowerment and Child Education. He is also
           the Director of “Shri Kalka Construction Company”.
-          <div className={classes.readMoreContainer}>
-            <button className={classes.readMoreButton}>
+          <div className={classes.founder__readMoreContainer}>
+            <button className={classes.founder__readMoreButton}>
               <Link to="/founder-1" exact>
-                Read More <span className={classes.arrow}>→</span>
+                Read More <span className={classes.founder__arrow}>→</span>
               </Link>
             </button>
           </div>
         </div>
       </div>
       <div className={classes.founder}>
-        <div className={classes.founder__left}>
-          <figure className={classes.figure}>
+        <div className={classes.founders__left}>
+          <figure className={classes.founder__figure}>
             <img
               src="/images/founders/founder2.jpg"
               alt="Founder"
-              className={classes.founderPhoto}
+              className={classes.founder__photo}
             />
           </figure>
-          <div className={classes.founders__contact}>
+          <div className={classes.founder__contact}>
             <a
               href="/"
-              className={classes.iconContainer}
+              className={classes.founder__iconContainer}
             >
               <img
                 src="/facebook.png"
                 alt="Facebook"
-                className={classes.icon}
+                className={classes.founder__icon}
               />
             </a>
             <a
               href="/"
-              className={classes.iconContainer}
+              className={classes.founder__iconContainer}
             >
-              <img src="/twitter.png" alt="Facebook" className={classes.icon} />
+              <img src="/twitter.png" alt="Facebook" className={classes.founder__icon} />
             </a>
           </div>
         </div>
-        <div className={classes.foundersInfo}>
+        <div className={classes.founder__info}>
           <h2>Reena Sharma</h2>
-          <h3 className={classes.designation}>General Secretary</h3>
+          <h3 className={classes.founder__designation}>General Secretary</h3>
           Reena Sharma is the General Secretary of Saccha Samarpan Society. She
           is professionally qualified and holds her Masters degree in Master in
           Social Work (MSW). She has taken an initiative to educate children and
@@ -103,10 +103,10 @@ const founders = props => {
           welfare Society as a social worker to promote education in rural
           areas. She has 20 year of experience in Social Work and Teaching
           different Vocational courses in different NGOs and Institute.
-          <div className={classes.readMoreContainer}>
-            <button className={classes.readMoreButton}>
+          <div className={classes.founder__readMoreContainer}>
+            <button className={classes.founder__readMoreButton}>
               <Link to="/founder-2" exact>
-                Read More <span className={classes.arrow}>→</span>
+                Read More <span className={classes.founder__arrow}>→</span>
               </Link>
             </button>
           </div>

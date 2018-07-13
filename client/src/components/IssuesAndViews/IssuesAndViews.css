@@ -1,18 +1,18 @@
-.content > p {
+.issues__content > p {
   margin: 2rem auto;
   font-size: 1.3rem;
   color: #333333;
   letter-spacing: 0.5px;
 }
-.content > ul {
+.issues__content > ul {
   color: #333333;
   margin-top: 2rem;
   list-style: none;
 }
-.resolvesList>li {
+.issues__resolvesList>li {
     margin: 0.5rem;
 }
-.resolvesList>li>i {
+.issues__resolvesList>li>i {
   font-size: 1.3rem;
   color: #bbbbbb;
   margin-right: 0.6rem;

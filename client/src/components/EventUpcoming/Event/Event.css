@@ -1,14 +1,14 @@
-.container {
+.event__container {
     padding: 2rem;
     font-family: "Lato", sans-serif;
 }
-.bold {
+.event__bold {
     font-size: 1.45rem;
     font-weight: 300;
     font-family: inherit;
     margin: 1rem;
 }
-.bolder{
+.event__bolder{
     font-weight: 600;
     color: #666666;
     display: inline-block;

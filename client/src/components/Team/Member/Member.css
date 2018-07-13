@@ -1,4 +1,4 @@
-.container {
+.member__container {
   padding: 5rem;
   display: flex;
   border-bottom: 1px solid #bbbbbb;
@@ -6,30 +6,30 @@
   text-align: left;
   margin-left: 5rem;
 }
-.imgContainer {
+.member__imgContainer {
   flex: 1;
 }
-.img {
+.member__img {
   width: 100%;
   height: 50%;
 }
-.textContainer {
+.member__textContainer {
   flex: 4;
   padding-left: 4rem;
   text-align: left;
   color: #666666;
   line-height: 26px;
 }
-.name {
+.member__name {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
-.designation {
+.member__designation {
   font-size: 1.3rem;
   font-size: 200;
 }
-.description {
+.member__description {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   margin-top: 1rem;

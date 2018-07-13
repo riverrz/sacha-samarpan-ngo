@@ -47,8 +47,8 @@ class EventUpcoming extends Component {
 
     return (
       <WhiteContainer>
-        <h1 className={classes["heading--primary"]}>Our Upcoming Events</h1>
-        <div className={classes["container"]}>{events}</div>
+        <h1 className={classes["eventUpcoming__heading--primary"]}>Our Upcoming Events</h1>
+        <div className={classes["eventUpcoming__container"]}>{events}</div>
       </WhiteContainer>
     );
   }

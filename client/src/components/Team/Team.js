@@ -36,7 +36,7 @@ class Team extends Component {
 
     return (
       <WhiteContainer>
-        <h1 className={classes["primary--heading"]}>Our Team</h1>
+        <h1 className={classes["team__heading--primary"]}>Our Team</h1>
         {allMembers}
       </WhiteContainer>
     );

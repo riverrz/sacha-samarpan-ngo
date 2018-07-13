@@ -1,4 +1,15 @@
-.founder__left {
+.founders__heading--primary {
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
+}
+.founders__headingSpan {
+  color: #ff9933;
+}
+
+.founders__left {
     position: relative;
     margin: 0 1rem 0 2rem;
 }
@@ -14,7 +25,7 @@
 .founder>* {
     transform: skew(+10deg);
 }
-.figure {
+.founder__figure {
     height: 20rem;
     width: 20rem;
     display: block;
@@ -23,30 +34,30 @@
     overflow: hidden;
 }
 
-.founderPhoto {
+.founder__photo {
     height: 100%;
     width: 100%;
     transition: all .3s;
     transform: scale(1.02);
 }
-.founders__contact {
+.founder__contact {
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
 }
 
-.iconContainer {    
+.founder__iconContainer {    
     text-decoration: none;
     display: inline-block;
     height: 4rem;
     width: 4rem;
 }
-.icon {
+.founder__icon {
     height: 100%;
     width: 100%;
 }
 
-.foundersInfo {
+.founder__info {
     display: inline-block;
     font-family: inherit;
     font-size: 1.4rem;
@@ -55,22 +66,22 @@
     padding-left: 5rem;
     flex:3;
 }
-.designation {
+.founder__designation {
     font-family: inherit;
     margin-bottom: 2rem;
 }
-.readMoreContainer {
+.founder__readMoreContainer {
     margin-top: 2rem;
 }
 
-.readMoreButton {
+.founder__readMoreButton {
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s;
 }
-.readMoreButton > a {
+.founder__readMoreButton > a {
   font-family: Exo;
   padding: 3px;
   font-size: 1.5rem;
@@ -78,6 +89,6 @@
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 }
-.readMoreButton:hover {
+.founder__readMoreButton:hover {
   transform: scale(1.1);
 }
