@@ -86,11 +86,20 @@ class Modal extends Component {
               Apply Now
             </Link>
           </div>
+          <button
+            className={classes.exitButton + " " + classes["exitButton--bottom"]}
+            onClick={this.props.exitClicked}
+          >
+            <i class="fas fa-times" />
+          </button>
         </div>
       );
     } else if (this.props.for === "video") {
       content = (
-        <div className={classes.modal__videoContainer} style={this.state.marginTop}>
+        <div
+          className={classes.modal__videoContainer}
+          style={this.state.marginTop}
+        >
           <iframe
             className={classes.modal__video}
             title="pvr"
@@ -98,6 +107,12 @@ class Modal extends Component {
             src="https://www.youtube.com/embed/MG7dW2gChOs"
             allowFullScreen
           />
+          <button
+            className={classes.exitButton + " " + classes["exitButton--bottom"]}
+            onClick={this.props.exitClicked}
+          >
+            <i class="fas fa-times" />
+          </button>
         </div>
       );
     }

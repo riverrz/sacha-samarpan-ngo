@@ -33,7 +33,12 @@
 .exitButton > i {
   font-size: 2rem;
 }
-
+.exitButton--bottom {
+  top: 103%;
+  right: 2%;
+  color: #eeeeee;
+  visibility: visible;
+}
 /*For Popup*/
 
 .popupContainer {
