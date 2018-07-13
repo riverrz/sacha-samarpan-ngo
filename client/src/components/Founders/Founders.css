@@ -1,4 +1,7 @@
-
+.founder__left {
+    position: relative;
+    margin: 0 1rem 0 2rem;
+}
 .founder {
     width: 80%;
     margin: 5rem auto;
@@ -14,46 +17,35 @@
 .figure {
     height: 20rem;
     width: 20rem;
-    display: inline-block;
-    position: relative;
+    display: block;
     flex:1;
     border-radius: 50%;
     overflow: hidden;
 }
-.figure:hover .founderPhoto {
-    transform: scale(1);
-    filter: blur(1px) brightness(50%);
-}
+
 .founderPhoto {
     height: 100%;
     width: 100%;
     transition: all .3s;
     transform: scale(1.02);
 }
-.iconContainer {
-    position: absolute;
-    top: 36%;
+.founders__contact {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconContainer {    
     text-decoration: none;
-    left: 41%;
     display: inline-block;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all .4s;
-    height: 5rem;
-    width: 5rem;
-    text-align: center;
+    height: 4rem;
+    width: 4rem;
 }
 .icon {
     height: 100%;
     width: 100%;
 }
-.figure:hover .iconContainer {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-    /* z-index: 99; */
-}
+
 .foundersInfo {
     display: inline-block;
     font-family: inherit;
@@ -76,7 +68,7 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .readMoreButton > a {
   font-family: Exo;
@@ -88,7 +80,4 @@
 }
 .readMoreButton:hover {
   transform: scale(1.1);
-}
-.readMoreButton:hover .arrow {
-  transform: translateX(10px);
 }

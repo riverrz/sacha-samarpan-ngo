@@ -9,16 +9,37 @@ const founders = props => {
         Our <span>Founders</span>
       </h1>
       <div className={classes.founder}>
-        <figure className={classes.figure}>
-          <img
-            src="/images/founders/founder1.JPG"
-            alt="Founder"
-            className={classes.founderPhoto}
-          />
-          <a href="/" className={classes.iconContainer}>
-            <img src="/facebook.png" alt="Facebook" className={classes.icon} />
-          </a>
-        </figure>
+        <div className={classes.founder__left}>
+          <figure className={classes.figure}>
+            <img
+              src="/images/founders/founder1.JPG"
+              alt="Founder"
+              className={classes.founderPhoto}
+            />
+          </figure>
+          <div className={classes.founders__contact}>
+            <a
+              href="https://www.facebook.com/NauratnaGupta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.iconContainer}
+            >
+              <img
+                src="/facebook.png"
+                alt="Facebook"
+                className={classes.icon}
+              />
+            </a>
+            <a
+              href="https://www.twitter.com/NauratnaGupta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.iconContainer}
+            >
+              <img src="/twitter.png" alt="Facebook" className={classes.icon} />
+            </a>
+          </div>
+        </div>
         <div className={classes.foundersInfo}>
           <h2>Nauratna Gupta</h2>
           <h3 className={classes.designation}>President</h3>
@@ -44,17 +65,33 @@ const founders = props => {
         </div>
       </div>
       <div className={classes.founder}>
-        <figure className={classes.figure}>
-          <img
-            src="/images/founders/founder2.jpg"
-            alt="Founder"
-            className={classes.founderPhoto}
-          />
-
-          <a href="/" className={classes.iconContainer}>
-            <img src="/facebook.png" alt="Facebook" className={classes.icon} />
-          </a>
-        </figure>
+        <div className={classes.founder__left}>
+          <figure className={classes.figure}>
+            <img
+              src="/images/founders/founder2.jpg"
+              alt="Founder"
+              className={classes.founderPhoto}
+            />
+          </figure>
+          <div className={classes.founders__contact}>
+            <a
+              href="/"
+              className={classes.iconContainer}
+            >
+              <img
+                src="/facebook.png"
+                alt="Facebook"
+                className={classes.icon}
+              />
+            </a>
+            <a
+              href="/"
+              className={classes.iconContainer}
+            >
+              <img src="/twitter.png" alt="Facebook" className={classes.icon} />
+            </a>
+          </div>
+        </div>
         <div className={classes.foundersInfo}>
           <h2>Reena Sharma</h2>
           <h3 className={classes.designation}>General Secretary</h3>

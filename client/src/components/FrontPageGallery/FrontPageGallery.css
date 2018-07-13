@@ -16,7 +16,7 @@
     height: 70rem;
 }
 .frontPageGallery__imgContainer {
-    width: 70%;
+    width: 70.5%;
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@
 }
 .frontPageGallery__videoContainer {
     height: 78.5%;
-    width: 30%;
+    width: 34%;
     padding-right: 3rem;
     position: relative;
 }
