@@ -7,7 +7,7 @@ const eventContainer = props => (
   <Switch>
     <Route
       exact
-      path={`${props.match.url}/overview`}
+      path={`${props.match.url}/`}
       component={EventOverview}
     />
     <Route

@@ -1,69 +1,14 @@
-@keyframes mover {
-
-0% {
-	left: 0;
-}
-
-30% {
-	left: 0;
-}
-
-35% {
-	left: -100%;
-}
-
-60% {
-    left: -100%;
-
-}
-
-65% {
-		left: -200%;
-
-}
-
-70% {
-	left: -200%;
-}
-
-75% {
-	left: -300%;
-}
-
-95% {
-	left: -300%;
-}
-
-100% {
-	left: -400%;
-
-}
-
-}
-
-.carousel__slider {
-    overflow: hidden;
-    width: 100%;
-	height: 95vh;
-    position: relative;
-    z-index: -2;
-}
-
-.carousel__slider figure>div {
-	width: 20%;
-	float: left;
-}
-.carousel__imageBox>img {
-    width: 100%;
-    height: 100%;
-}
-.carousel__slider figure {
+.carousel__imageBox {
 	position: relative;
-    width: 500%;
-	margin: 0;
-	left: 0;
-	text-align: left;
-	font-size: 0;
-	animation: mover 20s infinite ; 
-
+}
+.carousel__imageBox > img {
+	height: 97vh;
+}
+.onImg {
+	height: 20rem;
+	width: 20rem;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 }

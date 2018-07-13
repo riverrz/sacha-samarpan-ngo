@@ -138,7 +138,7 @@ class Navigation extends Component {
             <Dropdown>
               <li>
                 <NavLink
-                  to="/events/overview"
+                  to="/events"
                   exact
                   activeClassName='navigation__activeDropDown'>
                   <i className="fas fa-angle-right" /> Overview

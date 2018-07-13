@@ -1,23 +1,29 @@
-:global * {
+* {
   padding: 0;
   margin: 0;
 }
-:global html {
+html {
   font-size: 62.5%;
   /* min-height: 100%; */
   box-sizing: border-box;
   /* position: relative; */
 }
-:global * {
+* {
   box-sizing: inherit;
 }
-:global body {
+body {
   font-size: 1.2rem;
   position: relative;
   height: 100%;
   width: 100%;
   background-color: #222126;
   font-family: "Exo", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+-moz-osx-font-smoothing: grayscale !important;
+}
+a {
+  -webkit-font-smoothing: antialiased !important;
+-moz-osx-font-smoothing: grayscale !important;
 }
 .App {
   height: 100%;
