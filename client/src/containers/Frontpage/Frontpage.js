@@ -1,5 +1,4 @@
-import React from "react";
-import Aux from "../../hoc/Aux";
+import React, {Fragment} from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
 import FrontPageGallery from "../../components/FrontPageGallery/FrontPageGallery";
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 const frontpage = props => {
     const itemsArr = ["1.JPG", "2.JPG", "3.JPG"];
     return (
-      <Aux>
+      <Fragment>
         <Carousel itemsArr={itemsArr} autoPlay={true} interval={12000}/>
         <div className="frontPage__frontTextAndLogoBox">
           <div className="frontPage__saffron" />
@@ -73,7 +72,7 @@ const frontpage = props => {
           </div>
         </div>
         <FrontPageGallery invokeBackdrop={event => props.invoke(event)} imgArr={props.imgArr} />
-      </Aux>
+      </Fragment>
     );
 }
 

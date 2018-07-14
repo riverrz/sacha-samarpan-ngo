@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import "./Modal.css";
-import Aux from "../../hoc/Aux";
 import Carousel from "../Carousel/Carousel";
 class Modal extends Component {
   state = {
@@ -85,7 +84,12 @@ class Modal extends Component {
               </span>{" "}
               Type of Work: On field Work
             </p>
-            <Link exact to="/internship" className="modal__applyLink">
+            <Link
+              exact
+              to="/internship"
+              className="modal__applyLink"
+              onClick={this.props.exitClicked}
+            >
               Apply Now
             </Link>
           </div>
@@ -116,7 +120,7 @@ class Modal extends Component {
         </div>
       );
     }
-    return <Aux>{content}</Aux>;
+    return <Fragment>{content}</Fragment>;
   }
 }
 

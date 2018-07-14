@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import "./Navigation.css";
 import Logo from "../../assets/logo.png";
-import Aux from "../../hoc/Aux";
 import Dropdown from "../Dropdown/Dropdown";
 import { Link, NavLink } from "react-router-dom";
 class Navigation extends Component {
@@ -44,7 +43,7 @@ class Navigation extends Component {
       };
     }
     return (
-      <Aux>
+      <Fragment>
         <div className='nav'>
           <div className='nav__contact'>
             <div className='nav__contact__number'>
@@ -185,7 +184,7 @@ class Navigation extends Component {
             </Link>
           </div>
         </nav>
-      </Aux>
+      </Fragment>
     );
   }
 }
