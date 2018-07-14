@@ -7,13 +7,13 @@ import Carousel from "../Carousel/Carousel";
 class Modal extends Component {
   state = {
     marginTop: {
-      "margin-top": null
+      marginTop: null
     }
   };
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       marginTop: {
-        "margin-top": Math.round(window.pageYOffset) + 20 + "px"
+        marginTop: Math.round(window.pageYOffset) + 20 + "px"
       }
     });
   }
@@ -31,7 +31,7 @@ class Modal extends Component {
             className="modal__exitButton"
             onClick={this.props.exitClicked}
           >
-            <i class="fas fa-times" />
+            <i className="fas fa-times" />
           </button>
           <Carousel
             itemsArr={this.props.itemsArr}
@@ -93,7 +93,7 @@ class Modal extends Component {
             className="modal__exitButton modal__exitButton--bottom"
             onClick={this.props.exitClicked}
           >
-            <i class="fas fa-times" />
+            <i className="fas fa-times" />
           </button>
         </div>
       );
@@ -111,7 +111,7 @@ class Modal extends Component {
             className="modal__exitButton  modal__exitButton--bottom"
             onClick={this.props.exitClicked}
           >
-            <i class="fas fa-times" />
+            <i className="fas fa-times" />
           </button>
         </div>
       );

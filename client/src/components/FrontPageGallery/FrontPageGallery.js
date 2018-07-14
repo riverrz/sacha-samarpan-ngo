@@ -5,7 +5,6 @@ import "./FrontPageGallery.css";
 import { Link } from "react-router-dom";
 const frontPageGallery = props => {
     let images = props.imgArr.map((photo, id) => {
-      console.log(photo)
       return (
         <GalleryItem
           imageName={photo}

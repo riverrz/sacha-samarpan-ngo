@@ -51,7 +51,6 @@ class App extends Component {
     });
   };
   backdropInvoker = event => {
-    console.log(event.target);
     if (event.target.id === "overlay") {
       this.setState({
         backdropForVideo: true
@@ -68,7 +67,7 @@ class App extends Component {
       });
     }
   };
-  componentDidMount() {
+  componentWillMount() {
     let visited = sessionStorage["alreadyVisited"];
     if (visited) {
       this.setState({
@@ -83,7 +82,6 @@ class App extends Component {
   }
   render() {
     let backdrop = null;
-    console.log("frontPage", this.state.frontPageImages);
     if (this.state.backdropForGallery) {
       backdrop = (
         <Backdrop

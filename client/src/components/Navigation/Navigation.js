@@ -61,7 +61,7 @@ class Navigation extends Component {
                 <i className="fab fa-google-plus" />
               </a>
               <a href="/">
-                <i class="fab fa-whatsapp" />
+                <i className="fab fa-whatsapp" />
               </a>
             </div>
           </div>

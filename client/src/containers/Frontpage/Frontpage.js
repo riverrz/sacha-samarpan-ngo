@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Aux from "../../hoc/Aux";
 import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
@@ -6,8 +6,7 @@ import FrontPageGallery from "../../components/FrontPageGallery/FrontPageGallery
 import "./Frontpage.css";
 import { Link } from "react-router-dom";
 
-class Frontpage extends Component {
-  render() {
+const frontpage = props => {
     const itemsArr = ["1.JPG", "2.JPG", "3.JPG"];
     return (
       <Aux>
@@ -73,10 +72,9 @@ class Frontpage extends Component {
             </Link>
           </div>
         </div>
-        <FrontPageGallery invokeBackdrop={event => this.props.invoke(event)} imgArr={this.props.imgArr} />
+        <FrontPageGallery invokeBackdrop={event => props.invoke(event)} imgArr={props.imgArr} />
       </Aux>
     );
-  }
 }
 
-export default Frontpage;
+export default frontpage;

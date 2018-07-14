@@ -6,7 +6,6 @@ import Issues from '../../components/IssuesAndViews/IssuesAndViews';
 import Team from '../../components/Team/Team';
 
 const aboutContainer = props => {
-    console.log(props.match.url);
   return (
     <Switch>
       <Route  exact path={`${props.match.url}`} component={About}/>

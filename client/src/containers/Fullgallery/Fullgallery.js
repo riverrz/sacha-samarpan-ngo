@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Fullgallery.css';
 import Gallery from '../../components/Gallery/Gallery';
 class Fullgallery extends Component {
-    componentDidMount() {
+    componentWillMount() {
         window.scrollTo(0, 0)
     }
     render() {
