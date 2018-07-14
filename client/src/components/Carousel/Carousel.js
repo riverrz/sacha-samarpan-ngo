@@ -7,26 +7,25 @@ const carousel = props => {
     showStatus: false,
     infiniteLoop: true,
     showThumbs: false,
-    autoPlay: true,
+    autoPlay: props.autoPlay,
     stopOnHover: false,
-    interval: 12000,
+    interval: props.interval,
     emulateTouch: true,
     showIndicators: false,
-    swipeable: true
+    useKeyboardArrows: true,
+    swipeable: true,
+    selectedItem: props.selectedItem ? props.selectedItem - 1 : null
   };
+  const items = props.itemsArr.map((item, i) => {
+    return (
+      <div className="carousel__imageBox" key={i}>
+        <img src={`/images/${item}`} alt={`${item}`} />
+      </div>
+    );
+  });
   return (
     <div className="carousel__slider">
-      <Carousel {...settings}>
-        <div className="carousel__imageBox">
-          <img src="/images/1.JPG" alt="1" />
-        </div>
-        <div className="carousel__imageBox">
-          <img src="/images/2.JPG" alt="2" />
-        </div>
-        <div className="carousel__imageBox">
-          <img src="/images/3.JPG" alt="3" />
-        </div>
-      </Carousel>
+      <Carousel {...settings}>{items}</Carousel>
     </div>
   );
 };

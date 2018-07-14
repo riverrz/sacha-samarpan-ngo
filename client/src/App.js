@@ -18,28 +18,55 @@ class App extends Component {
   state = {
     viewPopUp: false,
     backdropForGallery: false,
-    backdropForVideo:false,
-    imageToLoad: null
+    backdropForFrontGallery: false,
+    backdropForVideo: false,
+    imageToLoad: null,
+    frontPageImages: ["1.JPG", "2.JPG", "3.JPG", "4.JPG"],
+    allImagesNames: [
+      "1.JPG",
+      "2.JPG",
+      "3.JPG",
+      "4.JPG",
+      "5.JPG",
+      "6.JPG",
+      "7.JPG",
+      "8.JPG",
+      "9.JPG",
+      "10.JPG",
+      "11.JPG",
+      "12.JPG",
+      "13.JPG",
+      "14.JPG",
+      "15.JPG",
+      "16.JPG"
+    ]
   };
   backdropRemover = () => {
     this.setState({
       backdropForGallery: false,
+      backdropForFrontGallery: false,
       imageLinkToLoad: null,
       viewPopUp: false,
       backdropForVideo: false
     });
   };
   backdropInvoker = event => {
-    console.log(event.target.id);
-    if (event.target.id==="overlay") {
+    console.log(event.target);
+    if (event.target.id === "overlay") {
       this.setState({
         backdropForVideo: true
-      })
+      });
+    } else if (event.target.id === "in-gallery") {
+      this.setState({
+        backdropForGallery: true,
+        imageLinkToLoad: event.target.src
+      });
+    } else if (event.target.id === "in-frontGallery") {
+      this.setState({
+        backdropForFrontGallery: true,
+        imageLinkToLoad: event.target.src
+      });
     }
-    this.setState({
-      backdropForGallery: true,
-      imageLinkToLoad: event.target.src
-    });
   };
   componentDidMount() {
     let visited = sessionStorage["alreadyVisited"];
@@ -56,6 +83,7 @@ class App extends Component {
   }
   render() {
     let backdrop = null;
+    console.log("frontPage", this.state.frontPageImages);
     if (this.state.backdropForGallery) {
       backdrop = (
         <Backdrop
@@ -63,10 +91,20 @@ class App extends Component {
           image={this.state.imageLinkToLoad}
           exitClicked={this.backdropRemover}
           for="gallery"
+          itemsArr={this.state.allImagesNames}
         />
       );
-    }
-    if (this.state.viewPopUp) {
+    } else if (this.state.backdropForFrontGallery) {
+      backdrop = (
+        <Backdrop
+          clicked={this.backdropRemover}
+          image={this.state.imageLinkToLoad}
+          exitClicked={this.backdropRemover}
+          for="gallery"
+          itemsArr={this.state.allImagesNames.slice(0, 4)}
+        />
+      );
+    } else if (this.state.viewPopUp) {
       backdrop = (
         <Backdrop
           clicked={this.backdropRemover}
@@ -75,31 +113,30 @@ class App extends Component {
           for="popup"
         />
       );
-    }
-    if (this.state.backdropForVideo) {
+    } else if (this.state.backdropForVideo) {
       backdrop = (
         <Backdrop
           clicked={this.backdropRemover}
           exitClicked={this.backdropRemover}
           for="video"
         />
-      )
+      );
     }
     return (
-      <div className='App'>
-        <div className='app__backSide'>
-          <div className='app__backSide__logoBox'>
+      <div className="App">
+        <div className="app__backSide">
+          <div className="app__backSide__logoBox">
             <img
               src={leftLogo}
               alt="charity-logo-1"
-              className='app__backSide__logo'
+              className="app__backSide__logo"
             />
           </div>
-          <div className='app__backSide__logoBox'>
+          <div className="app__backSide__logoBox">
             <img
               src={rightLogo}
               alt="charity-logo-1"
-              className='app__backSide__logo'
+              className="app__backSide__logo"
             />
           </div>
         </div>
@@ -124,7 +161,10 @@ class App extends Component {
           <Route
             path="/"
             render={() => (
-              <Frontpage invoke={event => this.backdropInvoker(event)} />
+              <Frontpage
+                imgArr={this.state.frontPageImages}
+                invoke={event => this.backdropInvoker(event)}
+              />
             )}
           />
         </Switch>

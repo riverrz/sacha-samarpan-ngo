@@ -1,7 +1,7 @@
 .modal__container {
   width: 80%;
   margin: auto;
-  height: 27%;
+  /* height: 27%; */
   /* height: 35%; */
   position: relative;
   overflow: hidden;
@@ -21,7 +21,7 @@
 .modal__exitButton {
   position: absolute;
   top: 1rem;
-  right: 1.5rem;
+  right: 4rem;
   font-size: 2rem;
   z-index: 2;
   background-color: transparent;

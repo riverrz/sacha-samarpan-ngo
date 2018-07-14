@@ -2,21 +2,22 @@ import React, { Component } from "react";
 import Aux from "../../hoc/Aux";
 import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
-import FrontPageGallery from '../../components/FrontPageGallery/FrontPageGallery';
+import FrontPageGallery from "../../components/FrontPageGallery/FrontPageGallery";
 import "./Frontpage.css";
 import { Link } from "react-router-dom";
 
 class Frontpage extends Component {
   render() {
+    const itemsArr = ["1.JPG", "2.JPG", "3.JPG"];
     return (
       <Aux>
-        <Carousel />
-        <div className='frontPage__frontTextAndLogoBox'>
-          <div className='frontPage__saffron' />
+        <Carousel itemsArr={itemsArr} autoPlay={true} interval={12000}/>
+        <div className="frontPage__frontTextAndLogoBox">
+          <div className="frontPage__saffron" />
           <Maintext />
-          <div className='frontPage__green' />
+          <div className="frontPage__green" />
         </div>
-        <div className='frontPage__iconRow'>
+        <div className="frontPage__iconRow">
           <div className="frontPage__iconRow__item">
             <span className="frontPage__iconRow__item__iconContainer">
               <img
@@ -72,7 +73,7 @@ class Frontpage extends Component {
             </Link>
           </div>
         </div>
-        <FrontPageGallery invokeBackdrop={event => this.props.invoke(event)}  />
+        <FrontPageGallery invokeBackdrop={event => this.props.invoke(event)} imgArr={this.props.imgArr} />
       </Aux>
     );
   }

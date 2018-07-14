@@ -66,6 +66,7 @@ class Gallery extends Component {
           imageName={data.name}
           key={i}
           invokeBackdrop={event => this.props.invokeBackdrop(event)}
+          id="in-gallery"
         />
       );
     });

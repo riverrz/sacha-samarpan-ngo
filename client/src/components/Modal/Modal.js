@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import "./Modal.css";
 import Aux from "../../hoc/Aux";
+import Carousel from "../Carousel/Carousel";
 class Modal extends Component {
   state = {
     marginTop: {
@@ -12,16 +13,18 @@ class Modal extends Component {
   componentDidMount() {
     this.setState({
       marginTop: {
-        "margin-top": Math.round(window.pageYOffset) + 40 + "px"
+        "margin-top": Math.round(window.pageYOffset) + 20 + "px"
       }
     });
   }
   render() {
     let content = null;
-
     if (this.props.for === "gallery") {
       var indexOfLink = this.props.image.indexOf("/images");
-      const relativeLink = this.props.image.slice(indexOfLink);
+      const relativeLink = this.props.image.slice(
+        indexOfLink + 8,
+        indexOfLink + 9
+      );
       content = (
         <div className="modal__container" style={this.state.marginTop}>
           <button
@@ -30,7 +33,11 @@ class Modal extends Component {
           >
             <i class="fas fa-times" />
           </button>
-          <img src={relativeLink} alt="Invoked" />
+          <Carousel
+            itemsArr={this.props.itemsArr}
+            autoPlay={false}
+            selectedItem={relativeLink}
+          />
         </div>
       );
     } else if (this.props.for === "popup") {

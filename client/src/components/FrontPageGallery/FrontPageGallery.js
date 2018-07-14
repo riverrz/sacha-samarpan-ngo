@@ -1,34 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import GalleryItem from "../Gallery/GalleryItem/GalleryItem";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import "./FrontPageGallery.css";
 import { Link } from "react-router-dom";
-class frontPageGallery extends Component {
-  state = {
-    photos: [
-      {
-        name: "1.JPG"
-      },
-      {
-        name: "2.JPG"
-      },
-      {
-        name: "3.JPG"
-      },
-      {
-        name: "4.JPG"
-      }
-    ]
-  };
-  render() {
-    let images = this.state.photos.map((photo, id) => {
+const frontPageGallery = props => {
+    let images = props.imgArr.map((photo, id) => {
+      console.log(photo)
       return (
         <GalleryItem
-          imageName={photo.name}
+          imageName={photo}
           key={id}
-          invokeBackdrop={event => this.props.invokeBackdrop(event)}
+          invokeBackdrop={event => props.invokeBackdrop(event)}
           width="45%"
           height="24.2rem"
+          id="in-frontGallery"
         />
       );
     });
@@ -46,7 +31,7 @@ class frontPageGallery extends Component {
               frameBorder="0"
               src="https://www.youtube.com/embed/MG7dW2gChOs"
             />
-            <div className='frontPageGallery__overlay' id="overlay" onClick={this.props.invokeBackdrop} />
+            <div className='frontPageGallery__overlay' id="overlay" onClick={props.invokeBackdrop} />
           </div>
         </div>
         <button className='frontPageGallery__galleryLink'>
@@ -56,7 +41,6 @@ class frontPageGallery extends Component {
         </button>
       </WhiteContainer>
     );
-  }
 }
 
 export default frontPageGallery;
