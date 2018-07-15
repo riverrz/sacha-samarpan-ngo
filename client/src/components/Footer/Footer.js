@@ -77,6 +77,15 @@ const footer = props => {
               </li>
             </ul>
           </div>
+          <div className="footer__mapContainer">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.063041015944!2d77.22823295055612!3d28.507750982381285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1a2c2ae96d5%3A0x980a1b570c0cedeb!2sSHRI+KALKA+CONSTRUCTION+CO.!5e0!3m2!1sen!2sin!4v1531672279814"
+              frameborder="0"
+              allowfullscreen
+              title="hq-map"
+              className="footer__map"
+            />
+          </div>
         </div>
       </footer>
       <div className="footer__copyRight">
