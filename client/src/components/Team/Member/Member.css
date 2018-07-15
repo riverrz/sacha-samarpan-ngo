@@ -34,3 +34,16 @@
   font-size: 1.6rem;
   margin-top: 1rem;
 }
+.member__contactContainer {
+  text-align: center;
+}
+.member__iconContainer {    
+    text-decoration: none;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+}
+.member__icon {
+    height: 100%;
+    width: 100%;
+}

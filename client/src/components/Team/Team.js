@@ -9,6 +9,7 @@ class Team extends Component {
         name: "Rajat Sharma",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Rajat.jpeg",
+        facebook: "",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       },
@@ -16,6 +17,7 @@ class Team extends Component {
         name: "Shivam Kumar",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Shivam.jpg",
+        facebook: "https://www.facebook.com/shivam.kumar.79",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       },
@@ -23,6 +25,7 @@ class Team extends Component {
         name: "Rohit Shukla",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Rohit.jpeg",
+        facebook: "",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       },
@@ -30,6 +33,7 @@ class Team extends Component {
         name: "Aman Gupta",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Aman.jpeg",
+        facebook: "",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       },
@@ -37,6 +41,7 @@ class Team extends Component {
         name: "Koushal Arora",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Koushal.jpeg",
+        facebook: "",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       },
@@ -44,6 +49,7 @@ class Team extends Component {
         name: "Umesh Rajput",
         designation: "Website Developer, Manager",
         photo: "/images/Team/Umesh.jpeg",
+        facebook: "",
         description:
           "A law graduate form LL.M. – National Law University, Jodhpur with 17+ years of experience on Child Rights, Women’s Rights, Access to Justice, Legal Aid and Legal Empowerment. He has worked with NOG’s like Global Rights, Child Rights and You (CRY) and has actively worked on various aspects of Child Protection – child sexual abuse, child trafficking, child labour and child marriage. He has worked with United Nations Development Programme (UNDP) and Ministry of Law and Justice, Government of India for implementation of a Project on “Access to Justice” for Marginalized People in eight Indian states – Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Orissa, Rajasthan and Uttar Pradesh. Since March 2017, he is associated with UNICEF as a Consultant on Child Protection. He recently facilitated Swami Vivekananda State Police Academy, Barrack pore, West Bengal, in strengthening Child Protection training of police officials. Presently, he is aiding UNICEF in Uttar Pradesh in Strengthening Child Protection Systems."
       }
@@ -58,6 +64,7 @@ class Team extends Component {
           photo={member.photo}
           description={member.description}
           key={id}
+          facebook={member.facebook}
         />
       );
     });
