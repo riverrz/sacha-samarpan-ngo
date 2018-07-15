@@ -23,7 +23,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* align-items: stretch; */
 }
 .footer__logoBox {
