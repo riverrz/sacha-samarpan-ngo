@@ -27,7 +27,7 @@ class Team extends Component {
         photo: "/images/Team/Rohit.jpeg",
         facebook: "https://www.facebook.com/rohit.shukla.792",
         description:
-          "Aman Gupta devotes all his hardwork,Diligence to this organisation  and  believe in educating child all over the world.He has worked with many NGOs and done a brilliant job everywhere. "
+          "Rohit Shukla devotes all his hardwork,Diligence to this organisation  and  believe in educating child all over the world.He has worked with many NGOs and done a brilliant job everywhere. "
       },
       {
         name: "Aman Gupta",
