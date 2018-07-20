@@ -70,7 +70,7 @@ class Team extends Component {
     });
 
     return (
-      <WhiteContainer>
+      <WhiteContainer style = {{paddingBottom: '8%'}}>
         <h1 className="team__heading--primary">Our Team</h1>
         {allMembers}
       </WhiteContainer>
