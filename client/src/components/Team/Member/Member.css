@@ -1,8 +1,9 @@
 .member__container {
-  padding: 5rem;
+  padding: 5rem 5rem 1rem 5rem;
   display: flex;
   border-bottom: 1px solid #bbbbbb;
   width: 75%;
+  height: 28rem;
   text-align: left;
   margin-left: 5rem;
 }
@@ -11,7 +12,7 @@
 }
 .member__img {
   width: 100%;
-  height: 50%;
+  height: 75%;
 }
 .member__textContainer {
   flex: 4;

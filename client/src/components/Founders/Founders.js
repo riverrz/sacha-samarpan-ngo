@@ -86,7 +86,7 @@ const founders = props => {
                 className="founder__icon"
               />
             </a>
-            <a href="/" className="founder__iconContainer">
+            <a className="founder__iconContainer">
               <img src="/twitter.png" alt="Twitter" className="founder__icon" />
             </a>
           </div>
