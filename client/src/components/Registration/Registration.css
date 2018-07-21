@@ -1,6 +1,6 @@
 
 .registration__headingPrimary {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
@@ -77,4 +77,12 @@
 }
 .registration__submitButton:active {
   transform: translateY(3px);
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .registration__form {
+    width: 85%;
+  }
 }

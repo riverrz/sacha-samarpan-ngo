@@ -8,11 +8,8 @@ html {
   box-sizing: border-box;
   /* position: relative; */
 }
-@media (max-width: 960px) {
-  html {
-    font-size: 50%;
-  }
-}
+
+
 * {
   box-sizing: inherit;
 }
@@ -58,4 +55,18 @@ a {
   /* background: #008000; */
   background-color: 	#5ebe9e; 
   color: #fff;
+}
+
+/*Media Queries*/
+
+@media (max-width: 960px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 45%;
+  }
 }

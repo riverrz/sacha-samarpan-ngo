@@ -38,9 +38,9 @@ class Internship extends Component {
     }
     return (
       <WhiteContainer>
-        <h1 className="internship__heading--primary">
+        <h1 className="internship__headingPrimary">
           Internship{" "}
-          <span className="heading__primary--saffron">
+          <span className="headinPrimary--saffron">
             Registration
           </span>
           <hr className="internship__horizontalRule--mid" />

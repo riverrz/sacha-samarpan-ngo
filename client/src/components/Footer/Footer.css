@@ -58,7 +58,9 @@
   height: 100%;
   background-color: #222126;
   text-align: center;
-  padding: 8px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 4rem;
   box-sizing: border-box;
   margin-right: 6px;

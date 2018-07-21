@@ -20,9 +20,10 @@
 .member__textContainer {
   flex: 4;
   padding-left: 4rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
   text-align: left;
   color: #666666;
-  line-height: 26px;
 }
 .member__name {
   font-size: 2rem;
@@ -37,6 +38,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   margin-top: 1rem;
+  line-height: 2.7rem;
 }
 .member__contactContainer {
   text-align: center;

@@ -178,6 +178,12 @@ a:visited {
     width: 90%;
   }
   .navigation__item > a {
-    font-size: 1.45rem;
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .navigation--notFixed {
+    width: 100%;
   }
 }

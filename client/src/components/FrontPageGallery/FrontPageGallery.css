@@ -1,9 +1,8 @@
 .frontPageGallery__headingPrimary {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
-  margin-bottom: 2rem;
   text-align: center;
 }
 .frontPageGallery__headingPrimary span {

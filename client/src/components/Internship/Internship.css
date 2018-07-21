@@ -1,11 +1,11 @@
 .internship__headingPrimary {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
   margin-bottom: 2rem;
 }
-.internship__headingPrimary span {
+.headinPrimary--saffron {
   color: #ff9933;
 }
 .internship__horizontalRule--mid {
@@ -99,4 +99,12 @@
 }
 .internship__submitButton:hover i {
   color: #fff;
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .internship__form {
+    width: 85%;
+  }
 }

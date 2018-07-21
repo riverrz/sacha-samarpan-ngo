@@ -45,6 +45,7 @@
 .frontPage__iconRow__item__para {
   margin: 1rem 0;
   font-size: 1.4rem;
+  text-align: center;
 }
 .frontPage__iconRow__item__link {
   color: #222222 !important;

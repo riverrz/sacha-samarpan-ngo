@@ -5,7 +5,7 @@
     align-content: center;
 }
 .donate__heading {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
@@ -91,4 +91,12 @@
   font-weight: 300;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .donate__form {
+    width: 85%;
+  }
 }

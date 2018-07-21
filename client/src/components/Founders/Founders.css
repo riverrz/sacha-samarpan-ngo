@@ -1,5 +1,5 @@
 .founders__heading--primary {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
@@ -91,4 +91,12 @@
 }
 .founder__readMoreButton:hover {
   transform: scale(1.1);
+}
+
+/*Media Queries*/
+
+@media (max-width: 960px) {
+    .founder {
+        width: 90%;
+    }
 }
