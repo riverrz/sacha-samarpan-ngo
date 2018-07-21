@@ -28,19 +28,9 @@ class Navigation extends Component {
     }
   };
   render() {
-    let styleForFixedNav = {
-      position: "absolute",
-      left: "50%",
-      top: "4rem",
-      width: "85%"
-    };
+    let navigationClass = 'navigation--notFixed'
     if (this.state.scrollingLock) {
-      styleForFixedNav = {
-        position: "fixed",
-        top: "0",
-        width: "100%",
-        transform: "translateX(0)"
-      };
+      navigationClass = 'navigation--fixed';
     }
     return (
       <Fragment>
@@ -65,7 +55,7 @@ class Navigation extends Component {
             </div>
           </div>
         </div>
-        <nav className='navigation' style={styleForFixedNav}>
+        <nav className={`navigation ${navigationClass}`}>
           <div className='navigation__item navigation__logoBox'>
             <img className='navigation__logo' src={Logo} alt="Logo" />
           </div>

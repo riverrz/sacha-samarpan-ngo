@@ -74,3 +74,16 @@
 .frontPage__active {
     color: #008000 !important;
 }
+
+/*Media Queries*/
+
+@media (max-width: 960px) {
+  .frontPage__saffron {
+    height: 40rem;
+    width: 40rem;
+  }
+  .frontPage__green {
+    height: 45rem;
+    width: 45rem;
+  }
+}

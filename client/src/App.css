@@ -8,6 +8,11 @@ html {
   box-sizing: border-box;
   /* position: relative; */
 }
+@media (max-width: 960px) {
+  html {
+    font-size: 50%;
+  }
+}
 * {
   box-sizing: inherit;
 }

@@ -156,3 +156,11 @@ footer__list__item__text i {
   width: 100%;
   border: none;
 }
+
+/*Media Queries*/
+
+@media (max-width: 960px) {
+  .footer__contactInfo {
+    width: 80%;
+  }
+}

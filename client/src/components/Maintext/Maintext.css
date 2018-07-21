@@ -23,7 +23,7 @@
   text-align: center;
 }
 .Maintext__headingPrimary {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: bold;
   font-family: "Exo", sans-serif;
@@ -34,7 +34,7 @@
 .Maintext__main {
   color: dodgerblue;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 1.47rem;
   letter-spacing: 0.4px;
 }
 .Maintext__main strong {
@@ -45,7 +45,7 @@
   /* color:  #000080; */
   color: dodgerblue;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 1.47rem;
   margin-top: 2rem;
   letter-spacing: 0.2px;
   font-weight: normal;
@@ -73,5 +73,9 @@
 .Maintext__Memberform button:active {
   transform: translateY(4px);
   box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 960px) {
+  
 }
 

@@ -80,8 +80,8 @@ const footer = props => {
           <div className="footer__mapContainer">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.119140935912!2d77.22824095055613!3d28.506062982381827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1a33d8ed9b5%3A0xbd36fa4d47458ebd!2sMahila+Training+Institute!5e0!3m2!1sen!2sin!4v1531673041841"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
               title="hq-map"
               className="footer__map"
             />
