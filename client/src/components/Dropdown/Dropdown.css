@@ -29,6 +29,7 @@
   width: 100%;
   text-decoration: none;
   transition: all 0.3s;
+  color: #e2e2e2;
 }
 .dropDown__list>li:hover > a {
   color: white;

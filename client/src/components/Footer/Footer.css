@@ -109,6 +109,7 @@
   display: inline-block;
   text-decoration: none;
   transition: all 0.3s;
+  color: #e2e2e2;
 }
 .footer__list__item:hover > a {
   color: white;

@@ -27,14 +27,10 @@
   justify-content: flex-end;
   color: #222126;
 }
-.nav__contact__social a:visited {
+.nav__contact__social a {
   color: #222126;
 }
-a:link,
-a:active,
-a:visited {
-  color: #e2e2e2;
-}
+
 
 .navigation {
   display: flex;
