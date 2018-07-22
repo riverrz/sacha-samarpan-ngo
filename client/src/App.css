@@ -21,11 +21,12 @@ body {
   background-color: #222126;
   font-family: "Exo", sans-serif;
   -webkit-font-smoothing: antialiased !important;
--moz-osx-font-smoothing: grayscale !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 a {
   -webkit-font-smoothing: antialiased !important;
--moz-osx-font-smoothing: grayscale !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  outline: none;
 }
 .App {
   height: 100%;
