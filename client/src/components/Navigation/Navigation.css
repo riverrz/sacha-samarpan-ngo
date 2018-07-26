@@ -166,12 +166,18 @@
 
 /*Media Queries*/
 
+@media (max-width: 1025px) {
+  .navigation--notFixed {
+    width: 90%;
+  } 
+}
+
 @media (max-width: 960px) {
   .navigation {
     height: 6.5rem;
   }
   .navigation--notFixed {
-    width: 90%;
+    width: 95%;
   }
   .navigation__item > a {
     font-size: 1.55rem;

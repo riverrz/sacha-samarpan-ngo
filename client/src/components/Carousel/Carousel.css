@@ -2,7 +2,7 @@
 	position: relative;
 }
 .carousel__imageBox > img {
-	height: 94vh;
+	height: 90vh;
 }
 .onImg {
 	height: 20rem;
@@ -11,4 +11,12 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+}
+
+/*Media Queries*/
+
+@media (max-width: 1024px) {
+	.carousel__imageBox > img {
+		height: 80vh;
+	}
 }

@@ -60,11 +60,17 @@ a {
 
 /*Media Queries*/
 
-@media (max-width: 960px) {
+@media (max-width: 1294px) {
+  html {
+    font-size: 52%;
+  }
+}
+@media (max-width: 1025px) {
   html {
     font-size: 50%;
   }
 }
+
 
 @media (max-width: 800px) {
   html {
