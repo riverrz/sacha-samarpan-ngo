@@ -13,6 +13,7 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: [grid-start] repeat(3, [col-start] 1fr [col-end]) [grid-end];
+  grid-auto-rows: 1fr;
   grid-gap: 5rem;
 }
 
@@ -54,4 +55,27 @@
 }
 .frontPageGallery__galleryLink:hover .arrow {
   transform: translateX(10px);
+}
+
+@media (max-width: 800px) {
+  .frontPageGallery__container {
+    grid-template-columns: [grid-start] repeat(2, [col-start] 1fr [col-end]) [grid-end];
+  }
+  .frontPageGallery__videoContainer {
+    grid-row: 3/4;
+    grid-column: grid-start/ grid-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .frontPageGallery__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .frontPageGallery__container>* {
+    grid-column: 1/-1;
+  }
+  .frontPageGallery__videoContainer {
+    grid-row: 5/6;
+  }
 }
