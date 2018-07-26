@@ -14,21 +14,19 @@
 .modal__container:hover > img {
   filter: brightness(70%);
 }
-.modal__container:hover .modal__exitButton {
-  visibility: visible;
-  color: #eeeeee;
-}
+
 .modal__exitButton {
   position: absolute;
   top: 1rem;
   right: 4rem;
-  font-size: 2rem;
+  font-size: 3rem;
   z-index: 2;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  visibility: hidden;
+  visibility: visible;
+  color: #eeeeee;
 }
 .modal__exitButton > i {
   font-size: 2rem;
@@ -36,13 +34,11 @@
 .modal__exitButton--bottom {
   top: 103%;
   right: 2%;
-  color: #eeeeee;
-  visibility: visible;
 }
 /*For Popup*/
 
 .modal__popupContainer {
-  height: 16%;
+  height: 50rem;
   width: 40%;
   background-color: #fff;
   margin: auto;

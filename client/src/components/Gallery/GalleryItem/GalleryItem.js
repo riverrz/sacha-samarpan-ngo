@@ -9,12 +9,17 @@ const galleryItem = props => {
       height: props.height
     };
   }
+  let itemClass = "galleryItem";
+  if (props.isGridItem) {
+    itemClass = "frontGalleryGridItem";
+  }
   return (
-    <div className="galleryItem" onClick={props.invokeBackdrop} style={style}>
+    <div className={itemClass} onClick={props.invokeBackdrop} style={style}>
       <img
         src={`/images/${props.imageName}`}
         alt="Gallery Item"
         id={props.id}
+        className = "galleryItem__img"
       />
     </div>
   );

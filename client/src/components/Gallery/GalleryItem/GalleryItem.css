@@ -7,15 +7,26 @@
   backface-visibility: hidden;
   
 }
-
-.galleryItem img {
+.frontGalleryGridItem {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  backface-visibility: hidden;
+}
+.galleryItem__img {
   height: 100%;
   width: 100%;
   background-size: cover;
   transition: all .4s;
   transform: scale(1.1);
 }
-.galleryItem:hover img {
+.galleryItem:hover .galleryItem__img {
   transform: scale(1);
   filter: brightness(60%);
 }
+.frontGalleryGridItem:hover .galleryItem__img {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+

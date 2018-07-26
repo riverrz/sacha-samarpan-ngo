@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 const frontPageGallery = props => {
     let images = props.imgArr.map((photo, id) => {
       return (
-        <GalleryItem
-          imageName={photo}
-          key={id}
-          invokeBackdrop={event => props.invokeBackdrop(event)}
-          width="45%"
-          height="24.2rem"
-          id="in-frontGallery"
-        />
+          <GalleryItem
+            imageName={photo}
+            key={id}
+            invokeBackdrop={event => props.invokeBackdrop(event)}
+            id="in-frontGallery"
+            isGridItem = {true}
+          />
       );
     });
     return (
@@ -22,7 +21,7 @@ const frontPageGallery = props => {
           Our Precious <span>Moments</span>
         </h1>
         <div className="frontPageGallery__container">
-          <div className='frontPageGallery__imgContainer'>{images}</div>
+          {images}
           <div className='frontPageGallery__videoContainer'>
             <iframe
               className='frontPageGallery__video'
