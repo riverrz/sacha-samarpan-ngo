@@ -1,14 +1,14 @@
 .footer {
   width: 100%;
-  height: 30rem;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   color: #e2e2e2;
 }
 .footer__left {
   height: 85%;
   width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -22,9 +22,7 @@
   flex: 3;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  /* align-items: stretch; */
 }
 .footer__logoBox {
   height: 30%;
@@ -49,8 +47,8 @@
   justify-content: flex-start;
   align-items: center;
 }
-.footer__contactInfo>i {
-    color: currentColor;
+.footer__contactInfo > i {
+  color: currentColor;
 }
 
 .footer__iconSpan {
@@ -77,11 +75,13 @@
   width: 100%;
 }
 .footer__about {
-  flex-basis: 25%;
+  flex: 1;
+  margin: 0 5rem;
 }
 
 .footer__links {
-  flex-basis: 25%;
+  flex: 1;
+  margin: 0 5rem;
 }
 
 .footer__HR {
@@ -132,16 +132,15 @@
 }
 
 .footer__copyRight {
-    width: 100%;
-    padding: 1.6rem 0;
-    background-color: #ff9933;
-    text-align: center;
-    font-family: inherit;
-    color: #fff;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+  width: 100%;
+  padding: 1.6rem 0;
+  background-color: #ff9933;
+  text-align: center;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
-
 
 footer__list__item__text i {
   font-size: 1.3rem;
@@ -149,10 +148,9 @@ footer__list__item__text i {
   margin-right: 0.4rem;
 }
 
-
 .footer__mapContainer {
-  height: 100%;
-  flex-basis: 40%;
+  padding-top: 4rem;
+  flex: 1;
 }
 .footer__map {
   height: 100%;
@@ -165,5 +163,14 @@ footer__list__item__text i {
 @media (max-width: 960px) {
   .footer__contactInfo {
     width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer__right {
+    flex-direction: column;
   }
 }
