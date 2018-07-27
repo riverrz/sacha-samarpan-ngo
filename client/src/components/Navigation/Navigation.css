@@ -37,7 +37,7 @@
   z-index: 99;
   transition: width 0.4s;
   transform: translateX(-50%);
-  background-color: #ff9933;
+  background-color: #ffae4c;
   justify-content: space-between;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
   font-size: 1.4rem;
@@ -82,7 +82,7 @@
 }
 
 .navigation__item:hover > a {
-  color: #ff8c00;
+  color: #ffae4c;
 }
 .navigation__item:not(:first-child)::before {
   content: "";
@@ -108,7 +108,7 @@
 .navigation__logoBox {
   background-color: #fff;
   flex: 0 0 17%;
-  border-right: 2px solid #ff8c00;
+  border-right: 2px solid #ffae4c;
 }
 .nav__contact i {
   margin-right: 1rem;
@@ -127,12 +127,12 @@
 }
 .navigation__donate {
   background-color: #fff;
-  border: 2px solid #ff8c00;
+  border: 2px solid #ffae4c;
 }
 .navigation__donate a {
   color: #fff;
   height: 55%;
-  background-color: #ff8c00;
+  background-color: #ffae4c;
   width: 93%;
   transition: background-color 0.2s;
 }
@@ -141,11 +141,11 @@
   background-color: #df9143;
 }
 .navigation__active {
-  color: #ff8c00 !important;
+  color: #ffae4c !important;
   background-color: #fff !important;
 }
 .navigation__activeDropDown {
-  background-color: #ff9933;
+  background-color: #ffae4c;
   transform: translate(0) !important;
   color: #fff !important;
 }

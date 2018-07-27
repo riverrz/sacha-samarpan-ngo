@@ -7,7 +7,7 @@ class Team extends Component {
     member: [
       {
         name: "Rajat Sharma",
-        designation: "Website Developer, Manager",
+        designation: "Co-ordinator",
         photo: "/images/Team/Rajat.jpeg",
         facebook: "https://www.facebook.com/justcoolrajatsharma",
         description:
@@ -23,15 +23,15 @@ class Team extends Component {
       },
       {
         name: "Rohit Shukla",
-        designation: "Website Developer, Manager",
+        designation: "Volunteer",
         photo: "/images/Team/Rohit.jpeg",
         facebook: "https://www.facebook.com/rohit.shukla.792",
         description:
-          "Rohit Shukla devotes all his hardwork,Diligence to this organisation  and  believe in educating child all over the world.He has worked with many NGOs and done a brilliant job everywhere. "
+          "I am Rohit Shukla. I have completed my MA in History from Delhi University with first Division. I am also RBI certified from Indian Institute Of Banking and Finance. I have also qualified many competitive exams like CDS,CGL,CISF,ITBP, Delhi Police and Banking, and presently running an competitive exam Institute and hope to teach free of cost in Saccha Samarpan. My vision is that no child is left behind in field of education because of financial deprivation."
       },
       {
         name: "Aman Gupta",
-        designation: "Website Developer, Manager",
+        designation: "Volunteer",
         photo: "/images/Team/Aman.jpeg",
         facebook: "https://www.facebook.com/AmanGupta0307",
         description:
@@ -39,7 +39,7 @@ class Team extends Component {
       },
       {
         name: "Koushal Arora",
-        designation: "Website Developer, Manager",
+        designation: "Volunteer",
         photo: "/images/Team/Koushal.jpeg",
         facebook: "https://www.facebook.com/kaushal.arora.796",
         description:
@@ -47,7 +47,7 @@ class Team extends Component {
       },
       {
         name: "Umesh Rajput",
-        designation: "Website Developer, Manager",
+        designation: "Volunteer",
         photo: "/images/Team/Umesh.jpeg",
         facebook: "https://www.facebook.com/UmeshRajput43",
         description:
@@ -70,7 +70,7 @@ class Team extends Component {
     });
 
     return (
-      <WhiteContainer style = {{paddingBottom: '8%'}}>
+      <WhiteContainer style={{ paddingBottom: "8%" }}>
         <h1 className="team__heading--primary">Our Team</h1>
         {allMembers}
       </WhiteContainer>

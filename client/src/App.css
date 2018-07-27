@@ -41,7 +41,7 @@ a {
 .app__backSide {
   height: 8rem;
   box-sizing: border-box;
-  background-color: lightskyblue;
+  background-color: #f8b15a;
   display: flex;
   margin: auto;
   justify-content: space-between;
