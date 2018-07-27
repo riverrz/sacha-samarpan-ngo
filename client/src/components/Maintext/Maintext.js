@@ -9,7 +9,7 @@ const maintext = props => {
         <span className='Maintext__main'><strong>"Sacha Samarpan"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
         THE BASIC MOTTO OF WHICH IS SOCIAL SERVICE. BESIDES THE MAIN MOTTO, THE
         BASIC IDEA OF SUCH A FORMATION IS TO HELP EACH AND EVERY HUMAN BEING WHO
-        NEEDS HELP.</span> <p>Umeed works for education for needy children who are under
+        NEEDS HELP.</span> <p>Saccha Samarpan works for education for needy children who are under
         difficult circumstances, such as child labour, children of poorest of
         the parents, children inflicted and affected with HIV/AIDS, street and
         runaway children, children with rare disabilities, disaster struck

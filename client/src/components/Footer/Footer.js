@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
+import { Link } from 'react-router-dom';
 import "./Footer.css";
 import Logo from "../../assets/logo.png";
+
 const footer = props => {
   return (
     <Fragment>
@@ -30,24 +32,24 @@ const footer = props => {
             <hr className="footer__HR" />
             <ul className="footer__list">
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/about" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> About Sacha Samarpan
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/donate" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Refund Policy
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/donate" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/donate" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -56,24 +58,24 @@ const footer = props => {
             <hr className="footer__HR" />
             <ul className="footer__list">
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> ID Form
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/events" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Events
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/registration" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Join Us
-                </a>
+                </Link>
               </li>
               <li className="footer__list__item">
-                <a href="/" className="footer__list__item__text">
+                <Link to="/internship" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Internship
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
