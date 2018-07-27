@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import Logo from "../../assets/logo.png";
 
@@ -15,14 +15,16 @@ const footer = props => {
             <div className="footer__contactInfo__phone">
               <span className="footer__iconSpan">
                 <i className="fas fa-phone" />
-              </span>{" "}
+              </span>
               +91 9211458806
             </div>
             <div className="footer__contactInfo__email">
               <span className="footer__iconSpan">
                 <i className="fas fa-envelope" />
-              </span>{" "}
-              info@sacchasamarpan.com
+              </span>
+              <a href="mailto:info@sacchasamarpan.com" className='footer__contactInfo__emailLink'>
+                info@sacchasamarpan.com
+              </a>
             </div>
           </div>
         </div>

@@ -28,30 +28,45 @@ class Navigation extends Component {
     }
   };
   render() {
-    let navigationClass = 'navigation--notFixed'
+    let navigationClass = "navigation--notFixed";
     if (this.state.scrollingLock) {
-      navigationClass = 'navigation--fixed';
+      navigationClass = "navigation--fixed";
     }
-    return <Fragment>
+    return (
+      <Fragment>
         <div className="nav">
           <div className="nav__contact">
             <div className="nav__contact__number">
               <i className="fas fa-phone" /> +91 9211458806
             </div>
             <div className="nav__contact__email">
-              <i className="fas fa-envelope" /> info@sacchasamarpan.com
+              <a href="mailto:info@sacchasamarpan.com" className="nav__contact__emailLink">
+                <i className="fas fa-envelope" /> info@sacchasamarpan.com
+              </a>
             </div>
             <div className="nav__contact__social">
-              <a href="https://www.facebook.com/SacchaSamarpanNGO" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/SacchaSamarpanNGO"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-facebook-f" />
               </a>
-              <a href="https://www.twitter.com/SacchaSamarpan1"  target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.twitter.com/SacchaSamarpan1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-twitter" />
               </a>
-              <a href="https://www.instagram.com/sacchasamarpan_ngo"  target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/sacchasamarpan_ngo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-instagram" />
               </a>
-              <a href="/"  target="_blank" rel="noopener noreferrer">
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp" />
               </a>
             </div>
@@ -72,23 +87,39 @@ class Navigation extends Component {
             </NavLink>
             <Dropdown>
               <li>
-                <NavLink to="/about" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/about"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Overview
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/about/founders" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/about/founders"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Founders
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about/team" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/about/team"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Our Team
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about/issues" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/about/issues"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Issues & Views
                 </NavLink>
               </li>
@@ -96,12 +127,20 @@ class Navigation extends Component {
           </div>
 
           <div className="navigation__item">
-            <NavLink to="/full-gallery" exact activeClassName="navigation__active">
+            <NavLink
+              to="/full-gallery"
+              exact
+              activeClassName="navigation__active"
+            >
               Gallery
             </NavLink>
           </div>
           <div className="navigation__item">
-            <NavLink to="/internship" exact activeClassName="navigation__active">
+            <NavLink
+              to="/internship"
+              exact
+              activeClassName="navigation__active"
+            >
               Internship
             </NavLink>
           </div>
@@ -112,17 +151,29 @@ class Navigation extends Component {
             </NavLink>
             <Dropdown>
               <li>
-                <NavLink to="/events" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/events"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Overview
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/events/archive" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/events/archive"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Events Archive
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/events/upcoming" exact activeClassName="navigation__activeDropDown">
+                <NavLink
+                  to="/events/upcoming"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
                   <i className="fas fa-angle-right" /> Upcoming Events
                 </NavLink>
               </li>
@@ -130,12 +181,20 @@ class Navigation extends Component {
           </div>
 
           <div className="navigation__item">
-            <NavLink to="/registration" exact activeClassName="navigation__active">
+            <NavLink
+              to="/registration"
+              exact
+              activeClassName="navigation__active"
+            >
               Registration
             </NavLink>
           </div>
           <div className="navigation__item">
-            <NavLink to="/important-links" exact activeClassName="navigation__active">
+            <NavLink
+              to="/important-links"
+              exact
+              activeClassName="navigation__active"
+            >
               Important Links
             </NavLink>
           </div>
@@ -145,7 +204,8 @@ class Navigation extends Component {
             </Link>
           </div>
         </nav>
-      </Fragment>;
+      </Fragment>
+    );
   }
 }
 

@@ -22,15 +22,18 @@
   align-items: center;
   flex: 1;
 }
+.nav__contact__emailLink {
+  color: inherit;
+  text-decoration: none;
+}
 .nav__contact__social {
   flex-basis: 6%;
   justify-content: flex-end;
-  color: #222126;
+  color: inherit;
 }
 .nav__contact__social a {
-  color: #222126;
+  color: inherit;
 }
-
 
 .navigation {
   display: flex;
@@ -163,13 +166,12 @@
   margin-right: auto;
 }
 
-
 /*Media Queries*/
 
 @media (max-width: 1025px) {
   .navigation--notFixed {
     width: 90%;
-  } 
+  }
 }
 
 @media (max-width: 960px) {

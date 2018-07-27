@@ -39,6 +39,10 @@
   flex-direction: column;
   justify-content: center;
 }
+.footer__contactInfo__emailLink {
+  color: inherit;
+  text-decoration: none;
+}
 .footer__contactInfo__phone {
   margin-bottom: 1rem;
   background-color: #444;
