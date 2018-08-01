@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const nodemailer = require('nodemailer');
 
 // Importing Models
 const Member = require("./Models/Member");
@@ -16,6 +17,9 @@ const {
 
 // Importing URIs from keys.js
 const { mongoURI } = require("./config/keys");
+
+// Importing Transporter of Nodemailer
+const Transporter = require("./Mailer/Mailer");
 
 const app = express();
 
@@ -63,6 +67,19 @@ app.post("/internship", async (req, res) => {
     return res.send("You are already registered as an Intern");
   }
   const newIntern = await Intern.create(possibleNewIntern);
+  const mailOptions = {
+    from: 'sacchasamarpan@gmail.com',
+    to: possibleNewIntern.email,
+    subject: 'Successful registeration as intern',
+    html: '<p>Thank you for becoming a part of out NGO as an intern</p>'
+  }
+  Transporter.sendMail(mailOptions, function(err, info) {
+    if (err) {
+      throw err;
+    } else {
+      console.log(info);
+    }
+  })
   res.send(
     `Thank you for joining us ${
       newIntern.name

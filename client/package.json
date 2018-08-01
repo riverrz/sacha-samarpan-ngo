@@ -5,6 +5,9 @@
   "proxy": {
     "/registration": {
       "target": "http://localhost:5000"
+    },
+    "/internship": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
