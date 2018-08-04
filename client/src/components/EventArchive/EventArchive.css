@@ -6,7 +6,10 @@
 
 .eventArchive__container {
     width: 100%;
-    padding: 5rem;
-    display: flex;
-    flex-wrap: wrap;
+    height: 100%;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    grid-auto-rows: 1fr;
 }
