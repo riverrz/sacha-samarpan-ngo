@@ -19,10 +19,9 @@ class Modal extends Component {
   render() {
     let content = null;
     if (this.props.for === "gallery") {
-      var indexOfLink = this.props.image.indexOf("/images");
-      const relativeLink = this.props.image.slice(
-        indexOfLink + 8,
-        indexOfLink + 9
+      const indexOfLink = this.props.image.indexOf("/images");
+      const relativeLink = buildImageNumber(
+        this.props.image.slice(indexOfLink + 8)
       );
       content = (
         <div className="modal__container" style={this.state.marginTop}>
@@ -122,6 +121,16 @@ class Modal extends Component {
     }
     return <Fragment>{content}</Fragment>;
   }
+}
+
+function buildImageNumber(str) {
+  let numStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i])) {
+      numStr += str[i];
+    }
+  }
+  return numStr;
 }
 
 export default Modal;

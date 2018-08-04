@@ -58,9 +58,6 @@ class Gallery extends Component {
   };
   render() {
     const allGalleryItems = this.state.images.map((data, i) => {
-      if (this.props.limit && i >= this.props.limit) {
-        return null;
-      }
       return (
         <GalleryItem
           imageName={data.name}
