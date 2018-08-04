@@ -10,6 +10,6 @@
     padding: 4rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 30px;
+    grid-gap: 3rem;
     grid-auto-rows: 1fr;
 }
