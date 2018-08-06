@@ -116,6 +116,15 @@ class Navigation extends Component {
               </li>
               <li>
                 <NavLink
+                  to="/about/contact"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
+                  <i className="fas fa-angle-right" /> Contact
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/about/issues"
                   exact
                   activeClassName="navigation__activeDropDown"

@@ -1,0 +1,36 @@
+.contact__sideBar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background-color: #222;
+  color: #bbb;
+}
+.contact__sideBar__item {
+  padding: 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.contact__sideBar__item:hover {
+    color: #fff !important;
+}
+.contact__sideBar__item:hover > .contact__sideBar__itemText {
+    transform: scaleX(1);
+}
+.contact__sideBar__itemText {
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  left: 100%;
+  color: #fff;
+  transition: all .3s;
+}
