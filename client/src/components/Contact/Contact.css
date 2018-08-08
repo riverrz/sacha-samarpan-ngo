@@ -13,10 +13,10 @@
   position: relative;
 }
 .contact__sideBar__item:hover {
-    color: #fff !important;
+  color: #fff !important;
 }
 .contact__sideBar__item:hover > .contact__sideBar__itemText {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 .contact__sideBar__itemText {
   transform: scaleX(0);
@@ -29,8 +29,65 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top:0;
+  top: 0;
   left: 100%;
   color: #fff;
-  transition: all .3s;
+  transition: all 0.3s;
+}
+.contact__main {
+  color: #222;
+  height: 100%;
+  width: 85%;
+  margin: auto;
+}
+
+.contact__main__heading--primary {
+  font-size: 3rem;
+}
+.contact__main__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+  margin-top: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+.contact__emailForm {
+  flex: 0 0 45%;
+  height: 100%;
+}
+.contact__form__inputContainer {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact__input {
+  flex: 0 0 47%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: #d3d3d3;
+  transition: background-color 0.3s;
+}
+.contact__input:focus {
+  background-color: #222;
+  color: #fff;
+}
+.contact__textArea {
+  outline: none;
+  border: none;
+  background-color: #d3d3d3;
+  transition: background-color .3s;
+  padding: 1rem;
+  flex: 0 0 100%;
+}
+.contact__textArea:focus {
+  background-color: #222;
+  color: #fff;
+}
+.contact__main__altContainer {
+  flex: 0 0 45%;
+  border-left: 2px solid #bbb;
 }
