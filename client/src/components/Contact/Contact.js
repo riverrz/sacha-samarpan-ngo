@@ -24,6 +24,10 @@ const contact = props => {
           <div className="contact__sideBar__itemText">twitter.com</div>
         </div>
       </aside>
+      <main className="contact__main">
+        <h1 className="contact__main__heading--primary">Contact Us</h1>
+
+      </main>
     </WhiteContainer>
   );
 };

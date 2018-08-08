@@ -36,9 +36,9 @@
   font-family: inherit;
   outline: none;
   border-radius: 20px;
+  background-color: #e6e6e6;
 }
 .registration__select {
-  background-color: #fff;
   border: none;
   outline: none;
   border-radius: 30px;

@@ -19,7 +19,7 @@
     text-align: left;
     padding: 2rem;
     transform: skew(-10deg);
-    background-color: #eee;
+    background-color: #d3d3d3;
     display: flex;
 }
 .founder>* {
