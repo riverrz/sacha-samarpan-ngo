@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/registration": {
+    "/register/member": {
       "target": "http://localhost:5000"
     },
-    "/internship": {
+    "/register/intern": {
       "target": "http://localhost:5000"
     },
     "/support/email": {

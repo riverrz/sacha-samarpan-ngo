@@ -46,7 +46,7 @@ class Internship extends Component {
           <hr className="internship__horizontalRule--mid" />
         </h1>
 
-        <form className='internship__form' action="/internship" method="POST">
+        <form className='internship__form' action="/register/intern" method="POST">
           <span className='internship__typeText'>Type of Internship:</span>
           <div className='internship__select__container'>
             <select
@@ -75,7 +75,7 @@ class Internship extends Component {
               type="text"
               placeholder="Phone:"
               iconClass="fas fa-phone"
-              name="intern[phone]"
+              name="intern[phoneNo]"
             />
             <Inputfield
               type="email"

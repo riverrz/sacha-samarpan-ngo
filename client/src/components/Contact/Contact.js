@@ -49,7 +49,7 @@ const contact = props => {
         </div>
       </aside>
       <main className="contact__main">
-        <h1 className="contact__main__heading--primary">Contact Us</h1>
+        <h1 className="contact__main__heading--primary">Get in touch with us</h1>
         <div className="contact__main__container">
           <form
             action="/support/email"

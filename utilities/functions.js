@@ -22,7 +22,7 @@ const buildEmail = (to, subject, htmlContent) => {
   });
 };
 
-const verifyEmailInputs = message => {
+const verifyInputs = message => {
   const { fName, lName, email, phoneNo, body } = message;
   const inputArr = Object.values(message);
   for (let i = 0; i < inputArr.length; i++) {
@@ -30,7 +30,7 @@ const verifyEmailInputs = message => {
       return false;
     }
   }
-  if (phoneNo.length !== 10) {
+  if (phoneNo.length !== 10 || isNaN(phoneNo)) {
     return false;
   }
 
@@ -41,5 +41,5 @@ module.exports = {
   findExistingIntern,
   findExistingMember,
   buildEmail,
-  verifyEmailInputs
+  verifyInputs
 };

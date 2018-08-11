@@ -13,7 +13,7 @@ const {
   findExistingIntern,
   findExistingMember,
   buildEmail,
-  verifyEmailInputs
+  verifyInputs
 } = require("./utilities/functions");
 
 // Importing URIs from keys.js
@@ -30,20 +30,24 @@ mongoose.connect(mongoURI);
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/registration", async (req, res) => {
+app.post("/register/member", async (req, res) => {
   if (!req.body.member) {
     return res.send("Please enter registration details");
   }
   const possibleNewMember = req.body.member;
+  if (!verifyInputs(possibleNewMember)) {
+    return res.redirect("back");
+  }
   const attrToFind = {
     name: possibleNewMember.name,
-    phone: possibleNewMember.phone,
+    phone: possibleNewMember.phoneNo,
     email: possibleNewMember.email
   };
   const foundMember = await findExistingMember(attrToFind);
   if (foundMember) {
     return res.send("You have already registered");
   }
+
   const newMember = await Member.create(possibleNewMember);
   buildEmail(
     possibleNewMember.email,
@@ -57,20 +61,26 @@ app.post("/registration", async (req, res) => {
   );
 });
 
-app.post("/internship", async (req, res) => {
+app.post("/register/intern", async (req, res) => {
   if (!req.body.intern) {
     return res.send("Please enter details for registering as Intern");
   }
   const possibleNewIntern = req.body.intern;
+  console.log(verifyInputs(possibleNewIntern));
+  if (!verifyInputs(possibleNewIntern)) {
+    return res.redirect("back");
+  }
   const attrToFind = {
     name: possibleNewIntern.name,
-    phone: possibleNewIntern.phone,
+    phone: possibleNewIntern.phoneNo,
     email: possibleNewIntern.email
   };
+  console.log(possibleNewIntern);
   const foundIntern = await findExistingIntern(attrToFind);
   if (foundIntern) {
     return res.send("You are already registered as an Intern");
   }
+
   const newIntern = await Intern.create(possibleNewIntern);
   buildEmail(
     possibleNewIntern.email,
@@ -85,7 +95,7 @@ app.post("/internship", async (req, res) => {
 });
 
 app.post("/support/email", (req, res) => {
-  const verifyResult = verifyEmailInputs(req.body.message);
+  const verifyResult = verifyInputs(req.body.message);
   if (!verifyResult) {
     res.redirect("back");
   } else {

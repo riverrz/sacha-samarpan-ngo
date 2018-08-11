@@ -9,11 +9,11 @@ const registration = props => (
       <span className='registration__headingPrimarySpan'>for a cause</span>
     </h1>
     <hr className='registration__horizontalRule' />
-    <form className='registration__form' action="/registration" method="POST">
+    <form className='registration__form' action="/register/member" method="POST">
       <p>Pay it to coordinator by selecting Payment Mode as Offline</p>
       <div className='registration__inputfields__container'>
         <Inputfield type="text" placeholder="Name:" iconClass="fas fa-user" name="member[name]"/>
-        <Inputfield type="text" placeholder="Phone:" iconClass="fas fa-phone" name="member[phone]"/>
+        <Inputfield type="text" placeholder="Phone:" iconClass="fas fa-phone" name="member[phoneNo]"/>
         <Inputfield
           type="email"
           placeholder="Email Address"

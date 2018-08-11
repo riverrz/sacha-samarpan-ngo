@@ -9,7 +9,7 @@ const internSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  phone: {
+  phoneNo: {
     type: Number,
     required: true
   },
