@@ -9,6 +9,4 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-console.log("Gmail Password", gmailPassword);
-
 module.exports = transporter;
