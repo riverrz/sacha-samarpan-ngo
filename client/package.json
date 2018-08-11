@@ -8,6 +8,9 @@
     },
     "/internship": {
       "target": "http://localhost:5000"
+    },
+    "/support/email": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

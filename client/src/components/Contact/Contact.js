@@ -28,7 +28,8 @@ const contact = props => {
         <h1 className="contact__main__heading--primary">Contact Us</h1>
         <div className="contact__main__container">
           <form
-            action="/"
+            action="/support/email"
+            method="POST"
             className="contact__emailForm"
             autoComplete="off"
             spellCheck={false}
@@ -40,6 +41,7 @@ const contact = props => {
                 className="contact__input"
                 placeholder="First Name"
                 name="message[fName]"
+                required
               />
               <input
                 type="text"
@@ -52,19 +54,22 @@ const contact = props => {
                 className="contact__input"
                 placeholder="Email Address"
                 name="message[email]"
+                required
               />
               <input
                 type="text"
                 className="contact__input"
                 placeholder="Phone No."
                 name="message[phoneNo]"
+                required
               />
               <textarea
-                name="message[message]"
+                name="message[body]"
                 className="contact__textArea"
                 cols="30"
                 rows="10"
                 placeholder="Your Message"
+                required
               />
             </div>
             <button className="contact__form__submitBtn">Submit</button>

@@ -12,7 +12,8 @@ const Intern = require("./Models/Intern");
 const {
   findExistingIntern,
   findExistingMember,
-  buildEmail
+  buildEmail,
+  verifyEmailInputs
 } = require("./utilities/functions");
 
 // Importing URIs from keys.js
@@ -44,7 +45,11 @@ app.post("/registration", async (req, res) => {
     return res.send("You have already registered");
   }
   const newMember = await Member.create(possibleNewMember);
-  buildEmail(possibleNewMember.email, 'member' ,"<p>Thank you for becoming a part of out NGO as a member</p>");
+  buildEmail(
+    possibleNewMember.email,
+    "Successful registeration as a Member",
+    "<p>Thank you for becoming a part of out NGO as a member</p>"
+  );
   res.send(
     `Thank You ${
       newMember.name
@@ -67,12 +72,35 @@ app.post("/internship", async (req, res) => {
     return res.send("You are already registered as an Intern");
   }
   const newIntern = await Intern.create(possibleNewIntern);
-  buildEmail(possibleNewIntern.email, 'intern' ,"<p>Thank you for becoming a part of out NGO as an intern</p>");
+  buildEmail(
+    possibleNewIntern.email,
+    "Successful registeration as an Intern",
+    "<p>Thank you for becoming a part of out NGO as an intern</p>"
+  );
   res.send(
     `Thank you for joining us ${
       newIntern.name
     } as an Intern. We hope to work with you and bring a positive change in our society. Your internID will be sent to you on your provided Email`
   );
+});
+
+app.post("/support/email", (req, res) => {
+  const verifyResult = verifyEmailInputs(req.body.message);
+  if (!verifyResult) {
+    res.redirect("back");
+  } else {
+    const userInput = req.body.message;
+    buildEmail(
+      "sacchasamarpan@gmail.com",
+      "User contact email",
+      `<p>A user is trying to contact us, given below are the details of the user</p>
+      <p>Name: ${userInput.fName} ${userInput.lName}</p>
+      <p>Phone No.: ${userInput.phoneNo}</p>
+      <p>Email Id: ${userInput.email}</p>
+      <p>Message: ${userInput.body}</p>`
+    );
+    res.redirect("/");
+  }
 });
 
 app.get("*", (req, res) => {
