@@ -5,7 +5,7 @@ import "./Contact.css";
 
 const contact = props => {
   return (
-    <WhiteContainer style={{ height: "50rem" }}>
+    <WhiteContainer style={{ height: "90vh" }}>
       <aside className="contact__sideBar">
         <div className="contact__sideBar__item">
           <i className="fab fa-facebook-f " />
@@ -27,7 +27,13 @@ const contact = props => {
       <main className="contact__main">
         <h1 className="contact__main__heading--primary">Contact Us</h1>
         <div className="contact__main__container">
-          <form action="/" className="contact__emailForm" autoComplete="off" spellCheck={ false }>
+          <form
+            action="/"
+            className="contact__emailForm"
+            autoComplete="off"
+            spellCheck={false}
+          >
+            <h1 className="contact__heading--secondary">Mail Us</h1>
             <div className="contact__form__inputContainer">
               <input
                 type="text"
@@ -64,7 +70,16 @@ const contact = props => {
             <button className="contact__form__submitBtn">Submit</button>
           </form>
           <div className="contact__main__altContainer">
-            <h1>Alternatives</h1>
+            <h1 className="contact__heading--secondary">Alternatives</h1>
+            <div className="contact__mapContainer">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.119140935912!2d77.22824095055613!3d28.506062982381827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1a33d8ed9b5%3A0xbd36fa4d47458ebd!2sMahila+Training+Institute!5e0!3m2!1sen!2sin!4v1531673041841"
+                frameBorder="0"
+                allowFullScreen
+                title="hq-map"
+                className="contact__map"
+              />
+            </div>
           </div>
         </div>
       </main>
