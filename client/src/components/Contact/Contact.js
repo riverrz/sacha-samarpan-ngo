@@ -7,7 +7,7 @@ const contact = props => {
   return (
     <WhiteContainer style={{ height: "90vh" }}>
       <aside className="contact__sideBar">
-        <div className="contact__sideBar__item">
+        <div className="contact__sideBar__item  facebook--backColor">
           <a
             href="https://www.facebook.com/SacchaSamarpanNGO"
             target="_blank"
@@ -17,7 +17,7 @@ const contact = props => {
             <i className="fab fa-facebook-f " />
           </a>
         </div>
-        <div className="contact__sideBar__item">
+        <div className="contact__sideBar__item instagram--backColor">
           <a
             href="https://www.instagram.com/sacchasamarpan_ngo"
             target="_blank"
@@ -27,7 +27,7 @@ const contact = props => {
             <i className="fab fa-instagram" />
           </a>
         </div>
-        <div className="contact__sideBar__item">
+        <div className="contact__sideBar__item youtube--backColor">
           <a
             href="https://www.youtube.com/channel/UC6mMdgm7DVDwcgQUoSrWIKQ/"
             target="_blank"
@@ -37,7 +37,7 @@ const contact = props => {
             <i className="fab fa-youtube" />
           </a>
         </div>
-        <div className="contact__sideBar__item">
+        <div className="contact__sideBar__item twitter--backColor">
           <a
             href="https://www.twitter.com/SacchaSamarpan1"
             target="_blank"
@@ -49,7 +49,9 @@ const contact = props => {
         </div>
       </aside>
       <main className="contact__main">
-        <h1 className="contact__main__heading--primary">Get in touch with us</h1>
+        <h1 className="contact__main__heading--primary">
+          Get in touch with us
+        </h1>
         <div className="contact__main__container">
           <form
             action="/support/email"

@@ -6,20 +6,28 @@
   background-color: #3f3f3f;
 }
 .contact__sideBar__item {
-  padding: 1rem;
   font-size: 2.5rem;
   cursor: pointer;
   position: relative;
 }
 .sideBar__item__link {
   color: #eee;
-  transition: all 0.2s;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
 }
-.contact__sideBar__item:hover .sideBar__item__link {
-  color: #7f7f7f;
+.facebook--backColor {
+  background-color: #3c589a;
 }
-.contact__sideBar__item:hover .contact__sideBar__itemText {
-  transform: scaleX(1);
+.instagram--backColor {
+  background-color: #527fa4;
+}
+.youtube--backColor {
+  background-color: #ff0000;
+}
+.twitter--backColor {
+  background-color: #1da1f2;
 }
 .contact__main {
   color: #222;
