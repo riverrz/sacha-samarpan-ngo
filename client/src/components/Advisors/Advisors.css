@@ -10,7 +10,7 @@
 }
 .advisors__list {
   height: 100%;
-  width: 50%;
+  width: 60%;
   list-style: none;
   margin-left: 5rem;
   margin-top: 3rem;
@@ -21,8 +21,10 @@
   width: 100%;
   padding: 1rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid #7f7f7f;
   margin-bottom: 8%;
+}
+.advisors__listItem:not(:last-of-type) {
+  border-bottom: 1px solid #bbb;
 }
 .advisors__picContainer {
   height: 30%;
