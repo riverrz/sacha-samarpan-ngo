@@ -40,7 +40,10 @@ class Navigation extends Component {
               <i className="fas fa-phone" /> +91 9211458806
             </div>
             <div className="nav__contact__email">
-              <a href="mailto:info@sacchasamarpan.com" className="nav__contact__emailLink">
+              <a
+                href="mailto:info@sacchasamarpan.com"
+                className="nav__contact__emailLink"
+              >
                 <i className="fas fa-envelope" /> info@sacchasamarpan.com
               </a>
             </div>
@@ -103,6 +106,15 @@ class Navigation extends Component {
                   activeClassName="navigation__activeDropDown"
                 >
                   <i className="fas fa-angle-right" /> Founders
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about/advisors"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
+                  <i className="fas fa-angle-right" /> Advisors
                 </NavLink>
               </li>
               <li>

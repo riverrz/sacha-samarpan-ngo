@@ -5,16 +5,17 @@ import Founders from "../../components/Founders/Founders";
 import Issues from "../../components/IssuesAndViews/IssuesAndViews";
 import Team from "../../components/Team/Team";
 import Contact from "../../components/Contact/Contact";
+import Advisors from "../../components/Advisors/Advisors";
 
 const aboutContainer = props => {
   return (
     <Switch>
       <Route exact path={`${props.match.url}`} component={About} />
       <Route exact path={`${props.match.url}/founders`} component={Founders} />
+      <Route exact path={`${props.match.url}/advisors`} component={Advisors} />
       <Route exact path={`${props.match.url}/issues`} component={Issues} />
       <Route exact path={`${props.match.url}/team`} component={Team} />
       <Route exact path={`${props.match.url}/contact`} component={Contact} />
-      
     </Switch>
   );
 };
