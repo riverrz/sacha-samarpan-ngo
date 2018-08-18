@@ -42,6 +42,7 @@
 .contact__main__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 90%;
   margin-top: 2rem;
   font-family: "Lato", sans-serif;
@@ -117,4 +118,36 @@
 .contact__map {
   height: 100%;
   width: 100%;
+}
+
+.contact__otherMethodsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #eee;
+  margin-top: 3rem;
+}
+.contact__otherMethod {
+  height: 100%;
+  flex: 0 0 46%;
+  /* padding: 1rem; */
+  /* height: 3rem; */
+  display: flex;
+  justify-content: flex-start;
+  background-color: #444;
+}
+.contact__otherMethodSpan {
+  display: inline-block;
+  height: 100%;
+  padding: 7px;
+  font-size: 1.7rem;
+  margin-right: 10px;
+  background-color: #222;
+  color: #d3d3d3;
+}
+.contact__otherMethodText {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
 }

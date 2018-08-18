@@ -111,6 +111,22 @@ const contact = props => {
                 className="contact__map"
               />
             </div>
+            <div className="contact__otherMethodsContainer">
+              <div className="contact__otherMethod">
+                <span className="contact__otherMethodSpan">
+                  <i className="fas fa-phone" />
+                </span>
+                <span className="contact__otherMethodText">+91 9999999999</span>
+              </div>
+              <div className="contact__otherMethod">
+                <span className="contact__otherMethodSpan">
+                  <i className="fas fa-envelope" />
+                </span>
+                <span className="contact__otherMethodText">
+                  info@sacchasamarpan.com
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </main>
