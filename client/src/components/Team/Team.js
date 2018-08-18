@@ -52,6 +52,20 @@ class Team extends Component {
         facebook: "https://www.facebook.com/UmeshRajput43",
         description:
           "He is one of the most hardworking person of Saccha Samarpan Ngo. He uplifts many issues regarding child education and women empowerment. His main objective is to develop human potential to its fullest extent so that intellectually capable and imaginatively gifted leaders can emerge in a range of professions."
+      },
+      {
+        name: "Shivanki",
+        designation: "Volunteer",
+        photo: "/images/Team/Shivanki.jpeg",
+        facebook: "https://www.facebook.com",
+        description: "Shivanki Volunteer"
+      },
+      {
+        name: "Priya",
+        designation: "Volunteer",
+        photo: "/images/Team/Priya.jpeg",
+        facebook: "https://www.facebook.com/priya.yadav.5661",
+        description: "Priya Volunteer"
       }
     ]
   };
