@@ -57,7 +57,8 @@ class Team extends Component {
         name: "Shivanki",
         designation: "Volunteer",
         photo: "/images/Team/Shivanki.jpeg",
-        facebook: "https://www.facebook.com",
+        facebook: "",
+        instagram: "https://www.instagram.com/shivirao07/",
         description: "Shivanki Volunteer"
       },
       {
@@ -71,16 +72,7 @@ class Team extends Component {
   };
   render() {
     const allMembers = this.state.member.map((member, id) => {
-      return (
-        <Member
-          name={member.name}
-          designation={member.designation}
-          photo={member.photo}
-          description={member.description}
-          key={id}
-          facebook={member.facebook}
-        />
-      );
+      return <Member key={id} {...member} />;
     });
 
     return (
