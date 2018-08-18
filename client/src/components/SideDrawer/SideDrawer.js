@@ -6,13 +6,37 @@ class SideDrawer extends Component {
   state = {
     show: false
   };
+  backdropCloseHandler = () => {
+    this.setState({
+      show: false
+    });
+  };
+  backdropOpenHandler = () => {
+    this.setState({
+      show: true
+    });
+  };
   render() {
     let sideDrawerClass = "sideDrawer--hidden";
+    let backdropClass = "sideDrawer__backdrop--hidden";
     if (this.state.show) {
       sideDrawerClass = "sideDrawer--show";
+      backdropClass = "sideDrawer__backdrop--show";
     }
     return (
       <Fragment>
+        <div
+          className="sideDrawer__toggleIcon"
+          onClick={this.backdropOpenHandler}
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+        <div
+          className={`sideDrawer__backdrop ${backdropClass}`}
+          onClick={this.backdropCloseHandler}
+        />
         <div className={`sideDrawer__container ${sideDrawerClass}`}>
           <div className="sideDrawer__logoContainer">
             <img
