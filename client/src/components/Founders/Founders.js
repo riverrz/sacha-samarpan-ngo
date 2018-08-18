@@ -38,6 +38,18 @@ const founders = props => {
             >
               <img src="/twitter.png" alt="Twitter" className="founder__icon" />
             </a>
+            <a
+              href="https://www.instagram.com/NauratnaGupta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="founder__iconContainer"
+            >
+              <img
+                src="/instagram.png"
+                alt="Instagram"
+                className="founder__icon"
+              />
+            </a>
           </div>
         </div>
         <div className="founder__info">

@@ -10,7 +10,7 @@ const member = props => {
         rel="noopener noreferrer"
         className="member__iconContainer"
       >
-        <img src="/facebook.png" alt="Facebook" className="member__icon" />
+        <img src="/facebook.png" alt="Facebook link" className="member__icon" />
       </a>
     );
     memberContactArr.push(facebookContact);
@@ -22,7 +22,11 @@ const member = props => {
         rel="noopener noreferrer"
         className="member__iconContainer"
       >
-        <img src="/instagram.png" alt="Facebook" className="member__icon" />
+        <img
+          src="/instagram.png"
+          alt="Instagram link"
+          className="member__icon"
+        />
       </a>
     );
     memberContactArr.push(instagramContact);
