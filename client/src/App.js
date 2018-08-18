@@ -14,6 +14,8 @@ import Internship from "./components/Internship/Internship";
 import Registration from "./components/Registration/Registration";
 import AboutContainer from "./containers/AboutContainer/AboutContainer";
 import EventContainer from "./containers/EventContainer/EventContainer";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+
 class App extends Component {
   state = {
     viewPopUp: false,
@@ -138,6 +140,7 @@ class App extends Component {
             />
           </div>
         </div>
+        <SideDrawer />
         <Navigation />
         {backdrop}
         <Switch>

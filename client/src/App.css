@@ -13,7 +13,6 @@ html {
   /* position: relative; */
 }
 
-
 * {
   box-sizing: inherit;
 }
@@ -37,7 +36,6 @@ a {
   width: 100%;
 }
 
-
 .app__backSide {
   height: 8rem;
   box-sizing: border-box;
@@ -48,7 +46,7 @@ a {
 }
 .app__backSide__logoBox {
   width: 6rem;
-  height:7rem;
+  height: 7rem;
   display: inline-block;
 }
 .app__backSide__logo {
@@ -58,7 +56,7 @@ a {
 
 ::selection {
   /* background: #008000; */
-  background-color: 	#5ebe9e; 
+  background-color: #5ebe9e;
   color: #fff;
 }
 
@@ -75,9 +73,13 @@ a {
   }
 }
 
-
 @media (max-width: 800px) {
   html {
     font-size: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .app__backSide {
+    display: none;
   }
 }
