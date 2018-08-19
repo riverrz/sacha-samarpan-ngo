@@ -44,7 +44,7 @@ class Navigation extends Component {
                 href="mailto:info@sacchasamarpan.com"
                 className="nav__contact__emailLink"
               >
-                <i className="fas fa-envelope" /> info@sacchasamarpan.com
+                <i className="fas fa-envelope" /> sacchasamarpan@yahoo.com
               </a>
             </div>
             <div className="nav__contact__social">
@@ -124,15 +124,6 @@ class Navigation extends Component {
                   activeClassName="navigation__activeDropDown"
                 >
                   <i className="fas fa-angle-right" /> Our Team
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about/contact"
-                  exact
-                  activeClassName="navigation__activeDropDown"
-                >
-                  <i className="fas fa-angle-right" /> Contact
                 </NavLink>
               </li>
               <li>

@@ -15,6 +15,7 @@ import Registration from "./components/Registration/Registration";
 import AboutContainer from "./containers/AboutContainer/AboutContainer";
 import EventContainer from "./containers/EventContainer/EventContainer";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
+import Contact from "./components/Contact/Contact";
 
 class App extends Component {
   state = {
@@ -158,6 +159,7 @@ class App extends Component {
           <Route path="/donate" exact component={Donate} />
           <Route path="/internship" exact component={Internship} />
           <Route path="/registration" exact component={Registration} />
+          <Route path="/contact" exact component={Contact} />
 
           <Route
             path="/"

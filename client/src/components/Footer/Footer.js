@@ -23,7 +23,7 @@ const footer = props => {
                 <i className="fas fa-envelope" />
               </span>
               <a href="mailto:info@sacchasamarpan.com" className='footer__contactInfo__emailLink'>
-                info@sacchasamarpan.com
+                sacchasamarpan@yahoo.com
               </a>
             </div>
           </div>
@@ -77,6 +77,11 @@ const footer = props => {
               <li className="footer__list__item">
                 <Link to="/internship" className="footer__list__item__text">
                   <i className="fas fa-angle-right" /> Internship
+                </Link>
+              </li>
+              <li className="footer__list__item">
+                <Link to="/contact" className="footer__list__item__text">
+                  <i className="fas fa-angle-right" /> Contact Us
                 </Link>
               </li>
             </ul>

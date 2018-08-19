@@ -116,14 +116,14 @@ const contact = props => {
                 <span className="contact__otherMethodSpan">
                   <i className="fas fa-phone" />
                 </span>
-                <span className="contact__otherMethodText">+91 9999999999</span>
+                <span className="contact__otherMethodText">+91 9211458806</span>
               </div>
               <div className="contact__otherMethod">
                 <span className="contact__otherMethodSpan">
                   <i className="fas fa-envelope" />
                 </span>
                 <span className="contact__otherMethodText">
-                  info@sacchasamarpan.com
+                  sacchasamarpan@yahoo.com
                 </span>
               </div>
             </div>
