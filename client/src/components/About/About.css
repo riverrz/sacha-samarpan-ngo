@@ -6,13 +6,12 @@
   transform: translateX(-50%);
 }
 .about__subHR {
-    width: 10%;
-    height: 1px;
-    background-color: #777777;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
+  width: 10%;
+  height: 1px;
+  background-color: #777777;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .about__headingPrimary {
   font-size: 4rem;
@@ -25,25 +24,25 @@
   color: #ff9933;
 }
 .about__subHeading {
-    color: #777777;
-    font-weight: 400;
-    margin-bottom: 1rem;
+  color: #777777;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 .about__textBox {
-    width: 60%;
-    text-align: center;
-    margin: 5rem auto;
+  width: 60%;
+  text-align: center;
+  margin: 5rem auto;
 }
 .about__innerHeading {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #ff9933;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ff9933;
 }
-.about__textBox>p {
-    margin: 2rem auto;
-    font-size: 1.3rem;
-    color: #333333;
-    letter-spacing: 0.5px;
+.about__textBox > p {
+  margin: 2rem auto;
+  line-height: 2.7rem;
+  font-size: 1.5rem;
+  color: #333333;
+  letter-spacing: 0.5px;
 }
-

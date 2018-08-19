@@ -1,5 +1,5 @@
 .advisors__heading--primary {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: inherit;
   color: #222;
 }
@@ -38,25 +38,24 @@
 .advisors__detailsContainer {
   width: 75%;
   height: 100%;
+  color: #666;
 }
 .advisors__heading--secondary {
   font-family: inherit;
   font-size: 2.2rem;
-  color: #3f3f3f;
   display: block;
   height: 10%;
   margin-bottom: 1%;
 }
 .advisors__designation {
   font-size: 1.8rem;
-  color: #3f3f3f;
   display: block;
   margin-bottom: 2%;
 }
 .advisors__details {
   display: block;
-  font-size: 1.4rem;
-  color: #222;
-  height: 10rem;
+  font-size: 1.5rem;
+  height: 15rem;
+  line-height: 2.5rem;
   overflow: auto;
 }

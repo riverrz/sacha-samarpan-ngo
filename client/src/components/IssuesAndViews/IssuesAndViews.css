@@ -1,18 +1,26 @@
+.issues__content {
+  width: 95%;
+}
+.issues__content > h1 {
+  font-size: 3rem;
+}
 .issues__content > p {
   margin: 2rem auto;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #333333;
   letter-spacing: 0.5px;
+  line-height: 2.5rem;
 }
 .issues__content > ul {
   color: #333333;
   margin-top: 2rem;
   list-style: none;
+  font-size: 1.5rem;
 }
-.issues__resolvesList>li {
-    margin: 0.5rem;
+.issues__resolvesList > li {
+  margin: 0.5rem;
 }
-.issues__resolvesList>li>i {
+.issues__resolvesList > li > i {
   font-size: 1.3rem;
   color: #bbbbbb;
   margin-right: 0.6rem;

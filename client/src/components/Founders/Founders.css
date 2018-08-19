@@ -10,68 +10,72 @@
 }
 
 .founders__left {
-    position: relative;
-    margin: 0 1rem 0 2rem;
+  position: relative;
+  margin: 0 1rem 0 2rem;
 }
 .founder {
-    width: 80%;
-    margin: 5rem auto;
-    text-align: left;
-    padding: 2rem;
-    transform: skew(-10deg);
-    background-color: #d3d3d3;
-    display: flex;
+  width: 80%;
+  margin: 5rem auto;
+  text-align: left;
+  padding: 2rem;
+  transform: skew(-10deg);
+  background-color: #d3d3d3;
+  display: flex;
 }
-.founder>* {
-    transform: skew(+10deg);
+.founder > * {
+  transform: skew(+10deg);
 }
 .founder__figure {
-    height: 20rem;
-    width: 20rem;
-    display: block;
-    flex:1;
-    border-radius: 50%;
-    overflow: hidden;
+  height: 20rem;
+  width: 20rem;
+  display: block;
+  flex: 1;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .founder__photo {
-    height: 100%;
-    width: 100%;
-    transition: all .3s;
-    transform: scale(1.02);
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  transform: scale(1.02);
 }
 .founder__contact {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.founder__iconContainer {    
-    text-decoration: none;
-    display: inline-block;
-    height: 4rem;
-    width: 4rem;
+.founder__iconContainer {
+  text-decoration: none;
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
 }
 .founder__icon {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .founder__info {
-    display: inline-block;
-    font-family: inherit;
-    font-size: 1.4rem;
-    padding-top: 2rem;
-    color: #222222;
-    padding-left: 5rem;
-    flex:3;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  color: #222222;
+  padding-left: 5rem;
+  flex: 3;
+}
+.founder__info > p {
+  line-height: 2.5rem;
 }
 .founder__designation {
-    font-family: inherit;
-    margin-bottom: 2rem;
+  font-family: inherit;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 .founder__readMoreContainer {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .founder__readMoreButton {
@@ -96,7 +100,7 @@
 /*Media Queries*/
 
 @media (max-width: 960px) {
-    .founder {
-        width: 90%;
-    }
+  .founder {
+    width: 90%;
+  }
 }

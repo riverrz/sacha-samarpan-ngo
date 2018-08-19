@@ -26,13 +26,13 @@
   color: #666666;
 }
 .member__name {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 .member__designation {
-  font-size: 1.3rem;
-  font-size: 200;
+  font-size: 1.8rem;
+  font-weight: 200;
 }
 .member__description {
   font-family: "Lato", sans-serif;
@@ -43,13 +43,13 @@
 .member__contactContainer {
   text-align: center;
 }
-.member__iconContainer {    
-    text-decoration: none;
-    display: inline-block;
-    height: 4rem;
-    width: 4rem;
+.member__iconContainer {
+  text-decoration: none;
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
 }
 .member__icon {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
