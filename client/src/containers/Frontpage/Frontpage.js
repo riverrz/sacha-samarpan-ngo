@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 
 const frontpage = props => {
   const itemsArr = [
-    "1.JPG",
-    "2.JPG",
     "3.JPG",
+    "7.JPG",
     "4.JPG",
     "5.JPG",
-    "6.JPG",
-    "7.JPG",
+    "1.JPG",
     "8.JPG",
     "9.JPG",
-    "16.JPG"
+    "16.JPG",
+    "6.JPG",
+    "11.JPG"
   ];
   return (
     <Fragment>
