@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import "./SideDrawer.css";
 import Logo from "../../assets/logo.png";
+import InnerList from "./InnerList/InnerList";
+import { Link } from "react-router-dom";
 
 class SideDrawer extends Component {
   state = {
@@ -46,14 +48,108 @@ class SideDrawer extends Component {
             />
           </div>
           <ul className="sideDrawer__navList">
-            <li className="sideDrawer_navList__item">Home</li>
-            <li className="sideDrawer_navList__item">About</li>
-            <li className="sideDrawer_navList__item">Gallery</li>
-            <li className="sideDrawer_navList__item">Internship</li>
-            <li className="sideDrawer_navList__item">Events</li>
-            <li className="sideDrawer_navList__item">Registration</li>
-            <li className="sideDrawer_navList__item">Important Links</li>
-            <li className="sideDrawer_navList__item">Donate</li>
+            <li className="sideDrawer_navList__item">
+              <Link className="sideDrawer__navLinks" to="/" exact>
+                Home
+              </Link>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <InnerList heading="About">
+                <li>
+                  <Link className="sideDrawer__navLinks" exact to="/about">
+                    Overview
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about/founders"
+                  >
+                    Founders
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about/advisors"
+                  >
+                    Advisors
+                  </Link>
+                </li>
+                <li>
+                  <Link className="sideDrawer__navLinks" exact to="/about/team">
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about/issues"
+                  >
+                    Issues & Views
+                  </Link>
+                </li>
+              </InnerList>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <Link className="sideDrawer__navLinks" exact to="/full-gallery">
+                Gallery
+              </Link>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <Link className="sideDrawer__navLinks" exact to="/internship">
+                Internship
+              </Link>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <InnerList heading="Events">
+                <li>
+                  <Link className="sideDrawer__navLinks" exact to="/events">
+                    Overview
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/events/archive"
+                  >
+                    Events Archives
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/events/upcoming"
+                  >
+                    Upcoming Events
+                  </Link>
+                </li>
+              </InnerList>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <Link className="sideDrawer__navLinks" exact to="/registration">
+                Registration
+              </Link>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/important-links"
+              >
+                Important Links
+              </Link>
+            </li>
+            <li className="sideDrawer_navList__item">
+              <Link className="sideDrawer__navLinks" exact to="/donate">
+                Donate
+              </Link>
+            </li>
           </ul>
         </div>
       </Fragment>

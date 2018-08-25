@@ -24,8 +24,8 @@
   left: 0;
   background-color: rgba(20, 20, 20, 0.6);
   z-index: 990;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   transition: opacity 0.2s ease;
 }
 .sideDrawer__backdrop--hidden {
@@ -40,13 +40,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 20rem;
-  height: 100%;
+  width: 50vw;
+  min-height: 100vh;
   background-color: #fff;
   z-index: 999;
   border-right: 2px solid #ffae4c;
   overflow-y: auto;
   transition: transform 0.2s ease;
+  background-color: #ffae4c;
 }
 .sideDrawer--hidden {
   transform: translateX(-100%);
@@ -73,9 +74,10 @@
   background: #555;
 }
 .sideDrawer__logoContainer {
-  height: 15%;
+  height: 20%;
   width: 100%;
   margin: auto;
+  background-color: #fff;
 }
 .sideDrawer__logo {
   height: 100%;
@@ -86,20 +88,20 @@
   display: flex;
   flex-flow: column;
   list-style: none;
-  margin-top: 20%;
-  height: 70%;
   justify-content: flex-start;
+  color: #fff;
 }
 .sideDrawer_navList__item {
-  width: 100%;
-  height: 7%;
-  background-color: #ffae4c;
-  color: #fff;
-  font-size: 1.8rem;
-  display: flex;
-  margin-bottom: 2%;
-  justify-content: center;
-  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  padding:3% 0;
+  
+}
+.sideDrawer__navLinks {
+  text-decoration: none;
+  color:inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 @media (min-width: 600px) {
