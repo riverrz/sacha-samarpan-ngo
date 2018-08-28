@@ -11,6 +11,9 @@
 .importantLinks__linksList {
   margin-top: 3rem;
   list-style: none;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 .importantLinks__linksList a {
   color: dodgerblue;
@@ -23,13 +26,28 @@
 .importantLinks__linksList > li {
   margin: 1rem 0;
 }
-.importantLinks__linksList  i {
+.importantLinks__linksList i {
   font-size: 1.3rem;
   color: #bbbbbb;
   margin-right: 0.8rem;
 }
 .importantLinks__HR {
-  width: 10%;
+  width: 20%;
   height: 1px;
   background-color: #777777;
+}
+
+/*Media Queries*/
+
+@media (max-width: 600px) {
+  .importantLinks__heading {
+    text-align: center;
+  }
+  .importantLinks__HR {
+    margin: auto;
+    width: 30%;
+  }
+  .importantLinks__container {
+    padding-left: 0;
+  }
 }
