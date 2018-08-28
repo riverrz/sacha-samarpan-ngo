@@ -39,3 +39,8 @@
     height: 80vh;
   }
 }
+@media (max-width: 960px) {
+  .carousel__imageBox > img {
+    height: 75vh;
+  }
+}
