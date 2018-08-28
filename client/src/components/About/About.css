@@ -36,7 +36,7 @@
 .about__innerHeading {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff9933;
 }
 .about__textBox > p {
@@ -45,4 +45,13 @@
   font-size: 1.5rem;
   color: #333333;
   letter-spacing: 0.5px;
+}
+
+/*Media Queries*/
+
+@media (max-width: 600px) {
+  .about__textBox {
+    width: 100%;
+    padding: 0 5%;
+  }
 }
