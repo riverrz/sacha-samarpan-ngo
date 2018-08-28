@@ -79,15 +79,45 @@
 
 /*Media Queries*/
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .frontPage__saffron {
     height: 40rem;
     width: 40rem;
   }
   .frontPage__green {
-    height: 45rem;
-    width: 45rem;
+    height: 40rem;
+    width: 40rem;
+  }
+}
+@media (max-width: 960px) {
+  .frontPage__saffron {
+    height: 35rem;
+    width: 35rem;
+  }
+  .frontPage__green {
+    height: 35rem;
+    width: 35rem;
+  }
+}
+@media (max-width: 700px) {
+  .frontPage__saffron {
+    height: 25rem;
+    width: 25rem;
+  }
+  .frontPage__green {
+    height: 25rem;
+    width: 25rem;
+  }
+}
+@media (max-width: 600px) {
+  .frontPage__saffron {
+    height: 17rem;
+    width: 17rem;
+  }
+  .frontPage__green {
+    height: 17rem;
+    width: 17rem;
   }
 }
 
-/*Media Queries*/
+
