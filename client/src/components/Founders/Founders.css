@@ -41,7 +41,7 @@
   transform: scale(1.02);
 }
 .founder__contact {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -102,5 +102,27 @@
 @media (max-width: 960px) {
   .founder {
     width: 90%;
+  }
+}
+@media (max-width: 700px) {
+  .founder {
+    width: 95%;
+    transform: skew(0);
+  }
+  .founder > * {
+    transform: skew(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .founder {
+    flex-flow: column;
+    text-align: center;
+  }
+  .founder__figure {
+    margin: auto;
+  }
+  .founder__info {
+    padding-left: 0;
   }
 }
