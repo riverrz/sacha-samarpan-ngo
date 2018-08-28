@@ -39,6 +39,10 @@
   flex-direction: column;
   justify-content: center;
 }
+.footer__contact__phoneLink {
+  text-decoration: none;
+  color: inherit;
+}
 .footer__contactInfo__emailLink {
   color: inherit;
   text-decoration: none;

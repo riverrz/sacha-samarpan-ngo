@@ -37,11 +37,14 @@ class Navigation extends Component {
         <div className="nav">
           <div className="nav__contact">
             <div className="nav__contact__number">
-              <i className="fas fa-phone" /> +91 9211458806
+              <i className="fas fa-phone" />{" "}
+              <a className="nav_contact__phoneLink" href="tel:+919211458806">
+                +91 9211458806
+              </a>
             </div>
             <div className="nav__contact__email">
               <a
-                href="mailto:info@sacchasamarpan.com"
+                href="mailto:sacchasamarpan@yahoo.com"
                 className="nav__contact__emailLink"
               >
                 <i className="fas fa-envelope" /> sacchasamarpan@yahoo.com

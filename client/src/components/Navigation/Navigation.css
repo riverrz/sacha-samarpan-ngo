@@ -22,6 +22,10 @@
   align-items: center;
   flex: 1;
 }
+.nav_contact__phoneLink {
+  text-decoration: none;
+  color: inherit;
+}
 .nav__contact__emailLink {
   color: inherit;
   text-decoration: none;
