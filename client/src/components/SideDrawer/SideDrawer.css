@@ -55,24 +55,7 @@
 .sideDrawer--show {
   transform: translateX(0);
 }
-.sideDrawer__container::-webkit-scrollbar {
-  width: 4px;
-}
 
-/* Track */
-.sideDrawer__container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-.sideDrawer__container::-webkit-scrollbar-thumb {
-  background: #7f7f7f;
-}
-
-/* Handle on hover */
-.sideDrawer__container::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 .sideDrawer__logoContainer {
   height: 20%;
   width: 100%;

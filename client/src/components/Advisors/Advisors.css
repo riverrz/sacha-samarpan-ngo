@@ -19,8 +19,7 @@
   display: flex;
   align-items: flex-start;
   width: 100%;
-  padding: 1rem;
-  padding-bottom: 4rem;
+  padding: 4rem 1rem;
   margin-bottom: 8%;
 }
 .advisors__listItem:not(:last-of-type) {
@@ -56,15 +55,25 @@
 .advisors__details {
   display: block;
   font-size: 1.5rem;
-  height: 15rem;
   line-height: 2.5rem;
-  overflow: auto;
 }
 
 /*Media Queries*/
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .advisors__list {
     width: 90%;
+    text-align: center;
+  }
+  .advisors__detailsContainer {
+    width: 100%;
+    padding-top: 2%;
+  }
+  .advisors__listItem {
+    flex-flow: column;
+    background-color: #d3d3d3;
+  }
+  .advisors__picContainer {
+    margin: auto;
   }
 }
