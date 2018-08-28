@@ -41,6 +41,7 @@
   top: 0;
   left: 0;
   width: 50vw;
+  height: 100vh;
   min-height: 100vh;
   background-color: #fff;
   z-index: 999;
@@ -73,16 +74,17 @@
   list-style: none;
   justify-content: flex-start;
   color: #fff;
+  height: 80%;
+  overflow: auto;
 }
 .sideDrawer_navList__item {
   font-size: 2rem;
   text-align: center;
-  padding:3% 0;
-  
+  padding: 3% 0;
 }
 .sideDrawer__navLinks {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   font-size: inherit;
   font-family: inherit;
 }
