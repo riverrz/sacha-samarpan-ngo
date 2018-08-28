@@ -10,9 +10,9 @@
 }
 .advisors__list {
   height: 100%;
-  width: 60%;
+  width: 70%;
   list-style: none;
-  margin-left: 5rem;
+  margin-left: 5%;
   margin-top: 3rem;
 }
 .advisors__listItem {
@@ -29,6 +29,7 @@
 .advisors__picContainer {
   height: 30%;
   width: 20%;
+  min-width: 100px;
   margin-right: 5%;
 }
 .advisors__pic {
@@ -58,4 +59,12 @@
   height: 15rem;
   line-height: 2.5rem;
   overflow: auto;
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .advisors__list {
+    width: 90%;
+  }
 }
