@@ -4,7 +4,7 @@
   left: 2%;
   height: 6rem;
   width: 6rem;
-  background-color: #222;
+  background-color: #666666;
   border-radius: 50%;
   z-index: 900;
   display: flex;
@@ -13,7 +13,7 @@
   align-items: center;
 }
 .sideDrawer__toggleIcon > div {
-  height: 2px;
+  height: 1px;
   width: 50%;
   margin: 3px;
   background-color: #fff;
