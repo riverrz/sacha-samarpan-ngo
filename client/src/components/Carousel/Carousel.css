@@ -16,20 +16,19 @@
 .carousal__imageDescription {
   background-color: transparent;
   color: #fff;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: rgba(20, 20, 20, 0.7);
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  height: 20%;
   width: 60%;
 }
 .carousal__imageTitle {
   font-size: 3.5rem;
 }
 .carousal__imageText {
-  margin-top: 2rem;
   font-size: 2rem;
+  margin-top: 2%;
 }
 
 /*Media Queries*/
@@ -41,6 +40,6 @@
 }
 @media (max-width: 960px) {
   .carousel__imageBox > img {
-    height: 75vh;
+    height: 60vh;
   }
 }
