@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 // Importing Models
 const Member = require("./Models/Member");
 const Intern = require("./Models/Intern");
+const Events = require("./Models/Event");
 
 // Importing utility functions
 const {
@@ -112,6 +113,7 @@ app.post("/support/email", (req, res) => {
     res.redirect("/");
   }
 });
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
