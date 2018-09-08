@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
 import FrontPageGallery from "../../components/FrontPageGallery/FrontPageGallery";
+import Sponsers from '../../components/Sponsers/Sponsers';
 import "./Frontpage.css";
 import { Link } from "react-router-dom";
 
@@ -84,6 +85,7 @@ const frontpage = props => {
         invokeBackdrop={event => props.invoke(event)}
         imgArr={props.imgArr}
       />
+      <Sponsers />
     </Fragment>
   );
 };

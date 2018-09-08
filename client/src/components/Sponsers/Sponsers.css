@@ -1,0 +1,21 @@
+.sponsers__list {
+  list-style: none;
+  padding: 2% 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  min-height: 350px;
+}
+.sponsers__listItem {
+  padding: 2%;
+}
+.sponsers__logo {
+  height: 100px;
+  width: 200px;
+}
+.sponsers__heading {
+  font-size: 4rem;
+}
