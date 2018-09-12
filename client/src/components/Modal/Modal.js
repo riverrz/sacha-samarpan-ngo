@@ -16,6 +16,12 @@ class Modal extends Component {
       }
     });
   }
+  componentDidMount() {
+    document.body.style.overflow = "hidden";
+  }
+  componentWillUnmount() {
+    document.body.style.overflow = "auto";
+  }
   render() {
     let content = null;
     if (this.props.for === "gallery") {
