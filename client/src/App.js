@@ -163,10 +163,11 @@ class App extends Component {
 
           <Route
             path="/"
-            render={() => (
+            render={props => (
               <Frontpage
                 imgArr={this.state.frontPageImages}
                 invoke={event => this.backdropInvoker(event)}
+                {...props}
               />
             )}
           />

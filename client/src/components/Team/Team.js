@@ -38,9 +38,9 @@ class Team extends Component {
           "Aman Gupta devotes all his hardwork,Diligence to this organisation  and  believe in educating child all over the world.He has worked with many NGOs and done a brilliant job everywhere. "
       },
       {
-        name: "Koushal Arora",
+        name: "Kaushal Arora",
         designation: "Volunteer",
-        photo: "/images/Team/Koushal.jpeg",
+        photo: "/images/Team/Kaushal.jpeg",
         facebook: "https://www.facebook.com/kaushal.arora.796",
         description:
           "Before you give up on yourself remember what your parents gave to just get you where you are. Kaushal Arora is a qualified degree holder in B.Tech computer Science from Jamia Hamdard University. He devotes all his kindness and hardwork  to the organisation."

@@ -157,7 +157,7 @@ footer__list__item__text i {
 }
 
 .footer__mapContainer {
-  padding-top: 4rem;
+  padding: 4rem 4rem 0 0;
   flex: 1;
 }
 .footer__map {

@@ -5,7 +5,7 @@ const about = props => (
   <WhiteContainer>
     <h1 className="about__headingPrimary">
       Welcome to{" "}
-      <span className="about__headingPrimarySpan">Sacha Samarthan</span>
+      <span className="about__headingPrimarySpan">Saccha Samarthan</span>
     </h1>
     <h2 className='about__subHeading'>Something about us</h2>
     <hr className='about__mainHR'/>

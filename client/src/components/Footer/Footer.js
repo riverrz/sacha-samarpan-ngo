@@ -43,7 +43,7 @@ const footer = props => {
             <ul className="footer__list">
               <li className="footer__list__item">
                 <Link to="/about" className="footer__list__item__text">
-                  <i className="fas fa-angle-right" /> About Sacha Samarpan
+                  <i className="fas fa-angle-right" /> About Saccha Samarpan
                 </Link>
               </li>
               <li className="footer__list__item">
@@ -88,8 +88,11 @@ const footer = props => {
                 </Link>
               </li>
               <li className="footer__list__item">
-                <Link to="/contact" className="footer__list__item__text">
-                  <i className="fas fa-angle-right" /> Contact Us
+                <Link
+                  to="/important-links"
+                  className="footer__list__item__text"
+                >
+                  <i className="fas fa-angle-right" /> Important Links
                 </Link>
               </li>
             </ul>
@@ -106,7 +109,7 @@ const footer = props => {
         </div>
       </footer>
       <div className="footer__copyRight">
-        © 2018 Sacha Samarthan All Right Reserved
+        © 2018 Saccha Samarthan All Right Reserved
       </div>
     </Fragment>
   );

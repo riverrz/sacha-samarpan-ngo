@@ -51,6 +51,7 @@ class Navigation extends Component {
               </a>
             </div>
             <div className="nav__contact__social">
+              <Link to="/important-links" className="nav__contact__link">Important Links</Link>
               <a
                 href="https://www.facebook.com/SacchaSamarpanNGO"
                 target="_blank"
@@ -71,9 +72,6 @@ class Navigation extends Component {
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-instagram" />
-              </a>
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-whatsapp" />
               </a>
             </div>
           </div>
@@ -205,12 +203,8 @@ class Navigation extends Component {
             </NavLink>
           </div>
           <div className="navigation__item">
-            <NavLink
-              to="/important-links"
-              exact
-              activeClassName="navigation__active"
-            >
-              Important Links
+            <NavLink to="/contact" exact activeClassName="navigation__active">
+              Contact Us
             </NavLink>
           </div>
           <div className="navigation__item navigation__donate">

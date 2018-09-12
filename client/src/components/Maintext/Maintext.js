@@ -6,7 +6,7 @@ const maintext = props => {
           <h1 className='Maintext__headingPrimary'>WELCOME TO <span className='Maintext__headingPrimarySpan'>SACHA SAMARPAN</span> </h1>
       <hr className='Maintext__horizontalRule'/>
       <div className='Maintext__content'>
-        <span className='Maintext__main'><strong>"Sacha Samarpan"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
+        <span className='Maintext__main'><strong>"Saccha Samarpan"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,
         THE BASIC MOTTO OF WHICH IS SOCIAL SERVICE. BESIDES THE MAIN MOTTO, THE
         BASIC IDEA OF SUCH A FORMATION IS TO HELP EACH AND EVERY HUMAN BEING WHO
         NEEDS HELP.</span> <p>Saccha Samarpan works for education for needy children who are under
