@@ -18,7 +18,15 @@ class SideDrawer extends Component {
       show: true
     });
   };
+  handleScrolling() {
+    if (this.state.show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }
   render() {
+    this.handleScrolling();
     let sideDrawerClass = "sideDrawer--hidden";
     let backdropClass = "sideDrawer__backdrop--hidden";
     if (this.state.show) {

@@ -25,7 +25,7 @@
   background-color: rgba(20, 20, 20, 0.6);
   z-index: 990;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   transition: opacity 0.2s ease;
 }
 .sideDrawer__backdrop--hidden {
@@ -41,8 +41,7 @@
   top: 0;
   left: 0;
   width: 50vw;
-  height: 100vh;
-  min-height: 100vh;
+  height: 110vh;
   background-color: #fff;
   z-index: 999;
   border-right: 2px solid #ffae4c;
