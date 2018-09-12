@@ -3,7 +3,7 @@ import  "./Maintext.css";
 const maintext = props => {
   return (
     <div className='Maintext'>
-          <h1 className='Maintext__headingPrimary'>WELCOME TO <span className='Maintext__headingPrimarySpan'>SACHA SAMARPAN</span> </h1>
+          <h1 className='Maintext__headingPrimary'>WELCOME TO <span className='Maintext__headingPrimarySpan'>SACCHA SAMARPAN</span> </h1>
       <hr className='Maintext__horizontalRule'/>
       <div className='Maintext__content'>
         <span className='Maintext__main'><strong>"Saccha Samarpan"</strong> IS A YOUTH CLUB FORMED BY YOUTHS OF THE NATION,

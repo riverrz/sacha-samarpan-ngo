@@ -181,4 +181,8 @@ footer__list__item__text i {
   .footer__right {
     flex-direction: column;
   }
+  .footer__mapContainer {
+    padding: 0;
+    padding-top: 4rem;
+  }
 }
