@@ -10,7 +10,10 @@ class Sponsers extends Component {
   render() {
     const lists = this.state.sponsers.map((img, i) => (
       <li className="sponsers__listItem" key={i}>
-        <Link to="/">
+        <Link to={{
+          pathname:'/sponser',
+          search:`number=${i}`
+        }}>
           <img
             src={`/images/sponsers/${img}`}
             alt="sponser"

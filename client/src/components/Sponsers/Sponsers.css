@@ -15,11 +15,11 @@
 .sponsers__logo {
   height: 100px;
   width: 200px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 
 }
 .sponsers__logo:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 .sponsers__heading {
   font-size: 4rem;
