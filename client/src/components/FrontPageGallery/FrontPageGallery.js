@@ -3,7 +3,7 @@ import GalleryItem from "../Gallery/GalleryItem/GalleryItem";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import "./FrontPageGallery.css";
 import { Link } from "react-router-dom";
-import { Zoom } from "react-reveal";
+import { Zoom, Fade } from "react-reveal";
 
 const frontPageGallery = props => {
   let images = props.imgArr.map((photo, id) => {
@@ -19,11 +19,14 @@ const frontPageGallery = props => {
   });
   return (
     <WhiteContainer>
-      <h1 className="frontPageGallery__headingPrimary">
-        Our Precious <span>Moments</span>
-      </h1>
-        <div className="frontPageGallery__container">
-          <Zoom>{images}</Zoom>
+      <Fade bottom>
+        <h1 className="frontPageGallery__headingPrimary">
+          Our Precious <span>Moments</span>
+        </h1>
+      </Fade>
+      <div className="frontPageGallery__container">
+        <Zoom delay={200}>{images}</Zoom>
+        <Zoom delay={250}>
           <div className="frontPageGallery__videoContainer">
             <iframe
               className="frontPageGallery__video"
@@ -37,7 +40,8 @@ const frontPageGallery = props => {
               onClick={props.invokeBackdrop}
             />
           </div>
-        </div>
+        </Zoom>
+      </div>
       <button className="frontPageGallery__galleryLink">
         <Link to="/full-gallery" exact>
           View All Photos <span className="frontPageGallery__arrow">→</span>

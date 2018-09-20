@@ -1,29 +1,38 @@
 import React from "react";
 import "./About.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
-import { Fade } from "react-reveal";
+import { Fade, Flip } from "react-reveal";
 
 const about = props => (
   <WhiteContainer>
     <h1 className="about__headingPrimary">
-      Welcome to{" "}
-      <span className="about__headingPrimarySpan">Saccha Samarthan</span>
+      <Flip left cascade>
+        Welcome
+      </Flip>
     </h1>
     <h2 className="about__subHeading">Something about us</h2>
     <hr className="about__mainHR" />
     <div className="about__textBox">
-      <h2 className="about__innerHeading">Our Vision</h2>
+      <h2 className="about__innerHeading">
+        <Flip left cascade delay={500}>
+          Our Vision
+        </Flip>
+      </h2>
       <hr className="about__subHR" />
-      <Fade bottom>
+      <Fade bottom delay={800}>
         <p>
           We want to see an India where every child gets an education, every
           youth an opportunity to succeed, and every woman the right to
           equality.
         </p>
       </Fade>
-      <h2 className="about__innerHeading">Our Mission</h2>
+      <h2 className="about__innerHeading">
+        <Flip left cascade delay={500}>
+          Our Mission
+        </Flip>
+      </h2>
       <hr className="about__subHR" />
-      <Fade bottom>
+      <Fade bottom delay={800}>
         <p>
           To enable people to take responsibility for the situation of the
           deprived Indian child and so motivate them to seek resolution through

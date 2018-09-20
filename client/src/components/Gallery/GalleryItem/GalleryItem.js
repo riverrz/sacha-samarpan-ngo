@@ -1,6 +1,6 @@
 import React from "react";
 import "./GalleryItem.css";
-
+import { Zoom } from "react-reveal";
 const galleryItem = props => {
   let style;
   if (props.width) {
@@ -14,14 +14,16 @@ const galleryItem = props => {
     itemClass = "frontGalleryGridItem";
   }
   return (
-    <div className={itemClass} onClick={props.invokeBackdrop} style={style}>
-      <img
-        src={`/images/${props.imageName}`}
-        alt="Gallery Item"
-        id={props.id}
-        className = "galleryItem__img"
-      />
-    </div>
+    <Zoom>
+      <div className={itemClass} onClick={props.invokeBackdrop} style={style}>
+        <img
+          src={`/images/${props.imageName}`}
+          alt="Gallery Item"
+          id={props.id}
+          className="galleryItem__img"
+        />
+      </div>
+    </Zoom>
   );
 };
 

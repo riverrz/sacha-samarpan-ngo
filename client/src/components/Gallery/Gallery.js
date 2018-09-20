@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import  "./Gallery.css";
+import "./Gallery.css";
 import GalleryItem from "./GalleryItem/GalleryItem";
 import { Link } from "react-router-dom";
-import WhiteContainer from '../../containers/WhiteContainer/WhiteContainer';
+import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
+import { Fade } from "react-reveal";
+
 class Gallery extends Component {
   state = {
     images: [
@@ -68,9 +70,9 @@ class Gallery extends Component {
       );
     });
     let possibleButton = (
-      <button className='gallery__link'>
+      <button className="gallery__link">
         <Link to="/full-gallery" exact>
-          View All Photos <span className='gallery__arrow'>→</span>
+          View All Photos <span className="gallery__arrow">→</span>
         </Link>
       </button>
     );
@@ -79,10 +81,12 @@ class Gallery extends Component {
     }
     return (
       <WhiteContainer>
-        <h1 className='gallery__headingPrimary'>
-          Our Precious <span>Moments</span>
-        </h1>
-        <div className='gallery'>{allGalleryItems}</div>
+        <Fade bottom delay={200}>
+          <h1 className="gallery__headingPrimary">
+            Our Precious <span>Moments</span>
+          </h1>
+        </Fade>
+        <div className="gallery">{allGalleryItems}</div>
         {possibleButton}
       </WhiteContainer>
     );

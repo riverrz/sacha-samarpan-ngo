@@ -1,4 +1,6 @@
 import React from "react";
+import { Fade } from "react-reveal";
+
 import "./Member.css";
 const member = props => {
   let memberContactArr = [];
@@ -37,11 +39,13 @@ const member = props => {
         <img src={props.photo} alt="Member" className="member__img" />
         <div className="member__contactContainer">{memberContactArr}</div>
       </div>
-      <div className="member__textContainer">
-        <h2 className="member__name">{props.name}</h2>
-        <h3 className="member__designation">{props.designation}</h3>
-        <p className="member__description">{props.description}</p>
-      </div>
+      <Fade bottom cascade>
+        <div className="member__textContainer">
+          <h2 className="member__name">{props.name}</h2>
+          <h3 className="member__designation">{props.designation}</h3>
+          <p className="member__description">{props.description}</p>
+        </div>
+      </Fade>
     </div>
   );
 };
