@@ -1,6 +1,7 @@
 import React from "react";
 import "./Founders.css";
 import { Link } from "react-router-dom";
+import { Zoom } from "react-reveal";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 const founders = props => {
   return (
@@ -17,40 +18,46 @@ const founders = props => {
               className="founder__photo"
             />
           </figure>
-          <div className="founder__contact">
-            <a
-              href="https://www.facebook.com/NauratnaGupta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder__iconContainer"
-            >
-              <img
-                src="/facebook.png"
-                alt="Facebook"
-                className="founder__icon"
-              />
-            </a>
-            <a
-              href="https://www.twitter.com/NauratnaGupta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder__iconContainer"
-            >
-              <img src="/twitter.png" alt="Twitter" className="founder__icon" />
-            </a>
-            <a
-              href="https://www.instagram.com/NauratnaGupta/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder__iconContainer"
-            >
-              <img
-                src="/instagram.png"
-                alt="Instagram"
-                className="founder__icon"
-              />
-            </a>
-          </div>
+          <Zoom cascade>
+            <div className="founder__contact">
+              <a
+                href="https://www.facebook.com/NauratnaGupta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="founder__iconContainer"
+              >
+                <img
+                  src="/facebook.png"
+                  alt="Facebook"
+                  className="founder__icon"
+                />
+              </a>
+              <a
+                href="https://www.twitter.com/NauratnaGupta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="founder__iconContainer"
+              >
+                <img
+                  src="/twitter.png"
+                  alt="Twitter"
+                  className="founder__icon"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/NauratnaGupta/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="founder__iconContainer"
+              >
+                <img
+                  src="/instagram.png"
+                  alt="Instagram"
+                  className="founder__icon"
+                />
+              </a>
+            </div>
+          </Zoom>
         </div>
         <div className="founder__info">
           <h2>Nauratna Gupta</h2>
@@ -87,24 +94,31 @@ const founders = props => {
               className="founder__photo"
             />
           </figure>
-          <div className="founder__contact">
-            <a
-              href="https://www.facebook.com/Reenasharma53"
-              className="founder__iconContainer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/facebook.png"
-                alt="Facebook"
-                className="founder__icon"
-              />
-            </a>
-            <a className="founder__iconContainer">
-              <img src="/twitter.png" alt="Twitter" className="founder__icon" />
-            </a>
-          </div>
+          <Zoom cascade>
+            <div className="founder__contact">
+              <a
+                href="https://www.facebook.com/Reenasharma53"
+                className="founder__iconContainer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/facebook.png"
+                  alt="Facebook"
+                  className="founder__icon"
+                />
+              </a>
+              <a className="founder__iconContainer">
+                <img
+                  src="/twitter.png"
+                  alt="Twitter"
+                  className="founder__icon"
+                />
+              </a>
+            </div>
+          </Zoom>
         </div>
+
         <div className="founder__info">
           <h2>Reena Sharma</h2>
           <h3 className="founder__designation">General Secretary</h3>

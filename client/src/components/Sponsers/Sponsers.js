@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal";
 import "./Sponsers.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 
@@ -10,10 +11,12 @@ class Sponsers extends Component {
   render() {
     const lists = this.state.sponsers.map((img, i) => (
       <li className="sponsers__listItem" key={i}>
-        <Link to={{
-          pathname:'/sponser',
-          search:`number=${i}`
-        }}>
+        <Link
+          to={{
+            pathname: "/sponser",
+            search: `number=${i}`
+          }}
+        >
           <img
             src={`/images/sponsers/${img}`}
             alt="sponser"
@@ -25,7 +28,9 @@ class Sponsers extends Component {
     return (
       <WhiteContainer style={{ backgroundColor: "#fff", padding: "5rem" }}>
         <h1 className="sponsers__heading">Our Sponsers</h1>
-        <ul className="sponsers__list">{lists}</ul>
+        <Fade cascade right>
+          <ul className="sponsers__list">{lists}</ul>
+        </Fade>
       </WhiteContainer>
     );
   }
