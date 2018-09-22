@@ -2,6 +2,8 @@ import React from "react";
 import "./Carousel.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Zoom } from "react-reveal";
+
 const carousel = props => {
   const settings = {
     showStatus: false,
@@ -28,7 +30,9 @@ const carousel = props => {
   });
   return (
     <div className="carousel__slider">
-      <Carousel {...settings}>{items}</Carousel>
+      <Zoom duration={700}>
+        <Carousel {...settings}>{items}</Carousel>
+      </Zoom>
     </div>
   );
 };

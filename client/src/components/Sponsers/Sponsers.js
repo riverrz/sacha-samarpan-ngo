@@ -28,7 +28,7 @@ class Sponsers extends Component {
     return (
       <WhiteContainer style={{ backgroundColor: "#fff", padding: "5rem" }}>
         <h1 className="sponsers__heading">Our Sponsers</h1>
-        <Fade cascade right>
+        <Fade cascade bottom>
           <ul className="sponsers__list">{lists}</ul>
         </Fade>
       </WhiteContainer>

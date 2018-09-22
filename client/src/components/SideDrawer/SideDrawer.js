@@ -57,14 +57,24 @@ class SideDrawer extends Component {
           </div>
           <ul className="sideDrawer__navList">
             <li className="sideDrawer_navList__item">
-              <Link className="sideDrawer__navLinks" to="/" exact>
+              <Link
+                className="sideDrawer__navLinks"
+                to="/"
+                exact
+                onClick={this.backdropCloseHandler}
+              >
                 Home
               </Link>
             </li>
             <li className="sideDrawer_navList__item">
               <InnerList heading="About">
                 <li>
-                  <Link className="sideDrawer__navLinks" exact to="/about">
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about"
+                    onClick={this.backdropCloseHandler}
+                  >
                     Overview
                   </Link>
                 </li>
@@ -73,6 +83,7 @@ class SideDrawer extends Component {
                     className="sideDrawer__navLinks"
                     exact
                     to="/about/founders"
+                    onClick={this.backdropCloseHandler}
                   >
                     Founders
                   </Link>
@@ -82,12 +93,18 @@ class SideDrawer extends Component {
                     className="sideDrawer__navLinks"
                     exact
                     to="/about/advisors"
+                    onClick={this.backdropCloseHandler}
                   >
                     Advisors
                   </Link>
                 </li>
                 <li>
-                  <Link className="sideDrawer__navLinks" exact to="/about/team">
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about/team"
+                    onClick={this.backdropCloseHandler}
+                  >
                     Our Team
                   </Link>
                 </li>
@@ -96,6 +113,7 @@ class SideDrawer extends Component {
                     className="sideDrawer__navLinks"
                     exact
                     to="/about/issues"
+                    onClick={this.backdropCloseHandler}
                   >
                     Issues & Views
                   </Link>
@@ -103,19 +121,34 @@ class SideDrawer extends Component {
               </InnerList>
             </li>
             <li className="sideDrawer_navList__item">
-              <Link className="sideDrawer__navLinks" exact to="/full-gallery">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/full-gallery"
+                onClick={this.backdropCloseHandler}
+              >
                 Gallery
               </Link>
             </li>
             <li className="sideDrawer_navList__item">
-              <Link className="sideDrawer__navLinks" exact to="/internship">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/internship"
+                onClick={this.backdropCloseHandler}
+              >
                 Internship
               </Link>
             </li>
             <li className="sideDrawer_navList__item">
               <InnerList heading="Events">
                 <li>
-                  <Link className="sideDrawer__navLinks" exact to="/events">
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/events"
+                    onClick={this.backdropCloseHandler}
+                  >
                     Overview
                   </Link>
                 </li>
@@ -124,6 +157,7 @@ class SideDrawer extends Component {
                     className="sideDrawer__navLinks"
                     exact
                     to="/events/archive"
+                    onClick={this.backdropCloseHandler}
                   >
                     Events Archives
                   </Link>
@@ -133,6 +167,7 @@ class SideDrawer extends Component {
                     className="sideDrawer__navLinks"
                     exact
                     to="/events/upcoming"
+                    onClick={this.backdropCloseHandler}
                   >
                     Upcoming Events
                   </Link>
@@ -140,7 +175,12 @@ class SideDrawer extends Component {
               </InnerList>
             </li>
             <li className="sideDrawer_navList__item">
-              <Link className="sideDrawer__navLinks" exact to="/registration">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/registration"
+                onClick={this.backdropCloseHandler}
+              >
                 Registration
               </Link>
             </li>
@@ -149,12 +189,18 @@ class SideDrawer extends Component {
                 className="sideDrawer__navLinks"
                 exact
                 to="/important-links"
+                onClick={this.backdropCloseHandler}
               >
                 Important Links
               </Link>
             </li>
             <li className="sideDrawer_navList__item">
-              <Link className="sideDrawer__navLinks" exact to="/donate">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/donate"
+                onClick={this.backdropCloseHandler}
+              >
                 Donate
               </Link>
             </li>

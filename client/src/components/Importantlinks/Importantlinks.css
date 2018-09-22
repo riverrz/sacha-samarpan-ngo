@@ -16,9 +16,10 @@
   padding-left: 1em;
 }
 .importantLinks__linksList a {
-  color: dodgerblue;
+  color: #333;
   /* color: #333333; */
   font-size: 1.4rem;
+  text-decoration: none;
 }
 .importantLinks__linksList a:hover {
   color: #333333;

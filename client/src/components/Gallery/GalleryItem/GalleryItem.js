@@ -14,7 +14,7 @@ const galleryItem = props => {
     itemClass = "frontGalleryGridItem";
   }
   return (
-    <Zoom>
+    <Zoom delay={200}>
       <div className={itemClass} onClick={props.invokeBackdrop} style={style}>
         <img
           src={`/images/${props.imageName}`}

@@ -3,7 +3,6 @@ import "./Gallery.css";
 import GalleryItem from "./GalleryItem/GalleryItem";
 import { Link } from "react-router-dom";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
-import { Fade } from "react-reveal";
 
 class Gallery extends Component {
   state = {
@@ -81,11 +80,9 @@ class Gallery extends Component {
     }
     return (
       <WhiteContainer>
-        <Fade bottom delay={200}>
-          <h1 className="gallery__headingPrimary">
-            Our Precious <span>Moments</span>
-          </h1>
-        </Fade>
+        <h1 className="gallery__headingPrimary">
+          Our Precious <span>Moments</span>
+        </h1>
         <div className="gallery">{allGalleryItems}</div>
         {possibleButton}
       </WhiteContainer>

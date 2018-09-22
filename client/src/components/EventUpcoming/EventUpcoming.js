@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import Event from "./Event/Event";
-import  "./EventUpcoming.css";
+import "./EventUpcoming.css";
 
 class EventUpcoming extends Component {
   state = {
