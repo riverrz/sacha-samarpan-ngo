@@ -1,0 +1,73 @@
+.sponser__container {
+  height: 100%;
+  padding: 3% 5%;
+  color: #222;
+  display: flex;
+}
+.sponser__logo__container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3%;
+}
+.sponser__logo {
+  max-height: 200px;
+  max-width: 300px;
+}
+.sponser__details__container {
+  height: 100%;
+  text-align: center;
+  padding: 0 2%;
+  flex: 2;
+  line-height: 24px;
+  border-left: 2px solid dodgerblue;
+  border-right: 2px solid dodgerblue;
+}
+.sponser__heading--primary {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.sponser__heading--secondary {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.sponser__heading--tertiary {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+.sponser__heading--quaternary {
+  font-size: 1.8rem;
+}
+.sponser__content {
+  font-size: 1.5rem;
+  margin: 1%;
+}
+.sponser__links {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #222;
+}
+.sponser__map__container {
+  flex: 1;
+  padding-left: 3%;
+}
+.sponser__map {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .sponser__container {
+    flex-flow: column;
+    width: 70%;
+    margin: auto;
+  }
+  .sponser__details__container {
+    border: none;
+  }
+  .sponser__logo__container {
+    margin-bottom: 5%;
+  }
+}
