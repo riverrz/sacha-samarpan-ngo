@@ -3,7 +3,7 @@ import "./Event.css";
 import { Fade } from "react-reveal";
 
 const event = props => (
-  <Fade top  cascade duration={700} delay={300}>
+  <Fade bottom>
     <ul className="event__list">
       <li className="event__list__item">
         <span className="event__list__title">Date:</span>

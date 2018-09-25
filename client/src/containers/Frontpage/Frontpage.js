@@ -3,6 +3,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import Maintext from "../../components/Maintext/Maintext";
 import FrontPageGallery from "../../components/FrontPageGallery/FrontPageGallery";
 import Sponsers from "../../components/Sponsers/Sponsers";
+import { Fade } from "react-reveal";
 import "./Frontpage.css";
 
 class Frontpage extends Component {
@@ -48,11 +49,12 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <h2 className="frontPage__iconRow__item__heading">KNOW MORE</h2>
-            <p className="frontPage__iconRow__item__para">
-              Most Trusted NGO among youth
-            </p>
-
+            <Fade bottom >
+              <h2 className="frontPage__iconRow__item__heading">KNOW MORE</h2>
+              <p className="frontPage__iconRow__item__para">
+                Most Trusted NGO among youth
+              </p>
+            </Fade>
             <span className="frontPage__iconRow__item__link">
               <em>Discover More</em>
             </span>
@@ -68,12 +70,14 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <h2 className="frontPage__iconRow__item__heading">
-              HELP & SUPPORT
-            </h2>
-            <p className="frontPage__iconRow__item__para">
-              Donate now to help the society.
-            </p>
+            <Fade bottom >
+              <h2 className="frontPage__iconRow__item__heading">
+                HELP & SUPPORT
+              </h2>
+              <p className="frontPage__iconRow__item__para">
+                Donate now to help the society.
+              </p>
+            </Fade>
             <span className="frontPage__iconRow__item__link">
               <em>Donate</em>
             </span>
@@ -89,10 +93,14 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <h2 className="frontPage__iconRow__item__heading">VOLUNTEERING</h2>
-            <p className="frontPage__iconRow__item__para">
-              Join us as Volunteer to help needed.
-            </p>
+            <Fade bottom >
+              <h2 className="frontPage__iconRow__item__heading">
+                VOLUNTEERING
+              </h2>
+              <p className="frontPage__iconRow__item__para">
+                Join us as Volunteer to help needed.
+              </p>
+            </Fade>
             <span className="frontPage__iconRow__item__link">
               <em>Apply Now</em>
             </span>
