@@ -9,16 +9,16 @@ import "./Frontpage.css";
 class Frontpage extends Component {
   state = {
     itemsArr: [
-      "3.JPG",
-      "7.JPG",
-      "4.JPG",
-      "5.JPG",
-      "1.JPG",
-      "8.JPG",
-      "9.JPG",
-      "16.JPG",
-      "6.JPG",
-      "11.JPG"
+      "3.jpg",
+      "7.jpg",
+      "4.jpg",
+      "5.jpg",
+      "1.jpg",
+      "8.jpg",
+      "9.jpg",
+      "16.jpg",
+      "6.jpg",
+      "11.jpg"
     ]
   };
   onClickHandler = path => {
