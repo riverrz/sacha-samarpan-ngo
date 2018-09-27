@@ -106,23 +106,31 @@ class Sponser extends Component {
             <h3 className="sponser__heading--tertiary">
               {selectedSponser.title}
             </h3>
-            <p className="sponser__content">{selectedSponser.description}</p>
-            <h4 className="sponser__heading--quaternary">Address</h4>
-            <p className="sponser__content">{selectedSponser.address}</p>
-            <h4 className="sponser__heading--quaternary">Phone No:</h4>
-            <a
-              href={`tel:+91${selectedSponser.phone}`}
-              className="sponser__links"
-            >
-              {selectedSponser.phone}
-            </a>
-            <h4 className="sponser__heading--quaternary">Email Address:</h4>
-            <a
-              href={`mailto:${selectedSponser.email}`}
-              className="sponser__links"
-            >
-              {selectedSponser.email}
-            </a>
+            <p className="sponser__content sponser__content--border">
+              {selectedSponser.description}
+            </p>
+            <div className="sponser__contact__container">
+              <h4 className="sponser__heading--quaternary">Address</h4>
+              <p className="sponser__content">{selectedSponser.address}</p>
+            </div>
+            <div className="sponser__contact__container">
+              <h4 className="sponser__heading--quaternary">Phone No:</h4>
+              <a
+                href={`tel:+91${selectedSponser.phone}`}
+                className="sponser__links"
+              >
+                {selectedSponser.phone}
+              </a>
+            </div>
+            <div className="sponser__contact__container">
+              <h4 className="sponser__heading--quaternary">Email Address:</h4>
+              <a
+                href={`mailto:${selectedSponser.email}`}
+                className="sponser__links"
+              >
+                {selectedSponser.email}
+              </a>
+            </div>
           </div>
           <Zoom>
             <div className="sponser__map__container">
