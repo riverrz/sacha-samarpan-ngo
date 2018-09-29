@@ -6,6 +6,7 @@
   margin: 3rem 0;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
   backface-visibility: hidden;
 }
 .frontGalleryGridItem {
@@ -14,6 +15,7 @@
   overflow: hidden;
   position: relative;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 .galleryItem__img {
   height: 100%;

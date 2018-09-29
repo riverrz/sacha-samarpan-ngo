@@ -16,13 +16,16 @@
   padding-left: 1em;
 }
 .importantLinks__linksList a {
-  color: #333;
-  /* color: #333333; */
-  font-size: 1.4rem;
+  color: #1a0dab;
+  font-size: 1.5rem;
+  font-weight: 600;
   text-decoration: none;
 }
 .importantLinks__linksList a:hover {
-  color: #333333;
+  color: rgb(180, 125, 207);
+}
+.importantLinks__linksList a:visited {
+  color: rgb(180, 125, 207);
 }
 .importantLinks__linksList > li {
   margin: 1rem 0;
