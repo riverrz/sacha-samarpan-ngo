@@ -6,7 +6,8 @@ import Dropdown from "../Dropdown/Dropdown";
 import { Link, NavLink } from "react-router-dom";
 class Navigation extends Component {
   state = {
-    scrollingLock: false
+    scrollingLock: false,
+    isLoggedIn: false
   };
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -32,50 +33,35 @@ class Navigation extends Component {
     if (this.state.scrollingLock) {
       navigationClass = "navigation--fixed";
     }
+
+    let navUserListItem = (
+      <Fragment>
+        <li className="navigation__user__routeList__item">
+          <Link to="/login" className="navigation__user__route">
+            Login
+          </Link>
+        </li>
+        <li className="navigation__user__routeList__item">
+          <Link to="/registration" className="navigation__user__route">
+            Register
+          </Link>
+        </li>
+      </Fragment>
+    );
+    if (this.state.isLoggedIn) {
+      navUserListItem = (
+        <li className="navigation__user__routeList__item">
+          <Link to="/profile" className="navigation__user__route">
+            Profile
+          </Link>
+        </li>
+      );
+    }
     return (
       <Fragment>
-        <div className="nav">
-          <div className="nav__contact">
-            <div className="nav__contact__number">
-              <i className="fas fa-phone" />{" "}
-              <a className="nav_contact__phoneLink" href="tel:+919211458806">
-                +91 9211458806
-              </a>
-            </div>
-            <div className="nav__contact__email">
-              <a
-                href="mailto:sacchasamarpan@yahoo.com"
-                className="nav__contact__emailLink"
-              >
-                <i className="fas fa-envelope" /> sacchasamarpan@yahoo.com
-              </a>
-            </div>
-            <div className="nav__contact__social">
-              <Link to="/important-links" className="nav__contact__link">Important Links</Link>
-              <a
-                href="https://www.facebook.com/SacchaSamarpanNGO"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-facebook-f" />
-              </a>
-              <a
-                href="https://www.twitter.com/SacchaSamarpan1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-twitter" />
-              </a>
-              <a
-                href="https://www.instagram.com/sacchasamarpan_ngo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-instagram" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <nav className="navigation__user">
+          <ul className="navigation__user__routeList">{navUserListItem}</ul>
+        </nav>
         <nav className={`navigation ${navigationClass}`}>
           <div className="navigation__item navigation__logoBox">
             <img className="navigation__logo" src={Logo} alt="Logo" />
@@ -203,8 +189,12 @@ class Navigation extends Component {
             </NavLink>
           </div>
           <div className="navigation__item">
-            <NavLink to="/contact" exact activeClassName="navigation__active">
-              Contact Us
+            <NavLink
+              to="/important-links"
+              exact
+              activeClassName="navigation__active"
+            >
+              Important Links
             </NavLink>
           </div>
           <div className="navigation__item navigation__donate">

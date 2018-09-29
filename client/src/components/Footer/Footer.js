@@ -90,10 +90,10 @@ const footer = props => {
               </li>
               <li className="footer__list__item">
                 <Link
-                  to="/important-links"
+                  to="/contact"
                   className="footer__list__item__text"
                 >
-                  <i className="fas fa-angle-right" /> Important Links
+                  <i className="fas fa-angle-right" /> Contact Us
                 </Link>
               </li>
             </ul>

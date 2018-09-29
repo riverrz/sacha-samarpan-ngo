@@ -30,6 +30,7 @@ a {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   outline: none;
+  text-decoration: none;
 }
 .App {
   height: 100%;
