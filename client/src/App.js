@@ -17,6 +17,7 @@ import EventContainer from "./containers/EventContainer/EventContainer";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
+import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
 
 class App extends Component {
   state = {
@@ -145,6 +146,7 @@ class App extends Component {
         <SideDrawer />
         <Navigation />
         {backdrop}
+        <AsideSocialBar />
         <Switch>
           <Route path="/about" component={AboutContainer} />
           <Route path="/events" component={EventContainer} />

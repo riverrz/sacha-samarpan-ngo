@@ -1,34 +1,3 @@
-.contact__sideBar {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  background-color: #3f3f3f;
-}
-.contact__sideBar__item {
-  font-size: 2.5rem;
-  cursor: pointer;
-  position: relative;
-}
-.sideBar__item__link {
-  color: #eee;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-}
-.facebook--backColor {
-  background-color: #3c589a;
-}
-.instagram--backColor {
-  background-color: #527fa4;
-}
-.youtube--backColor {
-  background-color: #ff0000;
-}
-.twitter--backColor {
-  background-color: #1da1f2;
-}
 .contact__main {
   color: #222;
   height: 100%;

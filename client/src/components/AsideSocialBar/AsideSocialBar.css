@@ -1,0 +1,48 @@
+.asideSocialBar__sideBar {
+  position: fixed;
+  top: 65vh;
+  left: 0;
+  background-color: #3f3f3f;
+  z-index: 100;
+}
+.asideSocialBar__sideBar__item {
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.sideBar__item__link {
+  color: #eee;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.facebook--backColor {
+  background-color: #3c589a;
+}
+.instagram--backColor {
+  background-color: #527fa4;
+}
+.youtube--backColor {
+  background-color: #ff0000;
+}
+.twitter--backColor {
+  background-color: #1da1f2;
+}
+
+/*Media Queries*/
+
+@media (max-width: 600px) {
+  .asideSocialBar__sideBar {
+    top: 94vh;
+    height: 6vh;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+  .asideSocialBar__sideBar__item {
+    flex: 1;
+    font-size: 3rem;
+  }
+}

@@ -17,10 +17,10 @@ class Modal extends Component {
     });
   }
   componentDidMount() {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflowY = "hidden";
   }
   componentWillUnmount() {
-    document.body.style.overflow = "auto";
+    document.body.style.overflowY = "auto";
   }
   render() {
     let content = null;
