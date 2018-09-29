@@ -5,8 +5,12 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  memberId: {
+    type: String,
+    required: true
+  },
   phoneNo: {
-    type: Number,
+    type: String,
     required: true
   },
   email: {

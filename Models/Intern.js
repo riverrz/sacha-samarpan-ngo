@@ -5,12 +5,16 @@ const internSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  internId: {
+    type: String,
+    required: true
+  },
   internshipType: {
     type: String,
     required: true
   },
   phoneNo: {
-    type: Number,
+    type: String,
     required: true
   },
   email: {

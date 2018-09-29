@@ -1,12 +1,5 @@
-const Member = require("../Models/Member");
-const Intern = require("../Models/Intern");
+
 const Transporter = require("../Mailer/Mailer");
-const findExistingMember = async attr => {
-  return await Member.findOne(attr);
-};
-const findExistingIntern = async attr => {
-  return await Intern.findOne(attr);
-};
 
 const buildEmail = (to, subject, htmlContent) => {
   const mailOptions = {
@@ -20,6 +13,12 @@ const buildEmail = (to, subject, htmlContent) => {
       throw err;
     }
   });
+};
+const checkBody = (req, res, next) => {
+  if (!(req.body.member || req.body.intern || req.body.user || req.body.message)) {
+    return res.status(422).send("Please Enter details first!");
+  }
+  next();
 };
 
 const verifyInputs = message => {
@@ -38,8 +37,7 @@ const verifyInputs = message => {
 };
 
 module.exports = {
-  findExistingIntern,
-  findExistingMember,
   buildEmail,
-  verifyInputs
+  verifyInputs,
+  checkBody
 };
