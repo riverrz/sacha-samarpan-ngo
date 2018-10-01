@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const withAuth = (WrappedComponent, redirectTo = "") => {
+const withAuth = (WrappedComponent, redirectTo = "", styles) => {
   return class extends Component {
     state = {
       loading: true,
@@ -44,15 +44,15 @@ const withAuth = (WrappedComponent, redirectTo = "") => {
     render() {
       let content;
       if (this.state.loading) {
-        content = <p>Loading...</p>;
+        content = <div style={styles}>Loading...</div>;
       } else if (!this.state.isAuth && !redirectTo) {
         content = <WrappedComponent {...this.props} />;
       } else if (this.state.isAuth) {
         content = <WrappedComponent {...this.props} user={this.state.user} />;
       } else if (this.state.error) {
-        content = <p>Some error Occured</p>;
+        content = <div style={styles}>Some error Occured</div>;
       } else {
-        content = <p>Not logged in</p>;
+        content = <div style={styles}>Not logged in</div>;
       }
       return content;
     }

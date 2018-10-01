@@ -1,39 +1,3 @@
-.navigation__user {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  height: 4rem;
-}
-.navigation__user__routeList {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  align-items: center;
-}
-.navigation__user__routeList__item {
-  height: 100%;
-  flex: 0 0 10%;
-  transition: background-color 0.3s;
-}
-.navigation__user__routeList__item:hover {
-  background-color: #333;
-}
-.navigation__user__routeList__item:hover .navigation__user__route {
-  color: #fff;
-}
-.navigation__user__route {
-  font-size: 14px;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-  width:100%;
-}
 .navigation {
   display: flex;
   z-index: 99;

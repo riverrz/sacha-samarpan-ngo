@@ -14,4 +14,12 @@ class Dashboard extends Component {
   }
 }
 
-export default withAuth(Dashboard, "/login");
+const styles = {
+  height: "40vh",
+  padding: "5rem 0",
+  fontSize: "16px",
+  textAlign: "center",
+  backgroundColor: "#eee"
+};
+
+export default withAuth(Dashboard, "/login", styles);

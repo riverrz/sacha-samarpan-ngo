@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
-import withAuth from "../../containers/withAuth/withAuth";
 import "./Navigation.css";
 import Logo from "../../assets/logo.png";
 import Dropdown from "../Dropdown/Dropdown";
 import { Link, NavLink } from "react-router-dom";
+import NavigationHeader from "./NavigationHeader/NavigationHeader";
 class Navigation extends Component {
   state = {
     scrollingLock: false
@@ -27,57 +27,16 @@ class Navigation extends Component {
       });
     }
   };
-  handleLogout = event => {
-    event.stopPropagation();
-    event.preventDefault();
-    localStorage.removeItem("token");
-    window.location.replace("/");
-  };
+
   render() {
     let navigationClass = "navigation--notFixed";
     if (this.state.scrollingLock) {
       navigationClass = "navigation--fixed";
     }
 
-    let navUserListItem = (
-      <Fragment>
-        <li className="navigation__user__routeList__item">
-          <Link to="/login" className="navigation__user__route">
-            Login
-          </Link>
-        </li>
-        <li className="navigation__user__routeList__item">
-          <Link to="/registration" className="navigation__user__route">
-            Register
-          </Link>
-        </li>
-      </Fragment>
-    );
-    if (this.props.user) {
-      navUserListItem = (
-        <Fragment>
-          <li className="navigation__user__routeList__item">
-            <Link to="/dashboard" className="navigation__user__route">
-              Dashboard
-            </Link>
-          </li>
-          <li className="navigation__user__routeList__item">
-            <Link
-              to="/logout"
-              onClick={this.handleLogout}
-              className="navigation__user__route"
-            >
-              Logout
-            </Link>
-          </li>
-        </Fragment>
-      );
-    }
     return (
       <Fragment>
-        <nav className="navigation__user">
-          <ul className="navigation__user__routeList">{navUserListItem}</ul>
-        </nav>
+        <NavigationHeader />
         <nav className={`navigation ${navigationClass}`}>
           <div className="navigation__item navigation__logoBox">
             <img className="navigation__logo" src={Logo} alt="Logo" />
@@ -224,4 +183,4 @@ class Navigation extends Component {
   }
 }
 
-export default withAuth(Navigation);
+export default Navigation;
