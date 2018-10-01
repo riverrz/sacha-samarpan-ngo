@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from "react";
-
+import withAuth from "../../containers/withAuth/withAuth";
 import "./Navigation.css";
 import Logo from "../../assets/logo.png";
 import Dropdown from "../Dropdown/Dropdown";
 import { Link, NavLink } from "react-router-dom";
 class Navigation extends Component {
   state = {
-    scrollingLock: false,
-    isLoggedIn: false
+    scrollingLock: false
   };
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -48,11 +47,11 @@ class Navigation extends Component {
         </li>
       </Fragment>
     );
-    if (this.state.isLoggedIn) {
+    if (this.props.user) {
       navUserListItem = (
         <li className="navigation__user__routeList__item">
-          <Link to="/profile" className="navigation__user__route">
-            Profile
+          <Link to="/dashboard" className="navigation__user__route">
+            Dashboard
           </Link>
         </li>
       );
@@ -208,4 +207,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+export default withAuth(Navigation);

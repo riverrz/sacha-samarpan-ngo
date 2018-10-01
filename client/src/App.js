@@ -18,6 +18,8 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
 import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
+import Login from "./components/Login/Login";
+import Dashboard from "./containers/Dashboard/Dashboard";
 
 class App extends Component {
   state = {
@@ -151,7 +153,7 @@ class App extends Component {
           <Route path="/about" component={AboutContainer} />
           <Route path="/events" component={EventContainer} />
 
-          <Route path="/important-links" exact component={Importantlinks} />
+          <Route path="/important-links" component={Importantlinks} />
           <Route
             path="/full-gallery"
             exact
@@ -159,11 +161,14 @@ class App extends Component {
               <Fullgallery invoke={event => this.backdropInvoker(event)} />
             )}
           />
-          <Route path="/donate" exact component={Donate} />
-          <Route path="/internship" exact component={Internship} />
-          <Route path="/registration" exact component={Registration} />
-          <Route path="/contact" exact component={Contact} />
+          <Route path="/donate" component={Donate} />
+          <Route path="/internship" component={Internship} />
+          <Route path="/registration" component={Registration} />
+          <Route path="/contact" component={Contact} />
           <Route path="/sponser" component={Sponser} />
+          <Route path="/login" component={Login} />
+          <Route path="/dashboard" component={Dashboard} />
+
           <Route
             path="/"
             render={props => (
