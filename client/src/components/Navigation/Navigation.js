@@ -27,6 +27,12 @@ class Navigation extends Component {
       });
     }
   };
+  handleLogout = event => {
+    event.stopPropagation();
+    event.preventDefault();
+    localStorage.removeItem("token");
+    window.location.replace("/");
+  };
   render() {
     let navigationClass = "navigation--notFixed";
     if (this.state.scrollingLock) {
@@ -49,11 +55,22 @@ class Navigation extends Component {
     );
     if (this.props.user) {
       navUserListItem = (
-        <li className="navigation__user__routeList__item">
-          <Link to="/dashboard" className="navigation__user__route">
-            Dashboard
-          </Link>
-        </li>
+        <Fragment>
+          <li className="navigation__user__routeList__item">
+            <Link to="/dashboard" className="navigation__user__route">
+              Dashboard
+            </Link>
+          </li>
+          <li className="navigation__user__routeList__item">
+            <Link
+              to="/logout"
+              onClick={this.handleLogout}
+              className="navigation__user__route"
+            >
+              Logout
+            </Link>
+          </li>
+        </Fragment>
       );
     }
     return (
