@@ -14,27 +14,28 @@ const localOptions = {
   usernameField: "email"
 };
 
-const localStrategy = new LocalStrategy(
-  localOptions,
-  (email, password, done) => {
-    User.find({ email }, function(err, user) {
+const localStrategy = new LocalStrategy(localOptions, function(
+  email,
+  password,
+  done
+) {
+  User.findOne({ email }, function(err, user) {
+    if (err) {
+      return done(err);
+    } else if (!user) {
+      return done(null, false);
+    }
+    user.comparePassword(password, function(err, isMatch) {
       if (err) {
         done(err);
-      } else if (!user) {
+      } else if (!isMatch) {
         done(null, false);
+      } else {
+        done(null, user);
       }
-      user.comparePassword(password, function(err, isMatch) {
-        if (err) {
-          done(err);
-        } else if (!isMatch) {
-          done(null, false);
-        } else {
-          done(null, user);
-        }
-      });
     });
-  }
-);
+  });
+});
 
 const jwtLogin = new JwtStratergy(jwtOptions, function(payload, done) {
   User.findById(payload.sub, function(err, user) {

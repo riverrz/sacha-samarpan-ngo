@@ -33,6 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const requireAuth = passport.authenticate("jwt", { session: false });
+
 app.get("/checkLogin", requireAuth, (req, res) => {
   res.send("Logged In");
 });

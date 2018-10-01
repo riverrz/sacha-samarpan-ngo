@@ -42,10 +42,11 @@ module.exports = app => {
           return res.json({ error: "Invalid user type" });
       }
       const idMatched = await modelOfUser.findOne({
+        email: possibleNewUser.email,
         [attributeToCheck]: possibleNewUser.typeId
       });
       if (!idMatched) {
-        return res.json({ error: "Invalid id" });
+        return res.json({ error: "Invalid id or unregitered email" });
       }
       const newUser = new User(possibleNewUser);
       await newUser.save();
@@ -56,7 +57,7 @@ module.exports = app => {
     }
   });
 
-  app.post("/user/login", helper.checkBody, requireLogin, async (req, res) => {
+  app.post("/user/login", requireLogin, async (req, res) => {
     console.log(req.user);
     res.json({ token: tokenForUser(req.user) });
   });
