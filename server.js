@@ -47,7 +47,6 @@ app.get("/getUser", requireAuth, async (req, res) => {
       return res.send({ error: "TypeOfUser is not valid" });
   }
   const userDetails = await currentUserModel.findOne({ email: req.user.email });
-  console.log(userDetails);
   res.json(userDetails);
 });
 

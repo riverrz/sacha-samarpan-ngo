@@ -52,13 +52,11 @@ module.exports = app => {
       await newUser.save();
       res.json({ token: tokenForUser(newUser) });
     } catch (err) {
-      console.log(err);
       res.send("An error occured. Please try again later.");
     }
   });
 
   app.post("/user/login", requireLogin, async (req, res) => {
-    console.log(req.user);
     res.json({ token: tokenForUser(req.user) });
   });
 };
