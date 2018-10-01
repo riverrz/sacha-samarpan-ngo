@@ -34,8 +34,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const requireAuth = passport.authenticate("jwt", { session: false });
 
-app.get("/checkLogin", requireAuth, (req, res) => {
-  res.send("Logged In");
+app.get("/getUser", requireAuth, async (req, res) => {
+  let currentUserModel;
+  switch (req.user.typeOfUser) {
+    case "Member":
+      currentUserModel = Member;
+      break;
+    case "Intern":
+      currentUserModel = Intern;
+      break;
+    default:
+      return res.send({ error: "TypeOfUser is not valid" });
+  }
+  const userDetails = await currentUserModel.findOne({ email: req.user.email });
+  console.log(userDetails);
+  res.json(userDetails);
 });
 
 memberRoutes(app);

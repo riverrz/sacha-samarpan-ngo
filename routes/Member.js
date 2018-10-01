@@ -17,6 +17,10 @@ module.exports = app => {
       const totalMembers = await Member.count({});
       const newId = Number(totalMembers) + 1;
       possibleNewMember.memberId = "SSM" + newId;
+
+      // Handle fee
+      possibleNewMember.lastPaid = Date.now();
+
       const newMember = new Member(possibleNewMember);
       await newMember.save();
       // helper.buildEmail(
@@ -29,7 +33,9 @@ module.exports = app => {
       return res.send(
         `Thank You ${
           newMember.name
-        } for becoming a member of Sacha Samarpan. Your membership ID will be sent to you on the provided email `
+        } for becoming a member of Sacha Samarpan. Your membership ID is ${
+          possibleNewMember.memberId
+        } `
       );
     } catch (err) {
       res.send(err);

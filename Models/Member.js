@@ -5,6 +5,11 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  joinedOn: {
+    type: Date,
+    default: Date.now()
+  },
+  lastPaid: Date,
   memberId: {
     type: String,
     required: true

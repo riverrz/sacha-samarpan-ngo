@@ -5,6 +5,10 @@ const internSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  joinedOn: {
+    type: Date,
+    default: Date.now()
+  },
   internId: {
     type: String,
     required: true
@@ -31,7 +35,8 @@ const internSchema = new mongoose.Schema({
   },
   batch: {
     type: String
-  }
+  },
+  lastPaid: Date
 });
 
 module.exports = mongoose.model("Intern", internSchema);

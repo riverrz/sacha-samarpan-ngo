@@ -17,6 +17,10 @@ module.exports = app => {
       const totalInterns = await Intern.count({});
       const newId = Number(totalInterns) + 1;
       possibleNewIntern.internId = "SSI" + newId;
+
+      // Fee handle
+      possibleNewIntern.lastPaid = Date.now();
+
       const newIntern = new Intern(possibleNewIntern);
       await newIntern.save();
       newIntern.save();
@@ -30,7 +34,9 @@ module.exports = app => {
       return res.send(
         `Thank you for joining us ${
           newIntern.name
-        } as an Intern. We hope to work with you and bring a positive change in our society. Your internID will be sent to you on your provided Email`
+        } as an Intern. We hope to work with you and bring a positive change in our society. Your internID is ${
+          possibleNewIntern.internId
+        }`
       );
     } catch (error) {
       res.send(err);
