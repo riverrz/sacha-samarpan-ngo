@@ -14,12 +14,12 @@ const navigationHeader = props => {
   let navUserListItem = (
     <Fragment>
       <li className="navigation__user__routeList__item">
-        <Link to="/login" className="navigation__user__route">
+        <Link to="/user/login" className="navigation__user__route">
           Login
         </Link>
       </li>
       <li className="navigation__user__routeList__item">
-        <Link to="/registration" className="navigation__user__route">
+        <Link to="/user/register" className="navigation__user__route">
           Register
         </Link>
       </li>

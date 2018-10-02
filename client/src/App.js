@@ -166,7 +166,7 @@ class App extends Component {
           <Route path="/registration" component={Registration} />
           <Route path="/contact" component={Contact} />
           <Route path="/sponser" component={Sponser} />
-          <Route path="/login" component={Login} />
+          <Route path="/user/login" component={Login} />
           <Route path="/dashboard" component={Dashboard} />
 
           <Route
