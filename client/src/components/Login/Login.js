@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Login.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import { connect } from "react-redux";
+import MDSpinner from "react-md-spinner";
+import Inputfield from "../Inputfield/Inputfield";
 import * as actions from "../../store/actions";
 
 class Signin extends Component {
@@ -33,28 +35,31 @@ class Signin extends Component {
     }
   }
   render() {
+    let form = (
+      <form onSubmit={this.handleSubmit} className="login__form">
+        <Inputfield
+          name="email"
+          type="email"
+          placeholder="Email"
+          onChange={this.onEmailChange}
+        />
+        <Inputfield
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={this.onPasswordChange}
+        />
+        <button className="login__submit"> Login </button>
+      </form>
+    );
+    if (this.props.loading) {
+      form = <MDSpinner size="45" />;
+    }
     return (
       <WhiteContainer style={{ height: "60vh" }}>
-        <p>{this.props.loading}</p>
-        <p>{this.props.error}</p>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            required
-            placeholder="Email"
-            name="email"
-            onChange={this.onEmailChange}
-          />
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            required
-            name="password"
-            onChange={this.onPasswordChange}
-          />
-          <button> Submit </button>
-        </form>
+        <h1 className="login__heading--primary">Enter your details:</h1>
+        <div className="login__error__container">{this.props.error}</div>
+        {form}
       </WhiteContainer>
     );
   }

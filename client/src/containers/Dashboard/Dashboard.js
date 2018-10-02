@@ -4,6 +4,7 @@ import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 import { Redirect } from "react-router-dom";
+import MDSpinner from "react-md-spinner";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -12,12 +13,13 @@ class Dashboard extends Component {
     }
   }
   render() {
-    let content = <p>Loading...</p>;
+    let content = (
+      <div className="container--authFailed">
+        <MDSpinner size="45" />
+      </div>
+    );
     if (!this.props.isAuth) {
-      content = (
-        // <div className="container--authFailed">Please Log in first</div>
-        <Redirect to="/login" />
-      );
+      content = <Redirect to="/login" />;
     }
     if (this.props.user) {
       content = (

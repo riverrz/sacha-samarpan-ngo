@@ -1,0 +1,36 @@
+.login__heading--primary {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.login__error__container {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+.login__form {
+  width: 60%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-height: 200px;
+  justify-content: space-between;
+}
+.login__submit {
+  padding: 1rem 2rem;
+  border: 2px solid dodgerblue;
+  background-color: #fff;
+  color: #333;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+.login__submit:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}

@@ -38,7 +38,7 @@ const reducer = (state = initialState, action) => {
         user: null,
         isAuth: false,
         loading: false,
-        error: "Error occured while logging you in! Please trye again later"
+        error: "Error occured while logging you in! Please try again later"
       };
     case actionTypes.LOADING:
       return {
