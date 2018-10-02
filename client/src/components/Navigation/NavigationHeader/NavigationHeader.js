@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import withAuth from "../../../containers/withAuth/withAuth";
 import "./NavigationHeader.css";
+import { connect } from "react-redux";
 
 const handleLogout = event => {
   event.stopPropagation();
@@ -25,7 +25,10 @@ const navigationHeader = props => {
       </li>
     </Fragment>
   );
-  if (props.user) {
+  if (props.loading) {
+    navUserListItem = null;
+  }
+  if (props.isAuth) {
     navUserListItem = (
       <Fragment>
         <li className="navigation__user__routeList__item">
@@ -52,17 +55,12 @@ const navigationHeader = props => {
   );
 };
 
-const styles = {
-  position: "absolute",
-  top: "0",
-  left: "50%",
-  transform: "translateX(-50%)",
-  width: "85%",
-  height: "4rem",
-  display: "flex",
-  fontSize: "14px",
-  justifyContent: "flex-end",
-  alignItems: "center"
+const mapStateToProps = state => {
+  return {
+    isAuth: state.isAuth,
+    user: state.user,
+    loading: state.loading
+  };
 };
 
-export default withAuth(navigationHeader, null, styles);
+export default connect(mapStateToProps)(navigationHeader);

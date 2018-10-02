@@ -80,6 +80,15 @@ a {
   color: #fff;
 }
 
+/*Auth failed container*/
+.container--authFailed {
+  height: 30vh;
+  background-color: #eee;
+  color: #333;
+  font-size: 2rem;
+  padding: 5rem 0;
+  text-align: center;
+}
 /*Media Queries*/
 
 @media (max-width: 1294px) {

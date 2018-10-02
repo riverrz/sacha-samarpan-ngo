@@ -1,55 +1,28 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { connect } from "react-redux";
+import * as actions from "../../store/actions";
 
-const withAuth = (WrappedComponent, redirectTo = "", styles) => {
+const withAuth = (WrappedComponent, redirectTo = "", styles, requireUser) => {
   return class extends Component {
-    state = {
-      loading: true,
-      error: false,
-      isAuth: null,
-      user: null
-    };
     componentDidMount() {
-      if (!this.state.loading) {
-        return;
+      if (requireUser) {
+        this.props.onFetchUser();
       }
-      axios
-        .get("/getUser", {
-          headers: {
-            authorization: localStorage.getItem("token")
-          }
-        })
-        .then(response => {
-          console.log(response);
-          this.setState({
-            loading: false,
-            error: false,
-            isAuth: true,
-            user: response.data
-          });
-        })
-        .catch(error => {
-          this.setState(
-            {
-              loading: false,
-              error
-            },
-            () => {
-              return redirectTo ? this.props.history.replace("/login") : null;
-            }
-          );
-        });
     }
-
+    componentDidUpdate() {
+      if (requireUser) {
+        this.props.onFetchUser();
+      }
+    }
     render() {
       let content;
-      if (this.state.loading) {
+      if (this.props.loading) {
         content = <div style={styles}>Loading...</div>;
-      } else if (!this.state.isAuth && !redirectTo) {
+      } else if (!this.props.isAuth && !redirectTo) {
         content = <WrappedComponent {...this.props} />;
-      } else if (this.state.isAuth) {
-        content = <WrappedComponent {...this.props} user={this.state.user} />;
-      } else if (this.state.error) {
+      } else if (this.props.isAuth) {
+        content = <WrappedComponent {...this.props} user={this.props.user} />;
+      } else if (this.props.error) {
         content = <div style={styles}>Some error Occured</div>;
       } else {
         content = <div style={styles}>Not logged in</div>;
@@ -59,4 +32,21 @@ const withAuth = (WrappedComponent, redirectTo = "", styles) => {
   };
 };
 
-export default withAuth;
+const mapStateToProps = state => {
+  return {
+    isAuth: state.isAuth,
+    user: state.user,
+    error: state.error,
+    loading: state.loading
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    onFetchUser: () => dispatch(actions.fetchUser())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withAuth);

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./Login.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
-import axios from "axios";
+import { connect } from "react-redux";
+import * as actions from "../../store/actions";
 
 class Signin extends Component {
   state = {
     email: "",
-    password: "",
-    error: null
+    password: ""
   };
   onEmailChange = event => {
     this.setState({
@@ -22,23 +22,21 @@ class Signin extends Component {
   handleSubmit = async event => {
     event.stopPropagation();
     event.preventDefault();
-    try {
-      const response = await axios.post("/user/login", {
-        email: this.state.email,
-        password: this.state.password
-      });
-      localStorage.setItem("token", response.data.token);
-      window.location.replace("/dashboard");
-    } catch (err) {
-      this.setState({
-        error: "Incorrect username or password"
-      });
-    }
+    this.props.onLogin({
+      email: this.state.email,
+      password: this.state.password
+    });
   };
+  componentDidUpdate() {
+    if (this.props.isAuth) {
+      this.props.history.replace("/dashboard");
+    }
+  }
   render() {
     return (
       <WhiteContainer style={{ height: "60vh" }}>
-        <p>{this.state.error}</p>
+        <p>{this.props.loading}</p>
+        <p>{this.props.error}</p>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">Email:</label>
           <input
@@ -62,4 +60,21 @@ class Signin extends Component {
   }
 }
 
-export default Signin;
+const mapStateToProps = state => {
+  return {
+    isAuth: state.isAuth,
+    error: state.error,
+    loading: state.loading
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onLogin: userDetails => dispatch(actions.loginUser(userDetails))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Signin);
