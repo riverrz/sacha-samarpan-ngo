@@ -1,4 +1,3 @@
-
 const Transporter = require("../Mailer/Mailer");
 
 const buildEmail = (to, subject, htmlContent) => {
@@ -15,7 +14,9 @@ const buildEmail = (to, subject, htmlContent) => {
   });
 };
 const checkBody = (req, res, next) => {
-  if (!(req.body.member || req.body.intern || req.body.user || req.body.message)) {
+  if (
+    !(req.body.member || req.body.intern || req.body.user || req.body.message)
+  ) {
     return res.status(422).send("Please Enter details first!");
   }
   next();

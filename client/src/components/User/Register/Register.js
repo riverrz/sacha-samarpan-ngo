@@ -21,7 +21,15 @@ class Register extends Component {
   onSubmitHandler = event => {
     event.stopPropagation();
     event.preventDefault();
-    this.props.onSubmit();
+    const user = {
+      email: this.state.email,
+      password: this.state.password,
+      typeOfUser: this.state.typeOfUser,
+      typeId: this.state.typeId
+    };
+    this.props.onSubmit({
+      user
+    });
   };
   componentDidUpdate() {
     if (this.props.isAuth) {
