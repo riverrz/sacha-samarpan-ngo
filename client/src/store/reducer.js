@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
         loading: false,
         error: "Some error occured while fetching the user"
       };
-    case actionTypes.LOGIN_USER_SUCCESS:
+    case actionTypes.USER_SUCCESS:
       return {
         ...state,
         user: null,
@@ -32,13 +32,13 @@ const reducer = (state = initialState, action) => {
         error: false,
         loading: false
       };
-    case actionTypes.LOGIN_USER_FAIL:
+    case actionTypes.USER_FAIL:
       return {
         ...state,
         user: null,
         isAuth: false,
         loading: false,
-        error: "Error occured while logging you in! Please try again later"
+        error: "Error occured while performing this action! Please try again later"
       };
     case actionTypes.LOADING:
       return {

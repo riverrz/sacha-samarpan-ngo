@@ -22,7 +22,7 @@
 .login__submit {
   padding: 1rem 2rem;
   border: 2px solid dodgerblue;
-  background-color: #fff;
+  background-color: transparent;
   color: #333;
   border-radius: 20px;
   font-size: 1.4rem;

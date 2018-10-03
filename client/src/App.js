@@ -18,8 +18,9 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
 import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
-import Login from "./components/Login/Login";
+import Login from "./components/User/Login/Login";
 import Dashboard from "./containers/Dashboard/Dashboard";
+import Register from "./components/User/Register/Register";
 
 class App extends Component {
   state = {
@@ -167,6 +168,7 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route path="/sponser" component={Sponser} />
           <Route path="/user/login" component={Login} />
+          <Route path="/user/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
 
           <Route

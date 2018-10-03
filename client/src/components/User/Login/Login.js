@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Login.css";
-import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
+import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import { connect } from "react-redux";
 import MDSpinner from "react-md-spinner";
-import Inputfield from "../Inputfield/Inputfield";
-import * as actions from "../../store/actions";
+import Inputfield from "../../Inputfield/Inputfield";
+import * as actions from "../../../store/actions";
 
 class Signin extends Component {
   state = {

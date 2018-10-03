@@ -45,10 +45,24 @@ export const loginUser = userDetails => {
       .post("/user/login", userDetails)
       .then(response => {
         localStorage.setItem("token", response.data.token);
-        dispatch({ type: actionTypes.LOGIN_USER_SUCCESS });
+        dispatch({ type: actionTypes.USER_SUCCESS });
       })
       .catch(err => {
-        dispatch({ type: actionTypes.LOGIN_USER_FAIL });
+        dispatch({ type: actionTypes.USER_FAIL });
+      });
+  };
+};
+export const registerUser = userDetails => {
+  return dispatch => {
+    dispatch(loading());
+    axios
+      .post("/user/register", userDetails)
+      .then(response => {
+        localStorage.setItem("token", response.data.token);
+        dispatch({ type: actionTypes.USER_SUCCESS });
+      })
+      .catch(err => {
+        dispatch({ type: actionTypes.USER_FAIL });
       });
   };
 };
