@@ -18,9 +18,9 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
 import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
-import Login from "./components/User/Login/Login";
 import Dashboard from "./containers/Dashboard/Dashboard";
-import Register from "./components/User/Register/Register";
+import Login from "./components/UserAuth/Login/Login";
+import Register from "./components/UserAuth/Register/Register";
 
 class App extends Component {
   state = {

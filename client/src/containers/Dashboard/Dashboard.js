@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 import { Redirect } from "react-router-dom";
 import MDSpinner from "react-md-spinner";
+import NormalUser from "../../components/User/NormalUser/NormalUser";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -25,7 +26,7 @@ class Dashboard extends Component {
       content = (
         <WhiteContainer style={{ height: "60vh" }}>
           Welcome to Dashboard
-          <p>Your name: {this.props.user.name}</p>
+          <NormalUser {...this.props} />
         </WhiteContainer>
       );
     }
