@@ -6,6 +6,7 @@ import * as actions from "../../store/actions";
 import { Redirect } from "react-router-dom";
 import MDSpinner from "react-md-spinner";
 import NormalUser from "../../components/User/NormalUser/NormalUser";
+import Admin from "../../components/User/Admin/Admin";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -21,8 +22,14 @@ class Dashboard extends Component {
     );
     if (!this.props.isAuth) {
       content = <Redirect to="/user/login" />;
-    }
-    if (this.props.user) {
+    } else if (this.props.user && this.props.user.isAdmin) {
+      content = (
+        <WhiteContainer style={{ height: "60vh" }}>
+          Welcome to Dashboard
+          <Admin {...this.props} />
+        </WhiteContainer>
+      );
+    } else if (this.props.user && !this.props.user.isAdmin) {
       content = (
         <WhiteContainer style={{ height: "60vh" }}>
           Welcome to Dashboard
