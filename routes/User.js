@@ -62,6 +62,9 @@ module.exports = app => {
   });
 
   app.get("/getUser", requireAuth, async (req, res) => {
+    if (req.user.isAdmin) {
+      return res.json(req.user);
+    }
     let currentUserModel;
     switch (req.user.typeOfUser) {
       case "Member":
