@@ -35,8 +35,8 @@
 
 @media (max-width: 600px) {
   .asideSocialBar__sideBar {
-    top: 94vh;
-    height: 6vh;
+    top: 93vh;
+    height: 7vh;
     left: 0;
     width: 100%;
     display: flex;

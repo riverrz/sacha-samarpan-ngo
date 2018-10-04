@@ -38,7 +38,7 @@ class Register extends Component {
   }
   render() {
     let form = (
-      <form onSubmit={this.onSubmitHandler}>
+      <form onSubmit={this.onSubmitHandler} className="register__form">
         <Inputfield
           name="user[email]"
           placeholder="Email"
@@ -56,6 +56,7 @@ class Register extends Component {
           id="typeOfUser"
           onChange={event => this.onChangeHandler(event, "typeOfUser")}
           required
+          className="register__select"
         >
           <option value="" disabled selected hidden>
             Select user type
@@ -69,14 +70,14 @@ class Register extends Component {
           type="text"
           onChange={event => this.onChangeHandler(event, "typeId")}
         />
-        <button>Submit</button>
+        <button className="register__submit">Submit</button>
       </form>
     );
     if (this.props.loading) {
       form = <MDSpinner size="45" />;
     }
     return (
-      <WhiteContainer style={{ height: "40vh" }}>
+      <WhiteContainer>
         <h1>Enter your details </h1>
         <div className="register__error__container">{this.props.error}</div>
         {form}

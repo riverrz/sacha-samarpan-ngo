@@ -4,3 +4,41 @@
   color: #333;
   text-align: center;
 }
+.register__form {
+  width: 60%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-height: 200px;
+  justify-content: space-between;
+}
+.register__select {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #e6e6e6;
+  font-family: inherit;
+  cursor: pointer;
+  width: 40rem;
+  padding: 0.8rem 2rem;
+  margin: 0 auto 3rem auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.register__submit {
+  padding: 1rem 2rem;
+  border: 2px solid dodgerblue;
+  background-color: transparent;
+  color: #333;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.register__submit:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
