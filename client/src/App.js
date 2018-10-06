@@ -9,18 +9,53 @@ import Frontpage from "./containers/Frontpage/Frontpage";
 import Importantlinks from "./components/Importantlinks/Importantlinks";
 import Backdrop from "./containers/Backdrop/Backdrop";
 import Fullgallery from "./containers/Fullgallery/Fullgallery";
-import Donate from "./components/Donate/Donate";
-import Internship from "./components/Internship/Internship";
-import Registration from "./components/Registration/Registration";
-import AboutContainer from "./containers/AboutContainer/AboutContainer";
-import EventContainer from "./containers/EventContainer/EventContainer";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
-import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
 import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
-import Dashboard from "./containers/Dashboard/Dashboard";
-import Login from "./components/UserAuth/Login/Login";
-import Register from "./components/UserAuth/Register/Register";
+import WhiteContainer from "./containers/WhiteContainer/WhiteContainer";
+import Loadable from "react-loadable";
+
+const Loading = () => (
+  <WhiteContainer style={{ height: "40vh" }}>
+    Loading..... Please wait
+  </WhiteContainer>
+);
+const Register = Loadable({
+  loader: () => import("./components/UserAuth/Register/Register"),
+  loading: Loading
+});
+const Login = Loadable({
+  loader: () => import("./components/UserAuth/Login/Login"),
+  loading: Loading
+});
+const Dashboard = Loadable({
+  loader: () => import("./containers/Dashboard/Dashboard"),
+  loading: Loading
+});
+const Contact = Loadable({
+  loader: () => import("./components/Contact/Contact"),
+  loading: Loading
+});
+const EventContainer = Loadable({
+  loader: () => import("./containers/EventContainer/EventContainer"),
+  loading: Loading
+});
+const AboutContainer = Loadable({
+  loader: () => import("./containers/AboutContainer/AboutContainer"),
+  loading: Loading
+});
+const Registration = Loadable({
+  loader: () => import("./components/Registration/Registration"),
+  loading: Loading
+});
+const Internship = Loadable({
+  loader: () => import("./components/Internship/Internship"),
+  loading: Loading
+});
+const Donate = Loadable({
+  loader: () => import("./components/Donate/Donate"),
+  loading: Loading
+});
 
 class App extends Component {
   state = {
