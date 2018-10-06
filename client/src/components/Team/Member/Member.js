@@ -11,6 +11,7 @@ const member = props => {
         target="_blank"
         rel="noopener noreferrer"
         className="member__iconContainer"
+        key="1"
       >
         <img src="/facebook.png" alt="Facebook link" className="member__icon" />
       </a>
@@ -23,6 +24,7 @@ const member = props => {
         target="_blank"
         rel="noopener noreferrer"
         className="member__iconContainer"
+        key="2"
       >
         <img
           src="/instagram.png"

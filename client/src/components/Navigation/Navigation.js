@@ -17,11 +17,11 @@ class Navigation extends Component {
   }
 
   handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 100 && !this.state.scrollingLock) {
       this.setState({
         scrollingLock: true
       });
-    } else if (window.scrollY < 100) {
+    } else if (window.scrollY < 100 && this.state.scrollingLock) {
       this.setState({
         scrollingLock: false
       });
