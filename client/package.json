@@ -20,6 +20,9 @@
     },
     "/user/register": {
       "target": "http://localhost:5000"
+    },
+    "/events": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

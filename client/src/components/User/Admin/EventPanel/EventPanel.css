@@ -1,0 +1,29 @@
+.eventPanel__form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+  margin: 30px 0;
+}
+.eventPanel__form > :not(.eventPanel__submitBtn) {
+  width: 20%;
+}
+.eventPanel__input {
+  padding: 10px;
+  font-size: 1.6rem;
+  color: #333;
+}
+.eventPanel__textArea {
+  min-height: 60px;
+}
+.eventPanel__submitBtn {
+  border: 1px solid dodgerblue;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  color: #fff;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

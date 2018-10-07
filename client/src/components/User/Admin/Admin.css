@@ -1,0 +1,19 @@
+.admin__switch__container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+.admin__switch {
+  padding: 10px 20px;
+  border: 1px solid dodgerblue;
+  outline: none;
+  background-color: transparent;
+  color: #444;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.admin__switch:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}

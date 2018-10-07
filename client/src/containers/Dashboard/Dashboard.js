@@ -24,15 +24,13 @@ class Dashboard extends Component {
       content = <Redirect to="/user/login" />;
     } else if (this.props.user && this.props.user.isAdmin) {
       content = (
-        <WhiteContainer style={{ height: "60vh" }}>
-          Welcome to Dashboard
+        <WhiteContainer style={{ minHeight: "60vh" }}>
           <Admin {...this.props} />
         </WhiteContainer>
       );
     } else if (this.props.user && !this.props.user.isAdmin) {
       content = (
-        <WhiteContainer style={{ height: "60vh" }}>
-          Welcome to Dashboard
+        <WhiteContainer style={{ minHeight: "60vh" }}>
           <NormalUser {...this.props} />
         </WhiteContainer>
       );
