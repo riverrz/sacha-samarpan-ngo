@@ -2,7 +2,7 @@
   "name": "sacha-samarpan-ngo",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
     "node": "9.8.0"
   },
