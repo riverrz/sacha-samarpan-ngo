@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./Admin.css";
 import EventPanel from "./EventPanel/EventPanel";
+import { withRouter } from "react-router-dom";
 
 class Admin extends Component {
   state = {
-    panel: ""
+    panel: "",
+    result: ""
   };
   eventHandler = () => {
     this.setState({
@@ -12,7 +14,13 @@ class Admin extends Component {
     });
   };
   render() {
+    var searchParams = new URLSearchParams(this.props.location.search);
     let panel = null;
+    if (searchParams.has("result")) {
+      panel = (
+        <p className="admin__actionResult">{searchParams.get("result")}</p>
+      );
+    }
     if (this.state.panel === "Event") {
       panel = <EventPanel />;
     }
@@ -36,4 +44,4 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+export default withRouter(Admin);

@@ -17,3 +17,8 @@
   background-color: dodgerblue;
   color: #fff;
 }
+.admin__actionResult {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 1rem 0;
+}

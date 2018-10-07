@@ -11,7 +11,6 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  // reject a file
   if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
     cb(null, true);
   } else {
@@ -30,10 +29,9 @@ const upload = multer({
 module.exports = app => {
   app.post("/events", upload.single("image"), async (req, res) => {
     if (!req.file) {
-      return res.json({
-        status: "Error",
-        message: "Unsupported File Type"
-      });
+      return res.redirect(
+        `/dashboard?result=File is not supported or too large`
+      );
     }
     try {
       const newEvent = new Event({
@@ -41,14 +39,9 @@ module.exports = app => {
         image: req.file.filename
       });
       await newEvent.save();
-      res.json({
-        status: "Success"
-      });
+      res.redirect(`/dashboard?result=Successfully submitted event`);
     } catch (err) {
-      res.json({
-        status: "Error",
-        message: err
-      });
+      res.redirect(`/dashboard?result=Some error occured`);
     }
   });
 
