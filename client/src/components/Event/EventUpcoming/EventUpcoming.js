@@ -8,7 +8,8 @@ import Error from "../../Error/Error";
 
 class EventUpcoming extends Component {
   state = {
-    events: []
+    events: null,
+    error: false
   };
   async componentDidMount() {
     try {
