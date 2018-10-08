@@ -1,5 +1,10 @@
 const multer = require("multer");
 const Event = require("../Models/Event");
+const passport = require("passport");
+require("../services/passport");
+const { deleteUploadFile } = require("../utilities/functions");
+
+const requireAuth = passport.authenticate("jwt", { session: false });
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -27,7 +32,13 @@ const upload = multer({
 });
 
 module.exports = app => {
-  app.post("/events", upload.single("image"), async (req, res) => {
+  app.post("/events", requireAuth, upload.single("image"), async (req, res) => {
+    if (!req.user.admin) {
+      deleteUploadFile(req.file.filename);
+      return res.json({
+        error: "You must be an admin"
+      });
+    }
     if (!req.file) {
       return res.redirect(
         `/dashboard?result=File is not supported or too large`
@@ -41,6 +52,7 @@ module.exports = app => {
       await newEvent.save();
       res.redirect(`/dashboard?result=Successfully submitted event`);
     } catch (err) {
+      deleteUploadFile(req.file.filename);
       res.redirect(`/dashboard?result=Some error occured`);
     }
   });
