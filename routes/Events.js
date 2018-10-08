@@ -57,22 +57,22 @@ module.exports = app => {
     }
   });
 
-  app.get("/events/archive", async (req, res) => {
+  app.get("/events/fetch/archive", async (req, res) => {
     const currentDate = new Date();
     const results = await Event.find({ date: { $lt: currentDate } });
     res.json(results);
   });
-  app.get("/events/upcoming", async (req, res) => {
+  app.get("/events/fetch/upcoming", async (req, res) => {
     const currentDate = new Date();
     const results = await Event.find({ date: { $gte: currentDate } });
     res.json(results);
   });
-  app.get("/events/overview", async (req, res) => {
+  app.get("/events/fetch/overview", async (req, res) => {
     const results = await Event.find({}).limit(10);
     res.json(results);
   });
 
-  app.get("/events/:eventId", async (req, res) => {
+  app.get("/events/fetch/:eventId", async (req, res) => {
     const result = await Event.findById(req.params.eventId);
     res.json(result);
   });
