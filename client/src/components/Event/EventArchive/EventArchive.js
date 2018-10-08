@@ -34,9 +34,9 @@ class EventArchive extends Component {
         return (
           <EventArch
             key={i}
-            photo={event.photo}
-            title={event.title}
-            postedOn={event.postedOn}
+            image={event.image}
+            title={event.subject}
+            postedOn={new Date(event.date).toDateString()}
           />
         );
       });
