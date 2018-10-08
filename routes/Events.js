@@ -37,9 +37,9 @@ module.exports = app => {
       });
     }
     if (!req.file) {
-      return res.redirect(
-        `/dashboard?result=File is not supported or too large`
-      );
+      return res.json({
+        status: "Success"
+      });
     }
     try {
       const newEvent = new Event({
@@ -47,10 +47,14 @@ module.exports = app => {
         image: req.file.filename
       });
       await newEvent.save();
-      res.redirect(`/dashboard?result=Successfully submitted event`);
+      res.json({
+        status: "Success"
+      });
     } catch (err) {
       deleteUploadFile(req.file.filename);
-      res.redirect(`/dashboard?result=Some error occured`);
+      res.json({
+        status: "Error"
+      });
     }
   });
 
