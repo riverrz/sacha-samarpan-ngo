@@ -1,15 +1,16 @@
 .eventArchive__heading--primary {
-    font-size: 4rem;
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
 }
 
 .eventArchive__container {
-    width: 100%;
-    height: 100%;
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 3rem;
-    grid-auto-rows: 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+  grid-auto-rows: 1fr;
 }

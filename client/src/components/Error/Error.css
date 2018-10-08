@@ -1,0 +1,8 @@
+.error__container {
+  height: 10vh;
+  text-align: center;
+}
+.error__heading {
+  font-size: 1.6rem;
+  color: #333;
+}
