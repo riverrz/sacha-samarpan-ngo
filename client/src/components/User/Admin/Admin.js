@@ -5,8 +5,7 @@ import { withRouter } from "react-router-dom";
 
 class Admin extends Component {
   state = {
-    panel: "",
-    result: ""
+    panel: ""
   };
   eventHandler = () => {
     this.setState({
@@ -14,13 +13,7 @@ class Admin extends Component {
     });
   };
   render() {
-    var searchParams = new URLSearchParams(this.props.location.search);
     let panel = null;
-    if (searchParams.has("result")) {
-      panel = (
-        <p className="admin__actionResult">{searchParams.get("result")}</p>
-      );
-    }
     if (this.state.panel === "Event") {
       panel = <EventPanel />;
     }

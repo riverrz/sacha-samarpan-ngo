@@ -33,12 +33,14 @@ module.exports = app => {
     if (!req.user.isAdmin) {
       deleteUploadFile(req.file.filename);
       return res.json({
-        error: "You must be an admin"
+        status: "Error",
+        message: "You must be an admin"
       });
     }
     if (!req.file) {
       return res.json({
-        status: "Success"
+        status: "Success",
+        message: "Successfully uploaded the event"
       });
     }
     try {
@@ -48,12 +50,14 @@ module.exports = app => {
       });
       await newEvent.save();
       res.json({
-        status: "Success"
+        status: "Success",
+        message: "Successfully uploaded the event"
       });
     } catch (err) {
       deleteUploadFile(req.file.filename);
       res.json({
-        status: "Error"
+        status: "Error",
+        message: "There was a problem uploading the event"
       });
     }
   });
