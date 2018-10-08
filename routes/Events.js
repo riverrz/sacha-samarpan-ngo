@@ -57,12 +57,19 @@ module.exports = app => {
     }
   });
 
-  app.get("/events/archive", (req, res) => {
-    const currentDate = Date.now();
+  app.get("/events/archive", async (req, res) => {
+    const currentDate = new Date();
+    const results = await Event.find({ date: { $lt: currentDate } });
+    res.json(results);
   });
-  app.get("/events", async (req, res) => {
-    const events = await Event.find({});
-    res.json(events);
+  app.get("/events/upcoming", async (req, res) => {
+    const currentDate = new Date();
+    const results = await Event.find({ date: { $gte: currentDate } });
+    res.json(results);
+  });
+  app.get("/events/overview", async (req, res) => {
+    const results = await Event.find({}).limit(10);
+    res.json(results);
   });
 
   app.get("/events/:eventId", async (req, res) => {
