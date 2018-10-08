@@ -1,19 +1,15 @@
 const helper = require("../utilities/functions");
 const User = require("../Models/User");
-const passport = require("passport");
 const Member = require("../Models/Member");
 const Intern = require("../Models/Intern");
 const jwt = require("jwt-simple");
 const keys = require("../config/keys");
-require("../services/passport");
+const { requireAuth, requireLogin } = require("../middlewares/middlewares");
 
 function tokenForUser(user) {
   const timestamp = new Date().getTime();
   return jwt.encode({ sub: user.id, iat: timestamp }, keys.tokenSecret);
 }
-
-const requireLogin = passport.authenticate("local", { session: false });
-const requireAuth = passport.authenticate("jwt", { session: false });
 
 module.exports = app => {
   app.post("/user/register", helper.checkBody, async (req, res) => {

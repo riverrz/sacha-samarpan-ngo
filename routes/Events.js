@@ -1,10 +1,7 @@
 const multer = require("multer");
 const Event = require("../Models/Event");
-const passport = require("passport");
-require("../services/passport");
 const { deleteUploadFile } = require("../utilities/functions");
-
-const requireAuth = passport.authenticate("jwt", { session: false });
+const { requireLogin, requireAuth } = require("../middlewares/middlewares");
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
