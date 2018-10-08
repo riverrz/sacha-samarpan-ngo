@@ -33,7 +33,7 @@ const upload = multer({
 
 module.exports = app => {
   app.post("/events", requireAuth, upload.single("image"), async (req, res) => {
-    if (!req.user.admin) {
+    if (!req.user.isAdmin) {
       deleteUploadFile(req.file.filename);
       return res.json({
         error: "You must be an admin"
@@ -57,6 +57,9 @@ module.exports = app => {
     }
   });
 
+  app.get("/events/archive", (req, res) => {
+    const currentDate = Date.now();
+  });
   app.get("/events", async (req, res) => {
     const events = await Event.find({});
     res.json(events);
