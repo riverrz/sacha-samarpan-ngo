@@ -23,6 +23,12 @@
     },
     "/events": {
       "target": "http://localhost:5000"
+    },
+    "/events/fetch/*": {
+      "target": "http://localhost:5000"
+    },
+    "/upload/*": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

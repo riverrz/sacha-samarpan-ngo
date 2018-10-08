@@ -8,7 +8,7 @@ import Error from "../../Error/Error";
 
 class EventArchive extends Component {
   state = {
-    events: [],
+    events: null,
     error: false
   };
   async componentDidMount() {
@@ -24,19 +24,23 @@ class EventArchive extends Component {
     }
   }
   render() {
-    let events = this.state.events.map((event, i) => {
-      return (
-        <EventArch
-          key={i}
-          photo={event.photo}
-          title={event.title}
-          postedOn={event.postedOn}
-        />
-      );
-    });
-    let content = <div className="eventArchive__container">{events}</div>;
-    if (this.state.events.length === 0) {
+    let content;
+    if (!this.state.events) {
       content = <MDSpinner size="45" />;
+    } else if (this.state.events.length === 0) {
+      content = <h2>No event found</h2>;
+    } else if (this.state.events.length !== 0) {
+      let events = this.state.events.map((event, i) => {
+        return (
+          <EventArch
+            key={i}
+            photo={event.photo}
+            title={event.title}
+            postedOn={event.postedOn}
+          />
+        );
+      });
+      content = <div className="eventArchive__container">{events}</div>;
     }
     if (this.state.error) {
       content = <Error />;

@@ -1,21 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 import "./EventArch.css";
+import MDSpinner from "react-md-spinner";
 import { Zoom } from "react-reveal";
 
-const eventArch = props => (
-  <Zoom cascade>
-    <div className="eventArch__container">
-      <div className="eventArch__img__Container">
-        <img
-          src={props.photo}
-          alt="Event Archive 1"
-          className="eventArch__photo"
-        />
-      </div>
-      <h2 className="eventArch__title">{props.title}</h2>
-      <h4 className="eventArch__date">{props.postedOn}</h4>
-    </div>
-  </Zoom>
-);
+class EventArch extends Component {
+  state = {
+    image: ""
+  };
 
-export default eventArch;
+  render() {
+    let image;
+    if (!this.state.image) {
+      image = <MDSpinner size="45" />;
+    }
+    return (
+      <Zoom cascade>
+        <div className="eventArch__container">
+          <div className="eventArch__img__Container">{image}</div>
+          <h2 className="eventArch__title">{this.props.title}</h2>
+          <h4 className="eventArch__date">{this.props.postedOn}</h4>
+        </div>
+      </Zoom>
+    );
+  }
+}
+
+export default EventArch;
