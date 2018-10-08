@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
+import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import EventArch from "./EventArch/EventArch";
 import  "./EventArchive.css";
 class EventArchive extends Component {

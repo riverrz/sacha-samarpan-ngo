@@ -1,5 +1,5 @@
 import React from "react";
-import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
+import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import  "./EventOverview.css";
 const eventOverview = props => (
   <WhiteContainer>

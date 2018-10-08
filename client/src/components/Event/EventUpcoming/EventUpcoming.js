@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
+import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import Event from "./Event/Event";
 import "./EventUpcoming.css";
 
