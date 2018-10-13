@@ -64,16 +64,16 @@ module.exports = app => {
 
   app.get("/events/fetch/archive", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $lt: currentDate } });
+    const results = await Event.find({ date: { $lt: currentDate } }).sort({date: -1});
     res.json(results);
   });
   app.get("/events/fetch/upcoming", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $gte: currentDate } });
+    const results = await Event.find({ date: { $gte: currentDate } }).sort({date: -1});
     res.json(results);
   });
   app.get("/events/fetch/overview", async (req, res) => {
-    const results = await Event.find({}).limit(10);
+    const results = await Event.find({}).limit(10).sort({date: -1});
     res.json(results);
   });
 
