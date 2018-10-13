@@ -4,7 +4,7 @@ import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import { connect } from "react-redux";
 import MDSpinner from "react-md-spinner";
 import Inputfield from "../../Inputfield/Inputfield";
-import * as actions from "../../../store/actions";
+import * as actions from "../../../store/AuthReducer/actions";
 
 class Signin extends Component {
   state = {
@@ -67,9 +67,9 @@ class Signin extends Component {
 
 const mapStateToProps = state => {
   return {
-    isAuth: state.isAuth,
-    error: state.error,
-    loading: state.loading
+    isAuth: state.auth.isAuth,
+    error: state.auth.error,
+    loading: state.auth.loading
   };
 };
 

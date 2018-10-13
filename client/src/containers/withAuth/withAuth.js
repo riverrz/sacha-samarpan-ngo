@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "../../store/actions";
+import * as actions from "../../store/AuthReducer/actions";
 
 const withAuth = (WrappedComponent, redirectTo = "", styles, requireUser) => {
   return class extends Component {
@@ -34,10 +34,10 @@ const withAuth = (WrappedComponent, redirectTo = "", styles, requireUser) => {
 
 const mapStateToProps = state => {
   return {
-    isAuth: state.isAuth,
-    user: state.user,
-    error: state.error,
-    loading: state.loading
+    isAuth: state.auth.isAuth,
+    user: state.auth.user,
+    error: state.auth.error,
+    loading: state.auth.loading
   };
 };
 const mapDispatchToProps = dispatch => {

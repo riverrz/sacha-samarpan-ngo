@@ -57,9 +57,9 @@ const navigationHeader = props => {
 
 const mapStateToProps = state => {
   return {
-    isAuth: state.isAuth,
-    user: state.user,
-    loading: state.loading
+    isAuth: state.auth.isAuth,
+    user: state.auth.user,
+    loading: state.auth.loading
   };
 };
 

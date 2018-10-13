@@ -3,7 +3,7 @@ import "./Register.css";
 import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import Inputfield from "../../Inputfield/Inputfield";
 import { connect } from "react-redux";
-import * as actions from "../../../store/actions";
+import * as actions from "../../../store/AuthReducer/actions";
 import MDSpinner from "react-md-spinner";
 
 class Register extends Component {
@@ -88,9 +88,9 @@ class Register extends Component {
 
 const mapStateToProps = state => {
   return {
-    loading: state.loading,
-    error: state.error,
-    isAuth: state.isAuth
+    loading: state.auth.loading,
+    error: state.auth.error,
+    isAuth: state.auth.isAuth
   };
 };
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Dashboard.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import { connect } from "react-redux";
-import * as actions from "../../store/actions";
+import * as actions from "../../store/AuthReducer/actions";
 import { Redirect } from "react-router-dom";
 import MDSpinner from "react-md-spinner";
 import NormalUser from "../../components/User/NormalUser/NormalUser";
@@ -41,8 +41,8 @@ class Dashboard extends Component {
 
 const mapStateToProps = state => {
   return {
-    isAuth: state.isAuth,
-    user: state.user
+    isAuth: state.auth.isAuth,
+    user: state.auth.user
   };
 };
 
