@@ -5,10 +5,7 @@ const schema = mongoose.Schema({
     type: Date,
     required: true
   },
-  timings: {
-    type: String,
-    required: true
-  },
+  timings: String,
   venue: {
     type: String,
     required: true

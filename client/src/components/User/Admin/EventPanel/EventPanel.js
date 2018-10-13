@@ -114,7 +114,6 @@ class EventPanel extends Component {
               className="eventPanel__input"
               name="timings"
               type="text"
-              required
               onChange={event => this.onChangeHandler(event, "timings")}
               placeholder="Timings"
             />

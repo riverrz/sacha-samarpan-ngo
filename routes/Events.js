@@ -39,8 +39,8 @@ module.exports = app => {
     }
     if (!req.file) {
       return res.json({
-        status: "Success",
-        message: "Successfully uploaded the event"
+        status: "Error",
+        message: "Error in uploading the image"
       });
     }
     try {
