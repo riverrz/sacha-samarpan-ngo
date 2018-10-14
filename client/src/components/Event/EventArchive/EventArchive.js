@@ -36,6 +36,7 @@ class EventArchive extends Component {
             key={i}
             image={event.image}
             title={event.subject}
+            id={event._id}
             postedOn={new Date(event.date).toDateString()}
           />
         );

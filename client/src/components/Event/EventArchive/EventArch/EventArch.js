@@ -1,19 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
 import "./EventArch.css";
 import { Zoom } from "react-reveal";
+import { withRouter } from "react-router-dom";
 
-const eventArch = props => {
-  return (
-    <Zoom cascade>
-      <div className="eventArch__container">
-        <div className="eventArch__img__Container">
-          <img src={`/uploads/${props.image}`} className="eventArch__photo" alt="event"/>
+class EventArch extends Component {
+  onClickHandler = () => {
+    this.props.history.push(`/event/${this.props.id}`);
+  };
+  render() {
+    return (
+      <Zoom cascade>
+        <div className="eventArch__container" onClick={this.onClickHandler}>
+          <div className="eventArch__img__Container">
+            <img
+              src={`/uploads/${this.props.image}`}
+              className="eventArch__photo"
+              alt="event"
+            />
+          </div>
+          <h2 className="eventArch__title">{this.props.title}</h2>
+          <h4 className="eventArch__date">{this.props.postedOn}</h4>
         </div>
-        <h2 className="eventArch__title">{props.title}</h2>
-        <h4 className="eventArch__date">{props.postedOn}</h4>
-      </div>
-    </Zoom>
-  );
-};
+      </Zoom>
+    );
+  }
+}
 
-export default eventArch;
+export default withRouter(EventArch);

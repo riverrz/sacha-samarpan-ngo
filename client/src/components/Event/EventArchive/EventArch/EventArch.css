@@ -1,6 +1,7 @@
 .eventArch__container {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
 }
 .eventArch__photo {
   width: 300px;

@@ -21,6 +21,7 @@ import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
 import Dashboard from "./containers/Dashboard/Dashboard";
 import Login from "./components/UserAuth/Login/Login";
 import Register from "./components/UserAuth/Register/Register";
+import IndividualEvent from "./components/Event/IndividualEvent/IndividualEvent";
 
 class App extends Component {
   state = {
@@ -170,6 +171,7 @@ class App extends Component {
           <Route path="/user/login" component={Login} />
           <Route path="/user/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/event/:eventId" component={IndividualEvent} />
 
           <Route
             path="/"
