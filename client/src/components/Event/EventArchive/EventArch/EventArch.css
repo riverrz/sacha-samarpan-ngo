@@ -2,13 +2,17 @@
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   cursor: pointer;
+  transition: 0.3s;
+}
+.eventArch__container:hover {
+  background-color: #d3d3d3;
 }
 .eventArch__photo {
-  width: 300px;
+  width: 100%;
   height: 200px;
 }
 .eventArch__title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   font-family: inherit;
   display: block;
