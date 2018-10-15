@@ -1,0 +1,12 @@
+.video__videoContainer {
+  height: 80vh;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.video__video {
+  height: 100%;
+  width: 100%;
+}

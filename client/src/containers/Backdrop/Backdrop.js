@@ -1,15 +1,17 @@
 import React from "react";
 import "./Backdrop.css";
-import Modal from "../../components/Modal/Modal";
-const modal = props => (
-  <div className="backdrop">
-    <Modal
-      image={props.image}
-      exitClicked={props.exitClicked}
-      for={props.for}
-      itemsArr={props.itemsArr}
-    />
-  </div>
-);
+import { MODAL_CLOSE } from "../../store/ModalReducer/actionTypes";
+import { connect } from "react-redux";
 
-export default modal;
+const modal = props => <div className="backdrop" onClick={props.closeModal} />;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    closeModal: () => dispatch({ type: MODAL_CLOSE })
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(modal);

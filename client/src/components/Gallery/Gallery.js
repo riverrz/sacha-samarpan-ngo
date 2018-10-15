@@ -59,14 +59,7 @@ class Gallery extends Component {
   };
   render() {
     const allGalleryItems = this.state.images.map((data, i) => {
-      return (
-        <GalleryItem
-          imageName={data.name}
-          key={i}
-          invokeBackdrop={event => this.props.invokeBackdrop(event)}
-          id="in-gallery"
-        />
-      );
+      return <GalleryItem imageName={data.name} key={i} isFull={true} />;
     });
     let possibleButton = (
       <button className="gallery__link">

@@ -49,7 +49,7 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <Fade bottom >
+            <Fade bottom>
               <h2 className="frontPage__iconRow__item__heading">KNOW MORE</h2>
               <p className="frontPage__iconRow__item__para">
                 Most Trusted NGO among youth
@@ -70,7 +70,7 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <Fade bottom >
+            <Fade bottom>
               <h2 className="frontPage__iconRow__item__heading">
                 HELP & SUPPORT
               </h2>
@@ -93,7 +93,7 @@ class Frontpage extends Component {
                 className="frontPage__iconRow__item__icon"
               />
             </span>
-            <Fade bottom >
+            <Fade bottom>
               <h2 className="frontPage__iconRow__item__heading">
                 VOLUNTEERING
               </h2>
@@ -106,10 +106,7 @@ class Frontpage extends Component {
             </span>
           </div>
         </div>
-        <FrontPageGallery
-          invokeBackdrop={event => this.props.invoke(event)}
-          imgArr={this.props.imgArr}
-        />
+        <FrontPageGallery imgArr={this.props.imgArr} />
         <Sponsers />
       </Fragment>
     );

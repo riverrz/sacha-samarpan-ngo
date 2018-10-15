@@ -4,6 +4,8 @@ import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 import "./FrontPageGallery.css";
 import { Link } from "react-router-dom";
 import { Zoom } from "react-reveal";
+import { connect } from "react-redux";
+import { MODAL_VIDEO } from "../../store/ModalReducer/actionTypes";
 
 const frontPageGallery = props => {
   let images = props.imgArr.map((photo, id) => {
@@ -11,9 +13,8 @@ const frontPageGallery = props => {
       <GalleryItem
         imageName={photo}
         key={id}
-        invokeBackdrop={event => props.invokeBackdrop(event)}
-        id="in-frontGallery"
         isGridItem={true}
+        isFull={false}
       />
     );
   });
@@ -35,7 +36,7 @@ const frontPageGallery = props => {
             <div
               className="frontPageGallery__overlay"
               id="overlay"
-              onClick={props.invokeBackdrop}
+              onClick={props.modalVideo}
             />
           </div>
         </Zoom>
@@ -49,4 +50,13 @@ const frontPageGallery = props => {
   );
 };
 
-export default frontPageGallery;
+const mapDispatchToProps = dispatch => {
+  return {
+    modalVideo: () => dispatch({ type: MODAL_VIDEO })
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(frontPageGallery);

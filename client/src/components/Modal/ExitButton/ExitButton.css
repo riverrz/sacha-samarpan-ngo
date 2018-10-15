@@ -1,0 +1,16 @@
+.exitButton {
+  position: absolute;
+  top: 103%;
+  right: 2%;
+  font-size: 3rem;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  visibility: visible;
+  color: #eeeeee;
+}
+.exitButton > i {
+  font-size: 2rem;
+}

@@ -9,11 +9,13 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import authReducer from "./store/AuthReducer/reducer";
+import modalReducer from './store/ModalReducer/reducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  modal: modalReducer
 });
 
 const store = createStore(

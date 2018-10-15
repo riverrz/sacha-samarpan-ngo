@@ -1,142 +1,105 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actionTypes from "../../store/ModalReducer/actionTypes";
+import Popup from "./Popup/Popup";
+import Video from "./Video/Video";
+import ModalGallery from "./ModalGallery/ModalGallery";
+import Backdrop from "../../containers/Backdrop/Backdrop";
 import "./Modal.css";
-import Carousel from "../Carousel/Carousel";
+
 class Modal extends Component {
   state = {
-    marginTop: {
-      marginTop: null
-    }
+    frontPageImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
+    allImagesNames: [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg",
+      "13.jpg",
+      "14.jpg",
+      "15.jpg",
+      "16.jpg"
+    ]
   };
+
   componentWillMount() {
-    this.setState({
-      marginTop: {
-        marginTop: Math.round(window.pageYOffset) + 50 + "px"
-      }
-    });
-  }
-  componentDidMount() {
-    document.body.style.overflowY = "hidden";
-  }
-  componentWillUnmount() {
-    document.body.style.overflowY = "auto";
+    let visited = sessionStorage["alreadyVisited"];
+    if (!visited) {
+      this.props.modalPopup();
+      sessionStorage["alreadyVisited"] = true;
+    }
   }
   render() {
-    let content = null;
-    if (this.props.for === "gallery") {
-      const indexOfLink = this.props.image.indexOf("/images");
-      const relativeLink = buildImageNumber(
-        this.props.image.slice(indexOfLink + 8)
-      );
-      content = (
-        <div className="modal__container" style={this.state.marginTop}>
-          <button
-            className="modal__exitButton"
-            onClick={this.props.exitClicked}
-          >
-            <i className="fas fa-times" />
-          </button>
-          <Carousel
-            itemsArr={this.props.itemsArr}
-            autoPlay={false}
-            selectedItem={relativeLink}
+    let content;
+    switch (this.props.modalFor) {
+      case "popup":
+        content = (
+          <Popup
+            marginTop={this.state.marginTop}
+            exitClicked={this.props.modalClose}
           />
-        </div>
-      );
-    } else if (this.props.for === "popup") {
-      content = (
-        <div className="modal__popupContainer" style={this.state.marginTop}>
-          <img
-            src="/images/internship_banner.jpg"
-            alt="Internship Banner"
-            className="modal__banner"
+        );
+        break;
+      case "gallery":
+        content = (
+          <ModalGallery
+            marginTop={this.state.marginTop}
+            image={this.props.imageToLoad}
+            itemsArr={
+              this.props.isGalleryFull
+                ? this.state.allImagesNames
+                : this.state.frontPageImages
+            }
           />
-          <img src="/images/at.png" alt="At icon" className="modal__atIcon" />
-          <img
-            src={Logo}
-            alt="Saccha Samarpan Logo"
-            className="modal__logobanner"
-          />
-          <div className="modal__details">
-            <p className="modal__bold">
-              Internships are currently being offered to the interested
-              candidates
-            </p>
-            <p>
-              <span className="modal__iconContainer">
-                <img
-                  src="calendar.png"
-                  alt="Calendar"
-                  className="modal__icon"
-                />
-              </span>{" "}
-              Starting Date: 7th July 2018
-            </p>
-            <p>
-              <span className="modal__iconContainer">
-                <img src="document.png" alt="Project" className="modal__icon" />
-              </span>{" "}
-              Projects: Women Empowerment, Child Education
-            </p>
-            <p>
-              <span className="modal__iconContainer">
-                <img
-                  src="building.png"
-                  alt="Building"
-                  className="modal__icon"
-                />
-              </span>{" "}
-              Type of Work: On field Work
-            </p>
-            <Link
-              exact
-              to="/internship"
-              className="modal__applyLink"
-              onClick={this.props.exitClicked}
-            >
-              Apply Now
-            </Link>
-          </div>
-          <button
-            className="modal__exitButton modal__exitButton--bottom"
-            onClick={this.props.exitClicked}
-          >
-            <i className="fas fa-times" />
-          </button>
-        </div>
-      );
-    } else if (this.props.for === "video") {
-      content = (
-        <div className="modal__videoContainer" style={this.state.marginTop}>
-          <iframe
-            className="modal__video"
-            title="pvr"
-            frameBorder="0"
-            src="https://www.youtube.com/embed/MG7dW2gChOs"
-            allowFullScreen
-          />
-          <button
-            className="modal__exitButton  modal__exitButton--bottom"
-            onClick={this.props.exitClicked}
-          >
-            <i className="fas fa-times" />
-          </button>
-        </div>
-      );
+        );
+        break;
+      case "video":
+        content = <Video marginTop={this.state.marginTop} />;
+        break;
+      default:
+        content = null;
     }
-    return <Fragment>{content}</Fragment>;
+    let modal;
+    if (!this.props.modalFor) {
+      modal = null;
+      document.body.style.overflowY = "auto";
+    } else {
+      modal = (
+        <div className="modal__container">
+          <Backdrop />
+          {content}
+        </div>
+      );
+      document.body.style.overflowY = "hidden";
+    }
+    return modal;
   }
 }
 
-function buildImageNumber(str) {
-  let numStr = "";
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) {
-      numStr += str[i];
-    }
-  }
-  return numStr;
-}
+const mapStateToProps = state => {
+  return {
+    modalFor: state.modal.modalFor,
+    imageToLoad: state.modal.imageToLoad,
+    isGalleryFull: state.modal.isGalleryFull
+  };
+};
 
-export default Modal;
+const mapDispatchToProps = dispatch => {
+  return {
+    modalClose: () => dispatch({ type: actionTypes.MODAL_CLOSE }),
+    modalPopup: () => dispatch({ type: actionTypes.MODAL_POPUP })
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Modal);

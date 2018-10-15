@@ -7,7 +7,6 @@ import leftLogo from "./assets/Icons/charity-1.png";
 import rightLogo from "./assets/Icons/praying.png";
 import Frontpage from "./containers/Frontpage/Frontpage";
 import Importantlinks from "./components/Importantlinks/Importantlinks";
-import Backdrop from "./containers/Backdrop/Backdrop";
 import Fullgallery from "./containers/Fullgallery/Fullgallery";
 import Donate from "./components/Donate/Donate";
 import Internship from "./components/Internship/Internship";
@@ -22,14 +21,10 @@ import Dashboard from "./containers/Dashboard/Dashboard";
 import Login from "./components/UserAuth/Login/Login";
 import Register from "./components/UserAuth/Register/Register";
 import IndividualEvent from "./components/Event/IndividualEvent/IndividualEvent";
+import Modal from "./components/Modal/Modal";
 
 class App extends Component {
   state = {
-    viewPopUp: false,
-    backdropForGallery: false,
-    backdropForFrontGallery: false,
-    backdropForVideo: false,
-    imageToLoad: null,
     frontPageImages: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
     allImagesNames: [
       "1.jpg",
@@ -50,85 +45,7 @@ class App extends Component {
       "16.jpg"
     ]
   };
-  backdropRemover = () => {
-    this.setState({
-      backdropForGallery: false,
-      backdropForFrontGallery: false,
-      imageLinkToLoad: null,
-      viewPopUp: false,
-      backdropForVideo: false
-    });
-  };
-  backdropInvoker = event => {
-    if (event.target.id === "overlay") {
-      this.setState({
-        backdropForVideo: true
-      });
-    } else if (event.target.id === "in-gallery") {
-      this.setState({
-        backdropForGallery: true,
-        imageLinkToLoad: event.target.src
-      });
-    } else if (event.target.id === "in-frontGallery") {
-      this.setState({
-        backdropForFrontGallery: true,
-        imageLinkToLoad: event.target.src
-      });
-    }
-  };
-  componentWillMount() {
-    let visited = sessionStorage["alreadyVisited"];
-    if (visited) {
-      this.setState({
-        viewPopUp: false
-      });
-    } else {
-      this.setState({
-        viewPopUp: true
-      });
-      sessionStorage["alreadyVisited"] = true;
-    }
-  }
   render() {
-    let backdrop = null;
-    if (this.state.backdropForGallery) {
-      backdrop = (
-        <Backdrop
-          clicked={this.backdropRemover}
-          image={this.state.imageLinkToLoad}
-          exitClicked={this.backdropRemover}
-          for="gallery"
-          itemsArr={this.state.allImagesNames}
-        />
-      );
-    } else if (this.state.backdropForFrontGallery) {
-      backdrop = (
-        <Backdrop
-          clicked={this.backdropRemover}
-          image={this.state.imageLinkToLoad}
-          exitClicked={this.backdropRemover}
-          for="gallery"
-          itemsArr={this.state.allImagesNames.slice(0, 4)}
-        />
-      );
-    } else if (this.state.viewPopUp) {
-      backdrop = (
-        <Backdrop
-          clicked={this.backdropRemover}
-          image={this.state.imageLinkToLoad}
-          exitClicked={this.backdropRemover}
-          for="popup"
-        />
-      );
-    } else if (this.state.backdropForVideo) {
-      backdrop = (
-        <Backdrop
-          clicked={this.backdropRemover}
-          exitClicked={this.backdropRemover}
-          for="video"
-        />
-      );
-    }
     return (
       <div className="App">
         <div className="app__backSide">
@@ -149,7 +66,7 @@ class App extends Component {
         </div>
         <SideDrawer />
         <Navigation />
-        {backdrop}
+        <Modal />
         <AsideSocialBar />
         <Switch>
           <Route path="/about" component={AboutContainer} />
