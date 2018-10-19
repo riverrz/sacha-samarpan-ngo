@@ -15,7 +15,8 @@ class EventEdit extends Component {
     success: false,
     message: "",
     loading: false,
-    eventId: ""
+    eventId: "",
+    notFound: false
   };
   onChangeHandler = (event, field) => {
     this.setState({
@@ -98,14 +99,22 @@ class EventEdit extends Component {
     });
     try {
       const { data } = await axios.get(`/fetch/event/${this.state.eventId}`);
-      this.setState({
-        loading: false,
-        date: data.date.toIsoString().substr(0, 10),
-        timings: data.timings,
-        description: data.description,
-        subject: data.subject,
-        venue: data.venue
-      });
+      if (data.error) {
+        this.setState({
+          loading: false,
+          notFound: true
+        });
+      } else {
+        this.setState({
+          loading: false,
+          error: false,
+          date: new Date(data.date).toISOString().substr(0, 10),
+          timings: data.timings,
+          description: data.description,
+          subject: data.subject,
+          venue: data.venue
+        });
+      }
     } catch (err) {
       this.setState({
         loading: false,
@@ -123,17 +132,28 @@ class EventEdit extends Component {
     } else if (this.state.loading) {
       content = <MDSpinner size="45" />;
     } else if (!this.state.subject) {
+      let notFound;
+      if (this.state.notFound) {
+        notFound = (
+          <h2 style={{ textAlign: "center", fontSize: "2rem" }}>
+            No event found
+          </h2>
+        );
+      }
       content = (
-        <form onSubmit={this.getEventFromId}>
-          <input
-            type="text"
-            name="eventId"
-            placeholder="Enter an event's id"
-            required
-            onChange={event => this.onChangeHandler(event, "eventId")}
-          />
-          <button className="eventEdit__submitBtn">Submit</button>
-        </form>
+        <Fragment>
+          {notFound}
+          <form onSubmit={this.getEventFromId}>
+            <input
+              type="text"
+              name="eventId"
+              placeholder="Enter an event's id"
+              required
+              onChange={event => this.onChangeHandler(event, "eventId")}
+            />
+            <button className="eventEdit__submitBtn">Submit</button>
+          </form>
+        </Fragment>
       );
     } else {
       content = (
@@ -145,12 +165,14 @@ class EventEdit extends Component {
               name="date"
               type="date"
               required
+              value={this.state.date}
               onChange={event => this.onChangeHandler(event, "date")}
             />
             <input
               className="eventEdit__input"
               name="timings"
               type="text"
+              value={this.state.timings}
               onChange={event => this.onChangeHandler(event, "timings")}
               placeholder="Timings"
             />
@@ -159,6 +181,7 @@ class EventEdit extends Component {
               name="venue"
               type="text"
               required
+              value={this.state.venue}
               onChange={event => this.onChangeHandler(event, "venue")}
               placeholder="Venue"
             />
@@ -167,6 +190,7 @@ class EventEdit extends Component {
               name="subject"
               type="text"
               required
+              value={this.state.subject}
               onChange={event => this.onChangeHandler(event, "subject")}
               placeholder="Subject"
             />
@@ -174,6 +198,7 @@ class EventEdit extends Component {
               name="description"
               type="text"
               required
+              value={this.state.description}
               onChange={event => this.onChangeHandler(event, "description")}
               className="eventEdit__textArea"
             />

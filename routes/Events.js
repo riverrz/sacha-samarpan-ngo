@@ -86,7 +86,7 @@ module.exports = app => {
 
   app.get("/fetch/event/:eventId", async (req, res) => {
     if (!ObjectId.isValid(req.params.eventId)) {
-      return res.status(404).json({
+      return res.json({
         error: "An event with this id cannot be found"
       });
     }
