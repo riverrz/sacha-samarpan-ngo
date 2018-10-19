@@ -23,15 +23,10 @@ class IndividualEvent extends Component {
       const { data } = await axios.get(
         `/fetch/event/${this.props.match.params.eventId}`
       );
-      if (!data) {
+      if (data.error) {
         this.setState({
           loading: false,
           notFound: true
-        });
-      } else if (data.error) {
-        this.setState({
-          loading: false,
-          error: true
         });
       } else {
         this.setState({
