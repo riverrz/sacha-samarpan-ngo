@@ -1,0 +1,26 @@
+.eventDelete__form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+  align-items: center;
+}
+.eventDelete__input {
+  border: 1px solid dodgerblue;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-style: inherit;
+  outline: none;
+  margin-bottom: 2rem;
+}
+.eventDelete__submitBtn {
+  border: 1px solid dodgerblue;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  color: #fff;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

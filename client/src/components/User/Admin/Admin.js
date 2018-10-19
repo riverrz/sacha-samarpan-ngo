@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Admin.css";
 import EventCreate from "./EventPanel/EventCreate/EventCreate";
 import EventEdit from "./EventPanel/EventEdit/EventEdit";
+import EventDelete from "./EventPanel/EventDelete/EventDelete";
 import { withRouter } from "react-router-dom";
 
 class Admin extends Component {
@@ -19,6 +20,8 @@ class Admin extends Component {
       panel = <EventCreate />;
     } else if (this.state.panel === "EventEdit") {
       panel = <EventEdit />;
+    } else if (this.state.panel === "EventDelete") {
+      panel = <EventDelete />;
     }
     return (
       <div className="admin__container">
@@ -36,8 +39,11 @@ class Admin extends Component {
           >
             Edit an event
           </button>
-          <button className="admin__switch" onClick={this.eventHandler}>
-            Add an event
+          <button
+            className="admin__switch"
+            onClick={() => this.eventHandler("EventDelete")}
+          >
+            Delete an event
           </button>
         </div>
         {panel}
