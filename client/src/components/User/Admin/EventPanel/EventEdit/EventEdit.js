@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
-import "./EventCreate.css";
+import "./EventEdit.css";
 import axios from "axios";
 import MDSpinner from "react-md-spinner";
 
-class EventCreate extends Component {
+class EventEdit extends Component {
   state = {
     date: null,
     timings: "",
@@ -14,7 +14,8 @@ class EventCreate extends Component {
     error: false,
     success: false,
     message: "",
-    loading: false
+    loading: false,
+    eventId: ""
   };
   onChangeHandler = (event, field) => {
     this.setState({
@@ -90,6 +91,29 @@ class EventCreate extends Component {
       });
     }, 1000);
   }
+  getEventFromId = async event => {
+    event.preventDefault();
+    this.setState({
+      loading: true
+    });
+    try {
+      const { data } = await axios.get(`/fetch/event/${this.state.eventId}`);
+      this.setState({
+        loading: false,
+        date: data.date.toIsoString().substr(0, 10),
+        timings: data.timings,
+        description: data.description,
+        subject: data.subject,
+        venue: data.venue
+      });
+    } catch (err) {
+      this.setState({
+        loading: false,
+        error: true,
+        message: "Error in connecting with server"
+      });
+    }
+  };
   render() {
     let content;
     if (this.state.success) {
@@ -98,27 +122,40 @@ class EventCreate extends Component {
       content = <h2 style={{ color: "red" }}>{this.state.message}</h2>;
     } else if (this.state.loading) {
       content = <MDSpinner size="45" />;
+    } else if (!this.state.subject) {
+      content = (
+        <form onSubmit={this.getEventFromId}>
+          <input
+            type="text"
+            name="eventId"
+            placeholder="Enter an event's id"
+            required
+            onChange={event => this.onChangeHandler(event, "eventId")}
+          />
+          <button className="eventEdit__submitBtn">Submit</button>
+        </form>
+      );
     } else {
       content = (
         <Fragment>
-          <h1>Enter the following fields </h1>
-          <form className="eventCreate__form" onSubmit={this.formSubmit}>
+          <h1>Update the following fields </h1>
+          <form className="eventEdit__form" onSubmit={this.formSubmit}>
             <input
-              className="eventCreate__input"
+              className="eventEdit__input"
               name="date"
               type="date"
               required
               onChange={event => this.onChangeHandler(event, "date")}
             />
             <input
-              className="eventCreate__input"
+              className="eventEdit__input"
               name="timings"
               type="text"
               onChange={event => this.onChangeHandler(event, "timings")}
               placeholder="Timings"
             />
             <input
-              className="eventCreate__input"
+              className="eventEdit__input"
               name="venue"
               type="text"
               required
@@ -126,7 +163,7 @@ class EventCreate extends Component {
               placeholder="Venue"
             />
             <input
-              className="eventCreate__input"
+              className="eventEdit__input"
               name="subject"
               type="text"
               required
@@ -138,16 +175,16 @@ class EventCreate extends Component {
               type="text"
               required
               onChange={event => this.onChangeHandler(event, "description")}
-              className="eventCreate__textArea"
+              className="eventEdit__textArea"
             />
             <input
-              className="eventCreate__input"
+              className="eventEdit__input"
               name="image"
               type="file"
               required
               onChange={this.fileHandler}
             />
-            <button className="eventCreate__submitBtn">Submit</button>
+            <button className="eventEdit__submitBtn">Submit</button>
           </form>
         </Fragment>
       );
@@ -156,4 +193,4 @@ class EventCreate extends Component {
   }
 }
 
-export default EventCreate;
+export default EventEdit;

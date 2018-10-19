@@ -1,31 +1,40 @@
 import React, { Component } from "react";
 import "./Admin.css";
 import EventCreate from "./EventPanel/EventCreate/EventCreate";
+import EventEdit from "./EventPanel/EventEdit/EventEdit";
 import { withRouter } from "react-router-dom";
 
 class Admin extends Component {
   state = {
     panel: ""
   };
-  eventHandler = () => {
+  eventHandler = panel => {
     this.setState({
-      panel: "Event"
+      panel
     });
   };
   render() {
     let panel = null;
-    if (this.state.panel === "Event") {
+    if (this.state.panel === "EventCreate") {
       panel = <EventCreate />;
+    } else if (this.state.panel === "EventEdit") {
+      panel = <EventEdit />;
     }
     return (
       <div className="admin__container">
         <h3>Welcome Admin</h3>
         <div className="admin__switch__container">
-          <button className="admin__switch" onClick={this.eventHandler}>
+          <button
+            className="admin__switch"
+            onClick={() => this.eventHandler("EventCreate")}
+          >
             Add an event
           </button>
-          <button className="admin__switch" onClick={this.eventHandler}>
-            Add an event
+          <button
+            className="admin__switch"
+            onClick={() => this.eventHandler("EventEdit")}
+          >
+            Edit an event
           </button>
           <button className="admin__switch" onClick={this.eventHandler}>
             Add an event

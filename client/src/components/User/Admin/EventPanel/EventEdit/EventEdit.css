@@ -1,4 +1,4 @@
-.eventCreate__form {
+.eventEdit__form {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -6,18 +6,18 @@
   min-height: 400px;
   margin: 30px 0;
 }
-.eventCreate__form > :not(.eventCreate__submitBtn) {
+.eventEdit__form > :not(.eventEdit__submitBtn) {
   width: 20%;
 }
-.eventCreate__input {
+.eventEdit__input {
   padding: 10px;
   font-size: 1.6rem;
   color: #333;
 }
-.eventCreate__textArea {
+.eventEdit__textArea {
   min-height: 60px;
 }
-.eventCreate__submitBtn {
+.eventEdit__submitBtn {
   border: 1px solid dodgerblue;
   border-radius: 20px;
   background-color: dodgerblue;
