@@ -6,6 +6,9 @@
   min-height: 400px;
   margin: 30px 0;
 }
+.eventEdit__form--small {
+  min-height: 100px;
+}
 .eventEdit__form > :not(.eventEdit__submitBtn) {
   width: 20%;
 }

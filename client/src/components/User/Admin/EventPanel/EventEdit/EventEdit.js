@@ -147,12 +147,16 @@ class EventEdit extends Component {
       content = (
         <Fragment>
           {notFound}
-          <form onSubmit={this.getEventFromId}>
+          <form
+            onSubmit={this.getEventFromId}
+            className="eventEdit__form eventEdit__form--small"
+          >
             <input
               type="text"
               name="eventId"
               placeholder="Enter an event's id"
               required
+              className="eventEdit__input"
               onChange={event => this.onChangeHandler(event, "eventId")}
             />
             <button className="eventEdit__submitBtn">Submit</button>
