@@ -39,7 +39,7 @@ class EventPanel extends Component {
       this.setState({
         loading: true
       });
-      const { data } = await axios.post("/events", formData, {
+      const { data } = await axios.post("/event", formData, {
         headers: {
           authorization: localStorage.getItem("token"),
           "content-type": "multipart/form-data"
@@ -89,6 +89,9 @@ class EventPanel extends Component {
         loading: false
       });
     }, 1000);
+  }
+  async componentDidMount() {
+    
   }
   render() {
     let content;

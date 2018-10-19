@@ -20,7 +20,7 @@ class IndividualEvent extends Component {
   async componentDidMount() {
     try {
       const { data } = await axios.get(
-        `/events/fetch/${this.props.match.params.eventId}`
+        `/fetch/event/${this.props.match.params.eventId}`
       );
       this.setState({
         loading: false,
@@ -51,9 +51,7 @@ class IndividualEvent extends Component {
             />
           </div>
           <div className="individualEvent__detailsContainer">
-            <h1 className="individualEvent__heading">
-              {this.state.subject}
-            </h1>
+            <h1 className="individualEvent__heading">{this.state.subject}</h1>
             <ul className="individualEvent__list">
               <li className="individualEvent__list__item">
                 <strong>Date: </strong>

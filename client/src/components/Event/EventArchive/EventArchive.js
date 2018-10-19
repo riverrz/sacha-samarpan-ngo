@@ -13,7 +13,7 @@ class EventArchive extends Component {
   };
   async componentDidMount() {
     try {
-      const { data } = await axios.get("/events/fetch/archive");
+      const { data } = await axios.get("/fetch/event/archive");
       this.setState({
         events: data
       });

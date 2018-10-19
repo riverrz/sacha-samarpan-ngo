@@ -29,7 +29,7 @@ const upload = multer({
 });
 
 module.exports = app => {
-  app.post("/events", requireAuth, upload.single("image"), async (req, res) => {
+  app.post("/event", requireAuth, upload.single("image"), async (req, res) => {
     if (!req.user.isAdmin) {
       deleteUploadFile(req.file.filename);
       return res.json({
@@ -62,22 +62,28 @@ module.exports = app => {
     }
   });
 
-  app.get("/events/fetch/archive", async (req, res) => {
+  app.get("/fetch/event/archive", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $lt: currentDate } }).sort({date: -1});
+    const results = await Event.find({ date: { $lt: currentDate } }).sort({
+      date: -1
+    });
     res.json(results);
   });
-  app.get("/events/fetch/upcoming", async (req, res) => {
+  app.get("/fetch/event/upcoming", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $gte: currentDate } }).sort({date: -1});
+    const results = await Event.find({ date: { $gte: currentDate } }).sort({
+      date: -1
+    });
     res.json(results);
   });
-  app.get("/events/fetch/overview", async (req, res) => {
-    const results = await Event.find({}).limit(10).sort({date: -1});
+  app.get("/fetch/event/overview", async (req, res) => {
+    const results = await Event.find({})
+      .limit(10)
+      .sort({ date: -1 });
     res.json(results);
   });
 
-  app.get("/events/fetch/:eventId", async (req, res) => {
+  app.get("/fetch/event/:eventId", async (req, res) => {
     const result = await Event.findById(req.params.eventId);
     res.json(result);
   });

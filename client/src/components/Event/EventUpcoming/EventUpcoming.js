@@ -13,7 +13,7 @@ class EventUpcoming extends Component {
   };
   async componentDidMount() {
     try {
-      const { data } = await axios.get("/events/fetch/upcoming");
+      const { data } = await axios.get("/fetch/event/upcoming");
       this.setState({
         events: data
       });

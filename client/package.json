@@ -21,10 +21,10 @@
     "/user/register": {
       "target": "http://localhost:5000"
     },
-    "/events": {
+    "/event": {
       "target": "http://localhost:5000"
     },
-    "/events/fetch/*": {
+    "/fetch/event/*": {
       "target": "http://localhost:5000"
     },
     "/upload/*": {

@@ -12,7 +12,7 @@ class EventOverview extends Component {
   };
   async componentDidMount() {
     try {
-      const { data } = await axios.get("/events/fetch/overview");
+      const { data } = await axios.get("/fetch/event/overview");
       this.setState({
         events: data
       });
