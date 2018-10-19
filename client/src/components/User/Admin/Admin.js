@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Admin.css";
-import EventPanel from "./EventPanel/EventPanel";
+import EventCreate from "./EventPanel/EventCreate/EventCreate";
 import { withRouter } from "react-router-dom";
 
 class Admin extends Component {
@@ -15,7 +15,7 @@ class Admin extends Component {
   render() {
     let panel = null;
     if (this.state.panel === "Event") {
-      panel = <EventPanel />;
+      panel = <EventCreate />;
     }
     return (
       <div className="admin__container">

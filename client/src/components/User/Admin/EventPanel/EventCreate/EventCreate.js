@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./EventPanel.css";
+import "./EventCreate.css";
 import axios from "axios";
 import MDSpinner from "react-md-spinner";
 
@@ -89,9 +89,6 @@ class EventPanel extends Component {
         loading: false
       });
     }, 1000);
-  }
-  async componentDidMount() {
-    
   }
   render() {
     let content;
