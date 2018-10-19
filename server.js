@@ -3,6 +3,8 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const morgan = require("morgan");
+var winston = require("./config/winston");
 
 // Importing Routes
 const userRoutes = require("./routes/User");
@@ -25,6 +27,7 @@ app.use("/uploads", express.static(__dirname + "/../uploads")); // for any route
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan("combined", { stream: winston.stream }));
 
 memberRoutes(app);
 internRoutes(app);
