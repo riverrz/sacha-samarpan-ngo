@@ -41,12 +41,16 @@ class EventEdit extends Component {
       this.setState({
         loading: true
       });
-      const { data } = await axios.post("/event", formData, {
-        headers: {
-          authorization: localStorage.getItem("token"),
-          "content-type": "multipart/form-data"
+      const { data } = await axios.patch(
+        `/event/${this.state.eventId}`,
+        formData,
+        {
+          headers: {
+            authorization: localStorage.getItem("token"),
+            "content-type": "multipart/form-data"
+          }
         }
-      });
+      );
       if (data.status === "Error") {
         this.setState(
           {
@@ -206,7 +210,6 @@ class EventEdit extends Component {
               className="eventEdit__input"
               name="image"
               type="file"
-              required
               onChange={this.fileHandler}
             />
             <button className="eventEdit__submitBtn">Submit</button>

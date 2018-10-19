@@ -62,7 +62,53 @@ module.exports = app => {
       });
     }
   });
+  app.patch(
+    "/event/:eventId",
+    requireAuth,
+    upload.single("image"),
+    async (req, res) => {
+      if (!req.user.isAdmin) {
+        deleteUploadFile(req.file.filename);
+        return res.json({ status: "Error", message: "You must be an admin" });
+      }
+      if (!ObjectId.isValid(req.params.eventId)) {
+        deleteUploadFile(req.file.filename);
+        return res.json({
+          error: "An event with this id cannot be found"
+        });
+      }
+      try {
+        const updates = {
+          ...req.body,
+          image: req.file ? req.file.filename : null
+        };
 
+        // If no image uploaded remove image key from updates
+        if (!req.file) {
+          delete updates.image;
+        }
+        const updatedEvent = await Event.findByIdAndUpdate(
+          req.params.eventId,
+          updates
+        );
+        if (req.file) {
+          deleteUploadFile(updatedEvent.image);
+        }
+        res.json({
+          status: "Success",
+          message: "Successfully updated the event"
+        });
+      } catch (err) {
+        if (req.file) {
+          deleteUploadFile(req.file.filename);
+        }
+        res.json({
+          status: "Error",
+          message: "There was a problem uploading the event"
+        });
+      }
+    }
+  );
   app.get("/fetch/event/archive", async (req, res) => {
     const currentDate = new Date();
     const results = await Event.find({ date: { $lt: currentDate } }).sort({
