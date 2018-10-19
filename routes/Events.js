@@ -2,6 +2,7 @@ const multer = require("multer");
 const Event = require("../Models/Event");
 const { deleteUploadFile } = require("../utilities/functions");
 const { requireLogin, requireAuth } = require("../middlewares/middlewares");
+const ObjectId = require("mongoose").Types.ObjectId;
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -84,6 +85,11 @@ module.exports = app => {
   });
 
   app.get("/fetch/event/:eventId", async (req, res) => {
+    if (!ObjectId.isValid(req.params.eventId)) {
+      return res.status(404).json({
+        error: "An event with this id cannot be found"
+      });
+    }
     const result = await Event.findById(req.params.eventId);
     res.json(result);
   });

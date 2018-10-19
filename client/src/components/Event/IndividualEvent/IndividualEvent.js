@@ -15,18 +15,31 @@ class IndividualEvent extends Component {
     image: "",
     description: "",
     loading: true,
-    error: false
+    error: false,
+    notFound: false
   };
   async componentDidMount() {
     try {
       const { data } = await axios.get(
         `/fetch/event/${this.props.match.params.eventId}`
       );
-      this.setState({
-        loading: false,
-        ...data,
-        date: new Date(data.date).toDateString()
-      });
+      if (!data) {
+        this.setState({
+          loading: false,
+          notFound: true
+        });
+      } else if (data.error) {
+        this.setState({
+          loading: false,
+          error: true
+        });
+      } else {
+        this.setState({
+          loading: false,
+          ...data,
+          date: new Date(data.date).toDateString()
+        });
+      }
     } catch (err) {
       this.setState({
         error: true,
@@ -40,6 +53,12 @@ class IndividualEvent extends Component {
       content = <MDSpinner size="45" />;
     } else if (this.state.error) {
       content = <Error />;
+    } else if (this.state.notFound) {
+      content = (
+        <h2 style={{ textAlign: "center", fontSize: "2rem" }}>
+          No Event found with this id
+        </h2>
+      );
     } else {
       content = (
         <div className="individualEvent__container">
