@@ -69,7 +69,10 @@ module.exports = app => {
     async (req, res) => {
       if (!req.user.isAdmin) {
         deleteUploadFile(req.file.filename);
-        return res.json({ status: "Error", message: "You must be an admin" });
+        return res.json({
+          status: "Error",
+          message: "You must be an admin"
+        });
       }
       if (!ObjectId.isValid(req.params.eventId)) {
         deleteUploadFile(req.file.filename);
@@ -91,6 +94,12 @@ module.exports = app => {
           req.params.eventId,
           updates
         );
+        if (!updatedEvent) {
+          return res.json({
+            status: "Error",
+            message: "Couldn't find an event with that id"
+          });
+        }
         if (req.file) {
           deleteUploadFile(updatedEvent.image);
         }
@@ -109,16 +118,60 @@ module.exports = app => {
       }
     }
   );
+
+  app.delete("/event/:eventId", requireAuth, async (req, res) => {
+    if (!req.user.isAdmin) {
+      return res.json({
+        status: "Error",
+        message: "You must be an admin"
+      });
+    }
+    if (!ObjectId.isValid(req.params.eventId)) {
+      deleteUploadFile(req.file.filename);
+      return res.json({
+        error: "An event with this id cannot be found"
+      });
+    }
+    try {
+      const deletedUser = await Event.findByIdAndDelete(req.params.eventId);
+      if (!deletedUser) {
+        return res.json({
+          status: "Error",
+          message: "Couldnt find an event with the given id"
+        });
+      }
+      deleteUploadFile(deletedUser.image);
+      res.json({
+        status: "Success",
+        message: "Successfully deleted the event"
+      });
+    } catch (error) {
+      res.json({
+        status: "Error",
+        message: "Some error occurred while deleting the event"
+      });
+    }
+  });
+
+  // Fetch routes
   app.get("/fetch/event/archive", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $lt: currentDate } }).sort({
+    const results = await Event.find({
+      date: {
+        $lt: currentDate
+      }
+    }).sort({
       date: -1
     });
     res.json(results);
   });
   app.get("/fetch/event/upcoming", async (req, res) => {
     const currentDate = new Date();
-    const results = await Event.find({ date: { $gte: currentDate } }).sort({
+    const results = await Event.find({
+      date: {
+        $gte: currentDate
+      }
+    }).sort({
       date: -1
     });
     res.json(results);

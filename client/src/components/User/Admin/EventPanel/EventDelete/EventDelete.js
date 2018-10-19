@@ -13,35 +13,58 @@ class EventDelete extends Component {
   };
   onChangeHandler = event => {
     this.setState({
-      eventId: event.target.id
+      eventId: event.target.value
     });
   };
+  resetHandler() {
+    setTimeout(() => {
+      this.setState({
+        eventId: null,
+        error: false,
+        success: false,
+        message: "",
+        loading: false
+      });
+    }, 1000);
+  }
   handleSubmit = async event => {
     event.preventDefault();
     this.setState({
       loading: true
     });
     try {
-      const { data } = await axios.delete(`/event/${this.state.eventId}`);
-      if (data.error) {
-        this.setState({
-          loading: false,
-          error: true,
-          message: data.message
-        });
-      } else {
-        this.setState({
-          loading: false,
-          success: true,
-          message: data.message
-        });
-      }
-    } catch (error) {
-      this.setState({
-        loading: false,
-        error: true,
-        message: "Error connecting to the server"
+      const { data } = await axios.delete(`/event/${this.state.eventId}`, {
+        headers: {
+          authorization: localStorage.getItem("token")
+        }
       });
+      if (data.status === "Error") {
+        this.setState(
+          {
+            error: true,
+            message: data.message,
+            loading: false
+          },
+          () => this.resetHandler()
+        );
+      } else if (data.status === "Success") {
+        this.setState(
+          {
+            success: true,
+            message: data.message,
+            loading: false
+          },
+          () => this.resetHandler()
+        );
+      }
+    } catch (err) {
+      this.setState(
+        {
+          error: true,
+          message: "Error in connecting with server"
+        },
+        () => this.resetHandler()
+      );
     }
   };
   render() {
