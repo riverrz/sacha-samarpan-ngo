@@ -19,7 +19,7 @@ const event = props => (
       </li>
       <li className="event__list__item">
         <span className="event__list__title">Subject: </span>
-        <span className="event__list__detail">{props.description}</span>
+        <span className="event__list__detail">{props.subject}</span>
       </li>
     </ul>
   </Fade>

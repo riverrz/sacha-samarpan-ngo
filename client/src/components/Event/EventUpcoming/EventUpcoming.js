@@ -37,7 +37,7 @@ class EventUpcoming extends Component {
             date={new Date(event.date).toDateString()}
             venue={event.venue}
             timings={event.timings}
-            description={event.description}
+            subject={event.subject}
             key={id}
           />
         );
