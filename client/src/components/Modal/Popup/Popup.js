@@ -22,12 +22,12 @@ const popup = props => {
         <p className="popup__bold">
           Internships are currently being offered to the interested candidates
         </p>
-        <p>
+        {/* <p>
           <span className="popup__iconContainer">
             <img src="calendar.png" alt="Calendar" className="popup__icon" />
           </span>{" "}
           Starting Date: 7th July 2018
-        </p>
+        </p> */}
         <p>
           <span className="popup__iconContainer">
             <img src="document.png" alt="Project" className="popup__icon" />
