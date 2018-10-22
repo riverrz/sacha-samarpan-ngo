@@ -31,6 +31,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
+}
+
+/*Media Query*/
+
+@media (max-width: 600px) {
+  .navigation__user {
+    display: none;
+  }
 }
