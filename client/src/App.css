@@ -91,6 +91,22 @@ a {
   padding: 5rem 0;
   text-align: center;
 }
+
+/*Router Transitions*/
+.fade-enter {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 350ms linear;
+}
+.fade-exit {
+  opacity: 0;
+  display: none;
+}
+
 /*Media Queries*/
 
 @media (max-width: 1294px) {

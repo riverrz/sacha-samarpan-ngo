@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
@@ -22,6 +22,7 @@ import Login from "./components/UserAuth/Login/Login";
 import Register from "./components/UserAuth/Register/Register";
 import IndividualEvent from "./components/Event/IndividualEvent/IndividualEvent";
 import Modal from "./components/Modal/Modal";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class App extends Component {
   state = {
@@ -68,42 +69,51 @@ class App extends Component {
         <Navigation />
         <Modal />
         <AsideSocialBar />
-        <Switch>
-          <Route path="/about" component={AboutContainer} />
-          <Route path="/events" component={EventContainer} />
+        <TransitionGroup>
+          <CSSTransition
+            timeout={400}
+            classNames="fade"
+            key={this.props.location.key}
+            unmountOnExit={true}
+          >
+            <Switch location={this.props.location}>
+              <Route path="/about" component={AboutContainer} />
+              <Route path="/events" component={EventContainer} />
 
-          <Route path="/important-links" component={Importantlinks} />
-          <Route
-            path="/full-gallery"
-            exact
-            render={() => (
-              <Fullgallery invoke={event => this.backdropInvoker(event)} />
-            )}
-          />
-          <Route path="/donate" component={Donate} />
-          <Route path="/internship" component={Internship} />
-          <Route path="/registration" component={Registration} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/sponser" component={Sponser} />
-          <Route path="/user/login" component={Login} />
-          <Route path="/user/register" component={Register} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/event/:eventId" component={IndividualEvent} />
-
-          <Route
-            path="/"
-            render={props => (
-              <Frontpage
-                imgArr={this.state.frontPageImages}
-                invoke={event => this.backdropInvoker(event)}
-                {...props}
+              <Route path="/important-links" component={Importantlinks} />
+              <Route
+                path="/full-gallery"
+                exact
+                render={() => (
+                  <Fullgallery invoke={event => this.backdropInvoker(event)} />
+                )}
               />
-            )}
-          />
-        </Switch>
+              <Route path="/donate" component={Donate} />
+              <Route path="/internship" component={Internship} />
+              <Route path="/registration" component={Registration} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/sponser" component={Sponser} />
+              <Route path="/user/login" component={Login} />
+              <Route path="/user/register" component={Register} />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/event/:eventId" component={IndividualEvent} />
+
+              <Route
+                path="/"
+                render={props => (
+                  <Frontpage
+                    imgArr={this.state.frontPageImages}
+                    invoke={event => this.backdropInvoker(event)}
+                    {...props}
+                  />
+                )}
+              />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
         <Footer />
       </div>
     );
   }
 }
-export default App;
+export default withRouter(App);
