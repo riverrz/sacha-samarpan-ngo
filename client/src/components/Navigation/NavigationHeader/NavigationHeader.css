@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-/*Media Query*/
+/*Media query*/
 
 @media (max-width: 600px) {
   .navigation__user {
