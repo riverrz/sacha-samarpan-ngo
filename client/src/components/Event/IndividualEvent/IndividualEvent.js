@@ -4,6 +4,20 @@ import axios from "axios";
 import WhiteContainer from "../../../containers/WhiteContainer/WhiteContainer";
 import MDSpinner from "react-md-spinner";
 import Error from "../../Error/Error";
+import { Carousel } from "react-responsive-carousel";
+
+const settings = {
+  showStatus: false,
+  infiniteLoop: true,
+  showThumbs: false,
+  autoPlay: true,
+  stopOnHover: false,
+  interval: 12000,
+  showIndicators: false,
+  useKeyboardArrows: true,
+  swipeable: true,
+  width: window.innerWidth > 600 ? "50vw" : "90vw"
+};
 
 class IndividualEvent extends Component {
   state = {
@@ -57,13 +71,15 @@ class IndividualEvent extends Component {
     } else {
       content = (
         <div className="individualEvent__container">
-          <div className="individualEvent__imgContainer">
-            <img
-              src={`/uploads/${this.state.image}`}
-              alt="Event"
-              className="individualEvent__img"
-            />
-          </div>
+          <Carousel {...settings}>
+            <div className="individualEvent__imgContainer">
+              <img
+                src={`/uploads/${this.state.image}`}
+                alt="Event"
+                className="individualEvent__img"
+              />
+            </div>
+          </Carousel>
           <div className="individualEvent__detailsContainer">
             <h1 className="individualEvent__heading">{this.state.subject}</h1>
             <ul className="individualEvent__list">
