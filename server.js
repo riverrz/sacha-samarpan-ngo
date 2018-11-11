@@ -4,7 +4,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-var winston = require("./config/winston");
+const winston = require("./config/winston");
+const helmet = require("helmet");
 
 // Importing Routes
 const userRoutes = require("./routes/User");
@@ -23,6 +24,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 mongoose.connect(mongoURI);
+app.use(helmet());
 app.use("/uploads", express.static(__dirname + "/../uploads")); // for any route containing /uploads look for static file in this folder
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(bodyParser.json());
