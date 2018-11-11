@@ -9,9 +9,12 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import authReducer from "./store/AuthReducer/reducer";
-import modalReducer from './store/ModalReducer/reducer';
+import modalReducer from "./store/ModalReducer/reducer";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+let composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+if (process.env.NODE_ENV === "production") {
+  composeEnhancers = compose;
+}
 
 const rootReducer = combineReducers({
   auth: authReducer,
