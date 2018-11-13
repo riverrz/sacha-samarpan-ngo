@@ -27,59 +27,56 @@ const upload = multer({
     fileSize: 1024 * 1024 * 5
   },
   fileFilter
-});
+}).single("image");
 
 module.exports = app => {
-  app.post("/event", requireAuth, upload.single("image"), async (req, res) => {
+  app.post("/event", requireAuth, async (req, res) => {
     if (!req.user.isAdmin) {
-      deleteUploadFile(req.file.filename);
       return res.json({
         status: "Error",
         message: "You must be an admin"
       });
     }
-    if (!req.file) {
+    upload(req, res, async err => {
+      if (err) {
+        res.json({
+          status: "Error",
+          message: "Error in uploading the image"
+        });
+      } else {
+        try {
+          const newEvent = new Event({
+            ...req.body,
+            image: req.file.filename
+          });
+          await newEvent.save();
+          res.json({
+            status: "Success",
+            message: "Successfully uploaded the event"
+          });
+        } catch (err) {
+          deleteUploadFile(req.file.filename);
+          res.json({
+            status: "Error",
+            message: "There was a problem uploading the event"
+          });
+        }
+      }
+    });
+  });
+  app.patch("/event/:eventId", requireAuth, async (req, res) => {
+    if (!req.user.isAdmin) {
       return res.json({
         status: "Error",
-        message: "Error in uploading the image"
+        message: "You must be an admin"
       });
     }
-    try {
-      const newEvent = new Event({
-        ...req.body,
-        image: req.file.filename
-      });
-      await newEvent.save();
-      res.json({
-        status: "Success",
-        message: "Successfully uploaded the event"
-      });
-    } catch (err) {
-      deleteUploadFile(req.file.filename);
-      res.json({
-        status: "Error",
-        message: "There was a problem uploading the event"
+    if (!ObjectId.isValid(req.params.eventId)) {
+      return res.json({
+        error: "An event with this id cannot be found"
       });
     }
-  });
-  app.patch(
-    "/event/:eventId",
-    requireAuth,
-    upload.single("image"),
-    async (req, res) => {
-      if (!req.user.isAdmin) {
-        deleteUploadFile(req.file.filename);
-        return res.json({
-          status: "Error",
-          message: "You must be an admin"
-        });
-      }
-      if (!ObjectId.isValid(req.params.eventId)) {
-        deleteUploadFile(req.file.filename);
-        return res.json({
-          error: "An event with this id cannot be found"
-        });
-      }
+    upload(req, res, async err => {
       try {
         const updates = {
           ...req.body,
@@ -87,7 +84,7 @@ module.exports = app => {
         };
 
         // If no image uploaded remove image key from updates
-        if (!req.file) {
+        if (err) {
           delete updates.image;
         }
         const updatedEvent = await Event.findByIdAndUpdate(
@@ -116,8 +113,8 @@ module.exports = app => {
           message: "There was a problem uploading the event"
         });
       }
-    }
-  );
+    });
+  });
 
   app.delete("/event/:eventId", requireAuth, async (req, res) => {
     if (!req.user.isAdmin) {
