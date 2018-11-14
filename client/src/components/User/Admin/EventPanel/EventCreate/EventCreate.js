@@ -22,14 +22,19 @@ class EventCreate extends Component {
     });
   };
   fileHandler = event => {
+    const imageArr = Object.keys(event.target.files).map(key => {
+      return event.target.files[key];
+    });
     this.setState({
-      image: event.target.files[0]
+      image: imageArr
     });
   };
   formSubmit = async event => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append("image", this.state.image);
+    this.state.image.forEach(img => {
+      formData.append("image", img);
+    });
     formData.append("date", this.state.date);
     formData.append("venue", this.state.venue);
     formData.append("subject", this.state.subject);
@@ -145,6 +150,7 @@ class EventCreate extends Component {
               name="image"
               type="file"
               required
+              multiple
               onChange={this.fileHandler}
             />
             <button className="eventCreate__submitBtn">Submit</button>

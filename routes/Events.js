@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     cb(null, __dirname + "/../../uploads");
   },
   filename: function(req, file, cb) {
-    cb(null, Date.now() + file.originalname);
+    cb(null, new Date().toLocaleDateString() + file.originalname);
   }
 });
 
@@ -27,7 +27,7 @@ const upload = multer({
     fileSize: 1024 * 1024 * 5
   },
   fileFilter
-}).array("image", 2);
+}).array("image", 5);
 
 module.exports = app => {
   app.post("/event", requireAuth, async (req, res) => {
@@ -47,7 +47,7 @@ module.exports = app => {
         try {
           const newEvent = new Event({
             ...req.body,
-            image: [req.files.map(file => file.filename)]
+            image: req.files.map(file => file.filename)
           });
           await newEvent.save();
           res.json({
