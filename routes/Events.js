@@ -27,7 +27,7 @@ const upload = multer({
     fileSize: 1024 * 1024 * 5
   },
   fileFilter
-}).single("image");
+}).array("image", 2);
 
 module.exports = app => {
   app.post("/event", requireAuth, async (req, res) => {
@@ -37,6 +37,7 @@ module.exports = app => {
         message: "You must be an admin"
       });
     }
+    console.log(req.body);
     upload(req, res, async err => {
       if (err) {
         res.json({
@@ -47,7 +48,7 @@ module.exports = app => {
         try {
           const newEvent = new Event({
             ...req.body,
-            image: req.file.filename
+            image: [req.files.map(file => file.filename)]
           });
           await newEvent.save();
           res.json({
@@ -55,7 +56,7 @@ module.exports = app => {
             message: "Successfully uploaded the event"
           });
         } catch (err) {
-          deleteUploadFile(req.file.filename);
+          deleteUploadFile(req.files.map(file => file.filename));
           res.json({
             status: "Error",
             message: "There was a problem uploading the event"
@@ -78,13 +79,21 @@ module.exports = app => {
     }
     upload(req, res, async err => {
       try {
-        const updates = {
-          ...req.body,
-          image: req.file ? req.file.filename : null
-        };
-
-        // If no image uploaded remove image key from updates
-        if (err) {
+        // const updates = {
+        //   ...req.body,
+        //   image: req.files.length ? req.files[0].filename : null
+        // };
+        // // If no image uploaded remove image key from updates
+        // if (!req.files.length) {
+        //   delete updates.image;
+        // }
+        const updates = { ...req.body };
+        const imagesArr = req.files.map(file => {
+          return file.filename;
+        });
+        if (imagesArr.length) {
+          updates.image = imagesArr;
+        } else {
           delete updates.image;
         }
         const updatedEvent = await Event.findByIdAndUpdate(
@@ -97,7 +106,7 @@ module.exports = app => {
             message: "Couldn't find an event with that id"
           });
         }
-        if (req.file) {
+        if (imagesArr.length) {
           deleteUploadFile(updatedEvent.image);
         }
         res.json({
@@ -105,8 +114,8 @@ module.exports = app => {
           message: "Successfully updated the event"
         });
       } catch (err) {
-        if (req.file) {
-          deleteUploadFile(req.file.filename);
+        if (req.files.length) {
+          deleteUploadFile(req.files.map(file => file.filename));
         }
         res.json({
           status: "Error",
@@ -124,7 +133,6 @@ module.exports = app => {
       });
     }
     if (!ObjectId.isValid(req.params.eventId)) {
-      deleteUploadFile(req.file.filename);
       return res.json({
         error: "An event with this id cannot be found"
       });

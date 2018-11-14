@@ -38,17 +38,19 @@ const verifyInputs = message => {
   return true;
 };
 
-const deleteUploadFile = filename => {
-  const path = __dirname + `/../../uploads/${filename}`;
-  fs.stat(path, (err, stats) => {
-    if (err) {
-      console.log(err);
-    }
-    fs.unlink(path, err => {
+const deleteUploadFile = fileArr => {
+  fileArr.forEach(filename => {
+    const path = __dirname + `/../../uploads/${filename}`;
+    fs.stat(path, (err, stats) => {
       if (err) {
         console.log(err);
       }
-      console.log("Delete upload file successfully");
+      fs.unlink(path, err => {
+        if (err) {
+          console.log(err);
+        }
+        console.log("Delete upload file successfully");
+      });
     });
   });
 };

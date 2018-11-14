@@ -69,16 +69,19 @@ class IndividualEvent extends Component {
         </h2>
       );
     } else {
+      const images = this.state.image.map((img ,i) => (
+        <div className="individualEvent__imgContainer" key={i}>
+          <img
+            src={`/uploads/${img}`}
+            alt="Event"
+            className="individualEvent__img"
+          />
+        </div>
+      ))
       content = (
         <div className="individualEvent__container">
           <Carousel {...settings}>
-            <div className="individualEvent__imgContainer">
-              <img
-                src={`/uploads/${this.state.image}`}
-                alt="Event"
-                className="individualEvent__img"
-              />
-            </div>
+            {images}
           </Carousel>
           <div className="individualEvent__detailsContainer">
             <h1 className="individualEvent__heading">{this.state.subject}</h1>

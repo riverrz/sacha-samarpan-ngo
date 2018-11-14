@@ -8,16 +8,19 @@ class EventArch extends Component {
     this.props.history.push(`/event/${this.props.id}`);
   };
   render() {
+    const content = this.props.image.map((img,i) => (
+      <div className="eventArch__img__Container" key={i}>
+        <img
+          src={`/uploads/${img}`}
+          className="eventArch__photo"
+          alt="event"
+        />
+      </div>
+    ))
     return (
       <Zoom cascade>
         <div className="eventArch__container" onClick={this.onClickHandler}>
-          <div className="eventArch__img__Container">
-            <img
-              src={`/uploads/${this.props.image}`}
-              className="eventArch__photo"
-              alt="event"
-            />
-          </div>
+          {content}
           <h2 className="eventArch__title">{this.props.title}</h2>
           <h4 className="eventArch__date">{this.props.postedOn}</h4>
         </div>
