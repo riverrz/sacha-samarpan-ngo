@@ -12,7 +12,7 @@ const settings = {
   showThumbs: false,
   autoPlay: true,
   stopOnHover: false,
-  interval: 12000,
+  interval: 6000,
   showIndicators: false,
   useKeyboardArrows: true,
   swipeable: true,
