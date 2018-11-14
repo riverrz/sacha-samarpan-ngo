@@ -10,7 +10,7 @@ class EventCreate extends Component {
     venue: "",
     subject: "",
     description: "",
-    image: null,
+    imageArr: [],
     error: false,
     success: false,
     message: "",
@@ -26,13 +26,13 @@ class EventCreate extends Component {
       return event.target.files[key];
     });
     this.setState({
-      image: imageArr
+      imageArr
     });
   };
   formSubmit = async event => {
     event.preventDefault();
     const formData = new FormData();
-    this.state.image.forEach(img => {
+    this.state.imageArr.forEach(img => {
       formData.append("image", img);
     });
     formData.append("date", this.state.date);
@@ -87,7 +87,7 @@ class EventCreate extends Component {
         venue: "",
         subject: "",
         description: "",
-        image: null,
+        image: [],
         error: false,
         success: false,
         message: "",
