@@ -37,7 +37,6 @@ module.exports = app => {
         message: "You must be an admin"
       });
     }
-    console.log(req.body);
     upload(req, res, async err => {
       if (err) {
         res.json({
@@ -79,14 +78,6 @@ module.exports = app => {
     }
     upload(req, res, async err => {
       try {
-        // const updates = {
-        //   ...req.body,
-        //   image: req.files.length ? req.files[0].filename : null
-        // };
-        // // If no image uploaded remove image key from updates
-        // if (!req.files.length) {
-        //   delete updates.image;
-        // }
         const updates = { ...req.body };
         const imagesArr = req.files.map(file => {
           return file.filename;
