@@ -17,11 +17,23 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Contact from "./components/Contact/Contact";
 import Sponser from "./components/Sponsers/Sponser/Sponser";
 import AsideSocialBar from "./components/AsideSocialBar/AsideSocialBar";
-import Dashboard from "./containers/Dashboard/Dashboard";
-import Login from "./components/UserAuth/Login/Login";
-import Register from "./components/UserAuth/Register/Register";
 import IndividualEvent from "./components/Event/IndividualEvent/IndividualEvent";
 import Modal from "./components/Modal/Modal";
+import Loadable from "react-loadable";
+import Loading from "./components/Loading/Loading";
+
+const Register = Loadable({
+  loader: () => import("./components/UserAuth/Register/Register"),
+  loading: Loading
+});
+const Login = Loadable({
+  loader: () => import("./components/UserAuth/Login/Login"),
+  loading: Loading
+});
+const Dashboard = Loadable({
+  loader: () => import("./containers/Dashboard/Dashboard"),
+  loading: Loading
+});
 
 class App extends Component {
   state = {
