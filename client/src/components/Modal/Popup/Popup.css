@@ -69,3 +69,31 @@
   color: #fff !important;
   background-color: dodgerblue;
 }
+
+/* Mission Bhukh */
+
+.img__head {
+  width: 50%;
+  height: 150px;
+  display: inline-block;
+}
+
+.btn {
+  margin: 1rem;
+  padding: 1rem 3rem;
+  border: none;
+  background-color: steelblue;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 20px;
+  transition: transform 0.2s, background-color 0.4s;
+  box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+.link__container {
+  text-align: center;
+  padding-bottom: 1rem;
+}
