@@ -21,10 +21,10 @@ const carousel = props => {
     return (
       <div className="carousel__imageBox" key={i}>
         <img src={`/images/${item}`} alt={`${item}`} />
-        <div className="carousal__imageDescription">
+        {/* <div className="carousal__imageDescription">
           <h2 className="carousal__imageTitle">Heading</h2>
           <p className="carousal__imageText">Description about the image</p>
-        </div>
+        </div> */}
       </div>
     );
   });
