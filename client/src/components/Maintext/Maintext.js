@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Maintext.css";
 import HeadShake from "react-reveal/HeadShake";
 
 const maintext = props => {
   return (
     <div className="Maintext">
-        <h1 className="Maintext__headingPrimary">
-          WELCOME TO{" "}
-          <span className="Maintext__headingPrimarySpan">SACCHA SAMARPAN</span>{" "}
-        </h1>
+      <h1 className="Maintext__headingPrimary">
+        WELCOME TO{" "}
+        <span className="Maintext__headingPrimarySpan">SACCHA SAMARPAN</span>{" "}
+      </h1>
       <hr className="Maintext__horizontalRule" />
       <div className="Maintext__content">
         <span className="Maintext__main">
@@ -29,7 +30,11 @@ const maintext = props => {
       </div>
       <div className="Maintext__Memberform">
         <h3>DOWNLOAD OUR MEMBERSHIP FORM</h3>
-        <HeadShake><button>DOWNLOAD NOW</button></HeadShake>
+        <HeadShake>
+          <Link to="/membership-form.pdf" target="_blank" download>
+            <button  style={{ cursor: 'pointer' }}>DOWNLOAD</button>
+          </Link>
+        </HeadShake>
       </div>
     </div>
   );
