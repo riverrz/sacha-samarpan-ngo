@@ -118,6 +118,16 @@ class SideDrawer extends Component {
                     Issues & Views
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="sideDrawer__navLinks"
+                    exact
+                    to="/about/mission-bhukh"
+                    onClick={this.backdropCloseHandler}
+                  >
+                    Mission Bhukh
+                  </Link>
+                </li>
               </InnerList>
             </li>
             <li className="sideDrawer_navList__item">

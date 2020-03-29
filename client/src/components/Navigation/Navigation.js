@@ -97,6 +97,15 @@ class Navigation extends Component {
                   <i className="fas fa-angle-right" /> Issues & Views
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/about/mission-bhukh"
+                  exact
+                  activeClassName="navigation__activeDropDown"
+                >
+                  <i className="fas fa-angle-right" /> Mission Bhukh
+                </NavLink>
+              </li>
             </Dropdown>
           </div>
 
