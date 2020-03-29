@@ -85,12 +85,22 @@
 }
 .donate__conditionsList {
   list-style: disc;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .donate__conditionsHeading {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+
+.donation__details__container {
+  width: 75%;
+  margin: 3rem auto;
+  text-align: left;
+  font-size: 1.8rem;
+}
+.donation__details__container p {
+  margin: 1rem;
 }
 
 /*Media Queries*/
