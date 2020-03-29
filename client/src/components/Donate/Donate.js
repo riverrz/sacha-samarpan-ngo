@@ -47,13 +47,13 @@ const donate = props => {
       </form> */}
       <div className="donation__details__container">
         <h3>Given below are our details</h3>
-        <p>Name:- SACCHA SAMARPAN </p>
-        <p>A/C No.:- 5120101003663</p>
-        <p>IFSC: CNRB0005120 </p>
-        <p>Address:- CANARA BANK, KHANPUR, BRANCH, NEW DELHI </p>
+        <p><strong>Name:- </strong> SACCHA SAMARPAN </p>
+        <p><strong>A/C No.:- </strong> 5120101003663</p>
+        <p><strong>IFSC:- </strong> CNRB0005120 </p>
+        <p><strong>Address:- </strong> CANARA BANK, KHANPUR, BRANCH, NEW DELHI </p>
 
-        <p>PAN No.:- AATAS1911L</p>
-        <p>Paytm:- 9211807677 </p>
+        <p><strong>PAN No.:- </strong> AATAS1911L</p>
+        <p><strong>Paytm:- </strong> 9211807677 </p>
       </div>
       <div className="donate__conditionsContainer">
         <h1 className="donate__conditionsHeading">Terms & Conditions</h1>
