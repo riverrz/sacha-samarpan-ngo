@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../IssuesAndViews/IssuesAndViews.css";
 import "./MissionBhukh.css";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
@@ -30,10 +30,9 @@ const MissionBhukh = props => {
           </p>
           <h1>Mission Bhukh</h1>
           <p>
-            Saccha Samarpan NGO will run a mission called{" "}
-            <strong>Mission Bhukh</strong> from <strong>1st April 2020</strong>{" "}
-            to help those needy people who got stucked on roads and have no food
-            to eat.
+            Saccha Samarpan NGO is running <strong>Mission Bhukh</strong> from{" "}
+            <strong>25th March 2020</strong> and will continue this mission till
+            the country lockdown comes to an end.
           </p>
           <p>
             In this mission, each and every individual who is capable to support
@@ -44,25 +43,54 @@ const MissionBhukh = props => {
           <p>
             People who want to contribute to this mankind can contact to the
             provided phone nos:-
-            <a style={{ margin: "1rem auto", display: 'block', textAlign: 'center' }} href="tel:+91 9811700053">
+            <a
+              style={{
+                margin: "1rem auto",
+                display: "block",
+                textAlign: "center"
+              }}
+              href="tel:+91 9811700053"
+            >
               9811700053
             </a>
-            <a style={{ margin: "1rem auto", display: 'block', textAlign: 'center' }} href="tel:+91 9211807677">
+            <a
+              style={{
+                margin: "1rem auto",
+                display: "block",
+                textAlign: "center"
+              }}
+              href="tel:+91 9211807677"
+            >
               9211807677
             </a>
-            <a style={{ margin: "1rem auto", display: 'block', textAlign: 'center' }} href="tel:+91 9212180053">
+            <a
+              style={{
+                margin: "1rem auto",
+                display: "block",
+                textAlign: "center"
+              }}
+              href="tel:+91 9212180053"
+            >
               9212180053
             </a>
-            <a style={{ margin: "1rem auto", display: 'block', textAlign: 'center' }} href="tel:+91 9212580053">
+            <a
+              style={{
+                margin: "1rem auto",
+                display: "block",
+                textAlign: "center"
+              }}
+              href="tel:+91 9212580053"
+            >
               9212580053
             </a>
           </p>
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: "center" }}>
             <h3>Please consider donating to help this cause</h3>
-            <Link to="/donate"><button className="Donate__btn">DONATE</button></Link>
+            <Link to="/donate">
+              <button className="Donate__btn">DONATE</button>
+            </Link>
           </div>
         </Fade>
-
       </div>
     </WhiteContainer>
   );

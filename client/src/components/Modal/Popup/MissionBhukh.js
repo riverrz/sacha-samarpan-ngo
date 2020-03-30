@@ -17,14 +17,23 @@ export default props => (
         spread to many countries and territories.
       </p>
       <p>
-        Saccha Samarpan NGO will run a mission called Mission Bhukh from 1st
-        April 2020 to help those needy people who got stucked on roads and have
-        no food to eat.
+        Saccha Samarpan NGO is running this mission from 25th March 2020 and
+        will continue it till the country lockdown comes to an end. This mission
+        is to help those needy people who got stucked on roads and have no food
+        to eat.
       </p>
     </div>
     <div className="link__container">
-      <Link onClick={props.exitClicked} to="/about/mission-bhukh" className="btn">Learn more</Link>
-      <Link onClick={props.exitClicked} to="/donate" className="btn">Donate</Link>
+      <Link
+        onClick={props.exitClicked}
+        to="/about/mission-bhukh"
+        className="btn"
+      >
+        Learn more
+      </Link>
+      <Link onClick={props.exitClicked} to="/donate" className="btn">
+        Donate
+      </Link>
     </div>
   </Fragment>
 );
