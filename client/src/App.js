@@ -21,6 +21,7 @@ import IndividualEvent from "./components/Event/IndividualEvent/IndividualEvent"
 import Modal from "./components/Modal/Modal";
 import Loadable from "react-loadable";
 import Loading from "./components/Loading/Loading";
+import CoronaHelp from "./components/CoronaHelp";
 
 const Register = Loadable({
   loader: () => import("./components/UserAuth/Register/Register"),
@@ -106,7 +107,7 @@ class App extends Component {
           <Route path="/user/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/event/:eventId" component={IndividualEvent} />
-
+          <Route path="/corona-help" component={CoronaHelp} />
           <Route
             path="/"
             render={(props) => (

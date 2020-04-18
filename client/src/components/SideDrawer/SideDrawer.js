@@ -214,6 +214,16 @@ class SideDrawer extends Component {
                 Donate
               </Link>
             </li>
+            <li className="sideDrawer_navList__item sideDrawer_navList__item--corona">
+              <Link
+                className="sideDrawer__navLinks"
+                exact
+                to="/corona-help"
+                onClick={this.backdropCloseHandler}
+              >
+                Corona Help
+              </Link>
+            </li>
           </ul>
         </div>
       </Fragment>

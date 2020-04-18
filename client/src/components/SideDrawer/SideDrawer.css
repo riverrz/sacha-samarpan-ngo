@@ -88,6 +88,16 @@
   font-family: inherit;
 }
 
+.sideDrawer_navList__item--corona {
+  background-color: red;
+  color: #fff;
+  animation-name: fade;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
 @media (min-width: 600px) {
   .sideDrawer__container {
     display: none;

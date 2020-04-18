@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import NavigationHeader from "./NavigationHeader/NavigationHeader";
 class Navigation extends Component {
   state = {
-    scrollingLock: false
+    scrollingLock: false,
   };
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -19,11 +19,11 @@ class Navigation extends Component {
   handleScroll = () => {
     if (window.scrollY > 100 && !this.state.scrollingLock) {
       this.setState({
-        scrollingLock: true
+        scrollingLock: true,
       });
     } else if (window.scrollY < 100 && this.state.scrollingLock) {
       this.setState({
-        scrollingLock: false
+        scrollingLock: false,
       });
     }
   };
@@ -181,9 +181,16 @@ class Navigation extends Component {
               Important Links
             </NavLink>
           </div>
+
           <div className="navigation__item navigation__donate">
             <Link to="/donate" exact>
               <strong className="navigation__donate__strong">Donate</strong>
+            </Link>
+          </div>
+
+          <div className="navigation__item navigation__corona">
+            <Link to="/corona-help" exact>
+              Corona Updates
             </Link>
           </div>
         </nav>

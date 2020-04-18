@@ -129,6 +129,24 @@
   margin-right: auto;
 }
 
+.navigation__corona {
+  background-color: red;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
 /*Media Queries*/
 
 @media (max-width: 1025px) {
