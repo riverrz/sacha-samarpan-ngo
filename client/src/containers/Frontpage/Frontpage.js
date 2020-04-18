@@ -9,19 +9,19 @@ import "./Frontpage.css";
 class Frontpage extends Component {
   state = {
     itemsArr: [
+      "17.jpeg",
+      "19.jpeg",
+      "20.jpeg",
+      "21.jpeg",
+      "9.jpg",
       "3.jpg",
       "7.jpg",
-      "4.jpg",
-      "5.jpg",
-      "1.jpg",
-      "8.jpg",
-      "9.jpg",
       "16.jpg",
       "6.jpg",
-      "11.jpg"
-    ]
+      "11.jpg",
+    ],
   };
-  onClickHandler = path => {
+  onClickHandler = (path) => {
     this.props.history.push(path);
   };
   render() {

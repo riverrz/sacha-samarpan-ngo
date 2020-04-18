@@ -26,8 +26,12 @@ class Modal extends Component {
       "13.jpg",
       "14.jpg",
       "15.jpg",
-      "16.jpg"
-    ]
+      "16.jpg",
+      "17.jpeg",
+      "19.jpeg",
+      "20.jpeg",
+      "21.jpeg",
+    ],
   };
 
   componentWillMount() {
@@ -84,22 +88,19 @@ class Modal extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     modalFor: state.modal.modalFor,
     imageToLoad: state.modal.imageToLoad,
-    isGalleryFull: state.modal.isGalleryFull
+    isGalleryFull: state.modal.isGalleryFull,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     modalClose: () => dispatch({ type: actionTypes.MODAL_CLOSE }),
-    modalPopup: () => dispatch({ type: actionTypes.MODAL_POPUP })
+    modalPopup: () => dispatch({ type: actionTypes.MODAL_POPUP }),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

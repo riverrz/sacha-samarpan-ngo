@@ -24,15 +24,15 @@ import Loading from "./components/Loading/Loading";
 
 const Register = Loadable({
   loader: () => import("./components/UserAuth/Register/Register"),
-  loading: Loading
+  loading: Loading,
 });
 const Login = Loadable({
   loader: () => import("./components/UserAuth/Login/Login"),
-  loading: Loading
+  loading: Loading,
 });
 const Dashboard = Loadable({
   loader: () => import("./containers/Dashboard/Dashboard"),
-  loading: Loading
+  loading: Loading,
 });
 
 class App extends Component {
@@ -54,8 +54,13 @@ class App extends Component {
       "13.jpg",
       "14.jpg",
       "15.jpg",
-      "16.jpg"
-    ]
+      "16.jpg",
+      "17.jpeg",
+      "18.jpeg",
+      "19.jpeg",
+      "21.jpeg",
+      "22.jpeg",
+    ],
   };
   render() {
     return (
@@ -89,7 +94,7 @@ class App extends Component {
             path="/full-gallery"
             exact
             render={() => (
-              <Fullgallery invoke={event => this.backdropInvoker(event)} />
+              <Fullgallery invoke={(event) => this.backdropInvoker(event)} />
             )}
           />
           <Route path="/donate" component={Donate} />
@@ -104,10 +109,10 @@ class App extends Component {
 
           <Route
             path="/"
-            render={props => (
+            render={(props) => (
               <Frontpage
                 imgArr={this.state.frontPageImages}
-                invoke={event => this.backdropInvoker(event)}
+                invoke={(event) => this.backdropInvoker(event)}
                 {...props}
               />
             )}

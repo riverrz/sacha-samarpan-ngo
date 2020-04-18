@@ -3,8 +3,8 @@ import "./ModalGallery.css";
 import ExitButton from "../ExitButton/ExitButton";
 import Carousel from "../../Carousel/Carousel";
 
-const modalGallery = props => {
-  const buildImageNumber = str => {
+const modalGallery = (props) => {
+  const buildImageNumber = (str) => {
     let numStr = "";
     for (let i = 0; i < str.length; i++) {
       if (!isNaN(str[i])) {
