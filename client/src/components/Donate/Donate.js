@@ -1,7 +1,6 @@
 import React from "react";
 import "./Donate.css";
 import DonateLogo from "../../assets/Icons/donation-1.png";
-import Inputfield from "../Inputfield/Inputfield";
 import WhiteContainer from "../../containers/WhiteContainer/WhiteContainer";
 
 const donate = props => {
