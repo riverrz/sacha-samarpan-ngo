@@ -62,12 +62,12 @@ class Team extends Component {
           "Suraj varshney is a qualified degree holder in B.A programming from Delhi University. He is a talented  graphic designer and a  Brilliant  freelance designer.He is associated with us and working for the betterment of society with an initiative to bring out a positive change in all spheres of life.",
       },
       {
-        name: "Shivanki",
-        designation: "Volunteer",
-        photo: "/images/Team/Shivanki.jpeg",
+        name: "Harinder Balhara",
+        designation: "Social Worker - Community",
+        photo: "/images/Team/Harinder.jpeg",
         facebook: "",
-        instagram: "https://www.instagram.com/shivirao07/",
-        description: "Shivanki Volunteer",
+        instagram: "",
+        description: "I am born in Neb Sarai, Delhi. I m into this profession because I have seen how a little Kindness, guidance, and belief can transform lives-including my own.Social work is more than a job - it's a calling to advocate for those who feel voiceless, and to be a steady hand when life feels uncertain.",
       },
       {
         name: "Priya",
